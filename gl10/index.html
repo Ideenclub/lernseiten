@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GL 10 – Lernseiten</title>
+<style>
+  :root { --a:#4338ca; --b:#e0e7ff; --c:#1e1b4b; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         background:linear-gradient(160deg,var(--b) 0%,#fff 55%); color:var(--c); min-height:100vh; }
+  header { padding:48px 24px 24px; max-width:860px; margin:0 auto; }
+  .fach { text-transform:uppercase; letter-spacing:.14em; font-size:.8rem; font-weight:700; color:var(--a); }
+  h1 { font-size:clamp(2.4rem,7vw,4rem); margin:.2em 0 .1em; line-height:1; }
+  .sub { font-size:1.1rem; opacity:.75; margin:0; }
+  main { max-width:860px; margin:0 auto; padding:8px 24px 64px; }
+  .neu { display:block; text-decoration:none; color:#fff; background:var(--a); border-radius:22px; padding:28px;
+          box-shadow:0 14px 34px -14px var(--a); transition:transform .15s; }
+  .neu:active { transform:scale(.98); }
+  .neu .tag { display:inline-block; background:rgba(255,255,255,.2); border-radius:99px; padding:4px 12px; font-size:.8rem; font-weight:700; letter-spacing:.05em; }
+  .neu h2 { font-size:clamp(1.5rem,4vw,2.1rem); margin:14px 0 6px; }
+  .neu p { margin:0; opacity:.9; }
+  .neu .los { display:inline-block; margin-top:20px; background:#fff; color:var(--a); font-weight:800; border-radius:14px; padding:14px 22px; font-size:1.05rem; }
+  h3 { margin:40px 0 12px; font-size:1rem; text-transform:uppercase; letter-spacing:.1em; opacity:.6; }
+  .liste a { display:flex; justify-content:space-between; gap:16px; align-items:center; text-decoration:none; color:inherit;
+             background:#fff; border:1px solid rgba(0,0,0,.07); border-radius:16px; padding:16px 18px; margin-bottom:10px; min-height:60px; }
+  .liste .d { font-size:.85rem; opacity:.6; white-space:nowrap; }
+  .leer { background:#fff; border:2px dashed var(--a); border-radius:22px; padding:32px; text-align:center; }
+</style>
+</head>
+<body>
+<header>
+  <div class="fach">Gesellschaftslehre · Jahrgang 10</div>
+  <h1>GL 10</h1>
+  <p class="sub">Deine Lernseiten für den Unterricht</p>
+</header>
+<main id="inhalt"><div class="leer">Lade …</div></main>
+<script>
+(function () {
+  var box = document.getElementById('inhalt');
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function datum(d) { try { return new Date(d + 'T12:00:00').toLocaleDateString('de-DE', {weekday:'short', day:'2-digit', month:'2-digit', year:'numeric'}); } catch (e) { return d; } }
+  fetch('lessons.json', {cache: 'no-store'}).then(function (r) { return r.json(); }).then(function (liste) {
+    if (!liste.length) { box.innerHTML = '<div class="leer"><strong>Hier erscheint bald deine n&auml;chste Lernseite.</strong></div>'; return; }
+    var n = liste[0], h = '';
+    h += '<a class="neu" href="' + esc(n.pfad) + '"><span class="tag">AKTUELL · ' + esc(datum(n.datum)) + '</span>' +
+         '<h2>' + esc(n.titel) + '</h2><p>' + esc(n.typ) + (n.info ? ' · ' + esc(n.info) : '') + '</p><span class="los">Los geht&rsquo;s &rarr;</span></a>';
+    if (liste.length > 1) {
+      h += '<h3>Fr&uuml;here Stunden</h3><div class="liste">';
+      liste.slice(1).forEach(function (e) { h += '<a href="' + esc(e.pfad) + '"><span>' + esc(e.titel) + '</span><span class="d">' + esc(datum(e.datum)) + '</span></a>'; });
+      h += '</div>';
+    }
+    box.innerHTML = h;
+  }).catch(function () { box.innerHTML = '<div class="leer">Die Liste konnte nicht geladen werden. Bitte Seite neu laden.</div>'; });
+})();
+</script>
+</body>
+</html>
