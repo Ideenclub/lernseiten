@@ -9,7 +9,9 @@ Diese Datei gilt für jede Sitzung, auch für die automatischen Läufe (geplante
 
 ```
 index.html                  Startseite (nicht automatisch ändern)
-gl7/  gl8/  gl10/  wipo10/  je eine Klassenseite
+gl7/  gl10/  wipo10/        je eine Klassenseite
+gl8-1/  gl8-2/              Klassenseiten der beiden 8er-Klassen (siehe Sonderfall GL 8)
+gl8/                        gemeinsamer Baustein-Speicher für beide 8er-Klassen
   index.html                Klassenseite – liest lessons.json (nicht ändern)
   lessons.json              Liste der Stunden (neuester Eintrag OBEN)
   <ordner>/index.html       eine Lernseite pro Stunde bzw. pro Baustein
@@ -25,6 +27,14 @@ Eintrag in `lessons.json` (am Anfang des Arrays einfügen, gültiges JSON prüfe
 ```
 
 Die Klassenseite hat einen festen QR-Code im Klassenraum. Neue Stunden tauchen dort automatisch oben auf.
+
+### Sonderfall GL 8 (zwei Klassen, gleiche Inhalte)
+
+- `gl8/` ist der Speicher für alle Bausteine (je 45 Minuten): `gl8/bNN-kurzthema/index.html`. `gl8/lessons.json` listet jeden Baustein einmal (`"titel": "Baustein 12: …"`).
+- `gl8-1/` = Klassenseite der 8er-Klasse mit GL am Montag (Doppelstunde) und Donnerstag (Einzelstunde).
+- `gl8-2/` = Klassenseite der 8er-Klasse mit GL am Mittwoch (Einzelstunde) und Donnerstag (Doppelstunde).
+- In `gl8-1/lessons.json` und `gl8-2/lessons.json` steht pro Unterrichtstag der Klasse ein Eintrag mit dem Datum dieser Klasse; `pfad` zeigt auf den ersten Baustein der Stunde, z. B. `"../gl8/b12-dampfmaschine/"`, `info` z. B. `"Doppelstunde: Baustein 12 + 13"`.
+- Folgen zwei Bausteine in einer Doppelstunde aufeinander, steht am Ende des ersten ein großer Weiter-Knopf zum nächsten. Entsteht ein Folgebaustein erst in einem späteren Lauf, wird der Weiter-Knopf im vorherigen Baustein dann ergänzt.
 
 ## Veröffentlichen
 
