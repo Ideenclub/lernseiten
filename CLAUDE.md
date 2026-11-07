@@ -12,6 +12,7 @@ index.html                  Startseite (nicht automatisch ändern)
 gl7/  gl10/  wipo10/        je eine Klassenseite
 gl8-1/  gl8-2/              Klassenseiten der beiden 8er-Klassen (siehe Sonderfall GL 8)
 gl8/                        gemeinsamer Baustein-Speicher für beide 8er-Klassen
+planung/termine-2026-27.json  zentrale Termine (Ferien, Feiertage, bewegliche Ferientage, Halbjahr) – nur lesen, ändern nur auf Tobias' Anweisung
   index.html                Klassenseite – liest lessons.json (nicht ändern)
   lessons.json              Liste der Stunden (neuester Eintrag OBEN)
   <ordner>/index.html       eine Lernseite pro Stunde bzw. pro Baustein

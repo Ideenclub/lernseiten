@@ -1,0 +1,23 @@
+{
+  "schuljahr": "2026/27",
+  "hinweis": "Zentrale Termin-Datei für alle automatischen Läufe. Alle hier genannten Tage sind unterrichtsfrei. Nur Termine, keine personenbezogenen Daten.",
+  "ferien": [
+    {"name": "Herbstferien", "von": "2026-10-17", "bis": "2026-10-31"},
+    {"name": "Weihnachtsferien", "von": "2026-12-23", "bis": "2027-01-06"},
+    {"name": "Osterferien", "von": "2027-03-22", "bis": "2027-04-03"},
+    {"name": "Sommerferien", "von": "2027-07-19", "bis": "2027-08-31"}
+  ],
+  "feiertage": [
+    {"name": "Karfreitag", "datum": "2027-03-26"},
+    {"name": "Ostermontag", "datum": "2027-03-29"},
+    {"name": "Tag der Arbeit", "datum": "2027-05-01"},
+    {"name": "Christi Himmelfahrt", "datum": "2027-05-06"},
+    {"name": "Pfingstmontag", "datum": "2027-05-17"},
+    {"name": "Fronleichnam", "datum": "2027-05-27"}
+  ],
+  "bewegliche_ferientage": [],
+  "sonstige_unterrichtsfreie_tage": [],
+  "halbjahr": {"letzter_tag_1_halbjahr": null, "erster_tag_2_halbjahr": null, "hinweis": "null = noch nicht bestätigt; dann Ende Januar 2027 annehmen und in der Abschlussnachricht als Annahme kennzeichnen"},
+  "letzter_schultag": "2027-07-16",
+  "stand": "2026-11-07"
+}
