@@ -45,6 +45,27 @@ Die Klassenseite hat einen festen QR-Code im Klassenraum. Neue Stunden tauchen d
 4. URL der Seite: `https://ideenclub.github.io/lernseiten/<klasse>/<ordner>/`. GitHub Pages braucht nach dem Push etwa 1–2 Minuten.
 5. QR-Code für diese URL mit Python (`pip install qrcode[pil] --break-system-packages`) erzeugen, Fehlerkorrektur M, mindestens 600 px, schwarz auf weiß.
 
+### Wenn der Push scheitert: Upload-Paket für Tobias (verbindlich, Stand 09.11.2026)
+
+In den geplanten Aufgaben lehnt der Git-Proxy den Push derzeit ab (403 „not in this session's authorized repository set“). Dann lädt Tobias die Seite selbst per Browser hoch. Mach es ihm so einfach wie möglich – immer genau so:
+
+1. **Eine Datei pro Lernseite:** Jede Lernseite ist eine einzige `index.html`. Bilder werden als `data:`-URI direkt eingebettet (JPEG, vorher auf Bildschirmgröße verkleinert, max. ca. 1600 px Breite, Qualität ca. 85). Keine `img/`-Unterordner, keine weiteren Dateien.
+2. **lessons.json fertig mitliefern:** Nimm die aktuelle `lessons.json` der Klasse aus dem frisch geklonten `main`, füge den neuen Eintrag OBEN ein und prüfe das JSON (`python3 -c "import json; json.load(open(...))"`). Alte Einträge bleiben unverändert.
+3. **ZIP mit der Ordnerstruktur ab Repository-Wurzel:** `<KLASSE>_Upload_<JJJJ-MM-TT>.zip` (Datum der Stunde, z. B. `GL10_Upload_2026-11-12.zip`). Inhalt: genau ein äußerer Ordner mit demselben Namen ohne `.zip`, darin der Klassenordner mit allen geänderten Dateien, z. B.
+   ```
+   GL10_Upload_2026-11-12/
+     gl10/
+       lessons.json
+       2026-11-12-propaganda/index.html
+   ```
+   GL 8: entsprechend `gl8/bNN-…/index.html`, `gl8/lessons.json`, `gl8-1/lessons.json`, `gl8-2/lessons.json` (nur was sich ändert). Mehrere Lernseiten eines Laufs kommen in dasselbe ZIP.
+4. **Vorher prüfen:** ZIP entpacken, jede `index.html` im Headless-Browser öffnen (Bilder geladen, keine Konsolenfehler), `unzip -l` kontrollieren.
+5. **QR-Code zum Zeigen:** Für jede neue Lernseite zusätzlich `<KLASSE>_QR_<JJJJ-MM-TT>.png` erzeugen (mind. 1200 px, schwarz auf weiß, Fehlerkorrektur M, darunter groß die Kurz-URL und das Thema) und per `SendUserFile` (status: proactive, display: render) senden; im Artefakt den QR-Code groß (mind. 300 px breit) oben zeigen, damit Tobias ihn am Klassen-TV/Handy direkt vorzeigen kann.
+6. **Ausliefern:** ZIP per `SendUserFile` (status: proactive, display: attach) und ins Artefakt des Laufs aufnehmen (Download-Link), falls das Artefakt-Tool die Datei annimmt.
+7. **In der Abschlussnachricht** statt nur „NICHT online“ genau diese Zeilen:
+   `Lernseite: noch nicht online – bitte hochladen (Paket <Dateiname>.zip, ca. 1 Min.):`
+   `1. ZIP herunterladen und doppelklicken. 2. Im entpackten Ordner liegt der Ordner „<klasse>“. 3. github.com/Ideenclub/lernseiten öffnen (Startseite, NICHT im Klassenordner) → Add file → Upload files. 4. Den Ordner „<klasse>“ ins Feld ziehen. 5. Commit changes. Danach ist die Seite nach 1–2 Min. unter <URL> online.`
+
 ## Datenschutz (verbindlich, öffentliches Repository)
 
 - Keine Namen, Noten, Klassenlisten, Förderinfos oder sonstigen Schülerdaten – weder im Code noch in Dateinamen oder Commits.
