@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Die Dampfmaschine · Erklärvideo</title>
+<style>
+  :root {
+    --bg: #15120E;        /* Hintergrund (aus der Video-Palette) */
+    --flaeche: #211B14;   /* Karten */
+    --text: #F3ECE0;
+    --leise: #B5A898;
+    --akzent: #D9A04E;
+    --akzent2: #C2512F;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: max(20px, env(safe-area-inset-top)) 20px 40px;
+  }
+  main { max-width: 1100px; margin: 0 auto; }
+  .kopf { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin: 8px 0 18px; }
+  .marke { font-weight: 700; letter-spacing: .2em; font-size: 14px; color: var(--akzent); text-transform: uppercase; }
+  h1 { margin: 0; font-size: clamp(30px, 5vw, 52px); line-height: 1.05; letter-spacing: -.01em; }
+  .leitfrage { color: var(--leise); font-size: 20px; margin: 6px 0 22px; }
+  .rahmen { background: #000; border-radius: var(--radius); overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+  video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+  .knoepfe { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 28px; }
+  .knopf {
+    display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px;
+    border-radius: 999px; font-weight: 700; font-size: 18px; text-decoration: none; border: 0; cursor: pointer;
+    background: var(--akzent); color: var(--bg);
+  }
+  .knopf.zweit { background: transparent; color: var(--text); box-shadow: inset 0 0 0 2px var(--leise); }
+  .knopf svg { width: 22px; height: 22px; }
+  .karten { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .karte { background: var(--flaeche); border-radius: var(--radius); padding: 20px 22px; }
+  .karte h2 { margin: 0 0 8px; font-size: 15px; letter-spacing: .15em; text-transform: uppercase; color: var(--akzent); }
+  .karte ol, .karte p { margin: 0; padding-left: 1.2em; }
+  .karte p { padding-left: 0; }
+  .denk { border-left: 6px solid var(--akzent2); }
+  footer { margin-top: 36px; font-size: 13px; color: var(--leise); line-height: 1.5; }
+  footer a { color: var(--leise); }
+</style>
+</head>
+<body>
+<main>
+  <div class="kopf"><span class="marke">Gesellschaftslehre · Klasse 8</span></div>
+  <h1>Die Dampfmaschine</h1>
+  <p class="leitfrage">Wie funktioniert eine Dampfmaschine – und warum hat sie die Welt verändert?</p>
+
+  <div class="rahmen">
+    <video controls playsinline preload="metadata" poster="vorschau.jpg">
+      <source src="Klasse8_Dampfmaschine_2026-11-09.mp4" type="video/mp4">
+      <track kind="subtitles" src="untertitel.vtt" srclang="de" label="Deutsch" default>
+      Dein Browser kann dieses Video nicht abspielen. <a href="Klasse8_Dampfmaschine_2026-11-09.mp4">Video herunterladen</a>
+    </video>
+  </div>
+
+  <div class="knoepfe">
+    <button class="knopf" type="button" id="ut">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 12h4M13 12h4M7 15h10"/></svg>
+      <span>Untertitel aus</span>
+    </button>
+    <a class="knopf zweit" href="Klasse8_Dampfmaschine_2026-11-09.mp4" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+      Video speichern
+    </a>
+  </div>
+
+  <div class="karten">
+    <div class="karte">
+      <h2>Das Wichtigste</h2>
+      <ol>
+        <li>Kohle erhitzt Wasser, der Dampf treibt Kolben und Rad an: Dampf wird Bewegung.</li>
+        <li>Fabriken brauchen keinen Fluss mehr und entstehen dort, wo es Kohle gibt – zum Beispiel im Ruhrgebiet.</li>
+        <li>Mit der Dampfmaschine nimmt die Industrialisierung Fahrt auf.</li>
+      </ol>
+    </div>
+    <div class="karte denk">
+      <h2>Denk mal nach</h2>
+      <p>Welche Maschine ersetzt in deinem Alltag heute deine Muskelkraft? Notiere zwei Beispiele.</p>
+    </div>
+  </div>
+
+  <footer>
+    Bildnachweis: Kochtopf – Foto von Alexey Demidov, <a href="https://unsplash.com/photos/910oq0T7QuY">Unsplash</a> · James Watt – Gemälde von Carl Frederik von Breda, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Watt_James_von_Breda.jpg">Wikimedia Commons</a> · Karte: Natural Earth (gemeinfrei) · Schaubilder: eigene Grafiken
+  </footer>
+</main>
+<script>
+  (function () {
+    var v = document.querySelector('video');
+    var b = document.getElementById('ut');
+    var l = b.querySelector('span');
+    function stand() {
+      var t = v.textTracks && v.textTracks[0];
+      if (!t) { b.style.display = 'none'; return; }
+      l.textContent = t.mode === 'showing' ? 'Untertitel aus' : 'Untertitel an';
+    }
+    b.addEventListener('click', function () {
+      var t = v.textTracks && v.textTracks[0];
+      if (!t) return;
+      t.mode = t.mode === 'showing' ? 'hidden' : 'showing';
+      stand();
+    });
+    if (v.textTracks && v.textTracks.length) { v.textTracks[0].mode = 'showing'; }
+    stand();
+  })();
+</script>
+</body>
+</html>

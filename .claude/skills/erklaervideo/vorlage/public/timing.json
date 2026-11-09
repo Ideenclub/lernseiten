@@ -1,0 +1,1 @@
+{"fps": 30, "breite": 1920, "hoehe": 1080, "gesamtFrames": 90, "gesamtSek": 3, "cues": {"a1": {"start": 15, "end": 75, "text": "Platzhalter – tts.py überschreibt diese Datei.", "szene": "start"}}, "szenen": {"start": {"start": 0, "end": 90}}, "reihenfolge": ["start"]}

@@ -1,0 +1,22 @@
+{
+ "bilder": [
+  {
+   "datei": "topf.jpg",
+   "quelle": "https://unsplash.com/photos/910oq0T7QuY",
+   "download": "Unsplash-Connector download_asset 910oq0T7QuY, &w=2880",
+   "lizenz": "Unsplash",
+   "urheber": "Alexey Demidov"
+  },
+  {
+   "datei": "watt.jpg",
+   "quelle": "https://commons.wikimedia.org/wiki/File:Watt_James_von_Breda.jpg",
+   "download": "commons.py laden \"File:Watt James von Breda.jpg\" watt.jpg 1600",
+   "lizenz": "Public domain",
+   "urheber": "Carl Frederik von Breda"
+  }
+ ],
+ "zusatzpakete": [
+  "@fontsource/bebas-neue@5.3.0",
+  "@fontsource/barlow@5.3.0"
+ ]
+}

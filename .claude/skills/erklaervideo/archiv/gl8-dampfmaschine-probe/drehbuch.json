@@ -1,0 +1,97 @@
+{
+ "titel": "Die Dampfmaschine",
+ "klasse": "8",
+ "fps": 30,
+ "stimme": {
+  "modell": "de_DE-thorsten-high",
+  "tempo": 1.0
+ },
+ "vorlauf_sek": 0.5,
+ "nachlauf_sek": 1.6,
+ "szenen": [
+  {
+   "id": "hook",
+   "cues": [
+    {
+     "id": "h1",
+     "text": "Ein Topf mit kochendem Wasser.",
+     "pause": 0.25
+    },
+    {
+     "id": "h2",
+     "text": "Genau diese Kraft hat vor rund 250 Jahren die Welt verändert.",
+     "sprich": "Genau diese Kraft hat vor rund zweihundertfünfzig Jahren die Welt verändert."
+    }
+   ]
+  },
+  {
+   "id": "frage",
+   "cues": [
+    {
+     "id": "f1",
+     "text": "Wie funktioniert eine Dampfmaschine?",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "prinzip",
+   "cues": [
+    {
+     "id": "p1",
+     "text": "Kohle erhitzt Wasser, es entsteht Dampf.",
+     "pause": 0.2
+    },
+    {
+     "id": "p2",
+     "text": "Der Dampf drückt einen Kolben hin und her.",
+     "pause": 0.2
+    },
+    {
+     "id": "p3",
+     "text": "Über eine Stange dreht sich ein Rad und treibt Maschinen an.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "watt",
+   "cues": [
+    {
+     "id": "w1",
+     "text": "Ab 1769 macht James Watt die Dampfmaschine viel sparsamer.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "folgen",
+   "cues": [
+    {
+     "id": "r1",
+     "text": "Bald brauchen Fabriken keinen Fluss mehr.",
+     "pause": 0.2
+    },
+    {
+     "id": "r2",
+     "text": "Sie entstehen dort, wo es Kohle gibt, zum Beispiel im Ruhrgebiet.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "ende",
+   "cues": [
+    {
+     "id": "e1",
+     "text": "Kurz gemerkt: Dampf wird Bewegung, Fabriken ziehen zur Kohle, die Industrialisierung nimmt Fahrt auf.",
+     "pause": 0.4
+    },
+    {
+     "id": "e2",
+     "text": "Und du? Welche Maschine ersetzt heute deine Muskelkraft?"
+    }
+   ]
+  }
+ ]
+}
