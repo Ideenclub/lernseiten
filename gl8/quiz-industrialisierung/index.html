@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Volldampf-Check · Industrialisierung</title>
+<style>
+:root{
+  --ink:#14213D; --ink2:#22335A; --mint:#2EC4B6; --mint-d:#169C90; --coral:#FF6B4A;
+  --cream:#FFF8EC; --sand:#F1E6D2; --line:#E2D6C0; --ok:#1F9D6B; --ok-bg:#E3F6EE;
+  --bad:#D64545; --bad-bg:#FCE9E7; --muted:#5B6478;
+  --head:"Avenir Next Condensed","Avenir Next","Helvetica Neue",Arial,sans-serif;
+  --body:"Avenir Next",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.45}
+button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:860px;margin:0 auto;padding:18px 18px 40px}
+/* ---------- Kopf ---------- */
+.top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.badge{font-family:var(--head);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:14px;
+  background:var(--ink);color:var(--cream);padding:6px 12px;border-radius:999px}
+.stage{font-weight:700;color:var(--muted);font-size:16px}
+.bar{flex:1;height:12px;background:var(--sand);border-radius:99px;overflow:hidden;position:relative}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--mint),var(--mint-d));border-radius:99px;transition:width .4s}
+.count{font-weight:800;font-size:16px;min-width:56px;text-align:right}
+/* ---------- Karten ---------- */
+.card{background:#fff;border-radius:22px;box-shadow:0 2px 0 var(--line),0 14px 34px rgba(20,33,61,.08);overflow:hidden}
+.pad{padding:24px 26px 26px}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.08}
+h1{font-size:46px;font-weight:800;letter-spacing:-.01em}
+h2{font-size:30px;font-weight:800}
+.hero{position:relative;height:340px;background:var(--ink) center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,33,61,0) 30%,rgba(20,33,61,.88) 100%)}
+.hero .cap{position:absolute;left:26px;right:26px;bottom:22px;z-index:1;color:#fff}
+.kicker{display:inline-block;font-family:var(--head);font-weight:800;text-transform:uppercase;letter-spacing:.1em;
+  font-size:15px;background:var(--coral);color:#fff;padding:5px 11px;border-radius:6px;margin-bottom:10px}
+.lead{font-size:20px;margin:0 0 18px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 22px}
+.step{border:2px solid var(--line);border-radius:16px;padding:14px 14px 12px;background:var(--cream)}
+.step b{display:block;font-family:var(--head);font-size:30px;color:var(--mint-d);line-height:1}
+.step span{font-weight:700;font-size:17px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;padding:0;list-style:none}
+.facts li{background:var(--sand);border-radius:99px;padding:7px 14px;font-weight:700;font-size:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:60px;padding:0 30px;border:0;border-radius:16px;
+  background:var(--ink);color:#fff;font-weight:800;font-size:21px;box-shadow:0 4px 0 #0A1226;transition:transform .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #0A1226}
+.btn.mint{background:var(--mint-d);box-shadow:0 4px 0 #0E6F66}
+.btn.ghost{background:#fff;color:var(--ink);border:2px solid var(--ink);box-shadow:none}
+.btn[disabled]{opacity:.35;pointer-events:none}
+.btn.wide{width:100%}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.small{font-size:13px;color:var(--muted);line-height:1.4}
+/* ---------- Frage ---------- */
+.qhead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.qno{font-family:var(--head);font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--mint-d)}
+.qtype{font-size:14px;font-weight:700;color:var(--muted);background:var(--sand);padding:3px 10px;border-radius:99px}
+.q{font-size:25px;font-weight:700;line-height:1.3;margin:0 0 6px}
+.hint{font-size:16px;color:var(--muted);margin:0 0 16px}
+.opts{display:grid;gap:12px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;min-height:64px;text-align:left;padding:12px 16px;border-radius:16px;
+  border:2.5px solid var(--line);background:#fff;font-weight:600;font-size:19px;transition:border-color .15s,background .15s}
+.opt .k{flex:0 0 38px;height:38px;border-radius:12px;background:var(--sand);display:flex;align-items:center;justify-content:center;
+  font-family:var(--head);font-weight:800;font-size:19px}
+.opt.sel{border-color:var(--ink);background:#EEF1F8}
+.opt.sel .k{background:var(--ink);color:#fff}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg)} .opt.ok .k{background:var(--ok);color:#fff}
+.opt.bad{border-color:var(--bad);background:var(--bad-bg)} .opt.bad .k{background:var(--bad);color:#fff}
+.locked .opt,.locked .chip,.locked .tile,.locked .seg button{pointer-events:none}
+.tf{grid-template-columns:1fr 1fr}
+.tf .opt{justify-content:center;font-size:22px;font-weight:800;min-height:84px}
+/* Lückentext */
+.gaptext{font-size:22px;line-height:1.9;background:var(--cream);border-radius:16px;padding:16px 18px;margin-bottom:16px}
+.gap{display:inline-block;min-width:150px;border-bottom:3px solid var(--ink);text-align:center;font-weight:800;padding:0 6px;line-height:1.3}
+.gap.empty{color:#B8AE9B}
+.gap.ok{color:var(--ok);border-color:var(--ok)} .gap.bad{color:var(--bad);border-color:var(--bad)}
+.gaprow{margin-bottom:14px}
+.gaprow p{margin:0 0 8px;font-weight:800;font-size:16px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{min-height:54px;padding:0 18px;border-radius:14px;border:2.5px solid var(--line);background:#fff;font-weight:700;font-size:19px}
+.chip.sel{border-color:var(--ink);background:var(--ink);color:#fff}
+.chip.ok{border-color:var(--ok);background:var(--ok);color:#fff}
+.chip.bad{border-color:var(--bad);background:var(--bad-bg);color:var(--bad)}
+/* Zuordnen */
+.match{display:grid;grid-template-columns:1fr 1.5fr;gap:12px 16px;align-items:start}
+.col{display:grid;gap:12px}
+.colt{font-weight:800;font-size:15px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tile{position:relative;width:100%;min-height:66px;text-align:left;padding:12px 14px 12px 52px;border-radius:16px;border:2.5px solid var(--line);
+  background:#fff;font-weight:600;font-size:18px;line-height:1.3}
+.tile.term{font-weight:800;font-size:19px}
+.tile .n{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;
+  border:2.5px dashed #C9BDA6;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:#fff}
+.tile.active{border-color:var(--ink);background:#EEF1F8}
+.tile.paired .n{border-style:solid}
+.tile.ok{border-color:var(--ok)!important} .tile.bad{border-color:var(--bad)!important;background:var(--bad-bg)}
+.c0{background:#2EC4B6;border-color:#2EC4B6!important} .c1{background:#FF6B4A;border-color:#FF6B4A!important}
+.c2{background:#5B6CF0;border-color:#5B6CF0!important} .c3{background:#E9A23B;border-color:#E9A23B!important}
+.c4{background:#A452C9;border-color:#A452C9!important}
+.solution{margin-top:12px;font-size:16px;background:var(--cream);border-radius:12px;padding:10px 14px}
+/* Kategorien */
+.cat{display:grid;gap:12px}
+.catrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border:2.5px solid var(--line);border-radius:16px;padding:10px 12px 10px 16px;background:#fff}
+.catrow .lbl{flex:1 1 200px;font-weight:700;font-size:19px}
+.seg{display:flex;gap:8px}
+.seg button{min-height:52px;padding:0 14px;border-radius:12px;border:2.5px solid var(--line);background:var(--cream);font-weight:700;font-size:16px}
+.seg button.sel{background:var(--ink);border-color:var(--ink);color:#fff}
+.catrow.ok{border-color:var(--ok);background:var(--ok-bg)} .catrow.bad{border-color:var(--bad);background:var(--bad-bg)}
+/* Reihenfolge */
+.order .tile{padding-left:60px}
+.order .tile .n{width:36px;height:36px;font-size:19px;color:var(--ink)}
+.order .tile.paired .n{background:var(--ink);border-color:var(--ink);color:#fff}
+.order .tile.ok .n{background:var(--ok);border-color:var(--ok)}
+.order .tile.bad .n{background:var(--bad);border-color:var(--bad)}
+.linkbtn{background:none;border:0;color:var(--ink2);text-decoration:underline;font-weight:700;font-size:16px;padding:10px 0;min-height:44px}
+/* Rückmeldung */
+.fb{margin-top:18px;border-radius:16px;padding:16px 18px;display:none;font-size:18px}
+.fb.show{display:block;animation:pop .25s ease-out}
+.fb.ok{background:var(--ok-bg);border-left:8px solid var(--ok)}
+.fb.bad{background:var(--bad-bg);border-left:8px solid var(--bad)}
+.fb strong{font-family:var(--head);font-size:24px;display:block;margin-bottom:4px}
+.fb.ok strong{color:var(--ok)} .fb.bad strong{color:var(--bad)}
+@keyframes pop{from{transform:scale(.97);opacity:0}to{transform:none;opacity:1}}
+.actions{margin-top:20px;display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+/* Etappe */
+.ehero{height:260px}
+.prev{display:flex;align-items:center;gap:14px;background:var(--ok-bg);border-radius:16px;padding:14px 16px;margin-bottom:18px;font-weight:700}
+.prev b{font-family:var(--head);font-size:30px;color:var(--ok)}
+/* Ergebnis */
+.score{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:6px 0 20px}
+.ring{width:150px;height:150px;flex:0 0 150px}
+.ring text{font-family:var(--head);font-weight:800}
+.level{font-family:var(--head);font-size:34px;font-weight:800;line-height:1.05}
+.parts{display:grid;gap:10px;margin:0 0 20px}
+.pline{display:grid;grid-template-columns:150px 1fr 60px;align-items:center;gap:12px;font-weight:700;font-size:17px}
+.pline .bar{height:14px}
+.code{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:18px;padding:16px 20px;margin:0 0 18px}
+.code span{font-size:16px;opacity:.85}
+.code b{font-family:"Menlo","Courier New",monospace;font-size:30px;letter-spacing:.08em;color:var(--mint)}
+.save{border:2.5px dashed var(--coral);border-radius:16px;padding:14px 18px;margin:0 0 18px;font-size:18px}
+.save strong{color:var(--coral)}
+details{border:2px solid var(--line);border-radius:16px;margin:0 0 18px;background:var(--cream)}
+summary{min-height:56px;display:flex;align-items:center;padding:0 18px;font-weight:800;font-size:19px;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;font-size:28px;color:var(--mint-d)}
+details[open] summary::after{content:"–"}
+details ol{margin:0;padding:0 20px 16px 44px}
+details li{margin-bottom:8px}
+.practice{background:#FFF1D6;color:#8A5A00;font-weight:800;font-size:15px;padding:6px 12px;border-radius:99px}
+footer{margin-top:18px}
+@media (max-width:640px){
+  html,body{font-size:17px} h1{font-size:36px} .q{font-size:22px}
+  .hero{height:240px} .steps{grid-template-columns:1fr} .match{grid-template-columns:1fr}
+  .pline{grid-template-columns:110px 1fr 50px}
+}
+@media (orientation:landscape) and (min-width:1000px){ .wrap{max-width:900px} }
+</style>
+</head>
+<body>
+<div class="wrap" id="app" aria-live="polite"></div>
+
+<script>
+"use strict";
+/* ================= Inhalte ================= */
+const PARTS = [
+  { title:"Als die Maschinen kamen", short:"Erfindungen", img:"img/web.jpg", pos:"center 40%",
+    text:"Spinnrad, Dampfmaschine, Eisenbahn: Wie die Maschinen das Leben verändert haben." },
+  { title:"Warum gerade England?", short:"England", img:"img/lok.jpg", pos:"center 55%",
+    text:"Die fünf Zahnräder der Industrialisierung und eine Stadt, die explodiert." },
+  { title:"Deutschland holt auf", short:"Deutschland", img:"img/zoll.jpg", pos:"center 35%",
+    text:"Zölle, Zollverein, Eisenbahn, Ruhrgebiet und Fabriken vor unserer Haustür." }
+];
+
+const Q = [
+ /* ---------- Etappe 1 ---------- */
+ {p:0, t:"mc", q:"Wie haben die meisten Menschen um das Jahr 1700 gearbeitet?",
+  o:["Mit der Hand und mit einfachen Werkzeugen","Mit Dampfmaschinen in großen Fabriken","Mit Robotern und Fließbändern","Mit Maschinen, die mit Strom laufen"], a:0,
+  e:"Vor der Industrialisierung arbeiteten die meisten Menschen auf dem Land oder in kleinen Werkstätten: mit Muskelkraft, Wind- oder Wasserkraft."},
+ {p:0, t:"mc", q:"Wer verbesserte ab 1769 die Dampfmaschine so, dass sie Maschinen in Fabriken antreiben konnte?",
+  o:["Carl Benz","James Watt","Thomas Edison","Christoph Kolumbus"], a:1,
+  e:"James Watt verbesserte die Dampfmaschine ab 1769. Danach konnten Fabriken überall gebaut werden, nicht nur an Flüssen."},
+ {p:0, t:"cat", q:"Zu welchem Zeitalter gehört die Erfindung?", hint:"Tippe bei jeder Erfindung auf das passende Zeitalter.",
+  cats:["industriell","digital"],
+  items:[["Dampfmaschine",0],["Smartphone",1],["Eisenbahn",0],["Computer (PC)",1]],
+  e:"Dampfmaschine und Eisenbahn gehören zum industriellen Zeitalter. Computer und Smartphone gehören zum digitalen Zeitalter."},
+ {p:0, t:"gap", q:"Ergänze die zwei Fachbegriffe.",
+  text:["Die Zeit, in der Maschinen und Fabriken die Handarbeit ersetzten, nennt man ", ". Weil sich das Leben so schnell und so stark veränderte, spricht man auch von der Industriellen ", "."],
+  gaps:[{o:["Industrialisierung","Entdeckung","Reformation"],a:0},{o:["Erfindung","Revolution","Kolonie"],a:1}],
+  e:"Industrialisierung heißt: Maschinen und Fabriken ersetzen die Handarbeit. Eine Revolution ist eine schnelle, große Veränderung."},
+ {p:0, t:"tf", q:"In den Fabriken arbeiteten die Maschinen ganz allein. Menschen wurden dort nicht gebraucht.", a:false,
+  e:"Falsch. Die Fabriken brauchten sehr viele Arbeiterinnen und Arbeiter. Deshalb zogen viele Menschen vom Land in die Städte."},
+ {p:0, t:"order", q:"Bring die Erfindungen in die richtige zeitliche Reihenfolge.", hint:"Tippe zuerst auf die älteste Erfindung.",
+  items:["Dampfmaschine von James Watt (ab 1769)","Erste Eisenbahn in Deutschland (1835)","Erstes Auto (1886)","Smartphone (2007)"],
+  e:"Richtige Reihenfolge: Dampfmaschine 1769 → Eisenbahn in Deutschland 1835 → Auto 1886 → Smartphone 2007."},
+
+ /* ---------- Etappe 2 ---------- */
+ {p:1, t:"mc", q:"In welchem Land begann die Industrialisierung?",
+  o:["Deutschland","Spanien","England","USA"], a:2,
+  e:"Die Industrialisierung begann im 18. Jahrhundert in England. Deutschland folgte erst später."},
+ {p:1, t:"match", q:"Die fünf Zahnräder: Was passt zusammen?", hint:"Tippe links auf ein Zahnrad und dann rechts auf die passende Erklärung.",
+  pairs:[["Kohle und Eisen","Rohstoffe für Maschinen und Energie, die es in England selbst gab"],
+         ["Baumwolle","kam aus den Kolonien und wurde in Fabriken zu Stoff verarbeitet"],
+         ["Arbeitskräfte","viele Menschen zogen vom Land in die Städte"],
+         ["Geld","reiche Leute investierten in neue Fabriken"]],
+  e:"Kohle und Eisen, Baumwolle, Arbeitskräfte und Geld sind vier der fünf Zahnräder. Das fünfte Zahnrad sind die Erfindungen, zum Beispiel die Spinning Jenny und die Dampfmaschine."},
+ {p:1, t:"mc", q:"Was bedeutet das Wort „Investition“?",
+  o:["Man spart sein Geld zu Hause im Schrank.","Man steckt Geld in etwas, zum Beispiel in eine Fabrik, um später mehr zu verdienen.","Man bezahlt an einer Grenze für seine Waren.","Man tauscht Waren, ohne Geld zu benutzen."], a:1,
+  e:"Wer investiert, gibt Geld für etwas aus, das später Gewinn bringen soll, zum Beispiel für eine Fabrik mit Maschinen."},
+ {p:1, t:"mc", q:"Woher kam die Baumwolle für die Fabriken in England?",
+  o:["Von Feldern rund um London","Aus Bergwerken in Wales","Von Plantagen in den Kolonien, auf denen versklavte Menschen arbeiten mussten","Aus Deutschland"], a:2,
+  e:"Die Baumwolle wuchs auf Plantagen in Amerika. Dort mussten versklavte Menschen arbeiten. Das kennst du vom Dreieckshandel."},
+ {p:1, t:"mc", q:"Manchester hatte im Jahr 1801 rund 90 000 Einwohner. Im Jahr 1851 waren es rund 303 000. Was stimmt?",
+  o:["Die Stadt ist ungefähr doppelt so groß geworden.","Die Stadt ist mehr als dreimal so groß geworden.","Die Stadt ist zehnmal so groß geworden.","Die Stadt ist kleiner geworden."], a:1,
+  e:"3 × 90 000 = 270 000. Manchester hatte 1851 sogar 303 000 Einwohner, also mehr als dreimal so viele wie 1801. Die Menschen kamen wegen der Arbeit in den Fabriken."},
+ {p:1, t:"tf", q:"England hatte viel Kohle und Eisenerz im eigenen Land.", a:true,
+  e:"Richtig. Kohle und Eisen gab es in England selbst. Das war ein großer Vorteil für die Industrialisierung."},
+
+ /* ---------- Etappe 3 ---------- */
+ {p:2, t:"mc", q:"Ein Händler reist 1819 mit seinen Waren von Hamburg nach Österreich. Wie oft muss er unterwegs Zoll bezahlen?",
+  o:["1-mal","3-mal","10-mal","38-mal"], a:2,
+  e:"Er musste durch 10 Staaten und 10-mal Zoll bezahlen. In ganz Deutschland gab es damals 38 Zoll- und Mautlinien. Das machte Waren teuer."},
+ {p:2, t:"match", q:"Fachbegriffe: Was passt zusammen?", hint:"Tippe links auf einen Begriff und dann rechts auf die passende Erklärung.",
+  pairs:[["Zoll","Geld, das man an einer Grenze für Waren bezahlen muss"],
+         ["Maut","Gebühr dafür, dass man eine Straße oder Brücke benutzt"],
+         ["Zeche","Bergwerk, in dem Kohle abgebaut wird"],
+         ["Hütte","Fabrik, in der aus Eisenerz Eisen und Stahl wird"]],
+  e:"Zoll und Maut machten den Handel teuer. Zechen und Hütten wurden das Herz des Ruhrgebiets."},
+ {p:2, t:"mc", q:"Was änderte sich durch den Deutschen Zollverein ab 1834?",
+  o:["Alle Waren wurden teurer.","Viele deutsche Staaten schafften die Zölle untereinander ab. Der Handel wurde einfacher und billiger.","Die Eisenbahn wurde verboten.","Jeder Staat baute neue Grenzen."], a:1,
+  e:"Ab 1834 fielen zwischen vielen deutschen Staaten die Zollgrenzen weg. Waren konnten billiger und schneller transportiert werden."},
+ {p:2, t:"mc", q:"1835 fuhr die erste Eisenbahn in Deutschland. Zwischen welchen Städten?",
+  o:["Berlin und Hamburg","Nürnberg und Fürth","Bielefeld und Köln","Essen und Dortmund"], a:1,
+  e:"Die erste deutsche Eisenbahn fuhr 1835 von Nürnberg nach Fürth. Bielefeld bekam 1847 einen Bahnanschluss."},
+ {p:2, t:"order", q:"Die Eisenbahn als Kettenreaktion: Bring die Kette in die richtige Reihenfolge.", hint:"Tippe zuerst auf den Anfang der Kette.",
+  items:["Überall werden Eisenbahnstrecken gebaut.","Man braucht viele Schienen und Lokomotiven.","Man braucht viel Eisen und Stahl.","Man braucht viel Kohle.","Viele Arbeiter ziehen ins Ruhrgebiet, die Städte wachsen."],
+  e:"Darum nennt man die Eisenbahn die „Lokomotive der Industrialisierung“: Sie zog Eisen, Stahl, Kohle und Arbeitskräfte mit sich."},
+ {p:2, t:"mc", q:"Die Stadt Essen wuchs während der Industrialisierung von rund 5 500 auf rund 360 000 Einwohner. Was ist der wichtigste Grund?",
+  o:["Essen wurde die Hauptstadt von Deutschland.","Zechen und Hütten brauchten viele Arbeiter. Sie zogen mit ihren Familien nach Essen.","Viele Touristen machten in Essen Urlaub.","In Essen gab es keine Zölle."], a:1,
+  e:"Rund um Essen gab es viel Kohle. Zechen und Hütten brauchten Arbeitskräfte, deshalb wuchs die Stadt etwa um das 65-Fache (Tabelle im Buch S. 254)."},
+ {p:2, t:"mc", q:"Welche Fabrik aus unserer Region wurde 1854 in Bielefeld gegründet und verarbeitete Flachs zu Leinengarn?",
+  o:["Hoffmann’s Stärkefabriken","Zeche Zollverein","Ravensberger Spinnerei","Quarry Bank Mill"], a:2,
+  e:"Die Ravensberger Spinnerei in Bielefeld wurde 1854 gegründet. Hoffmann’s Stärkefabriken entstanden 1850 in Bad Salzuflen."}
+];
+
+const SUMMARY = [
+ "Um 1700 arbeiteten die meisten Menschen mit der Hand. Ab 1769 trieb die Dampfmaschine von James Watt Maschinen in Fabriken an.",
+ "Die Industrialisierung begann in England. Dort gab es Kohle und Eisen, Baumwolle aus den Kolonien, viele Arbeitskräfte, Geld und neue Erfindungen.",
+ "Deutschland war später dran, weil viele Zollgrenzen den Handel teuer und langsam machten.",
+ "Ab 1834 machte der Zollverein den Handel einfacher. Ab 1835 fuhren in Deutschland Eisenbahnen.",
+ "Die Eisenbahn war die „Lokomotive der Industrialisierung“: Sie brauchte Eisen, Stahl und Kohle. Im Ruhrgebiet wuchsen Zechen, Hütten und Städte.",
+ "Auch bei uns entstanden Fabriken, zum Beispiel die Ravensberger Spinnerei in Bielefeld und Hoffmann’s Stärkefabriken in Bad Salzuflen."
+];
+
+const TYPE = {mc:"Auswählen", tf:"Richtig oder falsch?", gap:"Lückentext", match:"Zuordnen", cat:"Sortieren", order:"Reihenfolge"};
+const KEY = "gl8-quiz-industrialisierung-v1";
+
+/* ================= Zustand ================= */
+let S = fresh();
+let cur = null;   // Antwort-Zwischenstand der aktuellen Frage
+function fresh(){ return {screen:"start", queue:Q.map((_,i)=>i), pos:0, res:{}, practice:false, shown:{}}; }
+function save(){ try{ if(!S.practice) localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+function load(){ try{ const s=JSON.parse(localStorage.getItem(KEY)||"null"); return s && s.queue ? s : null; }catch(e){ return null; } }
+function clearSave(){ try{ localStorage.removeItem(KEY); }catch(e){} }
+
+const $app = document.getElementById("app");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+function partScore(p){ let s=0,n=0; Q.forEach((q,i)=>{ if(q.p===p){ n++; if(S.res[i]) s++; } }); return [s,n]; }
+function total(){ return Object.values(S.res).filter(Boolean).length; }
+function scrollTop(){ window.scrollTo({top:0,behavior:"smooth"}); }
+
+/* ================= Bildschirme ================= */
+function render(){
+  if(S.screen==="start") return renderStart();
+  if(S.screen==="part") return renderPart();
+  if(S.screen==="q") return renderQ();
+  if(S.screen==="final") return renderFinal();
+  if(S.screen==="practiceEnd") return renderPracticeEnd();
+}
+
+function credit(){
+  return `<footer class="small">Fotos: Wolfgang Weiser (Zeche Zollverein), Richard Horne (Dampflok), Georg Eiermann (Webstühle) – alle über Unsplash.</footer>`;
+}
+
+function renderStart(){
+  const saved = load();
+  const canResume = saved && saved.screen!=="start" && saved.screen!=="final" && !saved.practice;
+  $app.innerHTML = `
+  <div class="card">
+    <div class="hero" style="background-image:url(img/zoll.jpg);background-position:center 30%">
+      <div class="cap"><span class="kicker">GL 8 · Industrialisierung</span><h1>Volldampf-Check</h1></div>
+    </div>
+    <div class="pad">
+      <p class="lead">Teste, was du aus den ersten Stunden zur Industrialisierung weißt. Du bekommst nach jeder Frage sofort eine Rückmeldung.</p>
+      <div class="steps">
+        ${PARTS.map((p,i)=>`<div class="step"><b>${i+1}</b><span>${esc(p.title)}</span></div>`).join("")}
+      </div>
+      <ul class="facts"><li>${Q.length} Fragen</li><li>ca. 15 Minuten</li><li>allein arbeiten</li></ul>
+      <div class="row">
+        ${canResume ? `<button class="btn mint" onclick="resume()">Weitermachen (Frage ${saved.pos+1})</button>
+                       <button class="btn ghost" onclick="startNew()">Neu beginnen</button>`
+                    : `<button class="btn mint" onclick="startNew()">Los geht’s</button>`}
+      </div>
+      <p class="small" style="margin-top:14px">Tipp: Wenn du etwas nicht mehr weißt, schau in dein Arbeitsblatt oder ins Buch (S. 252–255).</p>
+    </div>
+  </div>${credit()}`;
+  scrollTop();
+}
+function startNew(){ clearSave(); S=fresh(); S.screen="part"; save(); render(); }
+function resume(){ S=load(); render(); }
+
+function renderPart(){
+  const q = Q[S.queue[S.pos]], p = q.p, P = PARTS[p];
+  let prev = "";
+  if(p>0){ const [s,n]=partScore(p-1); prev = `<div class="prev"><b>${s}/${n}</b><span>Etappe ${p} geschafft! ${s>=n-1?"Stark.":"Weiter geht’s."}</span></div>`; }
+  $app.innerHTML = `
+  ${topbar()}
+  <div class="card">
+    <div class="hero ehero" style="background-image:url(${P.img});background-position:${P.pos}">
+      <div class="cap"><span class="kicker">Etappe ${p+1} von 3</span><h2>${esc(P.title)}</h2></div>
+    </div>
+    <div class="pad">
+      ${prev}
+      <p class="lead">${esc(P.text)}</p>
+      <button class="btn mint wide" onclick="go('q')">Etappe ${p+1} starten</button>
+    </div>
+  </div>`;
+  scrollTop();
+}
+
+function topbar(){
+  const n=S.queue.length, done=S.pos;
+  const q=Q[S.queue[Math.min(S.pos,n-1)]];
+  return `<div class="top">
+    ${S.practice?`<span class="practice">Übungsrunde</span>`:`<span class="badge">Etappe ${q.p+1}</span>`}
+    <div class="bar"><i style="width:${Math.round(done/n*100)}%"></i></div>
+    <span class="count">${Math.min(done+1,n)}/${n}</span></div>`;
+}
+
+function go(screen){ S.screen=screen; save(); render(); }
+
+/* ---------- Frage ---------- */
+function renderQ(){
+  const idx=S.queue[S.pos], q=Q[idx];
+  cur = {idx, done:false, sel:null};
+  let body="";
+  if(q.t==="mc"){
+    cur.order = shuffle(q.o.map((_,i)=>i));
+    body = `<div class="opts" id="opts">${cur.order.map((oi,k)=>`<button class="opt" data-i="${oi}" onclick="pick(${oi})"><span class="k">${"ABCD"[k]}</span><span>${esc(q.o[oi])}</span></button>`).join("")}</div>`;
+  }
+  if(q.t==="tf"){
+    body = `<div class="opts tf" id="opts">
+      <button class="opt" data-i="1" onclick="pick(1)">Richtig</button>
+      <button class="opt" data-i="0" onclick="pick(0)">Falsch</button></div>`;
+  }
+  if(q.t==="gap"){
+    cur.sel = q.gaps.map(()=>null);
+    let t=""; q.text.forEach((s,i)=>{ t+=esc(s); if(i<q.gaps.length) t+=`<span class="gap empty" id="g${i}">(${i+1})</span>`; });
+    body = `<div class="gaptext">${t}</div>` + q.gaps.map((g,gi)=>`
+      <div class="gaprow"><p>Lücke ${gi+1}</p><div class="chips">${g.o.map((o,oi)=>`<button class="chip" data-g="${gi}" data-i="${oi}" onclick="pickGap(${gi},${oi})">${esc(o)}</button>`).join("")}</div></div>`).join("");
+  }
+  if(q.t==="cat"){
+    cur.sel = q.items.map(()=>null);
+    body = `<div class="cat">${q.items.map((it,ii)=>`
+      <div class="catrow" id="cr${ii}"><span class="lbl">${esc(it[0])}</span>
+        <div class="seg">${q.cats.map((c,ci)=>`<button data-r="${ii}" data-i="${ci}" onclick="pickCat(${ii},${ci})">${esc(c)}</button>`).join("")}</div></div>`).join("")}</div>`;
+  }
+  if(q.t==="match"){
+    cur.right = shuffle(q.pairs.map((_,i)=>i));
+    cur.link = {}; cur.active = null;   // link[left]=right
+    body = `<div class="match">
+      <div class="col"><div class="colt">Begriff</div>${q.pairs.map((p,li)=>`<button class="tile term" id="L${li}" onclick="tapL(${li})"><span class="n"></span>${esc(p[0])}</button>`).join("")}</div>
+      <div class="col"><div class="colt">Erklärung</div>${cur.right.map(ri=>`<button class="tile" id="R${ri}" onclick="tapR(${ri})"><span class="n"></span>${esc(q.pairs[ri][1])}</button>`).join("")}</div>
+    </div>`;
+  }
+  if(q.t==="order"){
+    cur.shown = shuffle(q.items.map((_,i)=>i));
+    if(cur.shown.every((v,i)=>v===i)) cur.shown.reverse();
+    cur.seq = [];
+    body = `<div class="col order" id="ord">${cur.shown.map(ii=>`<button class="tile" id="O${ii}" onclick="tapO(${ii})"><span class="n"></span>${esc(q.items[ii])}</button>`).join("")}</div>
+      <button class="linkbtn" onclick="resetO()">Reihenfolge zurücksetzen</button>`;
+  }
+  $app.innerHTML = `
+  ${topbar()}
+  <div class="card"><div class="pad" id="qcard">
+    <div class="qhead"><span class="qno">Frage ${S.pos+1}</span><span class="qtype">${TYPE[q.t]}</span></div>
+    <p class="q">${esc(q.q)}</p>
+    ${q.hint?`<p class="hint">${esc(q.hint)}</p>`:`<p class="hint">${q.t==="mc"?"Tippe auf die richtige Antwort.":q.t==="gap"?"Wähle für jede Lücke das passende Wort.":"Tippe auf deine Antwort."}</p>`}
+    <div id="body">${body}</div>
+    <div class="fb" id="fb"></div>
+    <div class="actions"><button class="btn" id="check" disabled onclick="check()">Prüfen</button></div>
+  </div></div>`;
+  scrollTop();
+}
+
+function setReady(r){ document.getElementById("check").disabled = !r; }
+
+function pick(i){
+  if(cur.done) return; cur.sel=i;
+  document.querySelectorAll("#opts .opt").forEach(b=>b.classList.toggle("sel", +b.dataset.i===i));
+  setReady(true);
+}
+function pickGap(g,i){
+  if(cur.done) return; const q=Q[cur.idx]; cur.sel[g]=i;
+  document.querySelectorAll(`.chip[data-g="${g}"]`).forEach(b=>b.classList.toggle("sel", +b.dataset.i===i));
+  const el=document.getElementById("g"+g); el.textContent=q.gaps[g].o[i]; el.classList.remove("empty");
+  setReady(cur.sel.every(v=>v!==null));
+}
+function pickCat(r,i){
+  if(cur.done) return; cur.sel[r]=i;
+  document.querySelectorAll(`.seg button[data-r="${r}"]`).forEach(b=>b.classList.toggle("sel", +b.dataset.i===i));
+  setReady(cur.sel.every(v=>v!==null));
+}
+/* Zuordnen */
+function colorOf(li){ return "c"+li; }
+function paintMatch(){
+  const q=Q[cur.idx];
+  q.pairs.forEach((_,li)=>{
+    const L=document.getElementById("L"+li), n=L.querySelector(".n");
+    n.className="n"; L.classList.remove("paired","active");
+    if(cur.link[li]!==undefined){ n.classList.add(colorOf(li)); L.classList.add("paired"); n.textContent=li+1; } else n.textContent="";
+    if(cur.active===li) L.classList.add("active");
+  });
+  q.pairs.forEach((_,ri)=>{
+    const R=document.getElementById("R"+ri), n=R.querySelector(".n");
+    n.className="n"; R.classList.remove("paired"); n.textContent="";
+    const li=Object.keys(cur.link).find(k=>cur.link[k]===ri);
+    if(li!==undefined){ n.classList.add(colorOf(+li)); R.classList.add("paired"); n.textContent=+li+1; }
+  });
+  setReady(Object.keys(cur.link).length===q.pairs.length);
+}
+function tapL(li){
+  if(cur.done) return;
+  if(cur.link[li]!==undefined){ delete cur.link[li]; cur.active=li; }
+  else cur.active = li;
+  paintMatch();
+}
+function tapR(ri){
+  if(cur.done) return;
+  const owner=Object.keys(cur.link).find(k=>cur.link[k]===ri);
+  if(cur.active===null){ if(owner!==undefined){ delete cur.link[owner]; paintMatch(); } return; }
+  if(owner!==undefined) delete cur.link[owner];
+  cur.link[cur.active]=ri;
+  const free = Q[cur.idx].pairs.map((_,i)=>i).find(i=>cur.link[i]===undefined);
+  cur.active = (free===undefined ? null : free);
+  paintMatch();
+}
+/* Reihenfolge */
+function paintOrder(){
+  const q=Q[cur.idx];
+  q.items.forEach((_,ii)=>{
+    const T=document.getElementById("O"+ii), n=T.querySelector(".n"), k=cur.seq.indexOf(ii);
+    T.classList.toggle("paired",k>=0); n.textContent = k>=0 ? k+1 : "";
+  });
+  setReady(cur.seq.length===q.items.length);
+}
+function tapO(ii){
+  if(cur.done) return;
+  const k=cur.seq.indexOf(ii);
+  if(k>=0) cur.seq = cur.seq.slice(0,k); else cur.seq.push(ii);
+  paintOrder();
+}
+function resetO(){ if(cur.done) return; cur.seq=[]; paintOrder(); }
+
+/* ---------- Auswerten ---------- */
+function check(){
+  if(cur.done) return;
+  const q=Q[cur.idx]; let ok=false, extra="";
+  document.getElementById("body").classList.add("locked");
+  if(q.t==="mc" || q.t==="tf"){
+    const right = q.t==="mc" ? q.a : (q.a?1:0);
+    ok = cur.sel===right;
+    document.querySelectorAll("#opts .opt").forEach(b=>{
+      const i=+b.dataset.i; b.classList.remove("sel");
+      if(i===right) b.classList.add("ok"); else if(i===cur.sel) b.classList.add("bad");
+    });
+  }
+  if(q.t==="gap"){
+    ok = q.gaps.every((g,gi)=>cur.sel[gi]===g.a);
+    q.gaps.forEach((g,gi)=>{
+      const el=document.getElementById("g"+gi); el.textContent=g.o[g.a];
+      el.classList.add(cur.sel[gi]===g.a?"ok":"bad");
+      document.querySelectorAll(`.chip[data-g="${gi}"]`).forEach(b=>{
+        const i=+b.dataset.i; b.classList.remove("sel");
+        if(i===g.a) b.classList.add("ok"); else if(i===cur.sel[gi]) b.classList.add("bad");
+      });
+    });
+  }
+  if(q.t==="cat"){
+    ok = q.items.every((it,ii)=>cur.sel[ii]===it[1]);
+    q.items.forEach((it,ii)=>{
+      document.getElementById("cr"+ii).classList.add(cur.sel[ii]===it[1]?"ok":"bad");
+      if(cur.sel[ii]!==it[1]){
+        document.querySelectorAll(`.seg button[data-r="${ii}"]`).forEach(b=>b.classList.toggle("sel", +b.dataset.i===it[1]));
+      }
+    });
+  }
+  if(q.t==="match"){
+    ok = q.pairs.every((_,li)=>cur.link[li]===li);
+    q.pairs.forEach((_,li)=>{
+      const good = cur.link[li]===li;
+      document.getElementById("L"+li).classList.add(good?"ok":"bad");
+      if(cur.link[li]!==undefined) document.getElementById("R"+cur.link[li]).classList.add(good?"ok":"bad");
+    });
+    if(!ok) extra = `<div class="solution"><b>So ist es richtig:</b><br>${q.pairs.map(p=>`<b>${esc(p[0])}</b> – ${esc(p[1])}`).join("<br>")}</div>`;
+  }
+  if(q.t==="order"){
+    ok = cur.seq.every((v,k)=>v===k);
+    cur.seq.forEach((v,k)=>document.getElementById("O"+v).classList.add(v===k?"ok":"bad"));
+    if(!ok) extra = `<div class="solution"><b>So ist es richtig:</b><br>${q.items.map((t,i)=>`${i+1}. ${esc(t)}`).join("<br>")}</div>`;
+  }
+  cur.done=true;
+  if(!S.practice) S.res[cur.idx]=ok; else if(ok) S.fixed=(S.fixed||0)+1;
+  const fb=document.getElementById("fb");
+  fb.className="fb show "+(ok?"ok":"bad");
+  fb.innerHTML = `<strong>${ok?"Richtig!":"Leider falsch."}</strong>${esc(q.e)}${extra}`;
+  const last = S.pos===S.queue.length-1;
+  const nextPart = !last && !S.practice && Q[S.queue[S.pos+1]].p!==q.p;
+  document.querySelector(".actions").innerHTML =
+    `<button class="btn mint" onclick="next()">${last?"Zum Ergebnis":nextPart?"Etappe abschließen":"Weiter"}</button>`;
+  save();
+  setTimeout(()=>fb.scrollIntoView({behavior:"smooth",block:"nearest"}),60);
+}
+
+function next(){
+  const q=Q[S.queue[S.pos]];
+  if(S.pos===S.queue.length-1){ S.pos++; S.screen = S.practice ? "practiceEnd" : "final"; save(); return render(); }
+  S.pos++;
+  S.screen = (!S.practice && Q[S.queue[S.pos]].p!==q.p) ? "part" : "q";
+  save(); render();
+}
+
+/* ---------- Ergebnis ---------- */
+function resultCode(score){
+  let bits=0; Q.forEach((_,i)=>{ if(S.res[i]) bits |= (1<<i); });
+  const chk = ((bits*7 + score*131 + 4099) % 1296).toString(36).toUpperCase().padStart(2,"0");
+  return `IND-${String(score).padStart(2,"0")}-${chk}`;
+}
+function level(s,n){
+  const r=s/n;
+  if(r>=0.89) return ["Dampf-Profi!","Du kennst dich richtig gut aus."];
+  if(r>=0.68) return ["Gut in Fahrt!","Nur noch wenige Lücken. Übe die falschen Fragen."];
+  if(r>=0.47) return ["Auf dem richtigen Gleis","Übe die falschen Fragen noch einmal."];
+  return ["Noch mal Dampf machen","Schau in dein Arbeitsblatt und übe dann die falschen Fragen."];
+}
+function ring(s,n){
+  const r=62, c=2*Math.PI*r, f=c*(s/n);
+  return `<svg class="ring" viewBox="0 0 150 150" role="img" aria-label="${s} von ${n} Punkten">
+    <circle cx="75" cy="75" r="${r}" fill="none" stroke="#F1E6D2" stroke-width="16"/>
+    <circle cx="75" cy="75" r="${r}" fill="none" stroke="#2EC4B6" stroke-width="16" stroke-linecap="round"
+      stroke-dasharray="${f} ${c}" transform="rotate(-90 75 75)"/>
+    <text x="75" y="82" text-anchor="middle" font-size="44" fill="#14213D">${s}</text>
+    <text x="75" y="106" text-anchor="middle" font-size="17" fill="#5B6478">von ${n}</text></svg>`;
+}
+function renderFinal(){
+  const s=total(), n=Q.length, [lv,tip]=level(s,n);
+  const wrong = Q.map((_,i)=>i).filter(i=>!S.res[i]);
+  $app.innerHTML = `
+  <div class="card"><div class="pad">
+    <span class="kicker">Dein Ergebnis</span>
+    <div class="score">${ring(s,n)}<div><div class="level">${lv}</div><p style="margin:6px 0 0">${tip}</p></div></div>
+    <div class="parts">${PARTS.map((P,p)=>{ const [a,b]=partScore(p);
+      return `<div class="pline"><span>${p+1}. ${esc(P.short)}</span><div class="bar"><i style="width:${Math.round(a/b*100)}%"></i></div><span>${a}/${b}</span></div>`;}).join("")}</div>
+    <div class="code"><span>Dein Ergebnis-Code</span><b>${resultCode(s)}</b></div>
+    <div class="save"><strong>Sichern:</strong> Schreib deine Punktzahl (${s} von ${n}) und den Code oben auf dein Arbeitsblatt.</div>
+    <details><summary>Das Wichtigste in 6 Sätzen</summary>
+      <ol>${SUMMARY.map(t=>`<li>${esc(t)}</li>`).join("")}</ol>
+      <p class="small" style="padding:0 20px 16px;margin:0">Schreib die zwei Sätze, die du am wichtigsten findest, in dein Heft.</p>
+    </details>
+    <div class="row">
+      ${wrong.length?`<button class="btn mint" onclick="practice()">Falsche Fragen üben (${wrong.length})</button>`:""}
+      <button class="btn ghost" onclick="restart()">Ganz neu starten</button>
+    </div>
+  </div></div>${credit()}`;
+  scrollTop();
+}
+function practice(){
+  const wrong = Q.map((_,i)=>i).filter(i=>!S.res[i]);
+  S.practiceBackup = {pos:S.pos, screen:"final"};
+  S.queue = wrong; S.pos=0; S.practice=true; S.fixed=0; S.screen="q"; render();
+}
+function renderPracticeEnd(){
+  const n=S.queue.length, f=S.fixed||0;
+  $app.innerHTML = `
+  <div class="card"><div class="pad">
+    <span class="kicker">Übungsrunde geschafft</span>
+    <h2 style="margin:4px 0 12px">${f} von ${n} jetzt richtig</h2>
+    <p class="lead">${f===n?"Super, jetzt sitzt alles!":"Schau dir die Erklärungen noch einmal an oder übe weiter."}</p>
+    <div class="row">
+      <button class="btn mint" onclick="backToResult()">Zurück zum Ergebnis</button>
+      ${f<n?`<button class="btn ghost" onclick="practice()">Noch mal üben</button>`:""}
+    </div>
+  </div></div>`;
+  scrollTop();
+}
+function backToResult(){ S.queue=Q.map((_,i)=>i); S.pos=Q.length; S.practice=false; S.screen="final"; render(); }
+function restart(){ clearSave(); S=fresh(); render(); }
+
+(function init(){ const sv=load(); if(sv && sv.screen==="final"){ S=sv; S.practice=false; } render(); })();
+</script>
+</body>
+</html>
