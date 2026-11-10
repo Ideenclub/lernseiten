@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Was kann ich jetzt? – Machtübernahme 1933/34</title>
+<style>
+:root{
+  --ink:#1D2830; --ink2:#33424D; --grey:#66727A;
+  --paper:#F5F0E8; --card:#FFFFFF; --line:#E3DACD;
+  --terra:#A4502E; --terra-d:#7A3519; --terra-l:#F4E3D8;
+  --slate:#4F6B7A; --slate-l:#E2EAEE;
+  --ok:#2C7A55; --ok-l:#DDF0E5;
+  --amb:#B5761A; --amb-l:#FBEED5;
+  --red:#B23A2E; --red-l:#F9E2DE;
+}
+*{box-sizing:border-box}
+html{font-size:clamp(15px,min(2.2vw,3.2vh),44px)}
+html,body{margin:0;height:100%;background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.35;
+  -webkit-text-size-adjust:100%;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.serif{font-family:Georgia,"Times New Roman",serif}
+
+/* Rahmen */
+.app{position:fixed;inset:0;display:flex;flex-direction:column}
+.top{flex:none;display:flex;align-items:center;gap:.8rem;padding:.55rem 1.6rem;background:var(--ink);color:#fff}
+.top .k{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E9B79C;white-space:nowrap}
+.top .t{flex:1;font-size:.72rem;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .n{font-size:.66rem;opacity:.7;white-space:nowrap}
+.stage{flex:1;position:relative;overflow:hidden}
+.slide{position:absolute;inset:0;padding:1.1rem 1.6rem .9rem;display:flex;flex-direction:column;overflow-y:auto;
+  opacity:0;visibility:hidden;transform:translateX(2rem);transition:opacity .35s,transform .35s,visibility 0s .35s}
+.slide.on{opacity:1;visibility:visible;transform:none;transition:opacity .35s,transform .35s}
+.slide.left{transform:translateX(-2rem)}
+.nav{flex:none;display:flex;align-items:center;gap:.7rem;padding:.5rem 1.6rem calc(.5rem + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:#FBF8F3}
+.nav button.b{min-height:44px;min-width:44px;padding:.35rem 1.1rem;border:0;border-radius:.45rem;font-weight:700;font-size:.78rem}
+.nav .prev{background:#E8E0D4;color:var(--ink)}
+.nav .next{background:var(--terra);color:#fff}
+.nav button:disabled{opacity:.3;cursor:default}
+.dots{flex:1;display:flex;justify-content:center;gap:.45rem}
+.dots button{width:44px;height:44px;border:0;background:none;padding:0;display:grid;place-items:center}
+.dots i{display:block;width:.5rem;height:.5rem;border-radius:50%;background:#CFC4B5;transition:.25s}
+.dots button.on i{background:var(--terra);width:1.4rem;border-radius:.3rem}
+.nav .fs{background:none;border:2px solid #D8CEC0;color:var(--ink2);font-weight:600}
+
+/* Typo */
+.over{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--terra);margin:0 0 .15rem}
+h1{font-size:2.3rem;line-height:1.02;margin:0}
+h2{font-size:1.45rem;line-height:1.1;margin:0}
+.lead{font-size:.86rem;color:var(--ink2);margin:.35rem 0 0}
+
+/* Folie 1: Treppe */
+.s1head{display:flex;justify-content:space-between;align-items:flex-end;gap:1.2rem;flex-wrap:wrap}
+.badge18{display:flex;align-items:baseline;gap:.4rem;background:var(--terra-l);border-radius:.5rem;padding:.35rem .8rem;color:var(--terra-d)}
+.badge18 b{font-family:Georgia,serif;font-size:1.6rem;line-height:1}
+.badge18 span{font-size:.7rem;font-weight:600}
+.stairs{flex:1;min-height:9rem;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:1fr;gap:.4rem;align-items:end;margin:.9rem 0 .7rem}
+.st{border-radius:.45rem .45rem 0 0;color:#fff;padding:.45rem .55rem;display:flex;flex-direction:column;justify-content:flex-start;
+  height:0;transition:height .7s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.st .d{font-size:.58rem;font-weight:700;letter-spacing:.04em;opacity:.9}
+.st .w{font-size:.78rem;font-weight:700;line-height:1.15;margin-top:.15rem;hyphens:auto;-webkit-hyphens:auto}
+.st .x{font-size:.6rem;line-height:1.25;margin-top:.3rem;opacity:.92;hyphens:auto;-webkit-hyphens:auto}
+.merk{flex:none;display:flex;gap:.8rem;align-items:flex-start;background:var(--card);border-left:.35rem solid var(--terra);border-radius:.45rem;padding:.6rem .9rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.merk .l{flex:none;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--terra);padding-top:.2rem}
+.merk p{margin:0;font-size:.86rem}
+
+/* Checkliste */
+.chead{display:flex;align-items:center;gap:.8rem;margin-bottom:.2rem}
+.letter{flex:none;width:2.2rem;height:2.2rem;border-radius:.45rem;display:grid;place-items:center;font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:#fff;background:var(--slate)}
+.hint{display:flex;gap:1rem;flex-wrap:wrap;font-size:.62rem;color:var(--grey);margin:.35rem 0 .55rem}
+.hint span{display:inline-flex;align-items:center;gap:.3rem}
+.mini{display:inline-grid;place-items:center;width:1.1rem;height:1.1rem;border-radius:50%;font-size:.6rem;font-weight:800;color:#fff}
+.list{display:flex;flex-direction:column;gap:.42rem;margin-block:auto}
+.list[data-list="B"] .tx{font-size:.9rem}
+button.item{display:flex;align-items:center;gap:.8rem;width:100%;min-height:44px;text-align:left;background:var(--card);border:2px solid var(--line);
+  border-radius:.5rem;padding:.42rem .8rem;transition:border-color .2s,background .2s}
+.item .box{flex:none;width:1.75rem;height:1.75rem;border-radius:50%;border:2px solid #C9BEAF;display:grid;place-items:center;font-weight:800;font-size:.8rem;color:var(--grey);transition:.2s}
+.item .tx{flex:1;font-size:.82rem;line-height:1.28}
+.item .tx b{color:var(--terra-d)}
+.item .tag{flex:none;font-size:.54rem;font-weight:700;letter-spacing:.04em;color:var(--slate);background:var(--slate-l);border-radius:1rem;padding:.18rem .55rem;white-space:nowrap}
+.item.yes{border-color:var(--ok);background:var(--ok-l)}
+.item.yes .box{background:var(--ok);border-color:var(--ok);color:#fff}
+.item.unsure{border-color:var(--amb);background:var(--amb-l)}
+.item.unsure .box{background:var(--amb);border-color:var(--amb);color:#fff}
+.tally{padding-top:.5rem;font-size:.62rem;color:var(--grey);min-height:1.4rem}
+.tally b{color:var(--ink)}
+
+/* Bilanz */
+.amp{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin:.9rem 0 .7rem}
+.ac{background:var(--card);border-radius:.55rem;padding:.75rem .85rem;border-top:.4rem solid var(--c);box-shadow:0 1px 3px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s}
+.ac .r{display:flex;align-items:center;gap:.45rem;font-weight:800;font-size:.9rem}
+.ac .r i{width:.85rem;height:.85rem;border-radius:50%;background:var(--c);display:block}
+.ac .h{font-size:.62rem;color:var(--grey);margin:.15rem 0 .35rem}
+.ac p{margin:0;font-size:.76rem;line-height:1.3}
+.ac.hit{transform:translateY(-.25rem);box-shadow:0 0 0 3px var(--c),0 .4rem 1rem rgba(0,0,0,.12)}
+.heft{display:flex;gap:.8rem;align-items:center;background:var(--slate-l);border-left:.35rem solid var(--slate);border-radius:.45rem;padding:.55rem .9rem;font-size:.78rem}
+.heft svg{flex:none;width:1.4rem;height:1.7rem}
+.mine{font-size:.66rem;color:var(--grey);margin-top:.35rem;min-height:1rem}
+.mine b{color:var(--ink)}
+.reset{background:none;border:0;color:var(--slate);text-decoration:underline;font-size:.62rem;min-height:44px;padding:0 .3rem}
+
+/* Exit */
+.quote{margin:.7rem 0 .55rem;background:var(--ink);color:#fff;border-radius:.6rem;padding:.75rem 1.2rem;position:relative}
+.quote .q{font-family:Georgia,serif;font-size:1.35rem;line-height:1.2}
+.quote .who{font-size:.62rem;opacity:.7;margin-top:.35rem}
+.ask{font-size:.86rem;margin:0 0 .6rem}
+.revbtn{align-self:flex-start;min-height:44px;border:2px solid var(--terra);background:var(--card);color:var(--terra-d);font-weight:700;border-radius:.45rem;padding:.3rem 1rem;font-size:.74rem}
+.model{display:none;background:var(--card);border-left:.35rem solid var(--ok);border-radius:.45rem;padding:.6rem .9rem;font-size:.8rem;line-height:1.35;margin-top:.6rem}
+.model.show{display:block;animation:pop .35s}
+.model ul{margin:.25rem 0 0;padding-left:1.1rem}
+.model li{margin:.1rem 0}
+@keyframes pop{from{opacity:0;transform:translateY(.4rem)}to{opacity:1;transform:none}}
+.src{margin-top:auto;padding-top:.6rem;font-size:.5rem;color:var(--grey)}
+
+/* Hochformat (iPad hochkant) */
+@media (max-aspect-ratio:1/1){
+  html{font-size:clamp(15px,min(3.3vw,2.4vh),40px)}
+  h1{font-size:2rem}
+  .stairs{grid-template-columns:repeat(5,1fr);min-height:15rem}
+  .amp{grid-template-columns:1fr}
+  .st{padding:.4rem .4rem}
+  .st .w{font-size:.66rem}
+  .st .x{font-size:.54rem}
+  .st .d{font-size:.52rem}
+}
+@media (prefers-reduced-motion:reduce){.slide,.st,.ac{transition:none!important}.model.show{animation:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <span class="k">GL 10 · Lernziel-Check</span>
+    <span class="t" id="ttl">Machtübernahme 1933/34</span>
+    <span class="n" id="num">1 / 5</span>
+  </div>
+
+  <div class="stage" id="stage">
+
+    <!-- 1 Roter Faden -->
+    <section class="slide on" data-title="Der rote Faden">
+      <div class="s1head">
+        <div>
+          <p class="over">Rückblick auf die Stunde</p>
+          <h1 class="serif">Was kann ich jetzt?</h1>
+          <p class="lead">Der rote Faden: die Treppe in die Diktatur</p>
+        </div>
+        <div class="badge18"><b>18</b><span>Monate von der Demokratie<br>zur Diktatur</span></div>
+      </div>
+      <div class="stairs" id="stairs"></div>
+      <div class="merk">
+        <span class="l">Merksatz</span>
+        <p>Die NSDAP schaffte die Demokratie nicht mit einem Putsch ab. Sie fuhr zweigleisig: <b>scheinbar legale Gesetze und Verordnungen</b> auf der einen Seite, <b>Terror gegen ihre Gegner</b> auf der anderen.</p>
+      </div>
+    </section>
+
+    <!-- 2 Checkliste A -->
+    <section class="slide" data-title="Checkliste A: Wissen und erklären">
+      <div class="chead">
+        <span class="letter">A</span>
+        <div><p class="over" style="color:var(--slate)">Checkliste · Teil A</p><h2 class="serif">Das weiß ich und kann es erklären</h2></div>
+      </div>
+      <div class="hint">
+        <span>Lies jeden Satz und prüfe ehrlich: Kann ich das schon?</span>
+        <span><i class="mini" style="background:var(--ok)">✓</i> kann ich</span>
+        <span><i class="mini" style="background:var(--amb)">?</i> noch unsicher</span>
+        <span>(antippen)</span>
+      </div>
+      <div class="list" data-list="A"></div>
+      <div class="tally" data-tally></div>
+    </section>
+
+    <!-- 3 Checkliste B -->
+    <section class="slide" data-title="Checkliste B: Untersuchen und beurteilen">
+      <div class="chead">
+        <span class="letter" style="background:var(--terra)">B</span>
+        <div><p class="over">Checkliste · Teil B</p><h2 class="serif">Das kann ich untersuchen und beurteilen</h2></div>
+      </div>
+      <div class="hint">
+        <span>Die Königsdisziplin: Hier zeigst du, dass du mitdenken und urteilen kannst.</span>
+        <span><i class="mini" style="background:var(--ok)">✓</i> kann ich</span>
+        <span><i class="mini" style="background:var(--amb)">?</i> noch unsicher</span>
+      </div>
+      <div class="list" data-list="B"></div>
+      <div class="tally" data-tally></div>
+    </section>
+
+    <!-- 4 Bilanz -->
+    <section class="slide" data-title="Deine Bilanz">
+      <p class="over">Selbsteinschätzung</p>
+      <h2 class="serif">Wie viele Häkchen hast du?</h2>
+      <p class="lead">Zähle deine ✓ aus Teil A und B. Zeig dann per Handzeichen: Daumen hoch, zur Seite oder runter.</p>
+      <div class="amp" id="amp">
+        <div class="ac" style="--c:var(--ok)" data-min="7"><div class="r"><i></i>7–8 ✓</div><div class="h">Daumen hoch</div>
+          <p>Du hast den roten Faden. Erkläre deiner Nachbarin oder deinem Nachbarn Punkt 7 in eigenen Worten.</p></div>
+        <div class="ac" style="--c:var(--amb)" data-min="4"><div class="r"><i></i>4–6 ✓</div><div class="h">Daumen zur Seite</div>
+          <p>Gute Basis. Wiederhole zu Hause die Etappen der Lernseite, die bei deinen Fragezeichen-Punkten stehen.</p></div>
+        <div class="ac" style="--c:var(--red)" data-min="0"><div class="r"><i></i>0–3 ✓</div><div class="h">Daumen runter</div>
+          <p>Geh die Lernseite noch einmal durch. Starte mit der Treppe in die Diktatur (Etappe 3).</p></div>
+      </div>
+      <div class="heft">
+        <svg viewBox="0 0 26 32" aria-hidden="true"><rect x="1" y="1" width="24" height="30" rx="2" fill="#fff" stroke="#4F6B7A" stroke-width="2"/><path d="M6 10h14M6 16h14M6 22h9" stroke="#4F6B7A" stroke-width="2"/></svg>
+        <div><b>Ins Heft:</b> Notiere unter dem Arbeitsblatt die Nummern, hinter die du noch kein ✓ setzen kannst.</div>
+      </div>
+      <div class="mine" id="mine"></div>
+    </section>
+
+    <!-- 5 Exit -->
+    <section class="slide" data-title="Der letzte Satz">
+      <p class="over">Zum Schluss: Kannst du widersprechen?</p>
+      <h2 class="serif">Ein Satz zum Mitnehmen</h2>
+      <div class="quote">
+        <div class="q">„Hitler wurde doch gewählt. Also war alles legal.“</div>
+        <div class="who">Behauptung, die man bis heute hört</div>
+      </div>
+      <p class="ask">Antworte in zwei Sätzen. Nutze mindestens zwei Fachbegriffe aus dieser Stunde.</p>
+      <button class="revbtn" id="rev">Musterantwort zeigen</button>
+      <div class="model" id="model">
+        <b>Das stimmt so nicht.</b> Hitler wurde nicht vom Volk zum Kanzler gewählt, sondern von Reichspräsident Hindenburg ernannt. Die NSDAP hatte nie eine eigene Mehrheit, im März 1933 kam sie auf 43,9 Prozent. Danach schaffte sie die Demokratie Schritt für Schritt ab:
+        <ul>
+          <li>mit einer <b>Notverordnung</b>, die die Grundrechte außer Kraft setzte (Reichstagsbrandverordnung),</li>
+          <li>mit einem <b>Ermächtigungsgesetz</b>, das unter Druck und ohne die verhafteten oder geflohenen KPD-Abgeordneten beschlossen wurde,</li>
+          <li>mit <b>Terror</b> gegen Gegner und der <b>Gleichschaltung</b>.</li>
+        </ul>
+        Das war nur <b>scheinbar legal</b> (Scheinlegalität).
+      </div>
+      <div class="src">Buch: #Gesellschaftslehre 9/10, C.C. Buchner, S. 278–279 · Grafiken und Texte: eigene Darstellung</div>
+    </section>
+
+  </div>
+
+  <div class="nav">
+    <button class="b prev" id="prev" aria-label="Zurück">Zurück</button>
+    <div class="dots" id="dots"></div>
+    <button class="b fs" id="fs" aria-label="Vollbild" hidden>Vollbild</button>
+    <button class="b next" id="next" aria-label="Weiter">Weiter</button>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var KEY="gl10-machtuebernahme-check-v1";
+
+var STEPS=[
+ {d:"30.01.1933",w:"Hitler wird Reichs­kanzler",x:"noch verfassungs­gemäß",c:"#D6A487",h:40},
+ {d:"28.02.1933",w:"Reichs­tags­brand­ver­ord­nung",x:"Grund­rechte außer Kraft",c:"#C3825F",h:55},
+ {d:"23.03.1933",w:"Er­mäch­ti­gungs­ge­setz",x:"Parlament entmachtet, Gewalten­teilung weg",c:"#AE6240",h:70},
+ {d:"1933 · ab 14.07.",w:"Gleich­schal­tung",x:"Länder, Gewerk­schaften, Parteien: Ein­parteien­staat",c:"#8E4524",h:85},
+ {d:"02.08.1934",w:"„Führer und Reichs­kanzler“",x:"Ämter vereint, Reichswehr auf Hitler vereidigt",c:"#6A2F15",h:100}
+];
+
+var ITEMS={
+ A:[
+  {t:"Ich kann die <b>fünf Stufen</b> vom 30. Januar 1933 bis zum 2. August 1934 in die richtige Reihenfolge bringen.",g:"Treppe · Etappe 3"},
+  {t:"Ich weiß, welche Grundrechte die <b>Reichstagsbrandverordnung</b> außer Kraft setzte und wozu die NSDAP den Brand als Vorwand nutzte.",g:"Etappe 1"},
+  {t:"Ich kann erklären, warum mit dem <b>Ermächtigungsgesetz</b> die Gewaltenteilung endete.",g:"Etappe 2"},
+  {t:"Ich kann an zwei Beispielen erklären, was <b>Gleichschaltung</b> bedeutet.",g:"Etappe 3"},
+  {t:"Ich kann begründen, warum Hitler ab August 1934 <b>niemand mehr kontrollieren oder absetzen</b> konnte.",g:"Etappe 3"}
+ ],
+ B:[
+  {t:"Ich kann einem <b>Gesetzestext</b> entnehmen, welche Macht die Regierung 1933 bekam (Ermächtigungsgesetz, Buch S. 279, M5).",g:"Etappe 2"},
+  {t:"Ich kann begründet beurteilen, ob die Machtübernahme <b>„legal“</b> war, und dabei den Begriff <b>Scheinlegalität</b> verwenden.",g:"Etappe 2 · Quiz"},
+  {t:"Ich kann zwei <b>Sicherungen des Grundgesetzes</b> nennen, die heute so etwas verhindern sollen, und erklären, warum Gesetze allein nicht reichen.",g:"Etappe 4"}
+ ]
+};
+
+var state={};
+try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&typeof s==="object")state=s;}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+
+/* Treppe */
+var st=document.getElementById("stairs");
+STEPS.forEach(function(p){
+  var d=document.createElement("div");d.className="st";d.style.background=p.c;d.dataset.h=p.h;
+  d.innerHTML='<span class="d">'+p.d+'</span><span class="w">'+p.w+'</span><span class="x">'+p.x+'</span>';
+  st.appendChild(d);
+});
+function growStairs(on){
+  [].forEach.call(st.children,function(el,i){
+    if(on){setTimeout(function(){el.style.height=el.dataset.h+"%";},120+i*160);}else{el.style.height="0";}
+  });
+}
+
+/* Checkliste */
+var NEXT={"":"yes",yes:"unsure",unsure:""};
+var n=0;
+["A","B"].forEach(function(k){
+  var box=document.querySelector('[data-list="'+k+'"]');
+  ITEMS[k].forEach(function(it){
+    n++;var id="i"+n;
+    var b=document.createElement("button");b.className="item";b.dataset.id=id;b.dataset.nr=n;
+    b.innerHTML='<span class="box">'+n+'</span><span class="tx">'+it.t+'</span><span class="tag">'+it.g+'</span>';
+    b.addEventListener("click",function(){state[id]=NEXT[state[id]||""];if(!state[id])delete state[id];save();paint();});
+    box.appendChild(b);
+  });
+});
+function counts(){var y=0,u=0;Object.keys(state).forEach(function(k){if(state[k]==="yes")y++;else if(state[k]==="unsure")u++;});return {y:y,u:u};}
+function paint(){
+  [].forEach.call(document.querySelectorAll("button.item"),function(b){
+    var v=state[b.dataset.id]||"";b.classList.toggle("yes",v==="yes");b.classList.toggle("unsure",v==="unsure");
+    b.querySelector(".box").textContent=v==="yes"?"✓":v==="unsure"?"?":b.dataset.nr;
+    b.setAttribute("aria-label","Punkt "+b.dataset.nr+(v==="yes"?": kann ich":v==="unsure"?": noch unsicher":": offen"));
+  });
+  var c=counts();
+  var t=(c.y||c.u)?'Bisher: <b>'+c.y+' ✓</b> von 8 · <b>'+c.u+' ?</b>':"";
+  [].forEach.call(document.querySelectorAll("[data-tally]"),function(e){e.innerHTML=t;});
+  var mine=document.getElementById("mine");
+  var hit=null;
+  if(c.y||c.u){
+    var q=[];[].forEach.call(document.querySelectorAll("button.item.unsure"),function(b){q.push(b.dataset.nr);});
+    mine.innerHTML='Auf diesem Gerät markiert: <b>'+c.y+' ✓</b>'+(q.length?' · noch unsicher: <b>Nr. '+q.join(", ")+'</b>':'')+' <button class="reset" id="reset">Markierungen löschen</button>';
+    hit=c.y>=7?"7":c.y>=4?"4":"0";
+    document.getElementById("reset").addEventListener("click",function(){state={};save();paint();});
+  }else{mine.innerHTML="";}
+  [].forEach.call(document.querySelectorAll(".ac"),function(a){a.classList.toggle("hit",a.dataset.min===hit);});
+}
+paint();
+
+/* Musterantwort */
+document.getElementById("rev").addEventListener("click",function(){
+  var m=document.getElementById("model");var on=m.classList.toggle("show");
+  this.textContent=on?"Musterantwort ausblenden":"Musterantwort zeigen";
+});
+
+/* Folien */
+var slides=[].slice.call(document.querySelectorAll(".slide"));
+var cur=0,dots=document.getElementById("dots");
+slides.forEach(function(s,i){
+  var b=document.createElement("button");b.setAttribute("aria-label","Folie "+(i+1));b.innerHTML="<i></i>";
+  b.addEventListener("click",function(){go(i);});dots.appendChild(b);
+});
+function go(i){
+  if(i<0||i>=slides.length)return;
+  slides.forEach(function(s,j){s.classList.toggle("on",j===i);s.classList.toggle("left",j<i);});
+  [].forEach.call(dots.children,function(d,j){d.classList.toggle("on",j===i);});
+  cur=i;
+  document.getElementById("num").textContent=(i+1)+" / "+slides.length;
+  document.getElementById("ttl").textContent="Machtübernahme 1933/34 · "+slides[i].dataset.title;
+  document.getElementById("prev").disabled=i===0;
+  document.getElementById("next").disabled=i===slides.length-1;
+  growStairs(i===0);
+  slides[i].scrollTop=0;
+  try{history.replaceState(null,"","#"+(i+1));}catch(e){}
+}
+document.getElementById("prev").addEventListener("click",function(){go(cur-1);});
+document.getElementById("next").addEventListener("click",function(){go(cur+1);});
+document.addEventListener("keydown",function(e){
+  if(e.key==="ArrowRight"||e.key==="PageDown"||e.key===" "){e.preventDefault();go(cur+1);}
+  else if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();go(cur-1);}
+});
+var sx=null,sy=null;
+var stage=document.getElementById("stage");
+stage.addEventListener("touchstart",function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+stage.addEventListener("touchend",function(e){
+  if(sx===null)return;var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;sx=null;
+  if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1));
+},{passive:true});
+
+/* Vollbild, falls unterstützt */
+var fs=document.getElementById("fs"),root=document.documentElement;
+var req=root.requestFullscreen||root.webkitRequestFullscreen;
+if(req){fs.hidden=false;fs.addEventListener("click",function(){
+  try{
+    if(document.fullscreenElement||document.webkitFullscreenElement){(document.exitFullscreen||document.webkitExitFullscreen).call(document);}
+    else{var p=req.call(root);if(p&&p.catch)p.catch(function(){});}
+  }catch(e){}
+});}
+
+var start=0;try{var h=parseInt(location.hash.slice(1),10);if(h>=1&&h<=slides.length)start=h-1;}catch(e){}
+go(start);
+})();
+</script>
+</body>
+</html>
