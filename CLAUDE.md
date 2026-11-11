@@ -139,6 +139,8 @@ Jedes Arbeitsblatt sieht neu aus, als hätte es eine andere Person entworfen: zw
 - wiederholt keine Kombination aus Kopfgestaltung + Seitenraster + Rahmen der letzten 8 Blätter.
 Zwei Blätter desselben Laufs unterscheiden sich in mindestens 5 Merkmalen. Gleich bleiben dürfen nur Bedeutungen (z. B. ★ = Profi, ★★ = Experte, Symbol für Partnerarbeit), nicht ihre Gestaltung.
 
+**Abwechslung auch in der Methode:** Im Designprotokoll zusätzlich je Blatt die Hauptmethode bzw. das prägende Aufgabenformat notieren (z. B. Fallanalyse, Quellenarbeit, Rangliste, Rollenkarte, Zeitleiste, Entscheidungsspiel, Bildanalyse, Streitgespräch, Lernplakat). Dieselbe Hauptmethode nicht zweimal hintereinander in derselben Klasse.
+
 Abschlussnachricht: eine Zeile „Design: <Palette, Kopf, Raster in Stichworten> (neu gegenüber dem letzten Blatt: X von 11 Merkmalen)“.
 
 ### R6 – Ergebnissicherung, Selbstbewertung und Vorzeigen (Stand 11.11.2026)
@@ -179,6 +181,32 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 
 **Prüfen vor dem Ausliefern:** Stufen und Schwellen in Quiz, Lernseite und Selbsttest identisch und richtig berechnet (mit Testantworten durchklicken: 0 %, ca. 50 %, 100 %), Kontrollaufgabe markiert, Feld „Mein Ergebnis“ und Ablauf auf dem Blatt, 4 Handgriffe mit Erwartungshorizont und Abschlussfrage im Vertretungskasten.
 - Abschlussnachricht: eine Zeile „Ergebnissicherung: Stufen A–D im Quiz/Selbsttest, Kontrollaufgabe: Nr. …, Abschlussfrage: …“.
+
+### R7 – Qualitätsanspruch und Qualitätssicherung (Stand 11.11.2026)
+
+**Maßstab:** Jedes Produkt (Arbeitsblatt, Lösungsblatt, Lernseite, Quiz) erreicht oder übertrifft die Qualität kommerzieller, käuflicher Unterrichtsmaterialien (Verlagsarbeitshefte, Bestseller auf Lehrer-Marktplätzen): fachlich fehlerfrei, didaktisch durchdacht, sauber gesetzt, sofort einsetzbar. Es läuft ohne Zutun der Lehrkraft (R3, R6); Tobias kann die Stunde trotzdem frei anders gestalten.
+
+**Qualität vor Tempo:** Die Anweisung „Arbeite zügig und ohne unnötige Schleifen“ in den Aufträgen ist aufgehoben. Die Läufe starten seit 11.11.2026 kurz nach Mitternacht, es ist Zeit für mehrere Prüfrunden. Die Frist 6:00 Uhr bleibt. Wird es knapp (ab ca. 5:30 Uhr), die bis dahin beste, vollständig geprüfte Fassung ausliefern und offene Punkte in der Abschlussnachricht nennen.
+
+**Arbeitsweise in Stufen (jede Stufe ist Pflicht):**
+1. **Planen:** Stundenverlauf mit Minuten skizzieren, getrennt für schwache, mittlere und starke SuS (wer macht wann was, wo greifen Tipps, wo die Puffer). Erst dann bauen.
+2. **Bauen** nach R1–R6.
+3. **Probebearbeitung:** Zu jeder Kernaufgabe drei Musterantworten schreiben: schwache Schülerin mit Tipps, mittlerer Schüler, starke Schülerin. Prüfen: Reichen die Tipps wirklich? Ist die Aufgabe ohne Rückfrage verständlich? Fordert sie die Starke? Passt der Schreibraum zur mittleren Antwort? Stimmen Zeitansätze und Lösungsblatt? Wenn nein: ändern.
+4. **Technische Tests:**
+   - PDF: jede Seite mit 200 dpi als PNG rendern und ansehen (abgeschnittene oder überlappende Texte, leere Seiten, Seitenumbrüche mitten in Aufgaben, Bildschärfe, Kopfhöhe, Graustufen-Probe nach R4), QR-Code nach R1 auslesen.
+   - Lernseite und Quiz im Headless-Browser in iPad-Größe hoch und quer: jede Frage einmal richtig und einmal falsch beantworten, alle Knöpfe, Stufenberechnung mit 0 %, ca. 50 %, 100 %, „Fehler verbessern“, Neuladen mitten im Quiz (Fortschritt bleibt), Konsole fehlerfrei. Zusätzlich mit blockiertem Netzwerk laden: Die Seite muss vollständig funktionieren (keine externen Ressourcen).
+5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R7. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
+6. **Endabnahme:** Erst ausliefern, wenn keine A-Mängel offen sind.
+
+**Satz und Typografie (wie im Verlag):** einheitliche Abstände und Ränder (mind. 1,5 cm), Zeilenabstand gut lesbar, Fließtext mind. 10,5 pt (Jg. 7/8 eher 11–12 pt), keine einzelnen Zeilen am Seitenanfang oder -ende, keine Aufgabe über einen Seitenumbruch zerrissen, Silbentrennung sauber, deutsche Anführungszeichen („…“), einheitliche Schreibweise, fehlerfreie Rechtschreibung und Zeichensetzung (jeden Text Korrektur lesen), Bilder für Druck scharf (ca. 300 dpi in Druckgröße), Bildnachweise klein und vollständig.
+
+**Fachliche Richtigkeit:** Jede Sachaussage, Zahl, Altersgrenze, Jahreszahl und Seitenangabe gegen Buchscan oder seriöse Quelle prüfen (bei aktuellen Daten mit Stand). Lösungsblatt, Quiz und Arbeitsblatt widersprechen sich nirgends.
+
+**Motivation:** Je Einheit mindestens ein Element mit Wahlfreiheit oder einem eigenen Produkt (Wahlaufgabe, kreative Gestaltung, Entscheidung mit Begründung) und ein echter Lebensweltbezug der Altersgruppe.
+
+**Freiheit für die Lehrkraft:** Im Lösungsblatt ein kurzer Kasten „Andere Wege“ mit 2–3 Varianten (z. B. Einstieg im Plenum, Aufgabe X als Partnerarbeit, Abschluss als Placemat). Das Schülerblatt bleibt davon unabhängig selbstlaufend.
+
+**Abschlussnachricht:** eine Zeile „Qualitätsprüfung: Probebearbeitung 3 Niveaus ✓ · Tests ✓ · unabhängige Prüfung: X Runden, behoben: … · offen: keine / …“.
 
 ## Ordnerstruktur
 
