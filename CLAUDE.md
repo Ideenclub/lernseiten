@@ -29,6 +29,59 @@ Hinweis: Für Dateiform der Lernseiten (eine .html-Datei direkt im Klassenordner
 - Abschlussnachricht: eine Zeile „QR auf dem Arbeitsblatt: ja – <Ort> (Code geprüft)“ bzw. „nein – kein Online-Angebot“.
 - Der große QR-Code zum Zeigen (PNG, mind. 1200 px, im Artefakt oben) bleibt zusätzlich bestehen.
 
+### R2 – Niveau, Zeit und Pufferaufgaben (Stand 11.11.2026)
+
+Gilt für Arbeitsblatt, Lernseite und Quiz in GL 7, GL 8, GL 10 und WiPo 10.
+
+**R2 ersetzt alle älteren Niveau- und Umfangsvorgaben**, egal ob sie im Auftragstext der geplanten Aufgabe (Abschnitt „NIVEAU UND UMFANG“), in den Projektanweisungen oder in der Verlaufsdatei stehen. Ungültig sind insbesondere: „höchstens Hauptschulniveau“, „lieber leicht darunter“, „Tendenz zum Hauptschulniveau“, „sehr kurze Texte (max. ca. 80–120 Wörter)“, „Komplexität geringer als bei den frühen Blättern“, feste Richtwerte wie „3 Kernaufgaben + 1 Zusatzaufgabe“ und die Prüffrage „Schafft ein leistungsschwacher Schüler jede Kernaufgabe allein? Wenn nein: kürzen“. Wo ein Auftrag „NIVEAU UND UMFANG haben Vorrang“ sagt, ist R2 gemeint. Steht in einer Verlaufsdatei noch ein Abschnitt mit älteren Niveauvorgaben, ersetze ihn beim nächsten Schreiben der Datei durch die Zeile „Niveau, Zeit, Puffer, Plan B: siehe R2 und R3 der CLAUDE.md (Stand 11.11.2026)“.
+
+Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Doppelstunden-Blatt nach rund 10 Minuten fertig und wurden unruhig. Das Niveau war zu niedrig, der Umfang zu klein, Puffer fehlten.
+
+**Niveau – Gesamtschule, heterogene Lerngruppe**
+- Der Pflichtteil liegt auf mittlerem Niveau: Durchschnittliche SuS müssen nachdenken, schwächere schaffen ihn mit optionalen Hilfen, starke bekommen ihre Herausforderung in den Pufferaufgaben.
+- Pflichtteil je Einheit: Aufgaben in AFB I, überwiegend AFB II und mindestens eine AFB-III-Aufgabe (beurteilen, begründet entscheiden, Stellung nehmen; in Jg. 7/8 mit optionaler Hilfe).
+- Mindestens eine Knobelaufgabe je Einheit: Fall lösen, Widerspruch klären, Materialien vergleichen, Rangfolge begründen, Entscheidung treffen. Die Antwort darf nicht wörtlich aus einem Text abschreibbar sein.
+- Materialtexte altersgemäß, keine Leichte Sprache: Jg. 7/8 ca. 120–220 Wörter je Material, Jg. 10 bis ca. 300 Wörter. Fachbegriffe einführen (Wortspeicher) und in den Antworten einfordern.
+- Ankreuzen, Zuordnen und Lückentexte nur für Einstieg oder Sicherung, höchstens ein Viertel der Aufgaben. Den Kern bilden Aufgaben, die in eigenen Sätzen beantwortet werden.
+- Hilfen gestuft und optional (Tipp-Kasten, Wortspeicher, Satzanfänge), getrennt von der Aufgabe, damit sie den Anspruch nicht für alle senken.
+- Lernseite und Quiz: mindestens die Hälfte der Fragen verlangt Anwendung (Fall, Beispiel, Begründung), nicht nur Wiedererkennen.
+- Unberührt bleibt die Portionierung: In GL 7 (kurze Konzentrationsspanne mehrerer SuS) auf der Lernseite kurze Etappen mit häufigem Wechsel (lesen – anklicken – entscheiden). Das betrifft die Form, nicht das Niveau.
+
+**Zeit – der Kern füllt die Arbeitsphase**
+- Die Kernaufgaben beschäftigen durchschnittliche SuS realistisch: Einzelstunde (45 Min.) ca. 25–30 Min. Arbeitszeit, Doppelstunde (90 Min.) ca. 55–65 Min. Der Rest ist Einstieg, Sicherung, Organisation.
+- Im Lösungsblatt bekommt jede Aufgabe einen Zeitansatz für durchschnittliche SuS des Jahrgangs (Lesen, Nachdenken, Schreiben einrechnen). Die Summe der Kernaufgaben muss im Zielbereich liegen; sonst Aufgaben ergänzen oder vertiefen, nicht nur Schreibraum vergrößern.
+- Der Umfang richtet sich nach dem Zeitansatz, nicht nach einer festen Aufgabenzahl.
+
+**Pufferaufgaben – Pflicht auf jedem Arbeitsblatt**
+- Am Ende jedes Arbeitsblatts ein klar abgesetzter Bereich „Schon fertig?“ mit gestuften Zusatzaufgaben: Einzelstunde mindestens 2, Doppelstunde mindestens 3.
+  - ★ Profi-Aufgabe: vertiefen oder anwenden (AFB II–III).
+  - ★★ Experten-Aufgabe: Transfer, Beurteilung oder kreatives Produkt.
+  - Buchauftrag ins Heft (mit kleinem Buch-Icon als Vektorgrafik, kein Emoji), ohne Platzbedarf auf dem Blatt: „Buch S. __, M__ – Aufgabe __ ins Heft.“ Nur Seiten, Materialnummern und Aufgabennummern, die genau so auf den Scans stehen. Fehlen Scans: eine Heftaufgabe ohne Buch (z. B. Mindmap, Brief, Comic, Lernplakat).
+- Mindestens eine Pufferaufgabe ist zeitlich offen und kann nie ausgehen (z. B. „Schreibe 5 Quizfragen mit Lösung für deine Mitschüler“ oder ein Heftprodukt).
+- Das Lösungsblatt enthält Lösungen bzw. Erwartungshorizont zu allen Pufferaufgaben.
+- Die Lernseite endet ebenfalls mit „Schon fertig?“ (Bonusetappe oder Verweis auf die Pufferaufgaben des Blatts).
+
+**Kompakter Kopf – Platz für Aufgaben**
+- Kopfbereich (Titel, Fach, Name/Datum, QR-Code) höchstens ca. 3 cm hoch.
+- Ein Einstiegsbild höchstens ca. ein Sechstel der Seite (z. B. volle Breite, max. ca. 4,5 cm hoch, oder schmal neben dem Text). Größer nur, wenn das Bild selbst das Arbeitsmaterial ist.
+- Der gewonnene Platz geht an Aufgaben, Schreibraum und Pufferbereich. Weißraum ja, aber keine leeren Flächen ohne Funktion.
+
+**Prüfen vor dem Ausliefern**
+- Zeitansätze addieren (mit Python), Knobelaufgabe und AFB-III-Aufgabe vorhanden, Pufferbereich vollständig, Kopfhöhe im gerenderten PNG gemessen.
+- Abschlussnachricht: eine Zeile „Zeit/Puffer: Kern ca. X Min. · Puffer: ★ … · ★★ … · Buch S. … (bzw. Heftaufgabe)“, bei mehreren Einheiten je Einheit.
+
+### R3 – Selbstlaufendes Arbeitsblatt: ohne Internet, ohne iPad, mit Vertretung (Stand 11.11.2026)
+
+Gilt für jedes Arbeitsblatt aller Klassen. Ziel: Die Stunde läuft vollständig, auch wenn das Internet ausfällt, der iPad-Wagen fehlt, ein Link nicht geht oder eine Vertretungslehrkraft ohne Vorbereitung die Stunde übernimmt.
+
+- **Alles Nötige auf dem Blatt oder im Buch:** Jede Kernaufgabe lässt sich allein mit Arbeitsblatt, Buch (genaue Seite und Materialnummer), Heft und ggf. Atlas lösen. Nichts, was für die Kernaufgaben nötig ist, steht nur auf der Lernseite. Kein Pflichtmaterial, das nur die Fachlehrkraft hat (Video, Folie, Tafelbild).
+- **Selbsterklärende Aufgaben:** Operator fett, bei neuen Aufgabenformen ein kurzes Beispiel, Sozialform als Symbol. Keine Verweise wie „wie besprochen“, „siehe Tafel“ oder „deine Lehrkraft erklärt“.
+- **Ablaufzeile unter dem Titel** (eine Zeile, zählt zum Kopfbereich): z. B. „So arbeitest du: 1 → 2 → 3 → 4 → Schon fertig?“ mit grober Minutenangabe. Die SuS wissen ohne Erklärung, was zu tun ist.
+- **Kasten „Kein Internet / kein iPad?“** direkt beim QR-Code (1–2 Zeilen): „Kein Problem: Bearbeite alle Aufgaben auf diesem Blatt. Statt des Online-Quiz: …“ – mit einem konkreten Ersatz, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
+- **Vertretungskasten im Lösungsblatt**, ganz oben, in einer Minute lesbar: Thema in einem Satz · austeilen · benötigt (Buch S. …, ggf. Atlas) · Ablauf in 3 Schritten mit Minuten · wer fertig ist → „Schon fertig?“-Bereich · was am Ende gesichert oder eingesammelt wird. Ohne Fachbegriffe aus der Lehrkraftplanung.
+- **Prüfen vor dem Ausliefern:** Gedankenprobe „kein Internet + fachfremde Vertretung“: Kann die Klasse allein mit Blatt, Buch und Heft die ganze Stunde sinnvoll arbeiten, ohne dass jemand etwas erklärt? Wenn nein: nachbessern.
+- Abschlussnachricht: eine Zeile „Plan B: ja – Offline-Ersatz für das Quiz: …, Vertretungskasten im Lösungsblatt“.
+
 ## Ordnerstruktur
 
 ```
@@ -113,5 +166,5 @@ In den geplanten Aufgaben lehnt der Git-Proxy den Push derzeit ab (403 „not in
   - Fortschrittsanzeige, am Ende ein Abschluss-Quiz und ein Ergebnisbildschirm („Zeig dieses Ergebnis deiner Lehrkraft“) mit Punktzahl, ohne Namen,
   - Hinweis, was auf dem Arbeitsblatt bzw. im Heft gesichert wird.
 - Fragetypen mischen: Multiple Choice, Richtig/Falsch, Zuordnen (Tippen statt Ziehen ist auf dem iPad zuverlässiger), Reihenfolge, Lückentext mit Auswahl, Bild anklicken.
-- Niveau und Textlänge folgen den Vorgaben der jeweiligen geplanten Aufgabe (GL 7/GL 8/WiPo 10: sehr kurze Texte, einfache Sätze; GL 10: Gesamtschulniveau).
+- Niveau, Textlänge, Zeit und Pufferaufgaben: siehe R2 (Stand 11.11.2026). Ohne Internet und mit Vertretung muss das Arbeitsblatt die Stunde tragen: siehe R3.
 - Nach dem Bauen: Seite lokal mit einem Headless-Browser (z. B. Playwright) in iPad-Größe (820×1180) als Screenshot prüfen, alle Quizfragen einmal durchklicken, JS-Konsole auf Fehler prüfen.
