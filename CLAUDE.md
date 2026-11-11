@@ -114,6 +114,13 @@ Anlass: SuS haben Tobias gefragt, ob die Blätter mit KI gemacht sind. Ziel ist 
 - Echte Fotos haben Vorrang (Unsplash, Wikimedia Commons). KI-Bilder nie mit Menschen, Gesichtern, Händen, Tieren im Fokus oder Schrift im Bild; höchstens für neutrale Gegenstände oder Hintergründe und nur ohne erkennbare KI-Merkmale (Hochglanz-Look, unlogische Details, verzerrte Kanten). Sonst echtes Foto, schlichte Zeichnung oder Motiv weglassen.
 - Jedes Bild in der Vorschau auf solche Merkmale prüfen.
 
+**Bildnachweise dezent (Stand 11.11.2026)** – SuS haben die ständige Angabe „Unsplash“ unten auf den Blättern als KI-Hinweis gedeutet.
+- **Unsplash (auch Unsplash+): kein Bildnachweis auf dem Schülerblatt und auf der Lernseite.** Die Unsplash-Lizenz verlangt keine Namensnennung, auch nicht bei Bildern, die über eine Unsplash-Integration geladen wurden. Fotograf und Link stehen nur im Lehrkraftteil des Lösungsblatts in einer kleinen Zeile „Bildquellen (für die Lehrkraft)“ und in der Abschlussnachricht; auf der Lernseite höchstens als HTML-Kommentar im Quelltext.
+- **Wikimedia Commons gemeinfrei/CC0 und eigene Grafiken:** ebenfalls kein Nachweis auf dem Schülerblatt (nur im Lehrkraftteil).
+- **Wikimedia Commons mit CC BY oder CC BY-SA:** Nachweis ist Pflicht und bleibt. Dann im Verlagsstil: eine einzige kleine, graue Zeile (6–7 pt) ganz unten auf der Seite, beginnend mit „Bildnachweis:“, z. B. „Bildnachweis: M2 Max Muster / Wikimedia Commons, CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)“. Auf der Lernseite dieselbe Angabe klein am Seitenende. Kein eigener Kasten, keine Überschrift, kein Logo.
+- Deshalb bei gleich guter Eignung Bilder ohne Nachweispflicht bevorzugen (Unsplash, Commons gemeinfrei/CC0), damit das Schülerblatt ganz ohne Quellenzeile auskommt.
+- Nie auf dem Schülerblatt oder der Lernseite: „Unsplash“, „Canva“, „Stock“, „KI“, „generiert“ oder Tool-Namen. Die Pflicht, nur rechtlich nutzbare Bilder zu verwenden und die Quelle zu kennen, bleibt unverändert.
+
 **Prüfen vor dem Ausliefern (KI-Probe):** Das gerenderte Blatt mit den Augen eines 13-Jährigen ansehen: Gibt es etwas, das „nach KI aussieht“ (Sprache, Optik, Bild)? Liste oben durchgehen und jeden Fund ändern. Abschlussnachricht: eine Zeile „KI-Probe: bestanden (geändert: …)“.
 
 ### R5 – Abwechslung in der Gestaltung (Stand 11.11.2026)
@@ -277,7 +284,7 @@ In den geplanten Aufgaben lehnt der Git-Proxy den Push derzeit ab (403 „not in
 - `localStorage` nur für den Lernfortschritt auf dem eigenen iPad, Zugriffe immer in `try/catch`.
 - Keine Schulbuch-Scans, keine Buchabbildungen, keine wörtlichen Buchtexte (Urheberrecht). Das Buch nur referenzieren: „Schlag im Buch S. 54 auf und sieh dir M2 an.“
 - Arbeits- und Lösungsblätter (PDF) gehören NICHT ins Repository.
-- Bilder nur mit klarer Lizenz (Unsplash, Wikimedia Commons mit passender Lizenz, eigene Grafiken) und mit Bildnachweis klein am Seitenende.
+- Bilder nur mit klarer Lizenz (Unsplash, Wikimedia Commons mit passender Lizenz, eigene Grafiken). Bildnachweise nach R4 „Bildnachweise dezent“: Unsplash und gemeinfreie Bilder ohne sichtbaren Nachweis, CC-BY-Bilder mit einer kleinen Zeile am Seitenende.
 - Keine Hinweise auf KI-Erstellung auf der Schülerseite (Ausnahme: rechtlich vorgeschriebene Kennzeichnung KI-generierter Bilder, dann knapp in der Bildnachweiszeile).
 
 ## Gestaltung einer Lernseite
