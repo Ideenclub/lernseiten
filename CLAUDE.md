@@ -120,6 +120,7 @@ Anlass: SuS haben Tobias gefragt, ob die Blätter mit KI gemacht sind. Ziel ist 
 - **Wikimedia Commons mit CC BY oder CC BY-SA:** Nachweis ist Pflicht und bleibt. Dann im Verlagsstil: eine einzige kleine, graue Zeile (6–7 pt) ganz unten auf der Seite, beginnend mit „Bildnachweis:“, z. B. „Bildnachweis: M2 Max Muster / Wikimedia Commons, CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)“. Auf der Lernseite dieselbe Angabe klein am Seitenende. Kein eigener Kasten, keine Überschrift, kein Logo.
 - Deshalb bei gleich guter Eignung Bilder ohne Nachweispflicht bevorzugen (Unsplash, Commons gemeinfrei/CC0), damit das Schülerblatt ganz ohne Quellenzeile auskommt.
 - Nie auf dem Schülerblatt oder der Lernseite: „Unsplash“, „Canva“, „Stock“, „KI“, „generiert“ oder Tool-Namen. Die Pflicht, nur rechtlich nutzbare Bilder zu verwenden und die Quelle zu kennen, bleibt unverändert.
+- Einzige Ausnahme ist die gesetzlich nötige Kennzeichnung (Art. 50 Abs. 4 EU AI Act): Wirkt ein KI-Bild fotorealistisch und zeigt es real wirkende Orte, Ereignisse, Personen oder Gegenstände, die für echt gehalten werden könnten, steht in der kleinen Nachweiszeile „Abb. …: KI-generiert“. Solche Bilder deshalb möglichst vermeiden.
 
 **Prüfen vor dem Ausliefern (KI-Probe):** Das gerenderte Blatt mit den Augen eines 13-Jährigen ansehen: Gibt es etwas, das „nach KI aussieht“ (Sprache, Optik, Bild)? Liste oben durchgehen und jeden Fund ändern. Abschlussnachricht: eine Zeile „KI-Probe: bestanden (geändert: …)“.
 
