@@ -43,7 +43,12 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
 - Mindestens eine Knobelaufgabe je Einheit: Fall lösen, Widerspruch klären, Materialien vergleichen, Rangfolge begründen, Entscheidung treffen. Die Antwort darf nicht wörtlich aus einem Text abschreibbar sein.
 - Materialtexte altersgemäß, keine Leichte Sprache: Jg. 7/8 ca. 120–220 Wörter je Material, Jg. 10 bis ca. 300 Wörter. Fachbegriffe einführen (Wortspeicher) und in den Antworten einfordern.
 - Ankreuzen, Zuordnen und Lückentexte nur für Einstieg oder Sicherung, höchstens ein Viertel der Aufgaben. Den Kern bilden Aufgaben, die in eigenen Sätzen beantwortet werden.
-- Hilfen gestuft und optional (Tipp-Kasten, Wortspeicher, Satzanfänge), getrennt von der Aufgabe, damit sie den Anspruch nicht für alle senken.
+- **Hilfen für Schwächere, ohne die Starken zu bremsen:**
+  - Zu jeder Kernaufgabe mit Schreib- oder Denkanteil gibt es mindestens eine Hilfe, gestuft: Tipp 1 = Denkanstoß (Frage, Hinweis auf die Textstelle), Tipp 2 = Wortspeicher oder Satzanfänge, Tipp 3 = Beispiel oder Struktur (z. B. Tabelle vorgegeben, erster Satz vorgeschrieben).
+  - Die Hilfen stehen getrennt von der Aufgabe (Randspalte, Tippkasten am Seitenende oder umgedreht unten auf der Seite), nie in die Aufgabe eingebaut. Wer sie nicht braucht, sieht die Aufgabe in voller Schwierigkeit. Auf dem Blatt kurz: „Tipps nur nutzen, wenn du nicht weiterkommst.“
+  - Lesehilfen bei Materialtexten: Zeilennummern, Absätze, schwierige Wörter am Rand erklärt.
+  - Für Starke: Kernaufgaben haben eine offene Spitze (begründen, Gegenbeispiel finden, abwägen), sodass gute Antworten weiter gehen können als die Mindestlösung. Dazu die gestuften Pufferaufgaben (★/★★).
+  - Prüffrage je Kernaufgabe: Welche Hilfe hat ein schwacher Schüler hier? Was fordert einen starken Schüler hier noch? Fehlt eine der beiden Antworten: nachbessern.
 - Lernseite und Quiz: mindestens die Hälfte der Fragen verlangt Anwendung (Fall, Beispiel, Begründung), nicht nur Wiedererkennen.
 - Unberührt bleibt die Portionierung: In GL 7 (kurze Konzentrationsspanne mehrerer SuS) auf der Lernseite kurze Etappen mit häufigem Wechsel (lesen – anklicken – entscheiden). Das betrifft die Form, nicht das Niveau.
 
@@ -82,8 +87,59 @@ Gilt für jedes Arbeitsblatt aller Klassen. Ziel: Die Stunde läuft vollständig
 - **Ablaufzeile unter dem Titel** (eine Zeile, zählt zum Kopfbereich): z. B. „So arbeitest du: 1 → 2 → 3 → 4 → Schon fertig?“ mit grober Minutenangabe. Die SuS wissen ohne Erklärung, was zu tun ist.
 - **Kasten „Kein Internet / kein iPad?“** direkt beim QR-Code (1–2 Zeilen): „Kein Problem: Bearbeite alle Aufgaben auf diesem Blatt. Statt des Online-Quiz: …“ – mit einem konkreten Ersatz, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
 - **Vertretungskasten im Lösungsblatt**, ganz oben, in einer Minute lesbar: Thema in einem Satz · austeilen · benötigt (Buch S. …, ggf. Atlas) · Ablauf in 3 Schritten mit Minuten · wer fertig ist → „Schon fertig?“-Bereich · was am Ende gesichert oder eingesammelt wird. Ohne Fachbegriffe aus der Lehrkraftplanung.
-- **Prüfen vor dem Ausliefern:** Gedankenprobe „kein Internet + fachfremde Vertretung“: Kann die Klasse allein mit Blatt, Buch und Heft die ganze Stunde sinnvoll arbeiten, ohne dass jemand etwas erklärt? Wenn nein: nachbessern.
-- Abschlussnachricht: eine Zeile „Plan B: ja – Offline-Ersatz für das Quiz: …, Vertretungskasten im Lösungsblatt“.
+- **QR-Code ist immer Zusatz, nie Voraussetzung:** Keine Kernaufgabe und keine Pufferaufgabe setzt voraus, dass der QR-Code, die Lernseite oder das Internet funktioniert.
+- **„Du brauchst“-Zeile** im Kopf oder in der Ablaufzeile: z. B. „Du brauchst: Buch S. 202–205, Heft, Stift“.
+- **Sozialform vertretungstauglich:** Ist eine Aufgabe als Partner- oder Gruppenarbeit gedacht, steht dabei, wie sie allein geht („Allein: …“), damit eine Vertretung die Klasse auch in Einzelarbeit lassen kann.
+- **Lösungen zum Auslegen:** Das Lösungsblatt hat eine eigene Seite „Lösungen zur Selbstkontrolle“ ohne Lehrkraftkasten und ohne Planungsbegriffe, die eine Vertretung auslegen oder an die Tafel hängen kann.
+- **Prüfen vor dem Ausliefern (Vertretungsprobe):** Lies nur das Schülerblatt mit den Augen einer fachfremden Vertretung und eines Schülers, der nicht im Unterricht war. Notiere jede Stelle, an der jemand fragen könnte „Was soll ich hier machen?“, „Wo steht das?“ oder „Ich bin fertig, was jetzt?“, und beseitige sie. Prüfe dann mit ausgeschaltetem Internet gedanklich: Kann die Klasse allein mit Blatt, Buch und Heft 45 bzw. 90 Minuten sinnvoll arbeiten, auch die Schnellen bis zum Schluss? Wenn nein: nachbessern.
+- Abschlussnachricht: eine Zeile „Plan B: ja – Offline-Ersatz für das Quiz: …, Vertretungskasten und Lösungen zum Auslegen im Lösungsblatt, Vertretungsprobe bestanden“.
+
+### R4 – Natürliche Gestaltung: wie von einer erfahrenen Lehrkraft, nicht wie generiert (Stand 11.11.2026)
+
+Anlass: SuS haben Tobias gefragt, ob die Blätter mit KI gemacht sind. Ziel ist nicht, etwas zu verschleiern, sondern Qualität: Ein Blatt soll aussehen und klingen wie von einer erfahrenen Lehrkraft oder einer Schulbuchredaktion, damit die SuS sich auf den Inhalt einlassen. Die Regel „keine KI-Hinweise auf dem Schülerblatt“ bleibt bestehen.
+
+**Sprache**
+- Sachlicher, klarer Schulbuchton, „du“-Ansprache, Arbeitsaufträge mit NRW-Operatoren. Überschriften schlicht wie im Schulbuch (Thema oder Leitfrage, höchstens ein kurzer Untertitel).
+- Vermeiden (typische KI-Merkmale): Werbe- und Ausrufeüberschriften („Ab 14 wird's ernst!“, „Bist du bereit?“), Wörter wie „Mission“, „Challenge“, „Level“, „eintauchen“, „spannende Reise“, „entdecke“, „Detektiv“ als Dauerformel, rhetorische Fragenketten, „Stell dir vor …“ als Standardeinstieg, Lob-Floskeln („Super gemacht!“), Dreierreihen aus Gewohnheit, viele Gedankenstriche, Doppelpunkt-Überschriften in Serie, überall gleich lange Sätze. Höchstens eine bewusst motivierende Formulierung pro Blatt.
+- Fallbeispiele wie aus dem echten Leben: alltägliche Vornamen, unperfekte Details, regionale Bezüge (Lippe, Bad Salzuflen) nur, wo sie sachlich stimmen. Keine erfundenen Fakten über reale Orte oder Personen.
+- Materialien wie im Verlag: M1, M2 …; unter selbst geschriebenen Texten „Autorentext“; echte Quellen nur mit echter Angabe.
+
+**Gestaltung**
+- Konventionen echter Schularbeitsblätter: Kopfzeile mit Name/Klasse/Datum-Linien, Fach und Thema; Fußzeile mit Seitenzahl („S. 1/2“); Schreiblinien statt leerer Kästen; nummerierte Aufgaben; Materialkennzeichnung.
+- Vermeiden (typische KI-Optik): Farbverläufe, Glanz-, Glow- oder Glaseffekte, Schlagschatten, überall abgerundete „Karten“ im App- oder Dashboard-Stil, Pillen-Badges, Neonfarben, Deko-Icons ohne Funktion, Icon an jeder Überschrift, perfekt symmetrische Kachelraster, für jeden Inhalt die gleiche Box, Emojis.
+- Icons nur mit Funktion (Sozialform, Buch, Tipp, QR), schlicht, in einem Stil pro Blatt, sparsam.
+- Kopiertauglich: Das Blatt funktioniert auch als Schwarz-Weiß-Kopie (Kontraste in Graustufen prüfen, keine großen Vollflächen, Text nie auf kräftigem Farbgrund).
+
+**Bilder** (häufigster Grund für „Ist das KI?“)
+- Echte Fotos haben Vorrang (Unsplash, Wikimedia Commons). KI-Bilder nie mit Menschen, Gesichtern, Händen, Tieren im Fokus oder Schrift im Bild; höchstens für neutrale Gegenstände oder Hintergründe und nur ohne erkennbare KI-Merkmale (Hochglanz-Look, unlogische Details, verzerrte Kanten). Sonst echtes Foto, schlichte Zeichnung oder Motiv weglassen.
+- Jedes Bild in der Vorschau auf solche Merkmale prüfen.
+
+**Prüfen vor dem Ausliefern (KI-Probe):** Das gerenderte Blatt mit den Augen eines 13-Jährigen ansehen: Gibt es etwas, das „nach KI aussieht“ (Sprache, Optik, Bild)? Liste oben durchgehen und jeden Fund ändern. Abschlussnachricht: eine Zeile „KI-Probe: bestanden (geändert: …)“.
+
+### R5 – Abwechslung in der Gestaltung (Stand 11.11.2026)
+
+Jedes Arbeitsblatt sieht neu aus, als hätte es eine andere Person entworfen: zwischen den Klassen, an verschiedenen Tagen und auch innerhalb eines Laufs (GL 7 Einzel- und Doppelstunden-Blatt, GL 8 Bausteine einer Doppelstunde). R5 ersetzt die Erlaubnis „dürfen zusammengehörig aussehen“. Der didaktische Zweck geht immer vor: Lesbarkeit, klare Aufgabenstruktur und Kopiertauglichkeit (R4) dürfen nicht leiden.
+
+**Merkmale, die variieren:**
+1. Farbpalette (2–3 Farben; auch mal fast einfarbig mit einem Akzent)
+2. Kopfgestaltung (Balken, Seitenleiste, Registerreiter, nur Linie, Titel links/mittig, mit oder ohne Bild)
+3. Seitenraster (einspaltig, zweispaltig, schmale Randspalte für Hilfen, Material links/Aufgaben rechts)
+4. Rahmen und Kästen (keine, feine Linie, Doppellinie, gestrichelt, nur Ecken, Karteikarte, Notizzettel, Hinterlegung)
+5. Aufgabennummern (Kreis, Quadrat, Fahne, Zahl am Rand, fett mit Punkt)
+6. Symbolstil (Linien-Icons, gefüllt, Piktogramm, Buchstaben-Symbole)
+7. Schrift (Größen, Gewichte, Großbuchstaben-Titel oder nicht; nur lokal verfügbare, frei lizenzierte Schriften)
+8. Hervorhebungen (Unterstreichung, Farbbalken am Rand, Kasten, Fettdruck)
+9. Darstellung der Hilfen (Randspalte, Tippkarten unten, umgedrehter Kasten, Wortspeicher als Leiste)
+10. Darstellung von Materialien (Zeitungsausschnitt, Infokarte, Tabelle, Steckbrief, Sprechblasen)
+11. Pufferbereich „Schon fertig?“ (Kasten, Leiste, Abschnitt mit Trennlinie, Karte am Seitenende)
+
+**Designprotokoll:** Führe in der Verlaufsdatei der Klasse den Abschnitt „Designprotokoll“ mit den letzten 8 Blättern (Datum · Blatt · Ausprägung der Merkmale 1–11 in Stichworten). Ein neues Blatt
+- weicht vom zuletzt erstellten Blatt derselben Klasse in mindestens 6 der 11 Merkmale ab,
+- wiederholt die Farbpalette keines der letzten 4 Blätter,
+- wiederholt keine Kombination aus Kopfgestaltung + Seitenraster + Rahmen der letzten 8 Blätter.
+Zwei Blätter desselben Laufs unterscheiden sich in mindestens 5 Merkmalen. Gleich bleiben dürfen nur Bedeutungen (z. B. ★ = Profi, ★★ = Experte, Symbol für Partnerarbeit), nicht ihre Gestaltung.
+
+Abschlussnachricht: eine Zeile „Design: <Palette, Kopf, Raster in Stichworten> (neu gegenüber dem letzten Blatt: X von 11 Merkmalen)“.
 
 ## Ordnerstruktur
 
