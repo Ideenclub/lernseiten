@@ -57,7 +57,7 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
 - Kernaufgaben: durchschnittliche SuS sind damit realistisch ca. 30–35 Min. (Einzel) bzw. ca. 60–70 Min. (Doppel) beschäftigt. Schwächere schaffen den Kern mit Hilfen in der Stunde.
 - Kern + Pufferaufgaben: auch schnelle SuS arbeiten damit durchgehend mindestens 40 bzw. 80 Min. Dafür reichen die Pufferaufgaben zeitlich für mindestens ca. 15 Min. (Einzel) bzw. ca. 25 Min. (Doppel), und eine davon ist offen (siehe unten), sodass niemand vor dem Stundenende ohne Aufgabe ist.
 - Weil kaum Zeit für eine lehrergeführte Phase bleibt, gehören Einstieg und Sicherung als Aufgaben aufs Blatt: Aufgabe 1 ist ein kurzer Einstieg (Foto, Fall, Frage), die letzte Kernaufgabe sichert das Ergebnis (z. B. Merksatz formulieren, Selbsttest, Kernaussage ins Heft). Beide zählen zur Arbeitszeit. Bei Doppelstunden nach ca. 40–45 Min. einen Phasenwechsel einplanen (neue Sozialform oder neues Material).
-- Im Lösungsblatt bekommt jede Aufgabe einen Zeitansatz für durchschnittliche SuS des Jahrgangs (Lesen, Nachdenken, Schreiben einrechnen). Die Summe der Kernaufgaben muss im Zielbereich liegen; sonst Aufgaben ergänzen oder vertiefen, nicht nur Schreibraum vergrößern.
+- Für jede Aufgabe wird ein Zeitansatz für durchschnittliche SuS des Jahrgangs ermittelt (Lesen, Nachdenken, Schreiben einrechnen). Er dient nur der Prüfung und steht nicht auf dem Lösungsblatt (R8). Die Summe der Kernaufgaben muss im Zielbereich liegen; sonst Aufgaben ergänzen oder vertiefen, nicht nur Schreibraum vergrößern.
 - Der Umfang richtet sich nach dem Zeitansatz, nicht nach einer festen Aufgabenzahl.
 
 **Pufferaufgaben – Pflicht auf jedem Arbeitsblatt**
@@ -66,7 +66,7 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
   - ★★ Experten-Aufgabe: Transfer, Beurteilung oder kreatives Produkt.
   - Buchauftrag ins Heft (mit kleinem Buch-Icon als Vektorgrafik, kein Emoji), ohne Platzbedarf auf dem Blatt: „Buch S. __, M__ – Aufgabe __ ins Heft.“ Nur Seiten, Materialnummern und Aufgabennummern, die genau so auf den Scans stehen. Fehlen Scans: eine Heftaufgabe ohne Buch (z. B. Mindmap, Brief, Comic, Lernplakat).
 - Mindestens eine Pufferaufgabe ist zeitlich offen und kann nie ausgehen (z. B. „Schreibe 5 Quizfragen mit Lösung für deine Mitschüler“ oder ein Heftprodukt).
-- Das Lösungsblatt enthält Lösungen bzw. Erwartungshorizont zu allen Pufferaufgaben.
+- Das Lösungsblatt (R8) enthält auch die Lösungen zu allen Pufferaufgaben.
 - Die Lernseite endet ebenfalls mit „Schon fertig?“ (Bonusetappe oder Verweis auf die Pufferaufgaben des Blatts).
 
 **Kompakter Kopf – Platz für Aufgaben**
@@ -86,13 +86,12 @@ Gilt für jedes Arbeitsblatt aller Klassen. Ziel: Die Stunde läuft vollständig
 - **Selbsterklärende Aufgaben:** Operator fett, bei neuen Aufgabenformen ein kurzes Beispiel, Sozialform als Symbol. Keine Verweise wie „wie besprochen“, „siehe Tafel“ oder „deine Lehrkraft erklärt“.
 - **Ablaufzeile unter dem Titel** (eine Zeile, zählt zum Kopfbereich): z. B. „So arbeitest du: 1 → 2 → 3 → 4 → Schon fertig?“ mit grober Minutenangabe. Die SuS wissen ohne Erklärung, was zu tun ist.
 - **Kasten „Kein Internet / kein iPad?“** direkt unter oder neben dem QR-Code (1–2 Zeilen); wird der Kopf dadurch zu hoch, steht der Kasten mit dem QR-Code am Blattende (R1): „Kein Problem: Bearbeite alle Aufgaben auf diesem Blatt. Statt des Online-Quiz: …“ – mit einem konkreten Ersatz, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
-- **Vertretungskasten im Lösungsblatt**, ganz oben, in einer Minute lesbar: Thema in einem Satz · austeilen · benötigt (Buch S. …, ggf. Atlas) · Ablauf in 3 Schritten mit Minuten · wer fertig ist → „Schon fertig?“-Bereich · die „4 Handgriffe“ der Ergebnissicherung aus R6 · was am Ende gesichert oder eingesammelt wird. Ohne Fachbegriffe aus der Lehrkraftplanung.
 - **QR-Code ist immer Zusatz, nie Voraussetzung:** Keine Kernaufgabe und keine Pufferaufgabe setzt voraus, dass der QR-Code, die Lernseite oder das Internet funktioniert.
 - **„Du brauchst“-Angabe** in der Ablaufzeile: z. B. „Du brauchst: Buch S. 202–205, Heft, Stift“.
 - **Sozialform vertretungstauglich:** Ist eine Aufgabe als Partner- oder Gruppenarbeit gedacht, steht dabei, wie sie allein geht („Allein: …“), damit eine Vertretung die Klasse auch in Einzelarbeit lassen kann.
-- **Lösungen zum Auslegen:** Das Lösungsblatt hat eine eigene Seite „Lösungen zur Selbstkontrolle“ ohne Lehrkraftkasten und ohne Planungsbegriffe, die auf dem Kontrolltisch ausgelegt wird (Ablauf siehe R6).
+- **Lösungen zum Auslegen:** Das Lösungsblatt nach R8 kann ausgedruckt auf dem Kontrolltisch ausgelegt werden (Ablauf siehe R6). Hinweise für Lehrkraft oder Vertretung gibt es nicht; die gibt Tobias selbst.
 - **Prüfen vor dem Ausliefern (Vertretungsprobe):** Lies nur das Schülerblatt mit den Augen einer fachfremden Vertretung und eines Schülers, der nicht im Unterricht war. Notiere jede Stelle, an der jemand fragen könnte „Was soll ich hier machen?“, „Wo steht das?“ oder „Ich bin fertig, was jetzt?“, und beseitige sie. Prüfe dann mit ausgeschaltetem Internet gedanklich: Kann die Klasse allein mit Blatt, Buch und Heft 45 bzw. 90 Minuten sinnvoll arbeiten, auch die Schnellen bis zum Schluss? Wenn nein: nachbessern.
-- Abschlussnachricht: eine Zeile „Plan B: ja – Offline-Ersatz für das Quiz: …, Vertretungskasten und Lösungen zum Auslegen im Lösungsblatt, Vertretungsprobe bestanden“.
+- Abschlussnachricht: eine Zeile „Plan B: ja – Offline-Ersatz für das Quiz: …, Vertretungsprobe bestanden“.
 
 ### R4 – Natürliche Gestaltung: wie von einer erfahrenen Lehrkraft, nicht wie generiert (Stand 11.11.2026)
 
@@ -115,8 +114,8 @@ Anlass: SuS haben Tobias gefragt, ob die Blätter mit KI gemacht sind. Ziel ist 
 - Jedes Bild in der Vorschau auf solche Merkmale prüfen.
 
 **Bildnachweise dezent (Stand 11.11.2026)** – SuS haben die ständige Angabe „Unsplash“ unten auf den Blättern als KI-Hinweis gedeutet.
-- **Unsplash (auch Unsplash+): kein Bildnachweis auf dem Schülerblatt und auf der Lernseite.** Die Unsplash-Lizenz verlangt keine Namensnennung, auch nicht bei Bildern, die über eine Unsplash-Integration geladen wurden. Fotograf und Link stehen nur im Lehrkraftteil des Lösungsblatts in einer kleinen Zeile „Bildquellen (für die Lehrkraft)“ und in der Abschlussnachricht; auf der Lernseite höchstens als HTML-Kommentar im Quelltext.
-- **Wikimedia Commons gemeinfrei/CC0 und eigene Grafiken:** ebenfalls kein Nachweis auf dem Schülerblatt (nur im Lehrkraftteil).
+- **Unsplash (auch Unsplash+): kein Bildnachweis auf dem Schülerblatt und auf der Lernseite.** Die Unsplash-Lizenz verlangt keine Namensnennung, auch nicht bei Bildern, die über eine Unsplash-Integration geladen wurden. Fotograf und Link stehen nur in der Abschlussnachricht (nicht auf dem Lösungsblatt, R8); auf der Lernseite höchstens als HTML-Kommentar im Quelltext.
+- **Wikimedia Commons gemeinfrei/CC0 und eigene Grafiken:** ebenfalls kein Nachweis auf dem Schülerblatt (nur in der Abschlussnachricht).
 - **Wikimedia Commons mit CC BY oder CC BY-SA:** Nachweis ist Pflicht und bleibt. Dann im Verlagsstil: eine einzige kleine, graue Zeile (6–7 pt) ganz unten auf der Seite, beginnend mit „Bildnachweis:“, z. B. „Bildnachweis: M2 Max Muster / Wikimedia Commons, CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)“. Auf der Lernseite dieselbe Angabe klein am Seitenende. Kein eigener Kasten, keine Überschrift, kein Logo.
 - Deshalb bei gleich guter Eignung Bilder ohne Nachweispflicht bevorzugen (Unsplash, Commons gemeinfrei/CC0), damit das Schülerblatt ganz ohne Quellenzeile auskommt.
 - Nie auf dem Schülerblatt oder der Lernseite: „Unsplash“, „Canva“, „Stock“, „KI“, „generiert“ oder Tool-Namen. Die Pflicht, nur rechtlich nutzbare Bilder zu verwenden und die Quelle zu kennen, bleibt unverändert.
@@ -168,27 +167,22 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 - Unten auf dem Bildschirm die Anweisung: „Trag Punkte und Stufe auf deinem Arbeitsblatt bei ‚Mein Ergebnis‘ ein. Dann weiter wie auf dem Blatt beschrieben.“
 
 **Arbeitsblatt: Feld „Mein Ergebnis“ (am Blattende, vor oder neben „Schon fertig?“)**
-- Quiz bzw. Selbsttest: „___ von ___ Punkten · Stufe A B C D“ (ankreuzen). Ohne iPad zählt der Offline-Selbsttest aus R3; seine Lösungen stehen auf der Seite „Lösungen zur Selbstkontrolle“, die Stufen sind dieselben.
+- Quiz bzw. Selbsttest: „___ von ___ Punkten · Stufe A B C D“ (ankreuzen). Ohne iPad zählt der Offline-Selbsttest aus R3; seine Lösungen stehen im Lösungsblatt (R8), die Stufen sind dieselben.
 - Selbsteinschätzung: 2–4 Ich-kann-Sätze zum Inhalt der Stunde (z. B. „Ich kann erklären, ab wann Jugendliche strafmündig sind.“), je mit drei Kästchen „sicher · teilweise · noch nicht“, darunter eine Zeile „Das übe ich noch: …“ mit passendem Buch- oder Lernseitenverweis.
 - Feld „Kontrolle: ______“ für das Kürzel der Lehrkraft.
 
 **Ablauf für die SuS (steht auf dem Blatt, eine kurze nummerierte Anleitung beim Feld „Mein Ergebnis“)**
-1. Kernaufgaben erledigt → am Kontrolltisch die eigenen Antworten mit den „Lösungen zur Selbstkontrolle“ vergleichen, mit anderer Stiftfarbe verbessern (Blatt mitnehmen, kein Heft, höchstens 3 SuS gleichzeitig am Tisch).
+1. Kernaufgaben erledigt → am Kontrolltisch die eigenen Antworten mit dem ausgelegten Lösungsblatt vergleichen, mit anderer Stiftfarbe verbessern (Blatt mitnehmen, kein Heft, höchstens 3 SuS gleichzeitig am Tisch).
 2. Quiz bzw. Selbsttest machen, „Mein Ergebnis“ ausfüllen.
 3. Mit Blatt (und iPad mit Ergebnisbildschirm) nach vorne zur Lehrkraft. Stehen dort schon zwei: zurück an den Platz, an „Schon fertig?“ weiterarbeiten, später wiederkommen.
 4. Danach „Schon fertig?“.
 - Auf dem Blatt ist genau eine Kernaufgabe als **Kontrollaufgabe** markiert (eigenes, schlichtes Symbol plus Wort „Kontrolle“, möglichst die Sicherungs- oder AFB-III-Aufgabe). Nur sie wird vorgezeigt.
 - Doppelstunde: nach Teil 1 nur Selbstkontrolle am Kontrolltisch, Vorzeigen erst am Ende (einmal pro Stunde, nicht pro Teil).
 
-**Für die Lehrkraft bzw. Vertretung: genau 4 Handgriffe (im Vertretungskasten des Lösungsblatts)**
-1. Arbeitsblätter austeilen. Die Seite „Lösungen zur Selbstkontrolle“ ab ca. Minute 20 (Einzelstunde) bzw. 50 (Doppelstunde) auf einen Tisch vorne legen (vorher nicht, damit niemand abschreibt).
-2. Wer nach vorne kommt: nur die Kontrollaufgabe ansehen (ca. 30 Sekunden) und mit dem kurzen Erwartungshorizont im Vertretungskasten vergleichen, Ergebnisbildschirm bzw. „Mein Ergebnis“ ansehen, Kürzel ins Feld „Kontrolle“ setzen. Kein Gespräch über alle Aufgaben.
-3. Optional beim Abhaken eine Strichliste A/B/C/D führen (Vorlage im Vertretungskasten) – gibt Tobias einen Klassenüberblick.
-4. Letzte ca. 5 Minuten: kurze Abschlussrunde mit genau einer vorgegebenen Frage aus dem Vertretungskasten („Lasst 2–3 SuS ihre Antwort zu Aufgabe X vorlesen; richtig ist, wenn …“). Danach Blätter einsammeln oder ins Heft legen lassen, wie im Kasten angegeben.
 - Die Abschlussrunde ist Teil der Stunde: Kern + Puffer füllen die Arbeitszeit bis dahin (R2), die Runde liegt in den Minuten danach.
 
-**Prüfen vor dem Ausliefern:** Stufen und Schwellen in Quiz, Lernseite und Selbsttest identisch und richtig berechnet (mit Testantworten durchklicken: 0 %, ca. 50 %, 100 %), Kontrollaufgabe markiert, Feld „Mein Ergebnis“ und Ablauf auf dem Blatt, 4 Handgriffe mit Erwartungshorizont und Abschlussfrage im Vertretungskasten.
-- Abschlussnachricht: eine Zeile „Ergebnissicherung: Stufen A–D im Quiz/Selbsttest, Kontrollaufgabe: Nr. …, Abschlussfrage: …“.
+**Prüfen vor dem Ausliefern:** Stufen und Schwellen in Quiz, Lernseite und Selbsttest identisch und richtig berechnet (mit Testantworten durchklicken: 0 %, ca. 50 %, 100 %), Kontrollaufgabe markiert, Feld „Mein Ergebnis“ und Ablauf auf dem Blatt.
+- Abschlussnachricht: eine Zeile „Ergebnissicherung: Stufen A–D im Quiz/Selbsttest, Kontrollaufgabe: Nr. …“.
 
 ### R7 – Qualitätsanspruch und Qualitätssicherung (Stand 11.11.2026)
 
@@ -203,7 +197,7 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 4. **Technische Tests:**
    - PDF: jede Seite mit 200 dpi als PNG rendern und ansehen (abgeschnittene oder überlappende Texte, leere Seiten, Seitenumbrüche mitten in Aufgaben, Bildschärfe, Kopfhöhe, Graustufen-Probe nach R4), QR-Code nach R1 auslesen.
    - Lernseite und Quiz im Headless-Browser in iPad-Größe hoch und quer: jede Frage einmal richtig und einmal falsch beantworten, alle Knöpfe, Stufenberechnung mit 0 %, ca. 50 %, 100 %, „Fehler verbessern“, Neuladen mitten im Quiz (Fortschritt bleibt), Konsole fehlerfrei. Zusätzlich mit blockiertem Netzwerk laden: Die Seite muss vollständig funktionieren (keine externen Ressourcen).
-5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R7. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
+5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R8. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
 6. **Endabnahme:** Erst ausliefern, wenn keine A-Mängel offen sind.
 
 **Satz und Typografie (wie im Verlag):** einheitliche Abstände und Ränder (mind. 1,5 cm), Zeilenabstand gut lesbar, Fließtext mind. 10,5 pt (Jg. 7/8 eher 11–12 pt), keine einzelnen Zeilen am Seitenanfang oder -ende, keine Aufgabe über einen Seitenumbruch zerrissen, Silbentrennung sauber, deutsche Anführungszeichen („…“), einheitliche Schreibweise, fehlerfreie Rechtschreibung und Zeichensetzung (jeden Text Korrektur lesen), Bilder für Druck scharf (ca. 300 dpi in Druckgröße), Bildnachweise klein und vollständig.
@@ -212,9 +206,29 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 
 **Motivation:** Je Einheit mindestens ein Element mit Wahlfreiheit oder einem eigenen Produkt (Wahlaufgabe, kreative Gestaltung, Entscheidung mit Begründung) und ein echter Lebensweltbezug der Altersgruppe.
 
-**Freiheit für die Lehrkraft:** Im Lösungsblatt ein kurzer Kasten „Andere Wege“ mit 2–3 Varianten (z. B. Einstieg im Plenum, Aufgabe X als Partnerarbeit, Abschluss als Placemat). Das Schülerblatt bleibt davon unabhängig selbstlaufend.
 
 **Abschlussnachricht:** eine Zeile „Qualitätsprüfung: Probebearbeitung 3 Niveaus ✓ · Tests ✓ · unabhängige Prüfung: X Runden, behoben: … · offen: keine / …“.
+
+### R8 – Lösungsblatt: nur Lösungen, zum Besprechen am Klassen-TV (Stand 11.11.2026)
+
+Tobias zeigt das Lösungsblatt am iPad über den Klassen-TV und scrollt im Unterrichtsgespräch Aufgabe für Aufgabe weiter, damit die SuS mitschreiben und abhaken können. Hinweise zur Stunde, für die Lehrkraft oder für eine Vertretung braucht er nicht; den Ablauf gestaltet er selbst. R8 ersetzt alle anderen Vorgaben zum Inhalt des Lösungsblatts, auch in den Aufträgen der geplanten Aufgaben (z. B. Lehrkraftkasten, Vertretungskasten, Zeitplan mit/ohne iPads, Zeitansätze, Kernlehrplan- und Kompetenzbezug, Einsatzhinweise, „Andere Wege“, Lösungen zu Lernseite und Quiz, „UV … Stunde/Baustein X von Y“, Bildquellen, eigene Seite „Lösungen zur Selbstkontrolle“).
+
+**Inhalt – nur Lösungen**
+- Ausschließlich die Lösungen der Aufgaben des Arbeitsblatts, in derselben Reihenfolge, mit allen Details: Kernaufgaben, Pufferaufgaben (★, ★★, Buchauftrag, soweit lösbar), ggf. Offline-Selbsttest.
+- So formuliert, wie die SuS es ins Heft oder aufs Blatt schreiben sollen (schülergerechte Sprache, vollständige Sätze, wo die Aufgabe Sätze verlangt). Bei offenen Aufgaben eine Musterlösung und darunter kurz „Auch richtig: …“. Keine Lehrersprache wie „Erwartungshorizont“ oder „Bewertung“.
+- Nichts anderes: keine Hinweise zur Stunde, keine Lehrkraft- oder Vertretungshinweise, keine Zeitangaben, kein Lehrplanbezug, keine Lernseiten- oder Quizlösungen, keine Bildquellen, keine Planungsbegriffe, kein QR-Code.
+
+**Form – für den Klassen-TV**
+- PDF im A4-Querformat. Seite 1 beginnt oben mit „Lösungen“ und dem Titel des Arbeitsblatts (genau wie auf dem Blatt).
+- Eine Aufgabe pro Seite, damit die SuS beim Scrollen die nächste Lösung noch nicht sehen. Teilaufgaben (a, b, c) stehen mit deutlichem Abstand untereinander auf derselben Seite. Reicht eine Seite nicht, geht die Aufgabe auf der nächsten Seite mit „(Fortsetzung)“ weiter.
+- Jede Seite beginnt mit Aufgabennummer und Aufgabentitel genau wie auf dem Arbeitsblatt.
+- Große, klare Schrift: Lösungstext mind. 20 pt, Überschriften größer; schwarz auf weiß, hoher Kontrast, schlicht, keine Deko, keine Farbflächen; aus der letzten Reihe lesbar. Fußzeile höchstens die Seitenzahl.
+- Ausgedruckt dient dasselbe Blatt als Lösung zum Auslegen am Kontrolltisch (R6).
+
+**Wohin mit dem Rest:** Zeitansätze werden weiter intern für R2 berechnet. Bildquellen und alles, was die Aufträge sonst fürs Lösungsblatt vorsehen, stehen nur noch in der Abschlussnachricht bzw. in der Verlaufsdatei, soweit die Aufträge das verlangen.
+
+**Prüfen vor dem Ausliefern:** Jede Seite als PNG rendern und ansehen (eine Aufgabe pro Seite, nichts abgeschnitten, Schriftgröße), jede Lösung gegen Arbeitsblatt und Buch prüfen, keine Zusatzinformationen.
+- Abschlussnachricht: eine Zeile „Lösungsblatt: nur Lösungen (R8), X Seiten“.
 
 ## Ordnerstruktur
 
