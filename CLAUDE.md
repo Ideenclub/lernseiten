@@ -86,11 +86,11 @@ Gilt für jedes Arbeitsblatt aller Klassen. Ziel: Die Stunde läuft vollständig
 - **Selbsterklärende Aufgaben:** Operator fett, bei neuen Aufgabenformen ein kurzes Beispiel, Sozialform als Symbol. Keine Verweise wie „wie besprochen“, „siehe Tafel“ oder „deine Lehrkraft erklärt“.
 - **Ablaufzeile unter dem Titel** (eine Zeile, zählt zum Kopfbereich): z. B. „So arbeitest du: 1 → 2 → 3 → 4 → Schon fertig?“ mit grober Minutenangabe. Die SuS wissen ohne Erklärung, was zu tun ist.
 - **Kasten „Kein Internet / kein iPad?“** direkt unter oder neben dem QR-Code (1–2 Zeilen); wird der Kopf dadurch zu hoch, steht der Kasten mit dem QR-Code am Blattende (R1): „Kein Problem: Bearbeite alle Aufgaben auf diesem Blatt. Statt des Online-Quiz: …“ – mit einem konkreten Ersatz, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
-- **Vertretungskasten im Lösungsblatt**, ganz oben, in einer Minute lesbar: Thema in einem Satz · austeilen · benötigt (Buch S. …, ggf. Atlas) · Ablauf in 3 Schritten mit Minuten · wer fertig ist → „Schon fertig?“-Bereich · was am Ende gesichert oder eingesammelt wird. Ohne Fachbegriffe aus der Lehrkraftplanung.
+- **Vertretungskasten im Lösungsblatt**, ganz oben, in einer Minute lesbar: Thema in einem Satz · austeilen · benötigt (Buch S. …, ggf. Atlas) · Ablauf in 3 Schritten mit Minuten · wer fertig ist → „Schon fertig?“-Bereich · die „4 Handgriffe“ der Ergebnissicherung aus R6 · was am Ende gesichert oder eingesammelt wird. Ohne Fachbegriffe aus der Lehrkraftplanung.
 - **QR-Code ist immer Zusatz, nie Voraussetzung:** Keine Kernaufgabe und keine Pufferaufgabe setzt voraus, dass der QR-Code, die Lernseite oder das Internet funktioniert.
 - **„Du brauchst“-Angabe** in der Ablaufzeile: z. B. „Du brauchst: Buch S. 202–205, Heft, Stift“.
 - **Sozialform vertretungstauglich:** Ist eine Aufgabe als Partner- oder Gruppenarbeit gedacht, steht dabei, wie sie allein geht („Allein: …“), damit eine Vertretung die Klasse auch in Einzelarbeit lassen kann.
-- **Lösungen zum Auslegen:** Das Lösungsblatt hat eine eigene Seite „Lösungen zur Selbstkontrolle“ ohne Lehrkraftkasten und ohne Planungsbegriffe, die eine Vertretung auslegen oder an die Tafel hängen kann.
+- **Lösungen zum Auslegen:** Das Lösungsblatt hat eine eigene Seite „Lösungen zur Selbstkontrolle“ ohne Lehrkraftkasten und ohne Planungsbegriffe, die auf dem Kontrolltisch ausgelegt wird (Ablauf siehe R6).
 - **Prüfen vor dem Ausliefern (Vertretungsprobe):** Lies nur das Schülerblatt mit den Augen einer fachfremden Vertretung und eines Schülers, der nicht im Unterricht war. Notiere jede Stelle, an der jemand fragen könnte „Was soll ich hier machen?“, „Wo steht das?“ oder „Ich bin fertig, was jetzt?“, und beseitige sie. Prüfe dann mit ausgeschaltetem Internet gedanklich: Kann die Klasse allein mit Blatt, Buch und Heft 45 bzw. 90 Minuten sinnvoll arbeiten, auch die Schnellen bis zum Schluss? Wenn nein: nachbessern.
 - Abschlussnachricht: eine Zeile „Plan B: ja – Offline-Ersatz für das Quiz: …, Vertretungskasten und Lösungen zum Auslegen im Lösungsblatt, Vertretungsprobe bestanden“.
 
@@ -140,6 +140,45 @@ Jedes Arbeitsblatt sieht neu aus, als hätte es eine andere Person entworfen: zw
 Zwei Blätter desselben Laufs unterscheiden sich in mindestens 5 Merkmalen. Gleich bleiben dürfen nur Bedeutungen (z. B. ★ = Profi, ★★ = Experte, Symbol für Partnerarbeit), nicht ihre Gestaltung.
 
 Abschlussnachricht: eine Zeile „Design: <Palette, Kopf, Raster in Stichworten> (neu gegenüber dem letzten Blatt: X von 11 Merkmalen)“.
+
+### R6 – Ergebnissicherung, Selbstbewertung und Vorzeigen (Stand 11.11.2026)
+
+Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung, die Lehrkraft sieht mit wenig Aufwand, was geleistet wurde, und eine Vertretung muss dafür nichts vorbereiten oder erklären. Der Ablauf steht vollständig auf dem Arbeitsblatt. Datenschutz bleibt unberührt: Es werden keine Ergebnisse gespeichert oder übertragen, alles bleibt auf Blatt und iPad.
+
+**Feste Stufen (gleich in Quiz, Lernseite und Selbsttest, damit die SuS sie wiedererkennen)**
+- Stufe A „Sicher“: ab 85 % · Stufe B „Gut, kleine Lücken“: 65–84 % · Stufe C „Teilweise – wiederholen“: 40–64 % · Stufe D „Noch unsicher – noch einmal üben“: unter 40 %.
+- Jede Stufe ist durch Wort, Buchstabe und Form erkennbar (nicht nur durch Farbe; R4 Kopiertauglichkeit).
+- Keine Schulnoten. Die Stufe ist eine Rückmeldung zum Lernstand, die Bewertung bleibt Sache der Lehrkraft.
+
+**Quiz und Lernseite: automatische Auswertung**
+- Ergebnisbildschirm am Ende, auf einen Blick lesbar: Titel der Stunde, Datum und Uhrzeit des Abschlusses, Punkte im ERSTEN Versuch (zählt), Prozent, Stufe groß.
+- Rückmeldung je Etappe bzw. Teilthema: „Etappe 2 (…): 2 von 4 – wiederhole Etappe 2 oder Buch S. …, M…“ (nur Seiten, die genau so auf den Scans stehen). Bei Stufe A ein Hinweis auf die Pufferaufgaben des Blatts.
+- Danach „Fehler verbessern“: nur die falsch beantworteten Fragen noch einmal. Der Bildschirm zeigt dann beides, „1. Versuch: X Punkte“ und „nach Verbesserung: Y Punkte“; die Stufe richtet sich nach dem 1. Versuch.
+- Fortschritt per `localStorage` sichern (in `try/catch`), damit ein versehentliches Neuladen nichts löscht. „Neu starten“ nur über eine Rückfrage auf der Seite (kein Browser-Dialog).
+- Unten auf dem Bildschirm die Anweisung: „Trag Punkte und Stufe auf deinem Arbeitsblatt bei ‚Mein Ergebnis‘ ein. Dann weiter wie auf dem Blatt beschrieben.“
+
+**Arbeitsblatt: Feld „Mein Ergebnis“ (am Blattende, vor oder neben „Schon fertig?“)**
+- Quiz bzw. Selbsttest: „___ von ___ Punkten · Stufe A B C D“ (ankreuzen). Ohne iPad zählt der Offline-Selbsttest aus R3; seine Lösungen stehen auf der Seite „Lösungen zur Selbstkontrolle“, die Stufen sind dieselben.
+- Selbsteinschätzung: 2–4 Ich-kann-Sätze zum Inhalt der Stunde (z. B. „Ich kann erklären, ab wann Jugendliche strafmündig sind.“), je mit drei Kästchen „sicher · teilweise · noch nicht“, darunter eine Zeile „Das übe ich noch: …“ mit passendem Buch- oder Lernseitenverweis.
+- Feld „Kontrolle: ______“ für das Kürzel der Lehrkraft.
+
+**Ablauf für die SuS (steht auf dem Blatt, eine kurze nummerierte Anleitung beim Feld „Mein Ergebnis“)**
+1. Kernaufgaben erledigt → am Kontrolltisch die eigenen Antworten mit den „Lösungen zur Selbstkontrolle“ vergleichen, mit anderer Stiftfarbe verbessern (Blatt mitnehmen, kein Heft, höchstens 3 SuS gleichzeitig am Tisch).
+2. Quiz bzw. Selbsttest machen, „Mein Ergebnis“ ausfüllen.
+3. Mit Blatt (und iPad mit Ergebnisbildschirm) nach vorne zur Lehrkraft. Stehen dort schon zwei: zurück an den Platz, an „Schon fertig?“ weiterarbeiten, später wiederkommen.
+4. Danach „Schon fertig?“.
+- Auf dem Blatt ist genau eine Kernaufgabe als **Kontrollaufgabe** markiert (eigenes, schlichtes Symbol plus Wort „Kontrolle“, möglichst die Sicherungs- oder AFB-III-Aufgabe). Nur sie wird vorgezeigt.
+- Doppelstunde: nach Teil 1 nur Selbstkontrolle am Kontrolltisch, Vorzeigen erst am Ende (einmal pro Stunde, nicht pro Teil).
+
+**Für die Lehrkraft bzw. Vertretung: genau 4 Handgriffe (im Vertretungskasten des Lösungsblatts)**
+1. Arbeitsblätter austeilen. Die Seite „Lösungen zur Selbstkontrolle“ ab ca. Minute 20 (Einzelstunde) bzw. 50 (Doppelstunde) auf einen Tisch vorne legen (vorher nicht, damit niemand abschreibt).
+2. Wer nach vorne kommt: nur die Kontrollaufgabe ansehen (ca. 30 Sekunden) und mit dem kurzen Erwartungshorizont im Vertretungskasten vergleichen, Ergebnisbildschirm bzw. „Mein Ergebnis“ ansehen, Kürzel ins Feld „Kontrolle“ setzen. Kein Gespräch über alle Aufgaben.
+3. Optional beim Abhaken eine Strichliste A/B/C/D führen (Vorlage im Vertretungskasten) – gibt Tobias einen Klassenüberblick.
+4. Letzte ca. 5 Minuten: kurze Abschlussrunde mit genau einer vorgegebenen Frage aus dem Vertretungskasten („Lasst 2–3 SuS ihre Antwort zu Aufgabe X vorlesen; richtig ist, wenn …“). Danach Blätter einsammeln oder ins Heft legen lassen, wie im Kasten angegeben.
+- Die Abschlussrunde ist Teil der Stunde: Kern + Puffer füllen die Arbeitszeit bis dahin (R2), die Runde liegt in den Minuten danach.
+
+**Prüfen vor dem Ausliefern:** Stufen und Schwellen in Quiz, Lernseite und Selbsttest identisch und richtig berechnet (mit Testantworten durchklicken: 0 %, ca. 50 %, 100 %), Kontrollaufgabe markiert, Feld „Mein Ergebnis“ und Ablauf auf dem Blatt, 4 Handgriffe mit Erwartungshorizont und Abschlussfrage im Vertretungskasten.
+- Abschlussnachricht: eine Zeile „Ergebnissicherung: Stufen A–D im Quiz/Selbsttest, Kontrollaufgabe: Nr. …, Abschlussfrage: …“.
 
 ## Ordnerstruktur
 
@@ -222,7 +261,7 @@ In den geplanten Aufgaben lehnt der Git-Proxy den Push derzeit ab (403 „not in
   - Lerninhalte in kleinen Etappen (kurze Texte, Fotos, Schaubilder, gern einfache Animationen in CSS/SVG/Canvas),
   - nach jeder Etappe 2–4 Quizfragen mit sofortiger Rückmeldung und kurzer Erklärung,
   - Buchaufträge mit genauer Seite und Materialnummer,
-  - Fortschrittsanzeige, am Ende ein Abschluss-Quiz und ein Ergebnisbildschirm („Zeig dieses Ergebnis deiner Lehrkraft“) mit Punktzahl, ohne Namen,
+  - Fortschrittsanzeige, am Ende ein Abschluss-Quiz und ein Ergebnisbildschirm nach R6 (Stufe, Rückmeldung je Etappe, Hinweis aufs Blatt), ohne Namen,
   - Hinweis, was auf dem Arbeitsblatt bzw. im Heft gesichert wird.
 - Fragetypen mischen: Multiple Choice, Richtig/Falsch, Zuordnen (Tippen statt Ziehen ist auf dem iPad zuverlässiger), Reihenfolge, Lückentext mit Auswahl, Bild anklicken.
 - Niveau, Textlänge, Zeit und Pufferaufgaben: siehe R2 (Stand 11.11.2026). Ohne Internet und mit Vertretung muss das Arbeitsblatt die Stunde tragen: siehe R3.
