@@ -70,7 +70,7 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
 - Die Lernseite endet ebenfalls mit „Schon fertig?“ (Bonusetappe oder Verweis auf die Pufferaufgaben des Blatts).
 
 **Kompakter Kopf – Platz für Aufgaben**
-- Kopfbereich (Titel, Fach, Name/Datum, QR-Code) höchstens ca. 3 cm hoch.
+- Kopfbereich (Titel, Fach, Name/Klasse/Datum, QR-Code, Ablauf- und „Du brauchst“-Zeile aus R3) höchstens ca. 3,5 cm hoch. Ablauf und „Du brauchst“ teilen sich eine Zeile.
 - Ein Einstiegsbild höchstens ca. ein Sechstel der Seite (z. B. volle Breite, max. ca. 4,5 cm hoch, oder schmal neben dem Text). Größer nur, wenn das Bild selbst das Arbeitsmaterial ist.
 - Der gewonnene Platz geht an Aufgaben, Schreibraum und Pufferbereich. Weißraum ja, aber keine leeren Flächen ohne Funktion.
 
@@ -85,10 +85,10 @@ Gilt für jedes Arbeitsblatt aller Klassen. Ziel: Die Stunde läuft vollständig
 - **Alles Nötige auf dem Blatt oder im Buch:** Jede Kernaufgabe lässt sich allein mit Arbeitsblatt, Buch (genaue Seite und Materialnummer), Heft und ggf. Atlas lösen. Nichts, was für die Kernaufgaben nötig ist, steht nur auf der Lernseite. Kein Pflichtmaterial, das nur die Fachlehrkraft hat (Video, Folie, Tafelbild).
 - **Selbsterklärende Aufgaben:** Operator fett, bei neuen Aufgabenformen ein kurzes Beispiel, Sozialform als Symbol. Keine Verweise wie „wie besprochen“, „siehe Tafel“ oder „deine Lehrkraft erklärt“.
 - **Ablaufzeile unter dem Titel** (eine Zeile, zählt zum Kopfbereich): z. B. „So arbeitest du: 1 → 2 → 3 → 4 → Schon fertig?“ mit grober Minutenangabe. Die SuS wissen ohne Erklärung, was zu tun ist.
-- **Kasten „Kein Internet / kein iPad?“** direkt beim QR-Code (1–2 Zeilen): „Kein Problem: Bearbeite alle Aufgaben auf diesem Blatt. Statt des Online-Quiz: …“ – mit einem konkreten Ersatz, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
+- **Kasten „Kein Internet / kein iPad?“** direkt unter oder neben dem QR-Code (1–2 Zeilen); wird der Kopf dadurch zu hoch, steht der Kasten mit dem QR-Code am Blattende (R1): „Kein Problem: Bearbeite alle Aufgaben auf diesem Blatt. Statt des Online-Quiz: …“ – mit einem konkreten Ersatz, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
 - **Vertretungskasten im Lösungsblatt**, ganz oben, in einer Minute lesbar: Thema in einem Satz · austeilen · benötigt (Buch S. …, ggf. Atlas) · Ablauf in 3 Schritten mit Minuten · wer fertig ist → „Schon fertig?“-Bereich · was am Ende gesichert oder eingesammelt wird. Ohne Fachbegriffe aus der Lehrkraftplanung.
 - **QR-Code ist immer Zusatz, nie Voraussetzung:** Keine Kernaufgabe und keine Pufferaufgabe setzt voraus, dass der QR-Code, die Lernseite oder das Internet funktioniert.
-- **„Du brauchst“-Zeile** im Kopf oder in der Ablaufzeile: z. B. „Du brauchst: Buch S. 202–205, Heft, Stift“.
+- **„Du brauchst“-Angabe** in der Ablaufzeile: z. B. „Du brauchst: Buch S. 202–205, Heft, Stift“.
 - **Sozialform vertretungstauglich:** Ist eine Aufgabe als Partner- oder Gruppenarbeit gedacht, steht dabei, wie sie allein geht („Allein: …“), damit eine Vertretung die Klasse auch in Einzelarbeit lassen kann.
 - **Lösungen zum Auslegen:** Das Lösungsblatt hat eine eigene Seite „Lösungen zur Selbstkontrolle“ ohne Lehrkraftkasten und ohne Planungsbegriffe, die eine Vertretung auslegen oder an die Tafel hängen kann.
 - **Prüfen vor dem Ausliefern (Vertretungsprobe):** Lies nur das Schülerblatt mit den Augen einer fachfremden Vertretung und eines Schülers, der nicht im Unterricht war. Notiere jede Stelle, an der jemand fragen könnte „Was soll ich hier machen?“, „Wo steht das?“ oder „Ich bin fertig, was jetzt?“, und beseitige sie. Prüfe dann mit ausgeschaltetem Internet gedanklich: Kann die Klasse allein mit Blatt, Buch und Heft 45 bzw. 90 Minuten sinnvoll arbeiten, auch die Schnellen bis zum Schluss? Wenn nein: nachbessern.
