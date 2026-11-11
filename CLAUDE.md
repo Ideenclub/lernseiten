@@ -47,7 +47,7 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
 - Lernseite und Quiz: mindestens die Hälfte der Fragen verlangt Anwendung (Fall, Beispiel, Begründung), nicht nur Wiedererkennen.
 - Unberührt bleibt die Portionierung: In GL 7 (kurze Konzentrationsspanne mehrerer SuS) auf der Lernseite kurze Etappen mit häufigem Wechsel (lesen – anklicken – entscheiden). Das betrifft die Form, nicht das Niveau.
 
-**Zeit – der Kern füllt die Arbeitsphase**
+**Zeit – das Blatt füllt die Stunde**
 - Vorgabe von Tobias (Stand 11.11.2026): Das Arbeitsblatt füllt eine Einzelstunde (45 Min.) mindestens 40 Min. und eine Doppelstunde (90 Min.) mindestens 80 Min. – für ALLE SuS, auch für die schnellen. Kernaufgaben und Pufferaufgaben zusammen müssen das leisten.
 - Kernaufgaben: durchschnittliche SuS sind damit realistisch ca. 30–35 Min. (Einzel) bzw. ca. 60–70 Min. (Doppel) beschäftigt. Schwächere schaffen den Kern mit Hilfen in der Stunde.
 - Kern + Pufferaufgaben: auch schnelle SuS arbeiten damit durchgehend mindestens 40 bzw. 80 Min. Dafür reichen die Pufferaufgaben zeitlich für mindestens ca. 15 Min. (Einzel) bzw. ca. 25 Min. (Doppel), und eine davon ist offen (siehe unten), sodass niemand vor dem Stundenende ohne Aufgabe ist.
