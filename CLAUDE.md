@@ -5,6 +5,30 @@ Veröffentlicht über GitHub Pages: `https://ideenclub.github.io/lernseiten/`
 
 Diese Datei gilt für jede Sitzung, auch für die automatischen Läufe (geplante Aufgaben GL 7, GL 8, GL 10, WiPo 10).
 
+## ZENTRALE REGELN FÜR ALLE KLASSEN (höchste Priorität)
+
+Dieser Abschnitt ist die zentrale Stelle für Regeln, die Tobias für alle Klassen und Fächer festlegt. Rangfolge bei Widersprüchen:
+1. dieser Abschnitt,
+2. der Auftragstext der jeweiligen geplanten Aufgabe,
+3. alle übrigen Abschnitte dieser Datei.
+
+Neue oder geänderte Regeln für alle Klassen trägt Claude nur auf Tobias' ausdrücklichen Wunsch hier ein, jeweils mit „Stand <Datum>“. Ältere Regeln, die eine neue ersetzt, werden gelöscht, nicht stehen gelassen.
+
+Hinweis: Für Dateiform der Lernseiten (eine .html-Datei direkt im Klassenordner) und das Upload-Paket bei gescheitertem Push gelten die Angaben in den geplanten Aufgaben (Stand 10.11.2026). Die älteren Angaben dazu weiter unten (Unterordner mit `index.html`, ZIP mit Klassenordner) sind überholt.
+
+### R1 – QR-Code auf dem Arbeitsblatt (Stand 11.11.2026)
+
+- Gibt es zu einer Stunde, Einheit oder einem Baustein eine Lernseite, ein Lernquiz oder ein anderes Online-Angebot in diesem Repository, steht der QR-Code dazu IMMER direkt auf dem Schüler-Arbeitsblatt. Die SuS mit iPad starten so sofort, Tobias muss keinen Code extra zeigen. Gibt es kein Online-Angebot, steht auf dem Blatt weder ein QR-Code noch ein Hinweis darauf.
+- Zuordnung: Jedes Arbeitsblatt trägt den Code seines eigenen Online-Angebots (GL 7: Einzel- und Doppelstunden-Blatt je ihren Code, bei einer gemeinsamen Lernseite beide denselben; GL 8: jeder Baustein seinen Baustein-Code).
+- Größe: klein, aber sicher scannbar – 2,0 bis 2,5 cm Kantenlänge, nie kleiner als 2 cm. Fehlerkorrektur M, schwarz auf weiß mit heller Ruhezone, ohne Logo, Farbe oder Verlauf.
+- Platz: den am besten geeigneten freien Platz wählen, an dem der Code beim Austeilen sofort auffällt und nichts gequetscht wird. Erste Wahl: oben rechts im Kopfbereich neben dem Titel. Ist es dort eng: ein freier Bereich am Ende des Blatts (z. B. neben der Zusatz- bzw. Expertenaufgabe oder über der Fußzeile). Nie in Schreibfelder, nie über Text oder Bilder; Aufgaben und Schreibraum dafür nicht verdichten.
+- Beschriftung direkt daneben oder darunter, kurz und passend zur Art des Angebots, z. B. „Lernseite am iPad“ oder „Quiz am iPad“, darunter klein die URL ohne „https://“ zum Abtippen.
+- Mehrere Online-Angebote zur selben Einheit: je ein Code, nebeneinander, jeweils klar beschriftet.
+- Der Code enthält immer die endgültige URL der Seite – auch wenn der Push scheitert (er funktioniert dann nach Tobias' Upload).
+- Prüfen vor dem Ausliefern: jedes Arbeitsblatt-PDF mit mind. 200 dpi als PNG rendern, den QR-Code aus diesem Bild mit OpenCV `QRCodeDetector` auslesen; er muss exakt die URL ergeben. Sonst korrigieren.
+- Abschlussnachricht: eine Zeile „QR auf dem Arbeitsblatt: ja – <Ort> (Code geprüft)“ bzw. „nein – kein Online-Angebot“.
+- Der große QR-Code zum Zeigen (PNG, mind. 1200 px, im Artefakt oben) bleibt zusätzlich bestehen.
+
 ## Ordnerstruktur
 
 ```
