@@ -48,7 +48,9 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
 - Unberührt bleibt die Portionierung: In GL 7 (kurze Konzentrationsspanne mehrerer SuS) auf der Lernseite kurze Etappen mit häufigem Wechsel (lesen – anklicken – entscheiden). Das betrifft die Form, nicht das Niveau.
 
 **Zeit – der Kern füllt die Arbeitsphase**
-- Die Kernaufgaben beschäftigen durchschnittliche SuS realistisch: Einzelstunde (45 Min.) mindestens 40 Min., Doppelstunde (90 Min.) mindestens 80 Min. (Vorgabe von Tobias, Stand 11.11.2026). Die Pufferaufgaben kommen zusätzlich dazu und zählen nicht mit.
+- Vorgabe von Tobias (Stand 11.11.2026): Das Arbeitsblatt füllt eine Einzelstunde (45 Min.) mindestens 40 Min. und eine Doppelstunde (90 Min.) mindestens 80 Min. – für ALLE SuS, auch für die schnellen. Kernaufgaben und Pufferaufgaben zusammen müssen das leisten.
+- Kernaufgaben: durchschnittliche SuS sind damit realistisch ca. 30–35 Min. (Einzel) bzw. ca. 60–70 Min. (Doppel) beschäftigt. Schwächere schaffen den Kern mit Hilfen in der Stunde.
+- Kern + Pufferaufgaben: auch schnelle SuS arbeiten damit durchgehend mindestens 40 bzw. 80 Min. Dafür reichen die Pufferaufgaben zeitlich für mindestens ca. 15 Min. (Einzel) bzw. ca. 25 Min. (Doppel), und eine davon ist offen (siehe unten), sodass niemand vor dem Stundenende ohne Aufgabe ist.
 - Weil kaum Zeit für eine lehrergeführte Phase bleibt, gehören Einstieg und Sicherung als Aufgaben aufs Blatt: Aufgabe 1 ist ein kurzer Einstieg (Foto, Fall, Frage), die letzte Kernaufgabe sichert das Ergebnis (z. B. Merksatz formulieren, Selbsttest, Kernaussage ins Heft). Beide zählen zur Arbeitszeit. Bei Doppelstunden nach ca. 40–45 Min. einen Phasenwechsel einplanen (neue Sozialform oder neues Material).
 - Im Lösungsblatt bekommt jede Aufgabe einen Zeitansatz für durchschnittliche SuS des Jahrgangs (Lesen, Nachdenken, Schreiben einrechnen). Die Summe der Kernaufgaben muss im Zielbereich liegen; sonst Aufgaben ergänzen oder vertiefen, nicht nur Schreibraum vergrößern.
 - Der Umfang richtet sich nach dem Zeitansatz, nicht nach einer festen Aufgabenzahl.
