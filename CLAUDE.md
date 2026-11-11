@@ -48,7 +48,8 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
 - Unberührt bleibt die Portionierung: In GL 7 (kurze Konzentrationsspanne mehrerer SuS) auf der Lernseite kurze Etappen mit häufigem Wechsel (lesen – anklicken – entscheiden). Das betrifft die Form, nicht das Niveau.
 
 **Zeit – der Kern füllt die Arbeitsphase**
-- Die Kernaufgaben beschäftigen durchschnittliche SuS realistisch: Einzelstunde (45 Min.) ca. 25–30 Min. Arbeitszeit, Doppelstunde (90 Min.) ca. 55–65 Min. Der Rest ist Einstieg, Sicherung, Organisation.
+- Die Kernaufgaben beschäftigen durchschnittliche SuS realistisch: Einzelstunde (45 Min.) mindestens 40 Min., Doppelstunde (90 Min.) mindestens 80 Min. (Vorgabe von Tobias, Stand 11.11.2026). Die Pufferaufgaben kommen zusätzlich dazu und zählen nicht mit.
+- Weil kaum Zeit für eine lehrergeführte Phase bleibt, gehören Einstieg und Sicherung als Aufgaben aufs Blatt: Aufgabe 1 ist ein kurzer Einstieg (Foto, Fall, Frage), die letzte Kernaufgabe sichert das Ergebnis (z. B. Merksatz formulieren, Selbsttest, Kernaussage ins Heft). Beide zählen zur Arbeitszeit. Bei Doppelstunden nach ca. 40–45 Min. einen Phasenwechsel einplanen (neue Sozialform oder neues Material).
 - Im Lösungsblatt bekommt jede Aufgabe einen Zeitansatz für durchschnittliche SuS des Jahrgangs (Lesen, Nachdenken, Schreiben einrechnen). Die Summe der Kernaufgaben muss im Zielbereich liegen; sonst Aufgaben ergänzen oder vertiefen, nicht nur Schreibraum vergrößern.
 - Der Umfang richtet sich nach dem Zeitansatz, nicht nach einer festen Aufgabenzahl.
 
