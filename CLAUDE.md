@@ -3,7 +3,7 @@
 Sammel-Repository für alle digitalen Schülerangebote von Tobias (Gesamtschule Aspe, NRW): Lernseiten, Lernquizze, Lernpfade.
 Veröffentlicht über GitHub Pages: `https://ideenclub.github.io/lernseiten/`
 
-Diese Datei gilt für jede Sitzung, auch für die automatischen Läufe (geplante Aufgaben GL 7, GL 8, GL 10, WiPo 10).
+Diese Datei gilt für jede Sitzung, auch für die automatischen Läufe (geplante Aufgaben GL 7, GL 8a, GL 8e, GL 10, WiPo 10).
 
 ## ZENTRALE REGELN FÜR ALLE KLASSEN (höchste Priorität)
 
@@ -243,8 +243,8 @@ Die Klassenseite hat einen festen QR-Code im Klassenraum. Neue Stunden tauchen d
 ### Sonderfall GL 8 (zwei Klassen, gleiche Inhalte)
 
 - `gl8/` ist der Speicher für alle Bausteine (je 45 Minuten): `gl8/bNN-kurzthema/index.html`. `gl8/lessons.json` listet jeden Baustein einmal (`"titel": "Baustein 12: …"`).
-- `gl8-1/` = Klassenseite der 8er-Klasse mit GL am Montag (Doppelstunde) und Donnerstag (Einzelstunde).
-- `gl8-2/` = Klassenseite der 8er-Klasse mit GL am Mittwoch (Einzelstunde) und Donnerstag (Doppelstunde).
+- `gl8-1/` = Klassenseite der Klasse **8a** (GL am Montag Doppelstunde, Donnerstag Einzelstunde). Geplante Aufgabe „GL 8a“ (So + Mi 0:47), Projekt „GL 8a“ (Stammprojekt mit der gemeinsamen Verlaufsdatei).
+- `gl8-2/` = Klassenseite der Klasse **8e** (GL am Mittwoch Einzelstunde, Donnerstag Doppelstunde). Geplante Aufgabe „GL 8e“ (Di + Mi 3:17), Projekt „GL 8e“. 8e setzt in der Regel Bausteine ein, die für 8a schon erstellt wurden; die Auslieferung erfolgt getrennt je Klasse (Stand 11.11.2026).
 - In `gl8-1/lessons.json` und `gl8-2/lessons.json` steht pro Unterrichtstag der Klasse ein Eintrag mit dem Datum dieser Klasse; `pfad` zeigt auf den ersten Baustein der Stunde, z. B. `"../gl8/b12-dampfmaschine/"`, `info` z. B. `"Doppelstunde: Baustein 12 + 13"`.
 - Folgen zwei Bausteine in einer Doppelstunde aufeinander, steht am Ende des ersten ein großer Weiter-Knopf zum nächsten. Entsteht ein Folgebaustein erst in einem späteren Lauf, wird der Weiter-Knopf im vorherigen Baustein dann ergänzt.
 
