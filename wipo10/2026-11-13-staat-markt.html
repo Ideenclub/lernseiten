@@ -140,7 +140,7 @@ var ETAPPEN = [
  {id:'e4', kicker:'Etappe 4 von 4', title:'Streitfall Mindestlohn', img:'baeckerei', alt:'Theke einer Bäckerei mit Broten und Gebäck',
   text:['Die Höhe des Mindestlohns schlägt eine Kommission vor, in der Arbeitgeber und Gewerkschaften sitzen. Die Bundesregierung setzt ihn dann in Kraft: 2026 sind es 13,90 Euro, ab 2027 14,60 Euro pro Stunde.',
         'Ob er schneller steigen soll, ist umstritten. Entscheide: Spricht die Aussage für oder gegen einen höheren Mindestlohn?'],
-  repeat:'M3 auf dem Arbeitsblatt (S. 4)',
+  repeat:'M3 auf dem Arbeitsblatt (S. 3)',
   qs:[
    {type:'dd', q:'„Wer Vollzeit arbeitet, muss von seinem Lohn leben können.“', o:DD, c:0, e:'Das ist ein Argument für einen höheren Mindestlohn.'},
    {type:'dd', q:'„Kleine Bäckereien müssen die Brötchen dann teurer machen und verlieren Kunden.“', o:DD, c:1, e:'Das ist ein Argument dagegen: höhere Kosten für kleine Betriebe.'},
@@ -264,7 +264,7 @@ function render(){
       h += '<tr><td>'+esc(name)+'<br><span class="hint" style="margin:0">'+esc(tip)+'</span></td><td>'+k+' von '+n+'</td></tr>';
     });
     h += '</table>';
-    if(L==='A') h += '<p><b>Stufe A:</b> Weiter mit „Schon fertig?“ auf S. 6 deines Arbeitsblatts (Profi- und Experten-Aufgabe).</p>';
+    if(L==='A') h += '<p><b>Stufe A:</b> Weiter mit „Schon fertig?“ auf S. 3 deines Arbeitsblatts (Profi- und Experten-Aufgabe).</p>';
     var wrong = ALLQ.filter(function(q){ return S.first[q.id]===false; });
     h += '<div class="nav">';
     if(wrong.length && !S.fixDone) h += '<button class="btn main" id="fix">Fehler verbessern ('+wrong.length+')</button>';
@@ -281,7 +281,7 @@ function render(){
   }
   if(s==='fertig'){
     h += '<section class="screen on"><div class="kicker">Schon fertig?</div><h2>Weiter auf dem Arbeitsblatt</h2>';
-    h += '<div class="lead"><p>Auf <b>Seite 6</b> deines Arbeitsblatts findest du unter „Schon fertig?“ drei Aufgaben fürs Heft:</p>';
+    h += '<div class="lead"><p>Auf <b>Seite 3</b> deines Arbeitsblatts findest du unter „Schon fertig?“ drei Aufgaben fürs Heft:</p>';
     h += '<p>★ <b>Profi-Aufgabe:</b> Ist es gerecht, dass Jugendliche unter 18 ohne Ausbildung keinen Mindestlohn bekommen?</p>';
     h += '<p>★★ <b>Experten-Aufgabe:</b> Entwirf selbst einen Staatseingriff für ein Problem aus deinem Alltag.</p>';
     h += '<p><b>Quizfragen:</b> Schreib eigene Quizfragen mit Lösung für deine Mitschüler – so viele du willst.</p></div>';
