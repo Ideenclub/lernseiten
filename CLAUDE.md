@@ -192,12 +192,12 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 
 **Arbeitsweise in Stufen (jede Stufe ist Pflicht):**
 1. **Planen:** Stundenverlauf mit Minuten skizzieren, getrennt für schwache, mittlere und starke SuS (wer macht wann was, wo greifen Tipps, wo die Puffer). Erst dann bauen.
-2. **Bauen** nach R1–R6.
+2. **Bauen** nach R1–R6 und R9–R11.
 3. **Probebearbeitung:** Zu jeder Kernaufgabe drei Musterantworten schreiben: schwache Schülerin mit Tipps, mittlerer Schüler, starke Schülerin. Prüfen: Reichen die Tipps wirklich? Ist die Aufgabe ohne Rückfrage verständlich? Fordert sie die Starke? Passt der Schreibraum zur mittleren Antwort? Stimmen Zeitansätze und Lösungsblatt? Wenn nein: ändern.
 4. **Technische Tests:**
    - PDF: jede Seite mit 200 dpi als PNG rendern und ansehen (abgeschnittene oder überlappende Texte, leere Seiten, Seitenumbrüche mitten in Aufgaben, Bildschärfe, Kopfhöhe, Graustufen-Probe nach R4), QR-Code nach R1 auslesen.
    - Lernseite und Quiz im Headless-Browser in iPad-Größe hoch und quer: jede Frage einmal richtig und einmal falsch beantworten, alle Knöpfe, Stufenberechnung mit 0 %, ca. 50 %, 100 %, „Fehler verbessern“, Neuladen mitten im Quiz (Fortschritt bleibt), Konsole fehlerfrei. Zusätzlich mit blockiertem Netzwerk laden: Die Seite muss vollständig funktionieren (keine externen Ressourcen).
-5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R8. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
+5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R12. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
 6. **Endabnahme:** Erst ausliefern, wenn keine A-Mängel offen sind.
 
 **Satz und Typografie (wie im Verlag):** einheitliche Abstände und Ränder (mind. 1,5 cm), Zeilenabstand gut lesbar, Fließtext mind. 10,5 pt (Jg. 7/8 möglichst 11 pt; Tipps mind. 9 pt; Seitenlimit R9), keine einzelnen Zeilen am Seitenanfang oder -ende, keine Aufgabe über einen Seitenumbruch zerrissen, Silbentrennung sauber, deutsche Anführungszeichen („…“), einheitliche Schreibweise, fehlerfreie Rechtschreibung und Zeichensetzung (jeden Text Korrektur lesen), Bilder für Druck scharf (ca. 300 dpi in Druckgröße), Bildnachweise klein und vollständig.
@@ -262,6 +262,38 @@ Anlass: Am 12.11.2026 hatte das WiPo-10-Arbeitsblatt für eine Doppelstunde 6 Se
 
 **Prüfen vor dem Ausliefern:** Seitenzahl jedes Arbeitsblatt-PDFs mit Python (pypdf) zählen. Liegt sie über dem Limit, wird nicht ausgeliefert: kürzen nach der Reihenfolge oben und neu prüfen. Bei der Vertretungsprobe (R3) mitprüfen, ob jede Buch- und Heftaufgabe ohne Rückfrage verständlich ist.
 - Abschlussnachricht: eine Zeile „Umfang: Arbeitsblatt X Seiten (max. Y) · ins Buch/Heft verlagert: …“, bei mehreren Blättern je Blatt.
+
+**Platz voll nutzen (Stand 12.11.2026):** Das Limit ist eine Obergrenze, kein Freibrief für halbleere Seiten. Jede Seite ist sinnvoll gefüllt; die letzte Seite mindestens zu etwa zwei Dritteln. Würde eine dritte Seite nur zu einem Drittel gefüllt, wird auf 2 Seiten verdichtet (Reihenfolge oben). Würde eine Seite deutlich leer bleiben, wird der Platz für Aufgaben, Hilfen oder Pufferaufgaben genutzt, nicht für größere Bilder oder Weißraum. Prüfen am gerenderten PNG der letzten Seite.
+
+### R10 – Die Lernseite trägt die Stunde allein (Stand 12.11.2026)
+
+Wunsch von Tobias: Über den QR-Code auf dem Arbeitsblatt kommen die SuS auf eine Lernseite, mit der sie auch OHNE Arbeitsblatt die ganze Stunde sinnvoll arbeiten können – 45 Minuten bei einer Einzelstunde, 90 Minuten bei einer Doppelstunde. Arbeitsblatt (R3, ohne iPad) und Lernseite (ohne Blatt) sind zwei vollwertige Wege durch dieselbe Stunde.
+
+- **Vollständig:** Die Lernseite enthält alle Inhalte, Materialien und Aufgaben, die für die Lernziele der Stunde nötig sind, in digitaler Form – mindestens alles, was das Blatt verlangt, gern mehr (zusätzliche Etappen, Animationen, Bonusfragen). Nichts Pflichtiges steht nur auf dem Blatt.
+- **Zeit:** Etappen und Aufgaben füllen für durchschnittliche SuS mindestens 40 bzw. 80 Minuten; Zeitansätze je Etappe wie in R2 ermitteln und addieren. Doppelstunde: zwei klar getrennte Teile mit Phasenwechsel (bei GL 8 zwei Baustein-Seiten mit Weiter-Knopf, zusammen 80 Minuten). Am Ende „Schon fertig?“ mit Bonusetappe, die nie ausgeht.
+- **Schreibanteil:** Aufgaben, die eigene Sätze verlangen (AFB II/III), stehen auch auf der Lernseite, mit dem Hinweis „Schreibe deine Antwort ins Heft (Aufgabe …)“ und anschließender Musterlösung zum Aufklappen erst nach dem Schreiben. So bleibt der Kompetenzanspruch erhalten, auch wenn das Blatt fehlt.
+- **Buch:** Buchaufträge mit Seite und Materialnummer wie auf dem Blatt (nur Angaben genau wie auf den Scans), Datenschutz und Urheberrecht nach Abschnitt „Datenschutz“ (keine Buchtexte, keine Scans).
+- **Differenzierung:** Tipps gestuft zum Aufklappen, Profi- und Expertenetappen für Starke, kurze Etappen und Vorlesen/Worterklärungen für Schwächere (R2).
+- **Ergebnissicherung:** Ergebnisbildschirm nach R6; Hinweis, was ins Heft gehört.
+- **Prüfen:** Probebearbeitung der Lernseite ohne Blatt (R7 Stufe 3) – trägt sie 45 bzw. 90 Minuten? Technische Tests nach R7 Stufe 4.
+- Abschlussnachricht: eine Zeile „Lernseite allein: ca. X Min. (Etappen: …), alle Pflichtaufgaben enthalten: ja“.
+
+### R11 – Planung: Einbettung in die Reihe, Stundenbudget, Kompetenzen, Buch (Stand 12.11.2026)
+
+Gilt für jeden Lauf zusätzlich zu den Jahresplan-Abschnitten der Aufträge.
+- **Einbettung:** Jede Stunde knüpft erkennbar an die vorige an (kurzer Rückbezug in Aufgabe 1 oder auf der Lernseite) und bereitet die nächste vor. In der Verlaufsdatei steht je Stunde: UV, „Stunde X von Y“ (Budget laut Curriculum), Lernziel in einem Satz, Anschluss an die vorige Stunde, Vorgemerkt als Nächstes.
+- **Stundenbudget:** Vor jeder Planung die bereits gehaltenen Stunden des laufenden UV zählen und mit dem Budget des schulinternen Curriculums vergleichen. Ein UV überschreitet sein Budget nicht; ist das Budget erreicht, wird gesichert und das nächste UV begonnen. Abweichungen (z. B. Ausfälle) mit Kürzungsvorschlag melden. Das Ergebnis steht in jeder Abschlussnachricht („UV … Stunde X/Y“).
+- **Kompetenzorientierung:** Je Stunde 1–2 konkrete Kompetenzerwartungen aus dem schulinternen Curriculum bzw. Kernlehrplan GL/WiPo NRW (Sach-, Methoden-, Urteils-, Handlungskompetenz) auswählen, in der Verlaufsdatei notieren und die Aufgaben darauf ausrichten: Erarbeitung → Anwendung → Urteil/Transfer → Sicherung. Die Sicherungs- bzw. Kontrollaufgabe prüft genau diese Kompetenz. Auf dem Schülerblatt stehen keine Planungsbegriffe; dort zeigen höchstens die Ich-kann-Sätze (R6), worum es geht.
+- **Buch:** Liegen Buchseiten zum Thema vor, enthält jede Stunde mindestens einen Buchauftrag (Material lesen oder Aufgabe ins Heft), mit Seite, Materialnummer und Aufgabennummer genau wie auf den Scans. Datenschutz und Urheberrecht nach Abschnitt „Datenschutz“.
+- **Motivation:** Thema mit Bezug zur Lebenswelt der Altersgruppe; je Stunde eine Wahl- oder Produktaufgabe (R7).
+
+### R12 – Zugriff auf Planungsdaten vor dem Start prüfen (Stand 12.11.2026)
+
+Anlass: Am 12.11.2026 lief WiPo 10 ohne Zugriff auf Curriculum, Verlaufsdatei und Buchseiten; das Blatt entstand ohne Buchbezug und ohne Budgetprüfung.
+- Zu Beginn jedes Laufs prüfen, ob Verlaufsdatei, schulinternes Curriculum und die Buchseiten des aktuellen UV lesbar sind (Projekt-Werkzeuge per ToolSearch suchen, bei leerem Ergebnis nach ca. 30 Sekunden ein zweites Mal; dann Datei auflisten und öffnen).
+- Fehlt etwas davon: SOFORT eine eigene SendUserMessage an Tobias: „ACHTUNG <Klasse>: kein Zugriff auf <Verlaufsdatei / Curriculum / Buchseiten> – Fehlermeldung: …“. Danach trotzdem die bestmögliche Stunde erstellen (Fallback: Verlauf aus `planung/verlauf/<klasse>.md` im Repository, falls vorhanden; sonst aus den letzten Einträgen der lessons.json der Klasse und den neuesten Chats), keine Buchseiten erfinden. Ganz oben in der Abschlussnachricht: „ACHTUNG: erstellt ohne …“.
+- Spiegel im Repository: Nach jedem Lauf mit Zugriff schreibt der Lauf eine kurze Planungsübersicht nach `planung/verlauf/<klasse>.md` (UV-Liste mit Budgets und gehaltenen Stunden, letzte 10 Stunden mit Thema und Lernziel, Vorgemerkt als Nächstes, Buchindex des aktuellen und nächsten UV: Seite · Materialnummer · Materialart · Aufgabennummern – nur Nummern und Stichworte, keine Buchtexte). Keine Schülerdaten, keine Namen, keine Noten.
+- Abschlussnachricht: eine Zeile „Planungsdaten: Verlauf ✓/✗ · Curriculum ✓/✗ · Buchseiten ✓/✗“.
 
 ## Ordnerstruktur
 
