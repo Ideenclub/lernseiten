@@ -14,7 +14,7 @@ Dieser Abschnitt ist die zentrale Stelle für Regeln, die Tobias für alle Klass
 
 Neue oder geänderte Regeln für alle Klassen trägt Claude nur auf Tobias' ausdrücklichen Wunsch hier ein, jeweils mit „Stand <Datum>“. Ältere Regeln, die eine neue ersetzt, werden gelöscht, nicht stehen gelassen.
 
-Hinweis: Für Dateiform der Lernseiten (eine .html-Datei direkt im Klassenordner) und das Upload-Paket bei gescheitertem Push gelten die Angaben in den geplanten Aufgaben (Stand 10.11.2026). Die älteren Angaben dazu weiter unten (Unterordner mit `index.html`, ZIP mit Klassenordner) sind überholt.
+Hinweis: Dateiform der Lernseiten (Stand 10.11.2026): Jede neue Lernseite ist EINE Datei direkt im Klassenordner (`gl7/<JJJJ-MM-TT-kurzthema>.html`, in GL 8 `gl8/bNN-kurzthema.html`), Bilder als data:-URI eingebettet; in lessons.json ist „pfad“ der Dateiname. Hochladen nur noch über R14 (Übergabe). Die älteren Angaben weiter unten (Unterordner mit `index.html`, Upload-ZIP) sind überholt.
 
 ### R1 – QR-Code auf dem Arbeitsblatt (Stand 11.11.2026)
 
@@ -192,12 +192,12 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 
 **Arbeitsweise in Stufen (jede Stufe ist Pflicht):**
 1. **Planen:** Stundenverlauf mit Minuten skizzieren, getrennt für schwache, mittlere und starke SuS (wer macht wann was, wo greifen Tipps, wo die Puffer). Erst dann bauen.
-2. **Bauen** nach R1–R6 und R9–R11.
+2. **Bauen** nach R1–R6 und R9–R14.
 3. **Probebearbeitung:** Zu jeder Kernaufgabe drei Musterantworten schreiben: schwache Schülerin mit Tipps, mittlerer Schüler, starke Schülerin. Prüfen: Reichen die Tipps wirklich? Ist die Aufgabe ohne Rückfrage verständlich? Fordert sie die Starke? Passt der Schreibraum zur mittleren Antwort? Stimmen Zeitansätze und Lösungsblatt? Wenn nein: ändern.
 4. **Technische Tests:**
    - PDF: jede Seite mit 200 dpi als PNG rendern und ansehen (abgeschnittene oder überlappende Texte, leere Seiten, Seitenumbrüche mitten in Aufgaben, Bildschärfe, Kopfhöhe, Graustufen-Probe nach R4), QR-Code nach R1 auslesen.
    - Lernseite und Quiz im Headless-Browser in iPad-Größe hoch und quer: jede Frage einmal richtig und einmal falsch beantworten, alle Knöpfe, Stufenberechnung mit 0 %, ca. 50 %, 100 %, „Fehler verbessern“, Neuladen mitten im Quiz (Fortschritt bleibt), Konsole fehlerfrei. Zusätzlich mit blockiertem Netzwerk laden: Die Seite muss vollständig funktionieren (keine externen Ressourcen).
-5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R12. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
+5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R14. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
 6. **Endabnahme:** Erst ausliefern, wenn keine A-Mängel offen sind.
 
 **Satz und Typografie (wie im Verlag):** einheitliche Abstände und Ränder (mind. 1,5 cm), Zeilenabstand gut lesbar, Fließtext mind. 10,5 pt (Jg. 7/8 möglichst 11 pt; Tipps mind. 9 pt; Seitenlimit R9), keine einzelnen Zeilen am Seitenanfang oder -ende, keine Aufgabe über einen Seitenumbruch zerrissen, Silbentrennung sauber, deutsche Anführungszeichen („…“), einheitliche Schreibweise, fehlerfreie Rechtschreibung und Zeichensetzung (jeden Text Korrektur lesen), Bilder für Druck scharf (ca. 300 dpi in Druckgröße), Bildnachweise klein und vollständig.
@@ -292,8 +292,44 @@ Gilt für jeden Lauf zusätzlich zu den Jahresplan-Abschnitten der Aufträge.
 Anlass: Am 12.11.2026 lief WiPo 10 ohne Zugriff auf Curriculum, Verlaufsdatei und Buchseiten; das Blatt entstand ohne Buchbezug und ohne Budgetprüfung.
 - Zu Beginn jedes Laufs prüfen, ob Verlaufsdatei, schulinternes Curriculum und die Buchseiten des aktuellen UV lesbar sind. Das Werkzeug dafür heißt **„Projects“** und ist in den geplanten Läufen direkt eingebaut (Methoden `project_info` zum Auflisten der Projektdateien, `project_read`, `project_search`, `project_write`); es taucht in der ToolSearch-Suche NICHT auf. Zuerst `project_info` für das Projekt der Klasse aufrufen, dann die Dateien öffnen. Nur wenn kein solches Werkzeug in der eigenen Werkzeugliste steht: per ToolSearch suchen, nach ca. 30 Sekunden ein zweites Mal. (Gegenprobe 12.11.2026: Lauf sah mit `Projects · project_info` alle GL-10-Dateien.)
 - Fehlt etwas davon: SOFORT eine eigene SendUserMessage an Tobias: „ACHTUNG <Klasse>: kein Zugriff auf <Verlaufsdatei / Curriculum / Buchseiten> – Fehlermeldung: …“. Danach trotzdem die bestmögliche Stunde erstellen (Fallback: Verlauf aus `planung/verlauf/<klasse>.md` im Repository, falls vorhanden; sonst aus den letzten Einträgen der lessons.json der Klasse und den neuesten Chats), keine Buchseiten erfinden. Ganz oben in der Abschlussnachricht: „ACHTUNG: erstellt ohne …“.
-- Spiegel im Repository: Nach jedem Lauf mit Zugriff schreibt der Lauf eine kurze Planungsübersicht nach `planung/verlauf/<klasse>.md` (UV-Liste mit Budgets und gehaltenen Stunden, letzte 10 Stunden mit Thema und Lernziel, Vorgemerkt als Nächstes, Buchindex des aktuellen und nächsten UV: Seite · Materialnummer · Materialart · Aufgabennummern – nur Nummern und Stichworte, keine Buchtexte). Keine Schülerdaten, keine Namen, keine Noten.
+- Spiegel im Repository: Nach jedem Lauf mit Zugriff legt der Lauf eine kurze Planungsübersicht als `planung/verlauf/<klasse>.md` in die Übergabe (R14; `<klasse>` = gl7, gl8, gl10, wipo10). Inhalt: UV-Liste mit Budgets und gehaltenen Stunden, letzte 10 Stunden mit Thema und Lernziel, Vorgemerkt als Nächstes, Buchindex des aktuellen und nächsten UV: Seite · Materialnummer · Materialart · Aufgabennummern – nur Nummern und Stichworte, keine Buchtexte. Keine Schülerdaten, keine Namen, keine Noten.
 - Abschlussnachricht: eine Zeile „Planungsdaten: Verlauf ✓/✗ · Curriculum ✓/✗ · Buchseiten ✓/✗“.
+
+### R13 – Ablauf jedes geplanten Laufs (Stand 12.11.2026)
+
+Gilt für die Erstell-Aufgaben GL 7, GL 8a, GL 8e, GL 10 und WiPo 10. Der Auftragstext nennt nur noch das Klassenspezifische (Stundenplan, Projekt, Dateien, Buch, Reihenfolge, Besonderheiten). Reihenfolge der Schritte:
+1. **Start:** Datum mit `current_time`. Repository lesend klonen: `git clone https://github.com/Ideenclub/lernseiten.git` (öffentlich; kein add_repo, kein Push nötig). Diese CLAUDE.md lesen, dann `planung/termine-2026-27.json` (alle Ferien, Feiertage, beweglichen Ferientage und SuS-freien Tage sind frei; Einträge mit „jahrgaenge“ nur für diese Jahrgänge).
+2. **Planungsdaten nach R12** (Werkzeug „Projects“: zuerst `project_info`). Neueste Chats des Projekts mit `recent_chats`/`conversation_search` prüfen, falls verfügbar; Tobias' Angaben (Ausfall, „nicht geschafft“, „zu schwer“) haben Vorrang.
+3. **Abbruchfälle:** Morgen unterrichtsfrei oder kein Unterrichtstag der Klasse → nichts erstellen, nur kurz per SendUserMessage melden (mit Buchseiten-Erinnerung und Jahresplan-Zeile). Steht im Protokoll der Verlaufsdatei schon eine Stunde mit diesem Datum → nur melden. Ab 01.09.2027 nichts erstellen, nur um Bestätigung von Stundenplan und Lerngruppe bitten.
+4. **Buchseiten-Check:** Liegen für das aktuelle UND das nächste UV Buchseiten im Projekt? Fehlen sie und beginnt das nächste UV innerhalb von zwei Unterrichtswochen: sofort eine eigene SendUserMessage „Erinnerung <Klasse>: Ab <Datum> beginnt UV … (Kap. …, S. …). Bitte lade die Buchseiten ins Projekt „…“ hoch.“ – in jedem Lauf, solange sie fehlen.
+5. **Jahresplan und Budget nach R11:** verfügbare Stunden mit Python aus Stundenplan und Termine-Datei exakt zählen (nie schätzen), gehaltene Stunden je UV zählen, Budget nie überschreiten. Höchstens 4 Stunden Budget übrig → Hinweis „UV endet in X Stunden (am <Datum>) – nächstes UV „…“ ab <Datum>“; ist das Budget ausgeschöpft, wird die Stunde Abschluss und Sicherung des UV. Kein Budget im Curriculum → sinnvoll verteilen und „(Budget geschätzt, kein Wert im Curriculum)“. Keine erfundenen Zahlen.
+6. **Planen** (R7 Stufe 1, R11), dann **bauen** nach R1–R10: Arbeitsblatt-PDF und Lösungsblatt-PDF (R8) mit Python/ReportLab, Lernseite (R10, Dateiform siehe Hinweis oben), QR-Code auf dem Blatt (R1) und großer QR-Code zum Zeigen (PNG, mind. 1200 px, darunter Thema, Klasse, Datum, Kurz-URL; mit Decoder geprüft). Lehrwerk immer C.C. Buchner (nie Westermann); Seiten, Materialnummern und Aufgabennummern nur genau wie auf den Scans.
+7. **Prüfen** nach R7 (Probebearbeitung, technische Tests, unabhängige Prüfung, Endabnahme) und R9 (Seitenzahl mit pypdf).
+8. **Ausliefern:** alle PDFs und QR-PNGs per SendUserFile (status: proactive; QR-PNG mit display: render). Kein E-Mail-Versand, kein Gmail-Werkzeug.
+9. **Übergabe zum Hochladen nach R14** (Artefakt der Stunde mit Ordner `repo/`, dann Hochlade-Aufgabe anstoßen).
+10. **Verlaufsdatei** im Projekt aktualisieren: `project_read` direkt vor dem Schreiben, dann `project_write` mit vollem Inhalt; alle bestehenden Abschnitte übernehmen, nie Platzhalter. Pflichtangaben nach R11 und R5 (Designprotokoll), Protokollzeile mit Datum · Einzel/Doppel · UV · Stunde X/Y · Thema · Lernziel · Kompetenzen · Buchseiten · Lernseiten-URL · Seitenzahl Arbeitsblatt · Artefakt-Link, „Jahresplan 2026/27“ neu berechnet, „Vorgemerkt als Nächstes“. Veraltete Niveauabschnitte dabei nach R2 ersetzen.
+11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
+
+### R14 – Übergabe zum Hochladen (Stand 12.11.2026)
+
+Hintergrund (Tests vom 12.11.2026): Die Erstell-Aufgaben haben das Werkzeug „Projects“ (Curriculum, Verlauf, Buchseiten), dürfen aber nicht ins Repository schreiben (Push 403). Die Aufgabe „Lernseiten hochladen“ darf pushen, sieht aber die Projekte nicht. Deshalb übergibt jeder Erstell-Lauf seine Repository-Dateien über das Artefakt der Stunde, und die Hochlade-Aufgabe veröffentlicht sie. Tobias muss nichts hochladen.
+
+**Erstell-Lauf**
+- Keinen Push versuchen, kein Upload-ZIP bauen.
+- Genau ein Artefakt pro Lauf (das Artefakt der Stunde; Werkzeug per ToolSearch laden, z. B. `mcp__claude-artifacts__publish_files`, vorher dessen guide lesen). Titel wie im Auftrag (z. B. „GL 7 Jugendgericht“). Die Beschreibung (description) endet IMMER mit „· Übergabe zum Hochladen“. Inhalt:
+  - `index.html`: schlichte, handytaugliche Seite für Tobias, ganz oben groß der QR-Code (mind. 300 px), dann Datum, Thema, Format, Buchseiten, Links zu PDFs, Lernseiten-URL.
+  - PDFs und QR-PNGs der Stunde.
+  - Ordner `repo/` mit jeder Datei, die ins Repository soll, unter ihrem Zielpfad, z. B. `repo/gl7/2026-11-18-jugendgericht.html`, `repo/gl8/b14-kinderarbeit.html`, `repo/planung/verlauf/gl7.md`. Immer der vollständige Endinhalt. Erlaubt sind nur .html- und .md-Dateien in gl7/, gl8/, gl10/, wipo10/ und planung/verlauf/; nie `index.html`, nie lessons.json, nie PDFs. Jede .html-Datei höchstens 3 MB (Bilder sonst stärker verkleinern).
+  - `repo/uebergabe.json` (gültiges JSON, mit Python prüfen):
+    `{"klasse": "GL7", "datum": "2026-11-18", "commit": "GL 7: Lernseiten Jugendgericht (18.11.2026)", "eintraege": [{"datei": "gl7/lessons.json", "eintrag": {"datum": "2026-11-18", "titel": "…", "typ": "Lernseite mit Quiz", "pfad": "2026-11-18-jugendgericht.html", "info": "Mi, Einzelstunde"}}], "urls": ["https://ideenclub.github.io/lernseiten/gl7/2026-11-18-jugendgericht.html"]}`
+    Je neuem lessons.json-Eintrag ein Element in „eintraege“ (GL 8: gl8/lessons.json für neue Bausteine, gl8-1/lessons.json für 8a, gl8-2/lessons.json für 8e). Die Einträge werden oben eingefügt, bestehende Einträge bleiben unverändert.
+- Danach die Hochlade-Aufgabe sofort anstoßen: per ToolSearch `select:mcp__claude-code-remote__fire_trigger` laden und `fire_trigger` mit `trigger_id` „trig_01VcXuL7Pk3V6YgARFKhtGX1“ und `text` „Übergabe <Artefakt-Slug>“ aufrufen. Ist das Werkzeug nicht da oder scheitert der Aufruf: nicht schlimm, die Hochlade-Aufgabe läuft zusätzlich So–Do um 2:43, 4:43 und 5:43 Uhr und holt alle offenen Übergaben selbst ab.
+- Abschlusszeile: „Übergabe: Artefakt <URL> · Hochladen angestoßen ✓ / nicht möglich – wird spätestens 5:43 Uhr abgeholt“.
+
+**Hochlade-Lauf („Lernseiten hochladen“)**
+- Sucht private Artefakte, deren Beschreibung „Übergabe zum Hochladen“ enthält und die in den letzten 3 Tagen geändert wurden; erledigte Übergaben (Slug + Version) stehen in `planung/hochgeladen.json` und werden übersprungen. Ältere Übergaben vor neueren verarbeiten.
+- Prüft jede Datei (erlaubter Pfad und Typ, keine externen Ressourcen wie `<script src="http…">` oder Fremd-Stylesheets, keine Schülernamen, JSON gültig), schreibt sie, fügt die lessons.json-Einträge oben ein (nur wenn derselbe „pfad“ mit demselben „datum“ noch fehlt), trägt die Übergabe in `planung/hochgeladen.json` ein, committet mit der Nachricht aus `uebergabe.json` und pusht direkt auf `main` (vorher fetch + rebase, höchstens drei Versuche).
+- Meldet je Übergabe eine kurze SendUserMessage: „Hochgeladen ✓ <Klasse> <Datum>: <URL(s)> – online in 1–2 Minuten“ bzw. bei einem Fehler „ACHTUNG Hochladen <Klasse>: …“ mit dem Grund. Ohne offene Übergabe endet der Lauf ohne Nachricht.
 
 ## Ordnerstruktur
 
@@ -335,7 +371,7 @@ Die Klassenseite hat einen festen QR-Code im Klassenraum. Neue Stunden tauchen d
 4. URL der Seite: `https://ideenclub.github.io/lernseiten/<klasse>/<ordner>/`. GitHub Pages braucht nach dem Push etwa 1–2 Minuten.
 5. QR-Code für diese URL mit Python (`pip install qrcode[pil] --break-system-packages`) erzeugen, Fehlerkorrektur M, mindestens 600 px, schwarz auf weiß.
 
-### Wenn der Push scheitert: Upload-Paket für Tobias (verbindlich, Stand 09.11.2026)
+### Wenn der Push scheitert: Upload-Paket für Tobias (ÜBERHOLT seit 12.11.2026 – es gilt R14; nur noch Notlösung, wenn auch die Hochlade-Aufgabe nicht pushen kann)
 
 In den geplanten Aufgaben lehnt der Git-Proxy den Push derzeit ab (403 „not in this session's authorized repository set“). Dann lädt Tobias die Seite selbst per Browser hoch. Mach es ihm so einfach wie möglich – immer genau so:
 
