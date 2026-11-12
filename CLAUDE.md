@@ -85,11 +85,11 @@ Gilt für jedes Arbeitsblatt aller Klassen. Ziel: Die Stunde läuft vollständig
 - **Alles Nötige auf dem Blatt oder im Buch:** Jede Kernaufgabe lässt sich allein mit Arbeitsblatt, Buch (genaue Seite und Materialnummer), Heft und ggf. Atlas lösen. Nichts, was für die Kernaufgaben nötig ist, steht nur auf der Lernseite. Kein Pflichtmaterial, das nur die Fachlehrkraft hat (Video, Folie, Tafelbild).
 - **Selbsterklärende Aufgaben:** Operator fett, bei neuen Aufgabenformen ein kurzes Beispiel, Sozialform als Symbol. Keine Verweise wie „wie besprochen“, „siehe Tafel“ oder „deine Lehrkraft erklärt“.
 - **Ablaufzeile unter dem Titel** (eine Zeile, zählt zum Kopfbereich): z. B. „So arbeitest du: 1 → 2 → 3 → 4 → Schon fertig?“ mit grober Minutenangabe. Die SuS wissen ohne Erklärung, was zu tun ist.
-- **Kasten „Kein Internet / kein iPad?“** direkt unter oder neben dem QR-Code (1–2 Zeilen); wird der Kopf dadurch zu hoch, steht der Kasten mit dem QR-Code am Blattende (R1): „Kein Problem: Bearbeite alle Aufgaben auf diesem Blatt. Statt des Online-Quiz: …“ – mit einem konkreten Ersatz, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
+- **iPad-Hinweis beim QR-Code** (Stand 12.11.2026) direkt unter oder neben dem QR-Code, 2–3 kurze, sachliche Zeilen; wird der Kopf dadurch zu hoch, steht er mit dem QR-Code am Blattende (R1). Wortlaut nach diesem Muster: „Mit iPad: Lernseite über den QR-Code. Ohne iPad: alle Aufgaben auf dem Blatt, statt Quiz Selbsttest S. … .“ Keine saloppen Formulierungen wie „Kein Problem“, keine Überschrift „Kein Internet / kein iPad?“. Der Ersatz ist konkret, entweder einem kurzen Selbsttest auf dem Blatt (4–6 Fragen zum Ankreuzen oder Kurzantworten) oder einem Buchauftrag mit Seite und Aufgabennummer. Gibt es kein Online-Angebot, entfällt der Kasten.
 - **QR-Code ist immer Zusatz, nie Voraussetzung:** Keine Kernaufgabe und keine Pufferaufgabe setzt voraus, dass der QR-Code, die Lernseite oder das Internet funktioniert.
 - **„Du brauchst“-Angabe** in der Ablaufzeile: z. B. „Du brauchst: Buch S. 202–205, Heft, Stift“.
 - **Sozialform vertretungstauglich:** Ist eine Aufgabe als Partner- oder Gruppenarbeit gedacht, steht dabei, wie sie allein geht („Allein: …“), damit eine Vertretung die Klasse auch in Einzelarbeit lassen kann.
-- **Lösungen zum Auslegen:** Das Lösungsblatt nach R8 kann ausgedruckt auf dem Kontrolltisch ausgelegt werden (Ablauf siehe R6). Hinweise für Lehrkraft oder Vertretung gibt es nicht; die gibt Tobias selbst.
+- **Lösungen zum Auslegen:** Dafür gibt es das einseitige „Lösungsblatt zur Selbstkontrolle“ nach R8 (Stand 12.11.2026). Wo es liegt, sagt die Lehrkraft in der Stunde; auf dem Arbeitsblatt steht nur „Lösungsblatt“, nie „Kontrolltisch“. Hinweise für Lehrkraft oder Vertretung gibt es nicht; die gibt Tobias selbst.
 - **Prüfen vor dem Ausliefern (Vertretungsprobe):** Lies nur das Schülerblatt mit den Augen einer fachfremden Vertretung und eines Schülers, der nicht im Unterricht war. Notiere jede Stelle, an der jemand fragen könnte „Was soll ich hier machen?“, „Wo steht das?“ oder „Ich bin fertig, was jetzt?“, und beseitige sie. Prüfe dann mit ausgeschaltetem Internet gedanklich: Kann die Klasse allein mit Blatt, Buch und Heft 45 bzw. 90 Minuten sinnvoll arbeiten, auch die Schnellen bis zum Schluss? Wenn nein: nachbessern.
 - Abschlussnachricht: eine Zeile „Plan B: ja – Offline-Ersatz für das Quiz: …, Vertretungsprobe bestanden“.
 
@@ -172,12 +172,12 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 - Feld „Kontrolle: ______“ für das Kürzel der Lehrkraft.
 
 **Ablauf für die SuS (steht auf dem Blatt, eine kurze nummerierte Anleitung beim Feld „Mein Ergebnis“)**
-1. Kernaufgaben erledigt → am Kontrolltisch die eigenen Antworten mit dem ausgelegten Lösungsblatt vergleichen, mit anderer Stiftfarbe verbessern (Blatt mitnehmen, kein Heft, höchstens 3 SuS gleichzeitig am Tisch).
+1. Kernaufgaben erledigt → Ergebnisse mit dem Lösungsblatt (zur Selbstkontrolle, R8) kontrollieren, mit anderer Stiftfarbe verbessern (Blatt mitnehmen, kein Heft, höchstens 3 SuS gleichzeitig). Das Wort „Kontrolltisch“ wird nicht verwendet (Stand 12.11.2026). In der Ablaufzeile (R3) z. B.: „So arbeitest du: 1 → 2 → 3 → Ergebnisse mit dem Lösungsblatt kontrollieren → 4 → …“.
 2. Quiz bzw. Selbsttest machen, „Mein Ergebnis“ ausfüllen.
 3. Mit Blatt (und iPad mit Ergebnisbildschirm) nach vorne zur Lehrkraft. Stehen dort schon zwei: zurück an den Platz, an „Schon fertig?“ weiterarbeiten, später wiederkommen.
 4. Danach „Schon fertig?“.
 - Auf dem Blatt ist genau eine Kernaufgabe als **Kontrollaufgabe** markiert (eigenes, schlichtes Symbol plus Wort „Kontrolle“, möglichst die Sicherungs- oder AFB-III-Aufgabe). Nur sie wird vorgezeigt.
-- Doppelstunde: nach Teil 1 nur Selbstkontrolle am Kontrolltisch, Vorzeigen erst am Ende (einmal pro Stunde, nicht pro Teil).
+- Doppelstunde: nach Teil 1 nur Selbstkontrolle mit dem Lösungsblatt, Vorzeigen erst am Ende (einmal pro Stunde, nicht pro Teil).
 
 - Die Abschlussrunde ist Teil der Stunde: Kern + Puffer füllen die Arbeitszeit bis dahin (R2), die Runde liegt in den Minuten danach.
 
@@ -211,7 +211,7 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 
 ### R8 – Lösungsblatt: nur Lösungen, zum Besprechen am Klassen-TV (Stand 11.11.2026)
 
-Tobias zeigt das Lösungsblatt am iPad über den Klassen-TV und scrollt im Unterrichtsgespräch Aufgabe für Aufgabe weiter, damit die SuS mitschreiben und abhaken können. Hinweise zur Stunde, für die Lehrkraft oder für eine Vertretung braucht er nicht; den Ablauf gestaltet er selbst. R8 ersetzt alle anderen Vorgaben zum Inhalt des Lösungsblatts, auch in den Aufträgen der geplanten Aufgaben (z. B. Lehrkraftkasten, Vertretungskasten, Zeitplan mit/ohne iPads, Zeitansätze, Kernlehrplan- und Kompetenzbezug, Einsatzhinweise, „Andere Wege“, Lösungen zu Lernseite und Quiz, „UV … Stunde/Baustein X von Y“, Bildquellen, eigene Seite „Lösungen zur Selbstkontrolle“).
+Tobias zeigt das Lösungsblatt am iPad über den Klassen-TV und scrollt im Unterrichtsgespräch Aufgabe für Aufgabe weiter, damit die SuS mitschreiben und abhaken können. Hinweise zur Stunde, für die Lehrkraft oder für eine Vertretung braucht er nicht; den Ablauf gestaltet er selbst. R8 ersetzt alle anderen Vorgaben zum Inhalt des Lösungsblatts, auch in den Aufträgen der geplanten Aufgaben (z. B. Lehrkraftkasten, Vertretungskasten, Zeitplan mit/ohne iPads, Zeitansätze, Kernlehrplan- und Kompetenzbezug, Einsatzhinweise, „Andere Wege“, Lösungen zu Lernseite und Quiz, „UV … Stunde/Baustein X von Y“, Bildquellen). Zusätzlich gibt es seit 12.11.2026 ein zweites, eigenes PDF „Lösungsblatt zur Selbstkontrolle“ (siehe unten).
 
 **Inhalt – nur Lösungen**
 - Ausschließlich die Lösungen der Aufgaben des Arbeitsblatts, in derselben Reihenfolge, mit allen Details: Kernaufgaben, Pufferaufgaben (★, ★★, Buchauftrag, soweit lösbar), ggf. Offline-Selbsttest.
@@ -223,7 +223,14 @@ Tobias zeigt das Lösungsblatt am iPad über den Klassen-TV und scrollt im Unter
 - Eine Aufgabe pro Seite, damit die SuS beim Scrollen die nächste Lösung noch nicht sehen. Teilaufgaben (a, b, c) stehen mit deutlichem Abstand untereinander auf derselben Seite. Reicht eine Seite nicht, geht die Aufgabe auf der nächsten Seite mit „(Fortsetzung)“ weiter.
 - Jede Seite beginnt mit Aufgabennummer und Aufgabentitel genau wie auf dem Arbeitsblatt.
 - Große, klare Schrift: Lösungstext mind. 20 pt, Überschriften größer; schwarz auf weiß, hoher Kontrast, schlicht, keine Deko, keine Farbflächen; aus der letzten Reihe lesbar. Fußzeile höchstens die Seitenzahl.
-- Ausgedruckt dient dasselbe Blatt als Lösung zum Auslegen am Kontrolltisch (R6).
+- Zum Auslegen dient nicht dieses Blatt, sondern das Lösungsblatt zur Selbstkontrolle (unten).
+
+**Lösungsblatt zur Selbstkontrolle (Stand 12.11.2026, Wunsch von Tobias)**
+- Zu jedem Arbeitsblatt ein zweites Lösungs-PDF: genau EINE Seite DIN A4 hoch, zum Auslegen, damit die SuS ihre Ergebnisse selbstständig auf einen Blick kontrollieren (R6). Das Lösungsblatt für den Klassen-TV (oben) bleibt unverändert bestehen.
+- Inhalt: oben nur „Lösungen“ und der Titel des Arbeitsblatts; darunter Aufgabe 1, 2, 3 … mit den Lösungen aller Kernaufgaben und des Selbsttests, kurz und eindeutig (Tabellen und Zuordnungen kompakt; bei offenen Aufgaben die Punkte, die vorkommen müssen, oder eine kurze Musterlösung). Lösungen zu „Schon fertig?“ nur, wenn sie ohne zweite Seite passen; sonst stehen sie nur im TV-Lösungsblatt.
+- Nichts anderes: keine Hinweise, keine Lehrkraftangaben, keine Zeitangaben, keine Stufentabelle, keine Deko, kein QR-Code. Schwarz auf weiß, Schrift mind. 10 pt.
+- Dateiname: <Klasse>_<Kurzthema>_Loesungen_Selbstkontrolle.pdf (z. B. WiPo10_Vorsorge_Loesungen_Selbstkontrolle.pdf). Seitenzahl mit pypdf prüfen (genau 1).
+- Abschlussnachricht: in der Zeile „Lösungsblatt“ ergänzen: „+ Selbstkontrolle 1 Seite“.
 
 **Wohin mit dem Rest:** Zeitansätze werden weiter intern für R2 berechnet. Bildquellen und alles, was die Aufträge sonst fürs Lösungsblatt vorsehen, stehen nur noch in der Abschlussnachricht bzw. in der Verlaufsdatei, soweit die Aufträge das verlangen.
 
@@ -303,7 +310,7 @@ Gilt für die Erstell-Aufgaben GL 7, GL 8a, GL 8e, GL 10 und WiPo 10. Der Auftra
 3. **Abbruchfälle:** Morgen unterrichtsfrei oder kein Unterrichtstag der Klasse → nichts erstellen, nur kurz per SendUserMessage melden (mit Buchseiten-Erinnerung und Jahresplan-Zeile). Steht im Protokoll der Verlaufsdatei schon eine Stunde mit diesem Datum → nur melden. Ab 01.09.2027 nichts erstellen, nur um Bestätigung von Stundenplan und Lerngruppe bitten.
 4. **Buchseiten-Check:** Liegen für das aktuelle UND das nächste UV Buchseiten im Projekt? Fehlen sie und beginnt das nächste UV innerhalb von zwei Unterrichtswochen: sofort eine eigene SendUserMessage „Erinnerung <Klasse>: Ab <Datum> beginnt UV … (Kap. …, S. …). Bitte lade die Buchseiten ins Projekt „…“ hoch.“ – in jedem Lauf, solange sie fehlen.
 5. **Jahresplan und Budget nach R11:** verfügbare Stunden mit Python aus Stundenplan und Termine-Datei exakt zählen (nie schätzen), gehaltene Stunden je UV zählen, Budget nie überschreiten. Höchstens 4 Stunden Budget übrig → Hinweis „UV endet in X Stunden (am <Datum>) – nächstes UV „…“ ab <Datum>“; ist das Budget ausgeschöpft, wird die Stunde Abschluss und Sicherung des UV. Kein Budget im Curriculum → sinnvoll verteilen und „(Budget geschätzt, kein Wert im Curriculum)“. Keine erfundenen Zahlen.
-6. **Planen** (R7 Stufe 1, R11), dann **bauen** nach R1–R10: Arbeitsblatt-PDF und Lösungsblatt-PDF (R8) mit Python/ReportLab, Lernseite (R10, Dateiform siehe Hinweis oben), QR-Code auf dem Blatt (R1) und großer QR-Code zum Zeigen (PNG, mind. 1200 px, darunter Thema, Klasse, Datum, Kurz-URL; mit Decoder geprüft). Lehrwerk immer C.C. Buchner (nie Westermann); Seiten, Materialnummern und Aufgabennummern nur genau wie auf den Scans.
+6. **Planen** (R7 Stufe 1, R11), dann **bauen** nach R1–R10: Arbeitsblatt-PDF, Lösungsblatt-PDF für den Klassen-TV und Lösungsblatt zur Selbstkontrolle (beide R8) mit Python/ReportLab, Lernseite (R10, Dateiform siehe Hinweis oben), QR-Code auf dem Blatt (R1) und großer QR-Code zum Zeigen (PNG, mind. 1200 px, darunter Thema, Klasse, Datum, Kurz-URL; mit Decoder geprüft). Lehrwerk immer C.C. Buchner (nie Westermann); Seiten, Materialnummern und Aufgabennummern nur genau wie auf den Scans.
 7. **Prüfen** nach R7 (Probebearbeitung, technische Tests, unabhängige Prüfung, Endabnahme) und R9 (Seitenzahl mit pypdf).
 8. **Ausliefern:** alle PDFs und QR-PNGs per SendUserFile (status: proactive; QR-PNG mit display: render). Kein E-Mail-Versand, kein Gmail-Werkzeug.
 9. **Übergabe zum Hochladen nach R14** (Artefakt der Stunde mit Ordner `repo/`, dann Hochlade-Aufgabe anstoßen).
