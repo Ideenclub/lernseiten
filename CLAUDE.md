@@ -316,7 +316,7 @@ Hintergrund (Tests vom 12.11.2026): Die Erstell-Aufgaben haben das Werkzeug „P
 
 **Erstell-Lauf**
 - Keinen Push versuchen, kein Upload-ZIP bauen.
-- Genau ein Artefakt pro Lauf (das Artefakt der Stunde; Werkzeug per ToolSearch laden, z. B. `mcp__claude-artifacts__publish_files`, vorher dessen guide lesen). Titel wie im Auftrag (z. B. „GL 7 Jugendgericht“). Die Beschreibung (description) endet IMMER mit „· Übergabe zum Hochladen“. Inhalt:
+- Genau ein Artefakt pro Lauf (das Artefakt der Stunde; Werkzeug per ToolSearch laden, z. B. `mcp__claude-artifacts__publish_files`, vorher dessen guide lesen). Titel wie im Auftrag (z. B. „GL 7 Jugendgericht“). Jede Veröffentlichung dieses Artefakts, auch jede spätere Korrektur, bekommt im Werkzeug `publish_files` den Parameter `label` = „Übergabe zum Hochladen“ (daran findet die Hochlade-Aufgabe es; getestet 12.11.2026). Inhalt:
   - `index.html`: schlichte, handytaugliche Seite für Tobias, ganz oben groß der QR-Code (mind. 300 px), dann Datum, Thema, Format, Buchseiten, Links zu PDFs, Lernseiten-URL.
   - PDFs und QR-PNGs der Stunde.
   - Ordner `repo/` mit jeder Datei, die ins Repository soll, unter ihrem Zielpfad, z. B. `repo/gl7/2026-11-18-jugendgericht.html`, `repo/gl8/b14-kinderarbeit.html`, `repo/planung/verlauf/gl7.md`. Immer der vollständige Endinhalt. Erlaubt sind nur .html- und .md-Dateien in gl7/, gl8/, gl10/, wipo10/ und planung/verlauf/; nie `index.html`, nie lessons.json, nie PDFs. Jede .html-Datei höchstens 3 MB (Bilder sonst stärker verkleinern).
@@ -327,7 +327,7 @@ Hintergrund (Tests vom 12.11.2026): Die Erstell-Aufgaben haben das Werkzeug „P
 - Abschlusszeile: „Übergabe: Artefakt <URL> · Hochladen angestoßen ✓ / nicht möglich – wird spätestens 5:43 Uhr abgeholt“.
 
 **Hochlade-Lauf („Lernseiten hochladen“)**
-- Sucht private Artefakte, deren Beschreibung „Übergabe zum Hochladen“ enthält und die in den letzten 3 Tagen geändert wurden; erledigte Übergaben (Slug + Version) stehen in `planung/hochgeladen.json` und werden übersprungen. Ältere Übergaben vor neueren verarbeiten.
+- Sucht mit `list_artifacts` (query „Übergabe zum Hochladen“, trifft das label) eigene Artefakte, die in den letzten 3 Tagen geändert wurden; erledigte Übergaben (Slug + Version) stehen in `planung/hochgeladen.json` und werden übersprungen. Ältere Übergaben vor neueren verarbeiten.
 - Prüft jede Datei (erlaubter Pfad und Typ, keine externen Ressourcen wie `<script src="http…">` oder Fremd-Stylesheets, keine Schülernamen, JSON gültig), schreibt sie, fügt die lessons.json-Einträge oben ein (nur wenn derselbe „pfad“ mit demselben „datum“ noch fehlt), trägt die Übergabe in `planung/hochgeladen.json` ein, committet mit der Nachricht aus `uebergabe.json` und pusht direkt auf `main` (vorher fetch + rebase, höchstens drei Versuche).
 - Meldet je Übergabe eine kurze SendUserMessage: „Hochgeladen ✓ <Klasse> <Datum>: <URL(s)> – online in 1–2 Minuten“ bzw. bei einem Fehler „ACHTUNG Hochladen <Klasse>: …“ mit dem Grund. Ohne offene Übergabe endet der Lauf ohne Nachricht.
 
