@@ -1,6 +1,13 @@
 [
   {
     "datum": "2026-11-13",
+    "titel": "Wie sorge ich für später vor?",
+    "typ": "Lernseite mit Quiz",
+    "pfad": "2026-11-13-vorsorge.html",
+    "info": "Fr, Doppelstunde"
+  },
+  {
+    "datum": "2026-11-13",
     "titel": "Wann greift der Staat in den Markt ein?",
     "typ": "Lernseite mit Quiz",
     "pfad": "2026-11-13-staat-markt.html",
