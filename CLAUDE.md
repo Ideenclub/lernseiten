@@ -278,6 +278,7 @@ Wunsch von Tobias: Über den QR-Code auf dem Arbeitsblatt kommen die SuS auf ein
 
 - **Vollständig:** Die Lernseite enthält alle Inhalte, Materialien und Aufgaben, die für die Lernziele der Stunde nötig sind, in digitaler Form – mindestens alles, was das Blatt verlangt, gern mehr (zusätzliche Etappen, Animationen, Bonusfragen). Nichts Pflichtiges steht nur auf dem Blatt.
 - **Zeit:** Etappen und Aufgaben füllen für durchschnittliche SuS mindestens 40 bzw. 80 Minuten; Zeitansätze je Etappe wie in R2 ermitteln und addieren. Doppelstunde: zwei klar getrennte Teile mit Phasenwechsel (bei GL 8 zwei Baustein-Seiten mit Weiter-Knopf, zusammen 80 Minuten). Am Ende „Schon fertig?“ mit Bonusetappe, die nie ausgeht.
+- **Länge (Stand 12.11.2026):** Die Lernseite darf ruhig länger sein als die Stunde. Starke SuS arbeiten dann weiter, andere schaffen nicht alles; das ist gewollt. Deshalb stehen die Pflichtetappen vorn, danach folgen klar gekennzeichnete Vertiefungs- und Bonusetappen, sodass alle das Wichtige schaffen.
 - **Schreibanteil:** Aufgaben, die eigene Sätze verlangen (AFB II/III), stehen auch auf der Lernseite, mit dem Hinweis „Schreibe deine Antwort ins Heft (Aufgabe …)“ und anschließender Musterlösung zum Aufklappen erst nach dem Schreiben. So bleibt der Kompetenzanspruch erhalten, auch wenn das Blatt fehlt.
 - **Buch:** Buchaufträge mit Seite und Materialnummer wie auf dem Blatt (nur Angaben genau wie auf den Scans), Datenschutz und Urheberrecht nach Abschnitt „Datenschutz“ (keine Buchtexte, keine Scans).
 - **Differenzierung:** Tipps gestuft zum Aufklappen, Profi- und Expertenetappen für Starke, kurze Etappen und Vorlesen/Worterklärungen für Schwächere (R2).
@@ -340,7 +341,7 @@ Hintergrund (Tests vom 12.11.2026): Die Erstell-Aufgaben haben das Werkzeug „P
 
 ### R15 – Präsentation in der Lernseite: Claude entscheidet selbst (Stand 12.11.2026)
 
-Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Ob eine Stunde eine Präsentation bekommt, wie lang sie ist und wie sie gestaltet wird, entscheidet Claude in jedem Lauf selbst, so wie eine erfahrene Fachlehrkraft es täte. Die Präsentation ist ein Angebot, keine Pflicht.
+Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Ob eine Stunde eine Präsentation bekommt, an welcher Stelle der Lernseite sie steht, ob es eine oder mehrere kurze Folienreihen sind, wie lang sie ist und wie sie gestaltet wird, entscheidet Claude in jedem Lauf selbst, so wie eine erfahrene Fachlehrkraft es täte. Die Präsentation ist ein Angebot, keine Pflicht.
 
 **Entscheidung bei der Planung (R7 Stufe 1) – alle Punkte zusammen abwägen**
 - **Lernziel:** Erreichen die SuS es mit Präsentation besser als ohne? Das ist meist bei Inhalten der Fall, die schrittweise aufgebaut verständlicher werden: Abläufe und Prozesse, Ursache-Folge-Ketten, Zeitleisten, Karten, Vorher-nachher-Vergleiche, Bildquellen, Plakate oder Karikaturen, die nacheinander groß betrachtet und gedeutet werden, ein gemeinsamer Einstieg oder eine Sicherung am Klassen-TV.
@@ -351,25 +352,27 @@ Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Ob eine 
 - **Keine Präsentation,** wenn sie nur das Arbeitsblatt wiederholt, wenn die SuS dabei nur zuschauen würden oder wenn das Lesen und Bearbeiten eines Textes den Kern der Stunde bildet.
 - Im Zweifel keine Präsentation. Lieber selten und gut.
 
-**Umfang und Gestaltung entscheidet Claude ebenfalls,** und zwar nach dem didaktischen Zweck: so kurz wie möglich, so lang wie nötig (Richtwert 5–12 Folien und 5–12 Minuten, in GL 7 eher am unteren Ende). Folientypen nach Funktion wählen, z. B. Bildfolie mit Deutungsfrage, schrittweise aufgebaute Kette, Zeitleiste, Karte, Gegenüberstellung. Eine Folie, ein Gedanke, wenig Text, große Schrift. Auf etwa jeder zweiten bis dritten Folie eine Denkfrage, Klickfrage oder Vorhersage („Was passiert als Nächstes?“), damit die SuS aktiv bleiben. Klickfragen geben sofort Rückmeldung und zählen nicht zu den Punkten des Ergebnisbildschirms (R6).
+**Umfang und Gestaltung entscheidet Claude ebenfalls,** und zwar nach dem didaktischen Zweck: so kurz wie möglich, so lang wie nötig (Richtwert je Folienreihe 3–12 Folien, in GL 7 eher am unteren Ende). Folientypen nach Funktion wählen, z. B. Bildfolie mit Deutungsfrage, schrittweise aufgebaute Kette, Zeitleiste, Karte, Gegenüberstellung. Eine Folie, ein Gedanke, wenig Text, große Schrift. Auf etwa jeder zweiten bis dritten Folie eine Denkfrage, Klickfrage oder Vorhersage („Was passiert als Nächstes?“), damit die SuS aktiv bleiben. Klickfragen geben sofort Rückmeldung und zählen nicht zu den Punkten des Ergebnisbildschirms (R6).
 
 **Form**
 - Immer in der Lernseite selbst. Keine eigene Datei, kein PDF, kein PowerPoint, kein Claude-Design- oder anderes claude.ai-Artefakt (Gründe: Datenschutz, R14 nimmt nur .html/.md an, SuS erreichen claude.ai-Links nicht sicher).
-- Abrufbar als Etappe im Ablauf der Lernseite und über einen Knopf „Präsentation“ im Kopf der Seite. Direkter Aufruf mit dem Anker `#praesentation` (z. B. für Tobias am Klassen-TV). Der QR-Code auf dem Arbeitsblatt bleibt der Code der Lernseite (R1); kein zusätzlicher Code.
+- **Position und Anzahl:** Claude legt fest, wo eine Folienreihe im Ablauf der Lernseite steht (als Einstieg, als Erklärteil mitten in der Lernseite, als Zusammenfassung am Ende) und ob es eine oder mehrere kurze Folienreihen gibt, z. B. drei Folien zum Einstieg und später fünf Folien zu einer Entwicklung. Jede Folienreihe ist eine eigene Etappe.
+- **Grenze, damit die Präsentation nicht überhandnimmt:** Einzelstunde höchstens 2 Folienreihen, zusammen höchstens ca. 12 Min.; Doppelstunde höchstens 3 Folienreihen, zusammen höchstens ca. 20 Min. Den größten Teil der Lernseite bilden weiterhin Etappen, in denen die SuS selbst arbeiten (Aufgaben, Quiz, Schreiben).
+- Über einen Knopf „Präsentation“ im Kopf der Seite sind alle Folienreihen jederzeit erneut abrufbar. Direkter Aufruf mit dem Anker `#praesentation` (erste Folienreihe), `#praesentation-2` usw. (z. B. für Tobias am Klassen-TV). Der QR-Code auf dem Arbeitsblatt bleibt der Code der Lernseite (R1); kein zusätzlicher Code.
 - Bedienung: Wischen, Pfeiltasten, Knöpfe „Zurück“/„Weiter“ (mind. 44 px), Folienzähler (z. B. „3/8“), Vollbild-Knopf. Lesbar auf dem iPad hoch und quer und am Klassen-TV (1920×1080) auch aus der letzten Reihe.
 - Alles in der Datei: keine externen Ressourcen, Bilder als data:-URI, Animationen in CSS/SVG. Gestaltung nach R4 (verlagsnah, keine KI-Optik), passend zur Farbwelt der Lernseite. Bildnachweise nach R4.
 
 **Verhältnis zu den anderen Regeln**
 - Das Arbeitsblatt trägt die Stunde ohne Präsentation (R3). Was eine Kernaufgabe des Blatts braucht, steht auch auf dem Blatt oder im Buch.
-- Die Präsentationszeit zählt zur Lernseitenzeit (R10).
+- Die Folienreihen zählen zur Lernseitenzeit (R10), ersetzen aber keine Aufgaben-Etappen. Die Lernseite füllt die Einzel- bzw. Doppelstunde in jedem Fall und darf länger sein (R10, „Länge“).
 - Qualität geht vor: Wird die Zeit im Lauf knapp (R7, ab ca. 5:30 Uhr), entfällt die Präsentation zugunsten einer vollständig geprüften Stunde.
 - Bereits veröffentlichte Lernseiten werden nur auf Tobias' ausdrücklichen Wunsch nachgerüstet.
 
-**Prüfen vor dem Ausliefern:** im Headless-Browser in 820×1180, 1180×820 und 1920×1080 jede Folie ansehen (nichts abgeschnitten, Schrift groß genug), Wischen, Pfeiltasten, Knöpfe, Anker `#praesentation`, Vollbild, offline laden, Konsole fehlerfrei. Die unabhängige Prüfung (R7 Stufe 5) bekommt Screenshots der Folien mit und beurteilt auch die Entscheidung selbst: Hilft die Präsentation dem Lernziel, oder wäre die Stunde ohne sie besser?
+**Prüfen vor dem Ausliefern:** im Headless-Browser in 820×1180, 1180×820 und 1920×1080 jede Folie ansehen (nichts abgeschnitten, Schrift groß genug), Wischen, Pfeiltasten, Knöpfe, alle Anker (`#praesentation`, `#praesentation-2` …), Vollbild, offline laden, Konsole fehlerfrei. Die unabhängige Prüfung (R7 Stufe 5) bekommt Screenshots der Folien mit und beurteilt auch die Entscheidung selbst: Hilft die Präsentation dem Lernziel, oder wäre die Stunde ohne sie besser?
 
 **Aus der Praxis lernen:** Jede Entscheidung mit Kurzbegründung im Designprotokoll der Verlaufsdatei vermerken, z. B. „Präsentation: ja, 7 Folien, Zeitleiste Machtübernahme – Ablauf schrittweise verständlicher“ oder „Präsentation: nein – Textarbeit ist Kern der Stunde“. Tobias' Rückmeldungen dazu bestimmen spätere Entscheidungen mit.
 
-**Abschlussnachricht:** eine Zeile „Präsentation: ja – <Thema>, X Folien, ca. Y Min., Grund: … (Aufruf am TV: <URL>#praesentation)“ bzw. „Präsentation: nein – Grund: …“.
+**Abschlussnachricht:** eine Zeile „Präsentation: ja – <Thema>, N Folienreihe(n) mit zusammen X Folien, ca. Y Min., Position: <z. B. Einstieg und Etappe 3>, Grund: … (Aufruf am TV: <URL>#praesentation)“ bzw. „Präsentation: nein – Grund: …“.
 
 ## Ordnerstruktur
 
