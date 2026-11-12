@@ -70,9 +70,9 @@ Anlass: Am 11.11.2026 waren in GL 7 die meisten SuS mit dem Einzel- und dem Dopp
 - Die Lernseite endet ebenfalls mit „Schon fertig?“ (Bonusetappe oder Verweis auf die Pufferaufgaben des Blatts).
 
 **Kompakter Kopf – Platz für Aufgaben**
-- Kopfbereich (Titel, Fach, Name/Klasse/Datum, QR-Code, Ablauf- und „Du brauchst“-Zeile aus R3) höchstens ca. 3,5 cm hoch. Ablauf und „Du brauchst“ teilen sich eine Zeile.
-- Ein Einstiegsbild höchstens ca. ein Sechstel der Seite (z. B. volle Breite, max. ca. 4,5 cm hoch, oder schmal neben dem Text). Größer nur, wenn das Bild selbst das Arbeitsmaterial ist.
-- Der gewonnene Platz geht an Aufgaben, Schreibraum und Pufferbereich. Weißraum ja, aber keine leeren Flächen ohne Funktion.
+- Kopfhöhe, Bildgröße und Seitenzahl: siehe R9 (Kopf höchstens 3 cm, Bilder max. ca. 4 cm hoch). Ablauf und „Du brauchst“ teilen sich eine Zeile.
+- Der gewonnene Platz geht an Aufgaben und Pufferbereich. Weißraum ja, aber keine leeren Flächen ohne Funktion.
+- Die Stundenfüllung (40 bzw. 80 Min.) entsteht aus Blatt + Buch + Heft zusammen, nicht aus der Länge des Blatts (R9).
 
 **Prüfen vor dem Ausliefern**
 - Zeitansätze addieren (mit Python), Knobelaufgabe und AFB-III-Aufgabe vorhanden, Pufferbereich vollständig, Kopfhöhe im gerenderten PNG gemessen.
@@ -200,7 +200,7 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R8. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
 6. **Endabnahme:** Erst ausliefern, wenn keine A-Mängel offen sind.
 
-**Satz und Typografie (wie im Verlag):** einheitliche Abstände und Ränder (mind. 1,5 cm), Zeilenabstand gut lesbar, Fließtext mind. 10,5 pt (Jg. 7/8 eher 11–12 pt), keine einzelnen Zeilen am Seitenanfang oder -ende, keine Aufgabe über einen Seitenumbruch zerrissen, Silbentrennung sauber, deutsche Anführungszeichen („…“), einheitliche Schreibweise, fehlerfreie Rechtschreibung und Zeichensetzung (jeden Text Korrektur lesen), Bilder für Druck scharf (ca. 300 dpi in Druckgröße), Bildnachweise klein und vollständig.
+**Satz und Typografie (wie im Verlag):** einheitliche Abstände und Ränder (mind. 1,5 cm), Zeilenabstand gut lesbar, Fließtext mind. 10,5 pt (Jg. 7/8 möglichst 11 pt; Tipps mind. 9 pt; Seitenlimit R9), keine einzelnen Zeilen am Seitenanfang oder -ende, keine Aufgabe über einen Seitenumbruch zerrissen, Silbentrennung sauber, deutsche Anführungszeichen („…“), einheitliche Schreibweise, fehlerfreie Rechtschreibung und Zeichensetzung (jeden Text Korrektur lesen), Bilder für Druck scharf (ca. 300 dpi in Druckgröße), Bildnachweise klein und vollständig.
 
 **Fachliche Richtigkeit:** Jede Sachaussage, Zahl, Altersgrenze, Jahreszahl und Seitenangabe gegen Buchscan oder seriöse Quelle prüfen (bei aktuellen Daten mit Stand). Lösungsblatt, Quiz und Arbeitsblatt widersprechen sich nirgends.
 
@@ -229,6 +229,39 @@ Tobias zeigt das Lösungsblatt am iPad über den Klassen-TV und scrollt im Unter
 
 **Prüfen vor dem Ausliefern:** Jede Seite als PNG rendern und ansehen (eine Aufgabe pro Seite, nichts abgeschnitten, Schriftgröße), jede Lösung gegen Arbeitsblatt und Buch prüfen, keine Zusatzinformationen.
 - Abschlussnachricht: eine Zeile „Lösungsblatt: nur Lösungen (R8), X Seiten“.
+
+### R9 – Seitenlimit des Arbeitsblatts (Stand 12.11.2026)
+
+Anlass: Am 12.11.2026 hatte das WiPo-10-Arbeitsblatt für eine Doppelstunde 6 Seiten. Tobias muss jedes Blatt für die ganze Klasse drucken; das ist zu teuer und zu aufwendig. R9 hat Vorrang vor allen Platz- und Umfangsangaben in R1–R8 und in den Aufträgen der geplanten Aufgaben (z. B. „viel Weißraum, großzügiger Schreibraum“ – ungültig).
+
+**Höchstzahl Seiten (A4 hoch, Schüler-Arbeitsblatt; 2 Seiten = ein Blatt beidseitig)**
+- Einzelstunde (45 Min.): höchstens 2 Seiten.
+- Doppelstunde (90 Min.): Ziel 2 Seiten, höchstens 3 Seiten.
+- GL 7 (Mittwoch): Einzelstunden-Blatt höchstens 2 Seiten, Doppelstunden-Blatt Ziel 2, höchstens 3 Seiten.
+- GL 8 (Bausteine à 45 Min.): jeder Baustein höchstens 2 Seiten, Ziel 1–2. Zwei direkt aufeinanderfolgende Bausteine (Bxx und Bxx+1) zusammen höchstens 3 Seiten, also nie zwei 2-seitige Bausteine hintereinander. Vor dem Bau die Seitenzahl des vorigen Bausteins in der Bausteinliste nachsehen; die Seitenzahl jedes Bausteins dort eintragen.
+- Das Lösungsblatt (Querformat für den Klassen-TV, R8) zählt nicht mit.
+
+**Die Stunde bleibt trotzdem voll (R2) und läuft ohne iPad (R3) – mit Blatt + Buch + Heft**
+- Was nicht aufs Blatt passt, wird ins Buch und ins Heft verlagert, nicht gestrichen: passende Aufgaben aus dem Schulbuch auswählen und als Buchauftrag aufs Blatt setzen, mit Buch-Icon und Heft-Hinweis, z. B. „Buch S. 186, M3 – Aufgabe 2 ins Heft“. Seiten, Materialnummern und Aufgabennummern nur so, wie sie auf den Scans stehen. Fehlen Scans: Heftaufgabe ohne Buch.
+- Materialtexte, die im Buch stehen, nicht abdrucken, sondern per Buchauftrag lesen lassen. Auf dem Blatt stehen nur Materialien, die das Buch nicht hat (meist höchstens ein kurzer eigener Text oder ein Schaubild).
+- Längere Antworten (mehr als ca. 4 Zeilen) gehören ins Heft: Heft-Symbol an der Aufgabe, auf dem Blatt keine Schreiblinien dafür. Schreiblinien nur für Kurzantworten, Tabellen und Lücken.
+- Pufferaufgaben „Schon fertig?“ (★, ★★, offene Aufgabe) möglichst als Einzeiler mit Buch- oder Heftbezug, ohne Schreibraum auf dem Blatt.
+- Der Offline-Ersatz für das Quiz (R3) ist bevorzugt ein Buchauftrag oder ein Selbsttest im Heft; ein Selbsttest auf dem Blatt höchstens 4 kurze Fragen, kompakt in einer Leiste.
+- Die Lernseite darf mehr enthalten als das Blatt (zusätzliche Etappen, Animationen, Bonusfragen). Das Blatt bildet die Lernseite nicht vollständig ab; es trägt den QR-Code (R1) und alle Kernaufgaben, die mit Blatt, Buch und Heft lösbar sind.
+
+**Platz sparen – Layout**
+- Kopfbereich höchstens 3 cm (Titel, Fach, Name/Klasse/Datum, QR-Code, Ablauf- und „Du brauchst“-Zeile in einer Zeile).
+- Bilder klein: höchstens 1 Bild pro Seite, max. ca. 4 cm hoch, gern schmal neben dem Text; nur Bilder mit Funktion (Material, Einstieg). Kein reines Deko-Bild.
+- Zweispaltig, wo es passt (Material links, Aufgaben rechts; Randspalte für Tipps).
+- Tipps kompakt: eine Tippleiste am Seitenende oder schmale Randspalte, Schrift mind. 9 pt.
+- „Mein Ergebnis“ (R6) kompakt in höchstens ca. 4 cm Höhe, gern neben „Schon fertig?“.
+- Lesbarkeit bleibt Pflicht: Fließtext und Aufgaben mind. 10,5 pt (Jg. 7/8 möglichst 11 pt), Ränder mind. 1,5 cm, keine gequetschten Zeilen. Lieber Inhalte ins Buch/Heft verlagern als die Schrift verkleinern.
+
+**Reihenfolge, wenn das Blatt zu lang ist**
+1. Lange Antworten ins Heft (Schreiblinien weg). 2. Bilder verkleinern oder weglassen. 3. Materialtexte durch Buchaufträge ersetzen. 4. Puffer und Selbsttest ins Buch/Heft verlagern. 5. Layout verdichten (zweispaltig, Kopf kleiner). 6. Erst dann Aufgaben zusammenlegen. Nie die Stundenfüllung (R2) oder Plan B (R3) aufgeben.
+
+**Prüfen vor dem Ausliefern:** Seitenzahl jedes Arbeitsblatt-PDFs mit Python (pypdf) zählen. Liegt sie über dem Limit, wird nicht ausgeliefert: kürzen nach der Reihenfolge oben und neu prüfen. Bei der Vertretungsprobe (R3) mitprüfen, ob jede Buch- und Heftaufgabe ohne Rückfrage verständlich ist.
+- Abschlussnachricht: eine Zeile „Umfang: Arbeitsblatt X Seiten (max. Y) · ins Buch/Heft verlagert: …“, bei mehreren Blättern je Blatt.
 
 ## Ordnerstruktur
 
