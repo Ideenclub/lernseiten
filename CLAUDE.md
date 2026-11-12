@@ -192,7 +192,7 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 
 **Arbeitsweise in Stufen (jede Stufe ist Pflicht):**
 1. **Planen:** Stundenverlauf mit Minuten skizzieren, getrennt für schwache, mittlere und starke SuS (wer macht wann was, wo greifen Tipps, wo die Puffer). Erst dann bauen.
-2. **Bauen** nach R1–R6 und R9–R14.
+2. **Bauen** nach R1–R6 und R9–R15.
 3. **Probebearbeitung:** Zu jeder Kernaufgabe drei Musterantworten schreiben: schwache Schülerin mit Tipps, mittlerer Schüler, starke Schülerin. Prüfen: Reichen die Tipps wirklich? Ist die Aufgabe ohne Rückfrage verständlich? Fordert sie die Starke? Passt der Schreibraum zur mittleren Antwort? Stimmen Zeitansätze und Lösungsblatt? Wenn nein: ändern.
 4. **Technische Tests:**
    - PDF: jede Seite mit 200 dpi als PNG rendern und ansehen (abgeschnittene oder überlappende Texte, leere Seiten, Seitenumbrüche mitten in Aufgaben, Bildschärfe, Kopfhöhe, Graustufen-Probe nach R4), QR-Code nach R1 auslesen.
@@ -310,12 +310,12 @@ Gilt für die Erstell-Aufgaben GL 7, GL 8a, GL 8e, GL 10 und WiPo 10. Der Auftra
 3. **Abbruchfälle:** Morgen unterrichtsfrei oder kein Unterrichtstag der Klasse → nichts erstellen, nur kurz per SendUserMessage melden (mit Buchseiten-Erinnerung und Jahresplan-Zeile). Steht im Protokoll der Verlaufsdatei schon eine Stunde mit diesem Datum → nur melden. Ab 01.09.2027 nichts erstellen, nur um Bestätigung von Stundenplan und Lerngruppe bitten.
 4. **Buchseiten-Check:** Liegen für das aktuelle UND das nächste UV Buchseiten im Projekt? Fehlen sie und beginnt das nächste UV innerhalb von zwei Unterrichtswochen: sofort eine eigene SendUserMessage „Erinnerung <Klasse>: Ab <Datum> beginnt UV … (Kap. …, S. …). Bitte lade die Buchseiten ins Projekt „…“ hoch.“ – in jedem Lauf, solange sie fehlen.
 5. **Jahresplan und Budget nach R11:** verfügbare Stunden mit Python aus Stundenplan und Termine-Datei exakt zählen (nie schätzen), gehaltene Stunden je UV zählen, Budget nie überschreiten. Höchstens 4 Stunden Budget übrig → Hinweis „UV endet in X Stunden (am <Datum>) – nächstes UV „…“ ab <Datum>“; ist das Budget ausgeschöpft, wird die Stunde Abschluss und Sicherung des UV. Kein Budget im Curriculum → sinnvoll verteilen und „(Budget geschätzt, kein Wert im Curriculum)“. Keine erfundenen Zahlen.
-6. **Planen** (R7 Stufe 1, R11), dann **bauen** nach R1–R10: Arbeitsblatt-PDF, Lösungsblatt-PDF für den Klassen-TV und Lösungsblatt zur Selbstkontrolle (beide R8) mit Python/ReportLab, Lernseite (R10, Dateiform siehe Hinweis oben), QR-Code auf dem Blatt (R1) und großer QR-Code zum Zeigen (PNG, mind. 1200 px, darunter Thema, Klasse, Datum, Kurz-URL; mit Decoder geprüft). Lehrwerk immer C.C. Buchner (nie Westermann); Seiten, Materialnummern und Aufgabennummern nur genau wie auf den Scans.
+6. **Planen** (R7 Stufe 1, R11), dann **bauen** nach R1–R10 und R15: Arbeitsblatt-PDF, Lösungsblatt-PDF für den Klassen-TV und Lösungsblatt zur Selbstkontrolle (beide R8) mit Python/ReportLab, Lernseite (R10, Präsentation nach Entscheidung gemäß R15, Dateiform siehe Hinweis oben), QR-Code auf dem Blatt (R1) und großer QR-Code zum Zeigen (PNG, mind. 1200 px, darunter Thema, Klasse, Datum, Kurz-URL; mit Decoder geprüft). Lehrwerk immer C.C. Buchner (nie Westermann); Seiten, Materialnummern und Aufgabennummern nur genau wie auf den Scans.
 7. **Prüfen** nach R7 (Probebearbeitung, technische Tests, unabhängige Prüfung, Endabnahme) und R9 (Seitenzahl mit pypdf).
 8. **Ausliefern:** alle PDFs und QR-PNGs per SendUserFile (status: proactive; QR-PNG mit display: render). Kein E-Mail-Versand, kein Gmail-Werkzeug.
 9. **Übergabe zum Hochladen nach R14** (Artefakt der Stunde mit Ordner `repo/`, dann Hochlade-Aufgabe anstoßen).
 10. **Verlaufsdatei** im Projekt aktualisieren: `project_read` direkt vor dem Schreiben, dann `project_write` mit vollem Inhalt; alle bestehenden Abschnitte übernehmen, nie Platzhalter. Pflichtangaben nach R11 und R5 (Designprotokoll), Protokollzeile mit Datum · Einzel/Doppel · UV · Stunde X/Y · Thema · Lernziel · Kompetenzen · Buchseiten · Lernseiten-URL · Seitenzahl Arbeitsblatt · Artefakt-Link, „Jahresplan 2026/27“ neu berechnet, „Vorgemerkt als Nächstes“. Veraltete Niveauabschnitte dabei nach R2 ersetzen.
-11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
+11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Präsentation (R15) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
 
 ### R14 – Übergabe zum Hochladen (Stand 12.11.2026)
 
@@ -337,6 +337,39 @@ Hintergrund (Tests vom 12.11.2026): Die Erstell-Aufgaben haben das Werkzeug „P
 - Sucht mit `list_artifacts` (query „Übergabe zum Hochladen“, trifft das label) eigene Artefakte, die in den letzten 3 Tagen geändert wurden; erledigte Übergaben (Slug + Version) stehen in `planung/hochgeladen.json` und werden übersprungen. Ältere Übergaben vor neueren verarbeiten.
 - Prüft jede Datei (erlaubter Pfad und Typ, keine externen Ressourcen wie `<script src="http…">` oder Fremd-Stylesheets, keine Schülernamen, JSON gültig), schreibt sie, fügt die lessons.json-Einträge oben ein (nur wenn derselbe „pfad“ mit demselben „datum“ noch fehlt), trägt die Übergabe in `planung/hochgeladen.json` ein, committet mit der Nachricht aus `uebergabe.json` und pusht direkt auf `main` (vorher fetch + rebase, höchstens drei Versuche).
 - Meldet je Übergabe eine kurze SendUserMessage: „Hochgeladen ✓ <Klasse> <Datum>: <URL(s)> – online in 1–2 Minuten“ bzw. bei einem Fehler „ACHTUNG Hochladen <Klasse>: …“ mit dem Grund. Ohne offene Übergabe endet der Lauf ohne Nachricht.
+
+### R15 – Präsentation in der Lernseite: Claude entscheidet selbst (Stand 12.11.2026)
+
+Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Ob eine Stunde eine Präsentation bekommt, wie lang sie ist und wie sie gestaltet wird, entscheidet Claude in jedem Lauf selbst, so wie eine erfahrene Fachlehrkraft es täte. Die Präsentation ist ein Angebot, keine Pflicht.
+
+**Entscheidung bei der Planung (R7 Stufe 1) – alle Punkte zusammen abwägen**
+- **Lernziel:** Erreichen die SuS es mit Präsentation besser als ohne? Das ist meist bei Inhalten der Fall, die schrittweise aufgebaut verständlicher werden: Abläufe und Prozesse, Ursache-Folge-Ketten, Zeitleisten, Karten, Vorher-nachher-Vergleiche, Bildquellen, Plakate oder Karikaturen, die nacheinander groß betrachtet und gedeutet werden, ein gemeinsamer Einstieg oder eine Sicherung am Klassen-TV.
+- **Einbettung in die Reihe (R11):** Passt sie an diese Stelle des UV, etwa als Einstieg in ein neues UV, als Überblick vor einer Vertiefung oder als Wiederholung vor dem Abschluss?
+- **Lerngruppe:** Jahrgang, Konzentrationsspanne (GL 7: kurze Abschnitte, wenige Folien am Stück), Lesestärke und Tobias' Rückmeldungen in Verlaufsdatei und Chats (z. B. „zu schwer“, „hat gut geklappt“, „unruhig“).
+- **Motivation:** Gewinnt das Thema durch Bilder, schrittweisen Aufbau oder eine Vorhersagefrage an Interesse? Ist der Inhalt dagegen textlastig, lenken Folien eher ab.
+- **Abwechslung (R5):** Wie oft gab es in den letzten Stunden der Klasse schon eine Präsentation? Sie darf nicht zur Routine werden.
+- **Keine Präsentation,** wenn sie nur das Arbeitsblatt wiederholt, wenn die SuS dabei nur zuschauen würden oder wenn das Lesen und Bearbeiten eines Textes den Kern der Stunde bildet.
+- Im Zweifel keine Präsentation. Lieber selten und gut.
+
+**Umfang und Gestaltung entscheidet Claude ebenfalls,** und zwar nach dem didaktischen Zweck: so kurz wie möglich, so lang wie nötig (Richtwert 5–12 Folien und 5–12 Minuten, in GL 7 eher am unteren Ende). Folientypen nach Funktion wählen, z. B. Bildfolie mit Deutungsfrage, schrittweise aufgebaute Kette, Zeitleiste, Karte, Gegenüberstellung. Eine Folie, ein Gedanke, wenig Text, große Schrift. Auf etwa jeder zweiten bis dritten Folie eine Denkfrage, Klickfrage oder Vorhersage („Was passiert als Nächstes?“), damit die SuS aktiv bleiben. Klickfragen geben sofort Rückmeldung und zählen nicht zu den Punkten des Ergebnisbildschirms (R6).
+
+**Form**
+- Immer in der Lernseite selbst. Keine eigene Datei, kein PDF, kein PowerPoint, kein Claude-Design- oder anderes claude.ai-Artefakt (Gründe: Datenschutz, R14 nimmt nur .html/.md an, SuS erreichen claude.ai-Links nicht sicher).
+- Abrufbar als Etappe im Ablauf der Lernseite und über einen Knopf „Präsentation“ im Kopf der Seite. Direkter Aufruf mit dem Anker `#praesentation` (z. B. für Tobias am Klassen-TV). Der QR-Code auf dem Arbeitsblatt bleibt der Code der Lernseite (R1); kein zusätzlicher Code.
+- Bedienung: Wischen, Pfeiltasten, Knöpfe „Zurück“/„Weiter“ (mind. 44 px), Folienzähler (z. B. „3/8“), Vollbild-Knopf. Lesbar auf dem iPad hoch und quer und am Klassen-TV (1920×1080) auch aus der letzten Reihe.
+- Alles in der Datei: keine externen Ressourcen, Bilder als data:-URI, Animationen in CSS/SVG. Gestaltung nach R4 (verlagsnah, keine KI-Optik), passend zur Farbwelt der Lernseite. Bildnachweise nach R4.
+
+**Verhältnis zu den anderen Regeln**
+- Das Arbeitsblatt trägt die Stunde ohne Präsentation (R3). Was eine Kernaufgabe des Blatts braucht, steht auch auf dem Blatt oder im Buch.
+- Die Präsentationszeit zählt zur Lernseitenzeit (R10).
+- Qualität geht vor: Wird die Zeit im Lauf knapp (R7, ab ca. 5:30 Uhr), entfällt die Präsentation zugunsten einer vollständig geprüften Stunde.
+- Bereits veröffentlichte Lernseiten werden nur auf Tobias' ausdrücklichen Wunsch nachgerüstet.
+
+**Prüfen vor dem Ausliefern:** im Headless-Browser in 820×1180, 1180×820 und 1920×1080 jede Folie ansehen (nichts abgeschnitten, Schrift groß genug), Wischen, Pfeiltasten, Knöpfe, Anker `#praesentation`, Vollbild, offline laden, Konsole fehlerfrei. Die unabhängige Prüfung (R7 Stufe 5) bekommt Screenshots der Folien mit und beurteilt auch die Entscheidung selbst: Hilft die Präsentation dem Lernziel, oder wäre die Stunde ohne sie besser?
+
+**Aus der Praxis lernen:** Jede Entscheidung mit Kurzbegründung im Designprotokoll der Verlaufsdatei vermerken, z. B. „Präsentation: ja, 7 Folien, Zeitleiste Machtübernahme – Ablauf schrittweise verständlicher“ oder „Präsentation: nein – Textarbeit ist Kern der Stunde“. Tobias' Rückmeldungen dazu bestimmen spätere Entscheidungen mit.
+
+**Abschlussnachricht:** eine Zeile „Präsentation: ja – <Thema>, X Folien, ca. Y Min., Grund: … (Aufruf am TV: <URL>#praesentation)“ bzw. „Präsentation: nein – Grund: …“.
 
 ## Ordnerstruktur
 
