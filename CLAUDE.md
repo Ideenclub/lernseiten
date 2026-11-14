@@ -192,7 +192,7 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 
 **Arbeitsweise in Stufen (jede Stufe ist Pflicht):**
 1. **Planen:** Stundenverlauf mit Minuten skizzieren, getrennt für schwache, mittlere und starke SuS (wer macht wann was, wo greifen Tipps, wo die Puffer). Erst dann bauen.
-2. **Bauen** nach R1–R6 und R9–R16.
+2. **Bauen** nach R1–R6 und R9–R18.
 3. **Probebearbeitung:** Zu jeder Kernaufgabe drei Musterantworten schreiben: schwache Schülerin mit Tipps, mittlerer Schüler, starke Schülerin. Prüfen: Reichen die Tipps wirklich? Ist die Aufgabe ohne Rückfrage verständlich? Fordert sie die Starke? Passt der Schreibraum zur mittleren Antwort? Stimmen Zeitansätze und Lösungsblatt? Wenn nein: ändern.
 4. **Technische Tests:**
    - PDF: jede Seite mit 200 dpi als PNG rendern und ansehen (abgeschnittene oder überlappende Texte, leere Seiten, Seitenumbrüche mitten in Aufgaben, Bildschärfe, Kopfhöhe, Graustufen-Probe nach R4), QR-Code nach R1 auslesen.
@@ -312,12 +312,12 @@ Gilt für die Erstell-Aufgaben GL 7, GL 8a, GL 8e, GL 10 und WiPo 10. Der Auftra
 3. **Abbruchfälle:** Morgen unterrichtsfrei oder kein Unterrichtstag der Klasse → nichts erstellen, nur kurz per SendUserMessage melden (mit Buchseiten-Erinnerung und Jahresplan-Zeile). Steht im Protokoll der Verlaufsdatei schon eine Stunde mit diesem Datum → nur melden. Ab 01.09.2027 nichts erstellen, nur um Bestätigung von Stundenplan und Lerngruppe bitten.
 4. **Buchseiten-Check:** Liegen für das aktuelle UND das nächste UV Buchseiten im Projekt? Fehlen sie und beginnt das nächste UV innerhalb von zwei Unterrichtswochen: sofort eine eigene SendUserMessage „Erinnerung <Klasse>: Ab <Datum> beginnt UV … (Kap. …, S. …). Bitte lade die Buchseiten ins Projekt „…“ hoch.“ – in jedem Lauf, solange sie fehlen.
 5. **Jahresplan und Budget nach R11:** verfügbare Stunden mit Python aus Stundenplan und Termine-Datei exakt zählen (nie schätzen), gehaltene Stunden je UV zählen, Budget nie überschreiten. Höchstens 4 Stunden Budget übrig → Hinweis „UV endet in X Stunden (am <Datum>) – nächstes UV „…“ ab <Datum>“; ist das Budget ausgeschöpft, wird die Stunde Abschluss und Sicherung des UV. Kein Budget im Curriculum → sinnvoll verteilen und „(Budget geschätzt, kein Wert im Curriculum)“. Keine erfundenen Zahlen.
-6. **Planen** (R7 Stufe 1, R11), dann **bauen** nach R1–R10, R15 und R16: Arbeitsblatt-PDF, Lösungsblatt-PDF für den Klassen-TV und Lösungsblatt zur Selbstkontrolle (beide R8) mit Python/ReportLab, Lernseite (R10, Präsentation und Animationen nach Entscheidung gemäß R15 und R16, Dateiform siehe Hinweis oben), QR-Code auf dem Blatt (R1) und großer QR-Code zum Zeigen (PNG, mind. 1200 px, darunter Thema, Klasse, Datum, Kurz-URL; mit Decoder geprüft). Lehrwerk immer C.C. Buchner (nie Westermann); Seiten, Materialnummern und Aufgabennummern nur genau wie auf den Scans.
+6. **Planen** (R7 Stufe 1, R11), dann **bauen** nach R1–R10, R15, R16 und R18: Arbeitsblatt-PDF, Lösungsblatt-PDF für den Klassen-TV und Lösungsblatt zur Selbstkontrolle (beide R8) mit Python/ReportLab, Lernseite (R10, Präsentation und Animationen nach Entscheidung gemäß R15 und R16, Dateiform siehe Hinweis oben), QR-Code auf dem Blatt (R1) und großer QR-Code zum Zeigen (PNG, mind. 1200 px, darunter Thema, Klasse, Datum, Kurz-URL; mit Decoder geprüft). Lehrwerk immer C.C. Buchner (nie Westermann); Seiten, Materialnummern und Aufgabennummern nur genau wie auf den Scans.
 7. **Prüfen** nach R7 (Probebearbeitung, technische Tests, unabhängige Prüfung, Endabnahme) und R9 (Seitenzahl mit pypdf).
 8. **Ausliefern:** alle PDFs und QR-PNGs per SendUserFile (status: proactive; QR-PNG mit display: render). Kein E-Mail-Versand, kein Gmail-Werkzeug.
 9. **Übergabe zum Hochladen nach R14** (Artefakt der Stunde mit Ordner `repo/`, dann Hochlade-Aufgabe anstoßen).
 10. **Verlaufsdatei** im Projekt aktualisieren: `project_read` direkt vor dem Schreiben, dann `project_write` mit vollem Inhalt; alle bestehenden Abschnitte übernehmen, nie Platzhalter. Pflichtangaben nach R11 und R5 (Designprotokoll), Protokollzeile mit Datum · Einzel/Doppel · UV · Stunde X/Y · Thema · Lernziel · Kompetenzen · Buchseiten · Lernseiten-URL · Seitenzahl Arbeitsblatt · Artefakt-Link, „Jahresplan 2026/27“ neu berechnet, „Vorgemerkt als Nächstes“. Veraltete Niveauabschnitte dabei nach R2 ersetzen.
-11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Präsentation (R15) · Animation (R16) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14) · Ist-Stand (R17). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
+11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Präsentation (R15) · Animation (R16) · Methodenbaustein (R18) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14) · Ist-Stand (R17). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
 
 ### R14 – Übergabe zum Hochladen (Stand 12.11.2026)
 
@@ -441,6 +441,57 @@ Wunsch von Tobias: Die Planung darf nicht davon ausgehen, dass alles auf Arbeits
 **Abschlussnachricht:** eine Zeile „Ist-Stand: berücksichtigt (Sa <Datum>: <Kurzfassung>, Umsetzung: …)“ bzw. „Ist-Stand: keine Rückmeldung – Plan wie vorgesehen“.
 
 **Datenschutz:** In `ist-stand.md` und allen daraus abgeleiteten Dateien keine Schülernamen, keine Noten, keine Angaben zu einzelnen SuS.
+
+### R18 – Methodenbausteine Mindmap, Comic, Explosionsdarstellung, Zeitleiste, Spickzettel: Claude entscheidet selbst (Stand 14.11.2026)
+
+Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Diese fünf Methoden werden bei jeder Stundenplanung mitbedacht, gegeneinander und gegen alle anderen Methoden (Präsentation R15, Animation R16, Fall, Quelle, Rangliste …) abgewogen und nur dort eingesetzt, wo sie das Lernziel oder die Motivation der Stunde spürbar besser erreichen. Ort: Lernseite (hat Vorrang), Arbeitsblatt oder Heft. Kein Baustein ist Pflicht; nie alle auf einmal.
+
+**Grundsätze**
+- Höchstens EIN Baustein aus R18 prägt eine Stunde (Hauptmethode im Designprotokoll, R5). Ein zweiter darf nur klein dazukommen (z. B. Spickzettel als Pufferaufgabe).
+- Derselbe R18-Baustein nicht in zwei aufeinanderfolgenden Stunden derselben Klasse als Hauptmethode; Ausnahme: eine wachsende Reihen-Zeitleiste (siehe unten).
+- Die SuS tun immer selbst etwas: ordnen, ergänzen, deuten, verdichten. Fertige Produkte zum bloßen Anschauen zählen nicht.
+- R3, R4, R9 und R10 gelten unverändert: Das Blatt trägt die Stunde ohne iPad, keine KI-Optik, Seitenlimit, Lernseite trägt die Stunde allein.
+
+**1. Mindmap – Gedanken ordnen (Sicherung, Wiederholung, Vorwissen sammeln)**
+- Passt: am Ende einer Etappe oder eines UV, vor einer Lernkontrolle, als Einstieg (Vorwissen), bei Themen mit mehreren Ursachen, Folgen oder Bereichen (z. B. Folgen der Industrialisierung: Arbeit, Wohnen, Umwelt, Familie).
+- Passt nicht: bei Abläufen mit fester Reihenfolge (dann Zeitleiste oder Flussdiagramm) und bei Pro-/Kontra-Fragen (dann Tabelle oder Waage).
+- Lernseite: „Sortier-Mindmap“ mit Selbstkontrolle – Mitte und Hauptäste vorgegeben, die SuS tippen Begriffe oder Kurzaussagen an und ordnen sie per Tippen dem richtigen Ast zu (kein Ziehen), danach Prüfen mit Rückmeldung. Starke SuS: zusätzlich einen eigenen Ast ins Heft ergänzen. Keine freie Online-Mindmap mit Speicherung und keine Fremddienste (Datenschutz).
+- Arbeitsblatt/Heft: eigene Mindmap im Heft (Querformat, Thema in der Mitte, 3–5 Hauptäste vorgegeben oder offen, je Ast 2–3 Stichworte, Fachbegriffe aus dem Wortspeicher). Tipp: Hauptäste als Startgerüst. Eignet sich gut als ★-Pufferaufgabe oder Sicherungsaufgabe.
+- Bei der ersten Mindmap einer Klasse eine kurze Anleitung mit Mini-Beispiel (3 Regeln: Mitte – Hauptäste – Stichworte statt Sätze).
+
+**2. Comic, Bildergeschichte, Karikatur – Zusammenhänge erzählen**
+- Passt: Perspektivwechsel (Fabrikkind 1850, Jugendlicher vor Gericht), Ursache-Folge-Geschichten, Alltagsgeschichte, Konflikte mit zwei Seiten.
+- Vorrangig als **Produkt der SuS** (★★-Pufferaufgabe, Wahlaufgabe, Heftaufgabe): „Zeichne einen Comic in 4 Bildern: …“ mit Vorgaben (Figuren, Ort, Zeit, 2 Fachbegriffe müssen vorkommen, Strichmännchen erlaubt). Auf dem Blatt höchstens ein kleines leeres 4-Felder-Raster oder der Hinweis „ins Heft“ (R9).
+- Als **Material** bevorzugt echte historische Karikaturen und Bildquellen (Wikimedia Commons, gemeinfrei oder mit Nachweis nach R4), verbunden mit Karikaturanalyse (beschreiben – deuten – beurteilen; Methodenkompetenz im KLP GL/WiPo). Sprech- oder Denkblasen zu echten Fotos realer Personen nur als klar gekennzeichnete Perspektivübernahme („Was könnte das Kind denken?“), nie als angebliche Zitate.
+- Selbst gebaute Comics auf der Lernseite: nur als schlichte Bildergeschichte in SVG (flache Figuren, keine Gesichter im Fokus, Text in HTML-Sprechblasen, nicht im Bild), höchstens 4–6 Felder, mit Aufgabe danach (Lücke im letzten Bild ergänzen, Reihenfolge ordnen, Perspektive schreiben). Lieber gar kein Comic als ein ungelenker.
+- KI-generierte Comic- oder Manga-Bilder mit Menschen sind nach R4 in den automatischen Läufen nicht erlaubt (Wiedererkennbarkeit als KI, unzuverlässige Figuren und Schrift). Ausnahme nur, wenn Tobias einen einzelnen Comic ausdrücklich in Auftrag gibt und abnimmt.
+
+**3. Explosionsdarstellung und beschriftetes Schnittbild – „Woraus besteht das?“**
+- Passt nur, wenn das Zerlegen eines Gegenstands das Lernziel trägt, nicht als Technikunterricht: Dampfmaschine (welches Bauteil macht die Fabrik unabhängig von Wasserkraft und Standort?), mechanischer Webstuhl, Fließband-Arbeitsplatz (Arbeitsteilung), Smartphone (welche Rohstoffe aus welchen Ländern → Globalisierung, Rohstoffkonflikte, Lieferketten; GL 10/WiPo 10), Produkt-Wertschöpfung (wer verdient an einer Jeans?).
+- Lernseite: interaktive SVG-Explosionsdarstellung nach R16 (Teile gleiten per Knopf auseinander, jedes Teil antippbar mit einem Satz zur Funktion bzw. Herkunft), danach Zuordnungs- oder Erklärfrage. Zählt als Animation (Obergrenzen R16). Mit „vereinfachte Darstellung“ kennzeichnen.
+- Arbeitsblatt: Standbild mit Nummern und Beschriftungsliste zum Zuordnen (kompakt, R9).
+- Bilder: zuerst gemeinfreie historische Zeichnungen (z. B. Wikimedia Commons, Motiv eindeutig belegt), sonst eigene SVG. Keine Abbildungen aus Schulbüchern oder Verlagsseiten, keine Bilder mit NC- oder unklarer Lizenz.
+
+**4. Zeitleiste – Chronologie und Gleichzeitigkeit**
+- Passt: in allen historischen UV, bei Entwicklungen (Eisenbahn, Wahlrecht, EU-Erweiterung), um Gleichzeitiges sichtbar zu machen (z. B. Erfindung und Arbeiterschutzgesetz).
+- Lernseite: Ereignisse per Tippen in die richtige Reihenfolge bringen, mit Prüfen; wo sinnvoll maßstabsgetreu (gleiche Jahre = gleicher Abstand), weil SuS Zeitabstände sonst falsch einschätzen. Zusätzlich Fragen zu Abständen und Gleichzeitigkeit („Wie viele Jahre lagen zwischen …?“, „Was geschah zur selben Zeit?“).
+- **Reihen-Zeitleiste:** Zu Beginn eines historischen UV kann im Heft eine Zeitleiste angelegt werden, die in folgenden Stunden mit je 1–2 Einträgen wächst (kurze Aufgabe am Stundenende). Wird sie angelegt, steht das in der Verlaufsdatei, und jede Folgestunde des UV enthält den Ergänzungsauftrag. Diese Wiederholung ist ausdrücklich erlaubt.
+- Jahreszahlen nach R7 prüfen.
+
+**5. Spickzettel – verdichten und aus dem Kopf abrufen**
+- Passt: als Pufferaufgabe („Schon fertig?“), am Ende eines Teilthemas, in der Stunde vor einer Lernkontrolle. Etwa jede 3.–4. Stunde einer Klasse, nicht häufiger.
+- Feste Regeln auf dem Blatt: Format Karteikarte DIN A7 bzw. ein abgegrenztes Feld von ca. 7 × 10 cm im Heft; höchstens ca. 30 Wörter plus eine kleine Skizze oder Pfeile; nur die wichtigsten Fachbegriffe und Zusammenhänge der letzten Stunde(n).
+- Pflicht-Zweitschritt (dort entsteht der Lerneffekt): Zettel umdrehen, die Inhalte aus dem Kopf ins Heft schreiben, mit dem Zettel vergleichen und Fehlendes farbig ergänzen.
+- Ob ein Spickzettel in einer Lernkontrolle benutzt werden darf, entscheidet nur Tobias; auf Blatt und Lernseite steht dazu nichts.
+- Lernseite: optional eine Etappe „Mein Spickzettel“ mit Auswahl der 5 wichtigsten Begriffe aus 10 (Rückmeldung, ob die Kernbegriffe dabei sind), danach Heftauftrag.
+
+**Entscheidung bei der Planung (R7 Stufe 1):** Für jede Stunde prüfen, ob einer der fünf Bausteine das Lernziel besser erreicht als die sonst geplante Form, unter Beachtung von Lernziel, Stelle im UV (R11), Lerngruppe und Ist-Stand (R17), Abwechslung (Designprotokoll R5) und Seitenlimit (R9). Im Zweifel nicht einsetzen.
+
+**Prüfen:** wie R7, R15 und R16 (Headless-Browser, Tippbedienung, offline, Konsole); die unabhängige Prüfung beurteilt auch, ob der gewählte Baustein dem Lernziel dient.
+
+**Aus der Praxis lernen:** Im Designprotokoll je Stunde „Methodenbaustein: <Mindmap/Comic/Explosion/Zeitleiste/Spickzettel/keiner> – Grund: …“. Tobias' Rückmeldungen (Chat, Ist-Stand R17) bestimmen spätere Entscheidungen mit.
+
+**Abschlussnachricht:** eine Zeile „Methodenbaustein: <Baustein> – Ort: <Lernseite Etappe … / Blatt Aufgabe … / Heft>, Grund: …“ bzw. „Methodenbaustein: keiner – Grund: …“.
 
 ## Ordnerstruktur
 
