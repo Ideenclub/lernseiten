@@ -12,6 +12,8 @@ Dieser Abschnitt ist die zentrale Stelle für Regeln, die Tobias für alle Klass
 2. der Auftragstext der jeweiligen geplanten Aufgabe,
 3. alle übrigen Abschnitte dieser Datei.
 
+Nennt ein Auftragstext nur einen Teil der Regeln (z. B. „R1–R14“), gelten trotzdem alle Regeln dieses Abschnitts, auch später ergänzte (Stand 14.11.2026).
+
 Neue oder geänderte Regeln für alle Klassen trägt Claude nur auf Tobias' ausdrücklichen Wunsch hier ein, jeweils mit „Stand <Datum>“. Ältere Regeln, die eine neue ersetzt, werden gelöscht, nicht stehen gelassen.
 
 Hinweis: Dateiform der Lernseiten (Stand 10.11.2026): Jede neue Lernseite ist EINE Datei direkt im Klassenordner (`gl7/<JJJJ-MM-TT-kurzthema>.html`, in GL 8 `gl8/bNN-kurzthema.html`), Bilder als data:-URI eingebettet; in lessons.json ist „pfad“ der Dateiname. Hochladen nur noch über R14 (Übergabe). Die älteren Angaben weiter unten (Unterordner mit `index.html`, Upload-ZIP) sind überholt.
@@ -197,7 +199,7 @@ Ziel: Jede Schülerin und jeder Schüler prüft und bewertet die eigene Leistung
 4. **Technische Tests:**
    - PDF: jede Seite mit 200 dpi als PNG rendern und ansehen (abgeschnittene oder überlappende Texte, leere Seiten, Seitenumbrüche mitten in Aufgaben, Bildschärfe, Kopfhöhe, Graustufen-Probe nach R4), QR-Code nach R1 auslesen.
    - Lernseite und Quiz im Headless-Browser in iPad-Größe hoch und quer: jede Frage einmal richtig und einmal falsch beantworten, alle Knöpfe, Stufenberechnung mit 0 %, ca. 50 %, 100 %, „Fehler verbessern“, Neuladen mitten im Quiz (Fortschritt bleibt), Konsole fehlerfrei. Zusätzlich mit blockiertem Netzwerk laden: Die Seite muss vollständig funktionieren (keine externen Ressourcen).
-5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R16. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
+5. **Unabhängige Prüfung:** Ein separater Prüf-Agent (Agent-Werkzeug, falls verfügbar), der an der Erstellung nicht beteiligt war, bekommt nur die gerenderten Seiten-PNGs von Arbeits- und Lösungsblatt, die Lernseiten-Datei und die Regeln R1–R18. Rolle: erfahrene Fachleitung GL/WiPo in NRW, zugleich fachfremde Vertretung und ein 13-jähriger Schüler. Auftrag: Mängel finden und nach Schwere ordnen (A = Stunde funktioniert so nicht oder fachlicher Fehler; B = deutlicher Qualitätsmangel; C = Kleinigkeit). Alle A- und B-Mängel beheben, danach eine zweite Prüfrunde; höchstens drei Runden. Ist kein Agent-Werkzeug verfügbar: eine zweite Prüfrunde selbst mit frischem Blick anhand derselben Liste durchführen und das in der Abschlussnachricht nennen.
 6. **Endabnahme:** Erst ausliefern, wenn keine A-Mängel offen sind.
 
 **Satz und Typografie (wie im Verlag):** einheitliche Abstände und Ränder (mind. 1,5 cm), Zeilenabstand gut lesbar, Fließtext mind. 10,5 pt (Jg. 7/8 möglichst 11 pt; Tipps mind. 9 pt; Seitenlimit R9), keine einzelnen Zeilen am Seitenanfang oder -ende, keine Aufgabe über einen Seitenumbruch zerrissen, Silbentrennung sauber, deutsche Anführungszeichen („…“), einheitliche Schreibweise, fehlerfreie Rechtschreibung und Zeichensetzung (jeden Text Korrektur lesen), Bilder für Druck scharf (ca. 300 dpi in Druckgröße), Bildnachweise klein und vollständig.
@@ -317,7 +319,7 @@ Gilt für die Erstell-Aufgaben GL 7, GL 8a, GL 8e, GL 10 und WiPo 10. Der Auftra
 8. **Ausliefern:** alle PDFs und QR-PNGs per SendUserFile (status: proactive; QR-PNG mit display: render). Kein E-Mail-Versand, kein Gmail-Werkzeug.
 9. **Übergabe zum Hochladen nach R14** (Artefakt der Stunde mit Ordner `repo/`, dann Hochlade-Aufgabe anstoßen).
 10. **Verlaufsdatei** im Projekt aktualisieren: `project_read` direkt vor dem Schreiben, dann `project_write` mit vollem Inhalt; alle bestehenden Abschnitte übernehmen, nie Platzhalter. Pflichtangaben nach R11 und R5 (Designprotokoll), Protokollzeile mit Datum · Einzel/Doppel · UV · Stunde X/Y · Thema · Lernziel · Kompetenzen · Buchseiten · Lernseiten-URL · Seitenzahl Arbeitsblatt · Artefakt-Link, „Jahresplan 2026/27“ neu berechnet, „Vorgemerkt als Nächstes“. Veraltete Niveauabschnitte dabei nach R2 ersetzen.
-11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Präsentation (R15) · Animation (R16) · Methodenbaustein (R18) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14) · Ist-Stand (R17). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
+11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Präsentation (R15) · Animation (R16) · Methode (R18) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14) · Ist-Stand (R17). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
 
 ### R14 – Übergabe zum Hochladen (Stand 12.11.2026)
 
@@ -442,9 +444,9 @@ Wunsch von Tobias: Die Planung darf nicht davon ausgehen, dass alles auf Arbeits
 
 **Datenschutz:** In `ist-stand.md` und allen daraus abgeleiteten Dateien keine Schülernamen, keine Noten, keine Angaben zu einzelnen SuS.
 
-### R18 – Methodenbausteine Mindmap, Comic, Explosionsdarstellung, Zeitleiste, Spickzettel: Claude entscheidet selbst (Stand 14.11.2026)
+### R18 – Methodenschatz: Claude wählt je Stunde die passende Methode (Stand 14.11.2026)
 
-Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Diese fünf Methoden werden bei jeder Stundenplanung mitbedacht, gegeneinander und gegen alle anderen Methoden (Präsentation R15, Animation R16, Fall, Quelle, Rangliste …) abgewogen und nur dort eingesetzt, wo sie das Lernziel oder die Motivation der Stunde spürbar besser erreichen. Ort: Lernseite (hat Vorrang), Arbeitsblatt oder Heft. Kein Baustein ist Pflicht; nie alle auf einmal.
+Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10, für jede neu erstellte Stunde bzw. jeden neu erstellten Baustein. Wunsch von Tobias: ein möglichst großer Schatz an Methoden, aus dem für jede einzelne Stunde in sorgfältiger Abwägung das Passende gewählt wird. Die fünf Bausteine unten (1–5) und der weitere Methodenschatz (6) werden bei jeder Stundenplanung mitbedacht, gegeneinander und gegen alle anderen Methoden (Präsentation R15, Animation R16, Fall, Quelle, Rangliste …) abgewogen und nur dort eingesetzt, wo sie das Lernziel oder die Motivation der Stunde spürbar besser erreichen. Ort: Lernseite (hat Vorrang), Arbeitsblatt oder Heft. Kein Baustein ist Pflicht; nie alle auf einmal.
 
 **Grundsätze**
 - Höchstens EIN Baustein aus R18 prägt eine Stunde (Hauptmethode im Designprotokoll, R5). Ein zweiter darf nur klein dazukommen (z. B. Spickzettel als Pufferaufgabe).
@@ -485,13 +487,49 @@ Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Diese f�
 - Ob ein Spickzettel in einer Lernkontrolle benutzt werden darf, entscheidet nur Tobias; auf Blatt und Lernseite steht dazu nichts.
 - Lernseite: optional eine Etappe „Mein Spickzettel“ mit Auswahl der 5 wichtigsten Begriffe aus 10 (Rückmeldung, ob die Kernbegriffe dabei sind), danach Heftauftrag.
 
-**Entscheidung bei der Planung (R7 Stufe 1):** Für jede Stunde prüfen, ob einer der fünf Bausteine das Lernziel besser erreicht als die sonst geplante Form, unter Beachtung von Lernziel, Stelle im UV (R11), Lerngruppe und Ist-Stand (R17), Abwechslung (Designprotokoll R5) und Seitenlimit (R9). Im Zweifel nicht einsetzen.
+**6. Weiterer Methodenschatz** (alle selbstlaufend und vertretungstauglich; Partnerformen immer mit „Allein: …“-Variante nach R3)
+- **Ursache-Folge-Kette / Flussdiagramm:** Abläufe und Wirkungsketten (Dampfmaschine → Fabrik → Landflucht → Wohnungsnot; Preis steigt → Nachfrage sinkt). Lernseite: Kettenglieder per Tippen ordnen.
+- **Begriffsnetz (Concept-Map):** Begriffe mit beschrifteten Pfeilen verbinden („führt zu“, „ist Teil von“). Stärker als die Mindmap, wenn Beziehungen zwischen Begriffen das Lernziel sind.
+- **Vergleichstabelle / Venn-Diagramm:** zwei Epochen, Systeme oder Positionen vergleichen (Umlageverfahren vs. Kapitaldeckung, Stadt vs. Land 1850).
+- **Rangliste / Diamond-Ranking:** Ursachen, Folgen oder Maßnahmen nach Bedeutung ordnen und die Spitze begründen (Knobelaufgabe nach R2).
+- **Positionslinie / Meinungsbarometer:** begründetes Urteil (AFB III). Lernseite: Schieberegler „stimme zu … stimme nicht zu“, danach Begründung ins Heft und eine Gegenposition prüfen.
+- **Pro-Kontra-Waage → Stellungnahme:** Argumente sammeln, gewichten, Urteil mit Satzbausteinen schreiben.
+- **Rollenkarten / Perspektivwechsel:** dieselbe Situation aus zwei Sichten (Fabrikbesitzer und Arbeiterin; Arbeitgeberin und Azubi). Keine erfundenen Zitate realer Personen.
+- **Fallanalyse / Entscheidungsspiel:** realistischer Fall mit Entscheidungen. Lernseite: verzweigter Ablauf („Was tust du?“) mit Folgen jeder Entscheidung und Rückmeldung.
+- **Bildquellen-, Karikatur-, Plakatanalyse:** beschreiben – deuten – beurteilen, mit Hilfsfragen; nur echte, lizenzrechtlich nutzbare Quellen (R4).
+- **Textquelle mit Quellenkritik:** W-Fragen (Wer? Wann? Für wen? Warum?), Standpunkt des Verfassers, Glaubwürdigkeit.
+- **Statistik und Diagramm:** auswerten (Schritte: Thema – Werte – Entwicklung – Erklärung) oder aus einer Tabelle selbst zeichnen. Daten nur aus seriöser Quelle mit Stand (R7).
+- **Kartenarbeit:** Buch- oder Atlaskarte gezielt auswerten (Atlas mit Seitenangabe nur, wenn Tobias' Atlas bekannt ist); Lernseite: Karte mit antippbaren Orten oder Regionen (eigene SVG).
+- **Fehlertext:** kurzer Text mit 4–6 eingebauten Sachfehlern finden und berichtigen (ideal zur Wiederholung und als Knobelaufgabe).
+- **Perspektivisches Schreiben:** Tagebucheintrag, Brief, Zeitungsmeldung, Interview, Social-Media-Beitrag aus der Zeit (als „ausgedacht“ erkennbar, Fakten müssen stimmen).
+- **Steckbrief / Lexikonartikel / One-Pager:** Wissen in fester Form verdichten (gut als ★-Puffer).
+- **Lernplakat oder Erklär-Storyboard:** 4–6 Bilder mit Sprechtext für ein 60-Sekunden-Erklärvideo planen (Produktaufgabe, ★★).
+- **Quizfragen selbst schreiben:** 5 Fragen mit Lösung für Mitschüler (offener Puffer, R2).
+- **Rätsel-Lernpfad (Escape-Format) auf der Lernseite:** jede richtig gelöste Etappe liefert einen Codebuchstaben, am Ende ein Lösungswort. Sparsam einsetzen (höchstens etwa jede 6. Stunde einer Klasse), Inhalt bleibt AFB II/III.
+- **Simulation / Planspiel mit Reglern:** Markt, Preisbildung, Zinseszins, Wahlrecht – zählt als Animation (R16).
+- Kreuzworträtsel, Lückentexte und reines Zuordnen nur zur Sicherung (höchstens ein Viertel der Aufgaben, R2).
+
+**Auswahl in drei Schritten**
+1. **Denkoperation des Lernziels bestimmen** und passende Methoden vorauswählen:
+   - Ordnen und überblicken → Mindmap, Begriffsnetz, Steckbrief
+   - Abläufe und Ursachen verstehen → Ursache-Folge-Kette, Animation (R16), Explosionsdarstellung
+   - Zeit und Entwicklung → Zeitleiste, Statistik, Präsentation (R15)
+   - Vergleichen → Vergleichstabelle, Venn-Diagramm, Vorher-nachher-Bilder
+   - Urteilen → Positionslinie, Pro-Kontra-Waage, Rangliste
+   - Perspektive übernehmen → Rollenkarten, perspektivisches Schreiben, Comic
+   - Quellen und Daten deuten → Bild-/Karikatur-/Textquellenanalyse, Statistik, Karte
+   - Anwenden und entscheiden → Fallanalyse, Entscheidungsspiel, Simulation
+   - Wiederholen und festigen → Spickzettel, Fehlertext, Quiz selbst schreiben, Rätsel-Lernpfad
+2. **Prüfen:** Lerngruppe und Ist-Stand (R17), Stelle im UV (Einstieg, Erarbeitung, Sicherung, Abschluss; R11), Seitenlimit (R9), Machbarkeit offline (R3).
+3. **Abwechslung sichern:** Im Designprotokoll stehen die Hauptmethoden der letzten 8 Stunden der Klasse. Bevorzugt wird eine Methode, die dort nicht oder am längsten nicht vorkommt; dieselbe Hauptmethode nie zweimal hintereinander (R5). Über ein Halbjahr sollen in jeder Klasse möglichst viele verschiedene Methoden vorkommen, ohne dass eine Stunde mehr als eine Hauptmethode trägt.
+
+**Entscheidung bei der Planung (R7 Stufe 1):** Für jede Stunde prüfen, ob eine Methode aus dem Schatz (1–6) das Lernziel besser erreicht als die sonst geplante Form, unter Beachtung von Lernziel, Stelle im UV (R11), Lerngruppe und Ist-Stand (R17), Abwechslung (Designprotokoll R5) und Seitenlimit (R9). Bei den aufwendigen Formen (Comic, Explosionsdarstellung, Rätsel-Lernpfad, Simulation) gilt: im Zweifel die schlichtere, bewährte Form.
 
 **Prüfen:** wie R7, R15 und R16 (Headless-Browser, Tippbedienung, offline, Konsole); die unabhängige Prüfung beurteilt auch, ob der gewählte Baustein dem Lernziel dient.
 
-**Aus der Praxis lernen:** Im Designprotokoll je Stunde „Methodenbaustein: <Mindmap/Comic/Explosion/Zeitleiste/Spickzettel/keiner> – Grund: …“. Tobias' Rückmeldungen (Chat, Ist-Stand R17) bestimmen spätere Entscheidungen mit.
+**Aus der Praxis lernen:** Im Designprotokoll je Stunde „Hauptmethode: <Methode> – Grund: …“ (bei R18 1–5 zusätzlich „Methodenbaustein: <Baustein>“). Tobias' Rückmeldungen (Chat, Ist-Stand R17) bestimmen spätere Entscheidungen mit.
 
-**Abschlussnachricht:** eine Zeile „Methodenbaustein: <Baustein> – Ort: <Lernseite Etappe … / Blatt Aufgabe … / Heft>, Grund: …“ bzw. „Methodenbaustein: keiner – Grund: …“.
+**Abschlussnachricht:** eine Zeile „Methode: <Hauptmethode> (+ <kleiner Zusatz>) – Ort: <Lernseite Etappe … / Blatt Aufgabe … / Heft>, Grund: … · zuletzt in dieser Klasse: …“.
 
 ## Ordnerstruktur
 
