@@ -308,7 +308,7 @@ Anlass: Am 12.11.2026 lief WiPo 10 ohne Zugriff auf Curriculum, Verlaufsdatei un
 
 Gilt für die Erstell-Aufgaben GL 7, GL 8a, GL 8e, GL 10 und WiPo 10. Der Auftragstext nennt nur noch das Klassenspezifische (Stundenplan, Projekt, Dateien, Buch, Reihenfolge, Besonderheiten). Reihenfolge der Schritte:
 1. **Start:** Datum mit `current_time`. Repository lesend klonen: `git clone https://github.com/Ideenclub/lernseiten.git` (öffentlich; kein add_repo, kein Push nötig). Diese CLAUDE.md lesen, dann `planung/termine-2026-27.json` (alle Ferien, Feiertage, beweglichen Ferientage und SuS-freien Tage sind frei; Einträge mit „jahrgaenge“ nur für diese Jahrgänge).
-2. **Planungsdaten nach R12** (Werkzeug „Projects“: zuerst `project_info`). Neueste Chats des Projekts mit `recent_chats`/`conversation_search` prüfen, falls verfügbar; Tobias' Angaben (Ausfall, „nicht geschafft“, „zu schwer“) haben Vorrang.
+2. **Planungsdaten nach R12** (Werkzeug „Projects“: zuerst `project_info`). Neueste Chats des Projekts mit `recent_chats`/`conversation_search` prüfen, falls verfügbar; Tobias' Angaben (Ausfall, „nicht geschafft“, „zu schwer“) haben Vorrang. Danach den Ist-Stand nach R17 lesen (Artefakt „Ist-Stand GL & WiPo“, Datei ist-stand.md) und in der ganzen Planung berücksichtigen.
 3. **Abbruchfälle:** Morgen unterrichtsfrei oder kein Unterrichtstag der Klasse → nichts erstellen, nur kurz per SendUserMessage melden (mit Buchseiten-Erinnerung und Jahresplan-Zeile). Steht im Protokoll der Verlaufsdatei schon eine Stunde mit diesem Datum → nur melden. Ab 01.09.2027 nichts erstellen, nur um Bestätigung von Stundenplan und Lerngruppe bitten.
 4. **Buchseiten-Check:** Liegen für das aktuelle UND das nächste UV Buchseiten im Projekt? Fehlen sie und beginnt das nächste UV innerhalb von zwei Unterrichtswochen: sofort eine eigene SendUserMessage „Erinnerung <Klasse>: Ab <Datum> beginnt UV … (Kap. …, S. …). Bitte lade die Buchseiten ins Projekt „…“ hoch.“ – in jedem Lauf, solange sie fehlen.
 5. **Jahresplan und Budget nach R11:** verfügbare Stunden mit Python aus Stundenplan und Termine-Datei exakt zählen (nie schätzen), gehaltene Stunden je UV zählen, Budget nie überschreiten. Höchstens 4 Stunden Budget übrig → Hinweis „UV endet in X Stunden (am <Datum>) – nächstes UV „…“ ab <Datum>“; ist das Budget ausgeschöpft, wird die Stunde Abschluss und Sicherung des UV. Kein Budget im Curriculum → sinnvoll verteilen und „(Budget geschätzt, kein Wert im Curriculum)“. Keine erfundenen Zahlen.
@@ -317,7 +317,7 @@ Gilt für die Erstell-Aufgaben GL 7, GL 8a, GL 8e, GL 10 und WiPo 10. Der Auftra
 8. **Ausliefern:** alle PDFs und QR-PNGs per SendUserFile (status: proactive; QR-PNG mit display: render). Kein E-Mail-Versand, kein Gmail-Werkzeug.
 9. **Übergabe zum Hochladen nach R14** (Artefakt der Stunde mit Ordner `repo/`, dann Hochlade-Aufgabe anstoßen).
 10. **Verlaufsdatei** im Projekt aktualisieren: `project_read` direkt vor dem Schreiben, dann `project_write` mit vollem Inhalt; alle bestehenden Abschnitte übernehmen, nie Platzhalter. Pflichtangaben nach R11 und R5 (Designprotokoll), Protokollzeile mit Datum · Einzel/Doppel · UV · Stunde X/Y · Thema · Lernziel · Kompetenzen · Buchseiten · Lernseiten-URL · Seitenzahl Arbeitsblatt · Artefakt-Link, „Jahresplan 2026/27“ neu berechnet, „Vorgemerkt als Nächstes“. Veraltete Niveauabschnitte dabei nach R2 ersetzen.
-11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Präsentation (R15) · Animation (R16) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
+11. **Abschlussnachricht** (SendUserMessage, Deutsch): zuerst die Kopfzeilen aus dem Auftrag, dann in dieser Reihenfolge je eine Zeile: Lernseite (URL, „wird automatisch hochgeladen – Bestätigung folgt“) · Artefakt · Buchseiten · Planungsdaten (R12) · Jahresplan/UV Stunde X/Y (R11) · Umfang (R9) · QR auf dem Arbeitsblatt (R1) · Lernseite allein (R10) · Präsentation (R15) · Animation (R16) · Zeit/Puffer (R2) · Plan B (R3) · KI-Probe (R4) · Design (R5) · Ergebnissicherung (R6) · Qualitätsprüfung (R7) · Lösungsblatt (R8) · Übergabe (R14) · Ist-Stand (R17). Danach höchstens 2–3 Zeilen zu Unsicherheiten, Buchfehlern, Kürzungsvorschlägen oder fehlenden Unterlagen. Fehlt etwas nach R12: „ACHTUNG: erstellt ohne …“ ganz oben.
 
 ### R14 – Übergabe zum Hochladen (Stand 12.11.2026)
 
@@ -415,6 +415,32 @@ Gilt für GL 7, GL 8 (8a und 8e), GL 10 und WiPo 10. Wunsch von Tobias: Animatio
 **Aus der Praxis lernen:** Jede Entscheidung mit Kurzbegründung im Designprotokoll der Verlaufsdatei vermerken, z. B. „Animation: ja, Dampfmaschine in 5 Schritten mit Vorhersage – Ablauf im Standbild schwer verständlich“ oder „Animation: nein – Quellenarbeit ist Kern der Stunde“. Tobias' Rückmeldungen dazu bestimmen spätere Entscheidungen mit. Bereits veröffentlichte Lernseiten werden nur auf Tobias' ausdrücklichen Wunsch nachgerüstet.
 
 **Abschlussnachricht:** eine Zeile „Animation: ja – <Thema>, N Animation(en), ca. X Min., Position: <Etappe …>, Grund: … (Aufruf am TV: <URL>#animation)“ bzw. „Animation: nein – Grund: …“.
+
+### R17 – Ist-Stand: Was in der Klasse wirklich geschafft wurde (Stand 14.11.2026)
+
+Wunsch von Tobias: Die Planung darf nicht davon ausgehen, dass alles auf Arbeitsblatt und Lernseite geschafft wurde. Jeden Samstag (geplante Aufgabe „Ist-Stand-Check GL & WiPo (Sa 9:47)“) meldet Tobias je Klasse, was tatsächlich drankam. Seine Angaben stehen in einer zentralen Datei, die jeder Lauf liest.
+
+**Quelle:** Artefakt „Ist-Stand GL & WiPo“, Slug `5ab10cc3-a70f-40e3-a95b-1c26cf8b7ef2` (https://claude.ai/artifact/CCYPTz6cTmuaUnvxKALJ3K), Datei `ist-stand.md`. Lesen mit `mcp__claude-artifacts__read_file` (per ToolSearch laden; slug wie oben, path „ist-stand.md“). Neueste Woche steht oben; je Klasse (Klasse 7, 8a, 8e, Klasse 10, WiPo 10) eine Zeile mit Status: vollständig · teilweise (offen: …) · höchstens halb · ausgefallen · Hinweis.
+
+**Wann:** In jedem Erstell-Lauf in R13 Schritt 2, vor Jahresplan und Planung. Gelesen werden alle Einträge, die neuer sind als die letzte Protokollzeile der Verlaufsdatei, die schon einen Ist-Stand-Vermerk trägt. Bei GL 8 gelten die Zeilen „8a“ und „8e“ getrennt für die jeweilige Klasse und ihren Zeiger.
+
+**Rangfolge:** Ist-Stand vor Protokoll, Verlaufsdatei und „Vorgemerkt als Nächstes“ (die gehen vom vollständigen Durchlauf aus). Widerspricht ein späterer Chat von Tobias im Klassenprojekt dem Ist-Stand, gilt die neuere Angabe.
+
+**Umsetzung je Status:**
+- **vollständig:** normal weiterplanen.
+- **teilweise (offen: …):** Die offenen Aufgaben bzw. Etappen werden in der nächsten Stunde nachgeholt, und zwar als kurze erste Phase (höchstens ca. 15 Min. je Einzelstunde) mit Rückbezug („Zuerst bringt ihr Aufgabe 4 und 5 vom letzten Blatt zu Ende …“), nicht durch ein wiederholtes Blatt. Auf dem neuen Arbeitsblatt steht ein Kasten „Erst fertig machen“ mit Blatt und Aufgabennummern; die Lernseite verlinkt die offene Etappe der vorigen Lernseite. Der Umfang der neuen Stunde wird entsprechend kleiner (Seitenlimit R9 bleibt). Betrifft das Offene ein Lernziel, auf dem die nächste Stunde aufbaut, wird es vor dem neuen Stoff gesichert.
+- **höchstens halb:** Die Stunde gilt als nicht gehalten. Das Thema wird erneut eingesetzt: vorhandenes Material wiederverwenden (bei GL 8 denselben Baustein, Zeiger rückt nicht vor), ergänzt um einen kurzen neuen Einstieg; nur bei Bedarf eine gestraffte Fassung. Kein neuer Stoff, bevor das Lernziel erreicht ist.
+- **ausgefallen:** zählt nicht als gehalten; das geplante Thema verschiebt sich in die nächste Stunde.
+- **Hinweise** („zu schwer“, „zu leicht“, „unruhig“, „Buch fehlte“ …): Niveau, Hilfen, Phasenlänge oder Material der nächsten Stunde gezielt anpassen (innerhalb R2/R3) und im Designprotokoll vermerken.
+- Danach Jahresplan und Budget nach R11 mit den tatsächlich gehaltenen Stunden neu rechnen; reicht das Budget nicht mehr, Kürzungsvorschlag in der Abschlussnachricht.
+
+**Keine Rückmeldung** (kein Eintrag für die Woche oder Datei nicht lesbar): wie bisher vom vollständigen Durchlauf ausgehen; ist die Datei nicht lesbar, in der Abschlussnachricht „Ist-Stand: Datei nicht lesbar – <Grund>“.
+
+**Protokollieren:** In der Verlaufsdatei bekommt die betroffene Protokollzeile den Vermerk „Ist-Stand (Sa <Datum>): <Status>“; der Spiegel `planung/verlauf/<klasse>.md` (R12) übernimmt ihn. Die Datei `ist-stand.md` schreibt nur die Samstagsaufgabe bzw. Tobias selbst; Erstell-Läufe lesen sie nur.
+
+**Abschlussnachricht:** eine Zeile „Ist-Stand: berücksichtigt (Sa <Datum>: <Kurzfassung>, Umsetzung: …)“ bzw. „Ist-Stand: keine Rückmeldung – Plan wie vorgesehen“.
+
+**Datenschutz:** In `ist-stand.md` und allen daraus abgeleiteten Dateien keine Schülernamen, keine Noten, keine Angaben zu einzelnen SuS.
 
 ## Ordnerstruktur
 
