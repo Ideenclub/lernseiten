@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wie verhielten sich die Deutschen gegenüber dem NS-Staat? · GL 10</title>
+<style>
+:root{--g:#23272E;--g2:#3A404A;--k:#2B5797;--kl:#DDE6F3;--grau:#E6E9ED;--w:#FFFFFF;--t:#1B1E23;--m:#5A616B;--ok:#24704A;--okl:#E2F0E8;--no:#A23B2A;--nol:#F6E3DF}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--grau);color:var(--t);font:17px/1.55 "Avenir Next","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.lab{font:600 12px/1.3 "SF Mono",Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--m)}
+header.top{background:var(--g);color:#F2F3F5;padding:18px 20px 14px}
+header.top .lab{color:#AEB5BF}
+header.top h1{font-size:26px;line-height:1.25;margin:6px 0 4px;font-weight:600;max-width:860px}
+.toprow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.plan{background:var(--g2);padding:10px 12px 12px;overflow-x:auto}
+.plan svg{display:block;min-width:620px;max-width:980px;margin:0 auto}
+.plan .r{cursor:pointer}
+.plan .r rect{fill:#4A515C;stroke:#7C8590;stroke-width:1.5}
+.plan .r.done rect{fill:#2B5797;stroke:#9DB6DA}
+.plan .r.akt rect{stroke:#FFFFFF;stroke-width:3}
+.plan .r text{fill:#F2F3F5;font:600 13px "Avenir Next","Segoe UI",Arial,sans-serif}
+.plan .r text.k{font:600 10px Menlo,Consolas,monospace;letter-spacing:.06em;fill:#C9CFD7}
+main{max-width:900px;margin:0 auto;padding:18px 16px 60px}
+section.v{display:none}
+section.v.on{display:block}
+.tafel{background:var(--w);border-left:6px solid var(--g);padding:18px 20px;margin:0 0 16px}
+.tafel.k{border-left-color:var(--k)}
+.tafel.dunkel{background:var(--g);color:#F2F3F5;border-left-color:var(--k)}
+.tafel.dunkel .lab{color:#AEB5BF}
+h2{font-size:23px;line-height:1.3;margin:4px 0 10px;font-weight:600}
+h3{font-size:18px;margin:14px 0 6px;font-weight:600}
+p{margin:0 0 10px}
+.fund{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--g);background:#F7F8FA;padding:10px 12px;margin:10px 0}
+.fund b{white-space:nowrap}
+.fund svg{flex:0 0 26px;margin-top:2px}
+.heft{border:2px dashed var(--k);padding:12px 14px;margin:12px 0;background:#F8FAFD}
+.heft .lab{color:var(--k)}
+button,.btn{font:600 16px "Avenir Next","Segoe UI",Arial,sans-serif;min-height:46px;padding:10px 18px;border:2px solid var(--g);background:var(--w);color:var(--g);border-radius:2px;cursor:pointer}
+button:focus-visible{outline:3px solid var(--k);outline-offset:2px}
+button.voll{background:var(--g);color:#fff}
+button.blau{border-color:var(--k);color:var(--k)}
+button.klein{min-height:44px;padding:8px 12px;font-size:15px}
+button[disabled]{opacity:.45;cursor:default}
+.nav{display:flex;justify-content:space-between;gap:10px;margin:18px 0 0;flex-wrap:wrap}
+details{border-top:1px solid #C9CFD7;padding:8px 0}
+details summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center;color:var(--k)}
+details>div{padding:4px 0 8px}
+.opts{display:grid;gap:8px;margin:8px 0}
+.opts button{text-align:left;font-weight:500;border-width:1.5px;border-color:#9AA2AD}
+.opts button.r{background:var(--okl);border-color:var(--ok);color:#123}
+.opts button.f{background:var(--nol);border-color:var(--no);color:#123}
+.rm{padding:10px 12px;margin:6px 0 12px;font-size:16px;display:none}
+.rm.on{display:block}
+.rm.r{background:var(--okl);border-left:4px solid var(--ok)}
+.rm.f{background:var(--nol);border-left:4px solid var(--no)}
+.frage{margin:16px 0 4px;font-weight:600}
+/* Treppe */
+.treppe{width:100%;max-width:760px;display:block;margin:6px auto}
+.treppe .st{cursor:pointer}
+.treppe .st rect{stroke:#23272E;stroke-width:1.5}
+.treppe .st.sel rect{stroke:#2B5797;stroke-width:4}
+.treppe text{font:600 15px "Avenir Next","Segoe UI",Arial,sans-serif}
+.stinfo{background:var(--w);border:2px solid var(--k);padding:12px 14px;min-height:96px}
+/* Regler */
+.regler{width:100%;height:44px}
+.bar{height:34px;background:#D3D8DE;position:relative;margin:8px 0}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--k)}
+.bar span{position:absolute;right:8px;top:6px;font-weight:600}
+/* Karten */
+.stapel{display:grid;grid-template-columns:1fr;gap:12px;margin:10px 0}
+.karte{background:var(--w);border:2px solid var(--g);padding:16px;min-height:150px;position:relative}
+.karte .nr{position:absolute;right:12px;top:10px}
+.ziele{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:760px){.ziele{grid-template-columns:repeat(4,1fr)}}
+.ziele button{font-size:15px;padding:10px 6px}
+.ablage{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+@media(min-width:760px){.ablage{grid-template-columns:repeat(4,1fr)}}
+.fach{background:#F4F6F8;border:1.5px solid #AAB2BC;min-height:70px;padding:6px 8px;font-size:13px}
+.fach b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--m)}
+.fach div{border-top:1px solid #D3D8DE;padding:3px 0}
+.chips{display:grid;gap:8px;margin:10px 0}
+.chip{background:var(--w);border:1.5px solid #9AA2AD;padding:10px 12px}
+.chip .wahl{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chip .wahl button{font-size:14px;min-height:44px;padding:6px 10px}
+.chip.r{border-color:var(--ok);background:var(--okl)}
+.chip.f{border-color:var(--no);background:var(--nol)}
+.zeig{border:3px solid var(--g);background:var(--w);padding:16px 18px;margin:14px 0}
+.zeig .kopf{display:flex;align-items:center;gap:12px;font:700 20px "Avenir Next","Segoe UI",Arial,sans-serif;letter-spacing:.04em}
+.zeig ul{margin:8px 0 0 0;padding-left:20px}
+.stufe{font-size:46px;font-weight:700;line-height:1;border:4px solid var(--g);display:inline-block;padding:10px 18px;margin:8px 0}
+.stufe.sA{border-radius:50%}.stufe.sB{border-radius:0}.stufe.sC{border-style:dashed}.stufe.sD{border-style:dotted}
+table.erg{width:100%;border-collapse:collapse;margin:10px 0;font-size:15px;background:var(--w)}
+table.erg td,table.erg th{border:1px solid #C9CFD7;padding:7px 8px;text-align:left;vertical-align:top}
+.zl{display:grid;gap:8px;margin:10px 0}
+.zl button{text-align:left;font-weight:500}
+.zlrow{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;background:var(--w);border:1px solid #C9CFD7;padding:8px}
+.abz{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.abz span{border:2px solid var(--k);padding:4px 10px;font-size:13px;font-weight:600;color:var(--k)}
+.abz span.leer{border-color:#AAB2BC;color:#8A929C;border-style:dashed}
+.modul{display:grid;gap:10px}
+@media(min-width:700px){.modul{grid-template-columns:1fr 1fr}}
+.modul button{text-align:left;min-height:96px;font-weight:500}
+.modul button b{display:block;font-size:17px;margin-bottom:4px}
+.dialog{position:fixed;inset:0;background:rgba(20,22,26,.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:9}
+.dialog.on{display:flex}
+.dialog>div{background:#fff;max-width:460px;padding:20px;border:3px solid var(--g)}
+.vorlesen{display:none}
+.vorlesen.da{display:inline-block}
+.exp{display:grid;gap:8px;margin:10px 0}
+.exp button{text-align:left;font-weight:500}
+.exp button.sel{border-color:var(--k);background:var(--kl)}
+small,.klein{font-size:14px;color:var(--m)}
+.zweisp{display:grid;gap:12px}
+@media(min-width:760px){.zweisp{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="toprow">
+    <div>
+      <div class="lab">Kap. 9 · Nationalsozialismus · GL 10</div>
+      <h1>Wie verhielten sich die Deutschen gegenüber dem NS-Staat?</h1>
+    </div>
+    <button class="klein" id="neuBtn" style="background:transparent;color:#F2F3F5;border-color:#7C8590">Neu starten</button>
+  </div>
+</header>
+<nav class="plan" aria-label="Ausstellungsplan">
+  <svg id="plan" viewBox="0 0 980 116" role="img" aria-label="Plan der Ausstellung mit sechs Räumen, Vertiefung und Sonderausstellung"></svg>
+</nav>
+
+<main>
+<!-- START -->
+<section class="v" id="v-start">
+  <div class="tafel dunkel">
+    <div class="lab">Eingang · Ausstellung „Mitmachen, anpassen, verweigern“</div>
+    <h2>Über 65 Millionen Menschen lebten 1933 im Deutschen Reich. Wie gingen sie mit der Diktatur um?</h2>
+    <p>Am Dienstag ging es um die Arbeitslosigkeit, die schnell sank, und um den Preis dafür. Heute geht es um die Menschen selbst: Wer jubelte, wer machte mit, wer zog sich zurück, wer leistete Widerstand?</p>
+  </div>
+  <div class="tafel">
+    <div class="lab">So gehst du durch die Ausstellung</div>
+    <p><b>Raum 1 bis 6</b> schaffen alle in der Stunde (ca. 40 Minuten). Danach kommt der <b>Zeigepunkt</b>.</p>
+    <p><b>Schon fertig?</b> Dann geht es im Vertiefungsraum und in der Sonderausstellung weiter. Dort warten vier Module mit eigenen Abzeichen.</p>
+    <p>Du brauchst: <b>Buch S. 288/289</b>, Heft, Stift. Was ins Heft gehört, steht in einem blau gestrichelten Kasten.</p>
+    <p class="klein">Tippe auf einen Raum im Plan oben, um zurückzuspringen. Dein Fortschritt bleibt auf diesem iPad gespeichert.</p>
+    <div class="nav"><span></span><button class="voll" data-go="r0">Zum Einstieg</button></div>
+  </div>
+</section>
+
+<!-- R0 Einstieg -->
+<section class="v" id="v-r0">
+  <div class="tafel k">
+    <div class="lab">Raum 0 · Einstieg · ca. 4 Min.</div>
+    <h2>Eine Volksabstimmung im August 1934</h2>
+    <p>Nach dem Tod von Reichspräsident Hindenburg am 2. August 1934 ließ Hitler das Amt des Reichspräsidenten mit seinem Amt als Reichskanzler zusammenlegen. Am 19. August 1934 sollten die Deutschen in einer Volksabstimmung dazu „Ja“ sagen.</p>
+    <p class="frage">Deine Vermutung: Wie viel Prozent der gültigen Stimmen waren „Ja“-Stimmen?</p>
+    <input class="regler" type="range" min="0" max="100" value="50" id="schaetz" aria-label="Schätzung in Prozent">
+    <div class="bar"><i id="schaetzBar" style="width:50%"></i><span id="schaetzWert">50 %</span></div>
+    <button class="blau" id="aufdecken">Aufdecken</button>
+    <div id="aufgedeckt" style="display:none">
+      <p class="frage">Ergebnis laut amtlicher Zählung</p>
+      <div class="bar"><i style="width:89.9%;background:var(--g)"></i><span style="color:#fff;right:auto;left:10px">rund 90 % Ja</span></div>
+      <p id="schaetzRm"></p>
+      <p>Rund 4,3 Millionen Menschen stimmten trotzdem mit „Nein“. Frei war die Abstimmung nicht:</p>
+      <ul>
+        <li>Es gab keine Parteien und keine Alternative mehr. Viele Gegner saßen in Haft oder waren geflohen.</li>
+        <li>Die Propaganda war überall, in Betrieben und in der Nachbarschaft wurde Druck gemacht.</li>
+        <li>Mancherorts wurde das Wahlgeheimnis nicht eingehalten.</li>
+      </ul>
+      <p>Trotzdem geht die Forschung davon aus, dass ein großer Teil der Bevölkerung das Regime in diesen Jahren tatsächlich unterstützte. Wie passt das zusammen? Darum geht es in den nächsten Räumen.</p>
+    </div>
+    <div class="nav"><button data-go="start">Zurück</button><button class="voll" data-go="r1">Weiter zu Raum 1</button></div>
+  </div>
+</section>
+
+<!-- R1 Modell -->
+<section class="v" id="v-r1">
+  <div class="tafel">
+    <div class="lab">Raum 1 · Das Ordnungsmodell · ca. 7 Min.</div>
+    <h2>Vier Arten, sich zu verhalten</h2>
+    <p>Um das Verhalten der Menschen zu ordnen, nutzen wir heute vier Stufen. <b>Tippe jede Stufe an</b> und lies die Erklärung. <button class="klein vorlesen" data-lesen="stinfo">Vorlesen</button></p>
+    <svg class="treppe" id="treppe" viewBox="0 0 760 250" role="group" aria-label="Treppe mit vier Stufen"></svg>
+    <div class="stinfo" id="stinfo" aria-live="polite"><span class="klein">Tippe eine Stufe an.</span></div>
+    <p class="klein" style="margin-top:8px">Wichtig: Die Grenzen sind fließend. Ein Mensch konnte sich im Beruf anpassen und privat verweigern.</p>
+    <h3>Kurzer Check</h3>
+    <div id="check1"></div>
+    <div class="nav"><button data-go="r0">Zurück</button><button class="voll" data-go="r2">Weiter zu Raum 2</button></div>
+  </div>
+</section>
+
+<!-- R2 Plakat -->
+<section class="v" id="v-r2">
+  <div class="tafel">
+    <div class="lab">Raum 2 · Bildquelle im Buch · ca. 7 Min.</div>
+    <h2>Was erwartete die Propaganda von den Menschen?</h2>
+    <div class="fund">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 5h8c1.5 0 2 1 2 2v15c0-1-1-1.5-2-1.5H3zM23 5h-8c-1.5 0-2 1-2 2v15c0-1 1-1.5 2-1.5h8z" fill="none" stroke="#23272E" stroke-width="2"/></svg>
+      <div><b>Buch S. 288/289, M9</b> · Plakat „Führer wir folgen Dir“ – ein NS-Propagandaplakat</div>
+    </div>
+    <p><b>Achtung beim Auswerten:</b> Ein Propagandaplakat zeigt, was das Regime von den Menschen wollte. Es zeigt nicht, wie die Menschen wirklich dachten.</p>
+    <p>Lege die Lupe auf das Plakat: Tippe die Fragen der Reihe nach an und schau im Buch genau hin.</p>
+    <div class="exp" id="lupe"></div>
+    <div class="heft">
+      <div class="lab">Ins Heft · Aufgabe 2</div>
+      <p><b>Analysiere</b> das Plakat M9 in drei Schritten: 1. Beschreiben (Was ist zu sehen?) 2. Deuten (Was soll der Betrachter denken und tun?) 3. Beurteilen (Zu welcher Stufe aus Raum 1 sollte das Plakat die Menschen bringen? Woran erkennst du, dass es Propaganda ist?).</p>
+    </div>
+    <details><summary>Tipp: Satzanfänge</summary><div>Auf dem Plakat sieht man … · Im Vordergrund / Hintergrund … · Der Text lautet … · Der Betrachter soll … · Das Plakat will erreichen, dass … · Es ist Propaganda, weil …</div></details>
+    <details><summary>Prüfliste: Hast du an alles gedacht?</summary><div>☐ Personen, Blickrichtung, Farben und Schrift beschrieben · ☐ Auftraggeber genannt (NS-Staat) · ☐ gesagt, wen das Plakat anspricht · ☐ eine Stufe aus Raum 1 genannt und begründet · ☐ gesagt, was das Plakat verschweigt (z. B. Zwang, Verfolgung, fehlende Freiheit)</div></details>
+    <div class="nav"><button data-go="r1">Zurück</button><button class="voll" data-go="r3">Weiter zu Raum 3</button></div>
+  </div>
+</section>
+
+<!-- R3 Kartenstapel -->
+<section class="v" id="v-r3">
+  <div class="tafel">
+    <div class="lab">Raum 3 · Fälle ordnen · ca. 8 Min.</div>
+    <h2>Zehn Fälle aus dem Alltag 1933–1939</h2>
+    <p>Die Fälle sind typisch für die Zeit, die Personen sind ausgedacht (außer Georg Elser). <b>Lies die Karte und lege sie auf die passende Stufe.</b></p>
+    <div id="stapel"></div>
+    <div class="ablage" id="ablage"></div>
+    <div class="nav"><button data-go="r2">Zurück</button><button class="voll" data-go="r4">Weiter zu Raum 4</button></div>
+  </div>
+</section>
+
+<!-- R4 Gründe -->
+<section class="v" id="v-r4">
+  <div class="tafel">
+    <div class="lab">Raum 4 · Gründe · ca. 8 Min.</div>
+    <h2>Warum machten so viele mit?</h2>
+    <p>Ordne jeden Grund einer der drei Gruppen zu. Oft kamen bei einem Menschen mehrere Gründe zusammen.</p>
+    <div class="chips" id="gruende"></div>
+    <div class="fund">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 5h8c1.5 0 2 1 2 2v15c0-1-1-1.5-2-1.5H3zM23 5h-8c-1.5 0-2 1-2 2v15c0-1 1-1.5 2-1.5h8z" fill="none" stroke="#23272E" stroke-width="2"/></svg>
+      <div><b>Buch S. 288/289, M10 und M11</b> · „Erdbeere für Hitler“ (M10) und „Rückblick auf eine Jugendzeit“ (M11)</div>
+    </div>
+    <div class="heft">
+      <div class="lab">Ins Heft · Aufgabe 4</div>
+      <p>Lies M10 und M11. <b>Notiere</b> zu jedem Material: Wer berichtet? Welches Verhalten wird beschrieben? <b>Ordne</b> es einer Stufe aus Raum 1 zu und <b>begründe</b> mit einem der Gründe von oben.</p>
+    </div>
+    <details><summary>Tipp 1: So gehst du vor</summary><div>Lies zuerst die Quellenangabe unter dem Material: Sie sagt dir, wer schreibt und wann. Markiere dann im Kopf die Stelle, an der jemand etwas tut oder fühlt.</div></details>
+    <details><summary>Tipp 2: Satzanfänge</summary><div>In M10 berichtet … · Beschrieben wird, dass … · Das passt zur Stufe …, weil … · Ein Grund dafür war wohl …</div></details>
+    <details><summary>Tipp 3: Wichtig bei Erinnerungen</summary><div>Ein Rückblick wurde oft Jahre später geschrieben. Die Person weiß dann schon, wie alles ausging. Das kann die Erinnerung färben.</div></details>
+    <div class="nav"><button data-go="r3">Zurück</button><button class="voll" data-go="r5">Weiter zu Raum 5</button></div>
+  </div>
+</section>
+
+<!-- R5 Urteil -->
+<section class="v" id="v-r5">
+  <div class="tafel">
+    <div class="lab">Raum 5 · Urteil und Texttafel · ca. 8 Min.</div>
+    <h2>Konnte man „nichts machen“?</h2>
+    <div class="tafel k" style="margin:8px 0 12px;background:#F7F8FA">
+      <div class="lab">Verbreitete Rechtfertigung nach 1945</div>
+      <p style="font-size:19px;margin:6px 0 0">„Wir konnten doch nichts machen.“</p>
+      <p class="klein" style="margin:6px 0 0">Diesen Satz sagten nach dem Krieg viele Erwachsene, wenn Jüngere fragten, warum sie mitgemacht hatten.</p>
+    </div>
+    <div class="heft">
+      <div class="lab">Ins Heft · Aufgabe 5a</div>
+      <p><b>Nimm Stellung</b> zu dieser Aussage. Nutze zwei Fälle aus Raum 3: einen, der zeigt, wie gefährlich Widerstand war, und einen, der zeigt, welche Spielräume es im Alltag gab.</p>
+    </div>
+    <details><summary>Tipp: Aufbau</summary><div>Die Aussage stimmt teilweise, weil … (Beispiel) · Sie stimmt aber nicht ganz, weil … (Beispiel) · Insgesamt …</div></details>
+    <details><summary>Musterlösung (erst nach dem Schreiben öffnen)</summary><div>Offener Widerstand war lebensgefährlich: Wer Flugblätter einer verbotenen Partei verteilte, musste mit Zuchthaus oder KZ rechnen; Georg Elser wurde nach seinem Attentat inhaftiert und 1945 ermordet. Die Aussage „Wir konnten nichts machen“ stimmt so aber nicht. Im Alltag gab es Spielräume: Man musste nicht begeistert jubeln, nicht in die Partei eintreten und niemanden anzeigen. Viele, die sich so verweigerten, hatten Nachteile, kamen aber nicht ins KZ. Die Aussage ist deshalb vor allem eine Ausrede, mit der man nach 1945 die eigene Verantwortung kleinredete.</div></details>
+    <div class="heft">
+      <div class="lab">Ins Heft · Aufgabe 5b · Texttafel</div>
+      <p><b>Gestalte</b> die Abschlusstafel unserer Ausstellung: Beantworte die Leitfrage „Wie verhielten sich die Deutschen gegenüber dem NS-Staat?“ in 3 Sätzen. Gib der Tafel eine sachliche Überschrift.</p>
+    </div>
+    <details><summary>Tipp: Bausteine für die Tafel</summary><div>Viele Deutsche stimmten dem Regime zu, weil … · Noch mehr passten sich an, … · Nur wenige verweigerten sich oder leisteten Widerstand, denn …</div></details>
+    <details><summary>Beispiel für eine Tafel</summary><div><b>Zustimmung, Anpassung und wenig Widerspruch</b><br>Viele Deutsche stimmten dem NS-Staat zu, weil sie der Propaganda glaubten oder von Arbeit und Aufstieg profitierten. Noch mehr passten sich an, aus Angst vor Nachteilen, Gestapo und KZ. Nur wenige verweigerten sich offen oder leisteten Widerstand, und diese Menschen riskierten Freiheit und Leben.</div></details>
+    <div class="nav"><button data-go="r4">Zurück</button><button class="voll" data-go="r6">Weiter zu Raum 6</button></div>
+  </div>
+</section>
+
+<!-- R6 Abschlussquiz -->
+<section class="v" id="v-r6">
+  <div class="tafel">
+    <div class="lab">Raum 6 · Abschlusscheck · ca. 5 Min.</div>
+    <h2>Was hast du verstanden?</h2>
+    <div id="quiz"></div>
+    <div class="nav"><button data-go="r5">Zurück</button><button class="voll" data-go="ergebnis">Zum Ergebnis</button></div>
+  </div>
+</section>
+
+<!-- ERGEBNIS -->
+<section class="v" id="v-ergebnis">
+  <div class="tafel dunkel">
+    <div class="lab">Besucherkarte · GL 10 · Ausstellung „Mitmachen, anpassen, verweigern“</div>
+    <h2>Dein Ergebnis</h2>
+    <p id="ergZeit" class="klein" style="color:#C9CFD7"></p>
+    <div id="ergKopf"></div>
+  </div>
+  <div class="tafel">
+    <table class="erg" id="ergTab"></table>
+    <div id="ergVerb"></div>
+    <div class="heft">
+      <div class="lab">Ins Heft</div>
+      <p>Schreib unter deine Aufgaben: „Ergebnis Lernseite: ___ von ___ Punkten · Stufe ___“. Dazu einen Satz: „Das übe ich noch: …“</p>
+    </div>
+  </div>
+  <div class="zeig">
+    <div class="kopf"><svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true"><path d="M14 20V8a2.5 2.5 0 015 0v9M19 17v-2a2.5 2.5 0 015 0v3M24 18a2.5 2.5 0 015 0v6c0 6-4 10-10 10h-1c-4 0-6-2-8-5l-4-6a2.4 2.4 0 014-2.5l4 3.5" fill="none" stroke="#23272E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>ZEIGEPUNKT 1</div>
+    <ul>
+      <li>Zeige: dein Heft (Aufgabe 5b, die Texttafel) und diesen Ergebnisbildschirm.</li>
+      <li>Geh mit Heft und iPad zum Zeigeplatz am Lehrerpult. Sind dort schon zwei Personen, bleib sitzen: Leg das Heft aufgeklappt an den Tischrand und mach bei „Schon fertig?“ weiter. Die Lehrkraft kommt vorbei.</li>
+      <li>Noch nicht fertig? Zeige trotzdem, wie weit du gekommen bist.</li>
+      <li>Sagt die Lehrkraft etwas anderes (zum Beispiel: Wir vergleichen gemeinsam), dann gilt das.</li>
+      <li>Nicht gezeigt bis zum Ende der Stunde? Zeige das Heft zu Beginn der nächsten Stunde.</li>
+    </ul>
+  </div>
+  <div class="tafel k">
+    <div class="lab">Schon fertig?</div>
+    <p>Dann geht es weiter: erst der Vertiefungsraum, dann die Sonderausstellung mit vier Modulen.</p>
+    <div class="nav"><button data-go="r6">Zurück</button><button class="voll" data-go="v1">Zum Vertiefungsraum</button></div>
+  </div>
+</section>
+
+<!-- V1 Risiko -->
+<section class="v" id="v-v1">
+  <div class="tafel">
+    <div class="lab">Vertiefung V1 · Was riskierte wer? · ca. 10 Min.</div>
+    <h2>Wie gefährlich war welches Verhalten?</h2>
+    <p>Schätze für jedes Verhalten mit dem Regler, wie groß das Risiko war (1 = gering, 5 = lebensgefährlich). Dann deck auf, was Menschen damals drohte.</p>
+    <div id="risiko"></div>
+    <div class="heft">
+      <div class="lab">Ins Heft · V1</div>
+      <p><b>Erkläre</b> in 3–4 Sätzen, warum die Gestapo mit wenig Personal so viel kontrollieren konnte. Nutze das Wort „Denunziation“.</p>
+    </div>
+    <details><summary>Musterlösung</summary><div>Die Gestapo hatte im Verhältnis zur Bevölkerung nur wenige Mitarbeiter. Sie war auf Anzeigen aus der Bevölkerung angewiesen. Nachbarn, Kollegen oder Bekannte meldeten Witze, Kritik oder „verdächtiges“ Verhalten (Denunziation), manchmal aus Überzeugung, oft auch aus Neid oder persönlichem Streit. Weil niemand wusste, wer zuhört, kontrollierten sich viele Menschen selbst und schwiegen.</div></details>
+    <div class="nav"><button data-go="ergebnis">Zurück</button><button class="voll" data-go="v2">Weiter zu V2</button></div>
+  </div>
+</section>
+
+<!-- V2 Jugend -->
+<section class="v" id="v-v2">
+  <div class="tafel">
+    <div class="lab">Vertiefung V2 · Jugend im NS-Staat · ca. 10 Min.</div>
+    <h2>Warum war die Jugend für das Regime so wichtig?</h2>
+    <p>Bring die Ereignisse in die richtige Reihenfolge: Tippe sie der Reihe nach an, das früheste zuerst.</p>
+    <div class="zl" id="zeitleiste"></div>
+    <div class="rm" id="zlRm"></div>
+    <div class="frage">Welche Absicht steckt hinter dieser Entwicklung am ehesten?</div>
+    <div id="v2q"></div>
+    <div class="heft">
+      <div class="lab">Ins Heft · V2</div>
+      <p><b>Vergleiche</b>: Welche Möglichkeiten, sich zu verweigern, hatte eine Jugendliche 1934 und welche 1940? Begründe mit der Zeitleiste.</p>
+    </div>
+    <details><summary>Musterlösung</summary><div>1934 war die Mitgliedschaft in HJ oder BDM noch nicht gesetzlich vorgeschrieben, auch wenn es Druck in Schule und Umfeld gab; man konnte also eher fernbleiben. Seit dem Gesetz von 1936 galt die HJ als Staatsjugend, und mit der Jugenddienstpflicht 1939 war der Dienst Pflicht. 1940 war Fernbleiben deshalb verboten und konnte bestraft werden. Verweigerung war nur noch im Kleinen möglich, etwa durch eigene Musik, Kleidung und Treffen wie bei der Swing-Jugend.</div></details>
+    <div class="nav"><button data-go="v1">Zurück</button><button class="voll" data-go="v3">Weiter zu V3</button></div>
+  </div>
+</section>
+
+<!-- V3 heute -->
+<section class="v" id="v-v3">
+  <div class="tafel">
+    <div class="lab">Vertiefung V3 · Und heute? · ca. 8 Min.</div>
+    <h2>Was schützt heute davor, dass Widerspruch gefährlich wird?</h2>
+    <p>Ordne jedem Fall das Grundrecht zu, das ihn heute schützt.</p>
+    <div class="chips" id="gg"></div>
+    <div class="tafel k" style="background:#F7F8FA">
+      <div class="lab">Grundgesetz, Art. 20 Abs. 4 (eingefügt 1968)</div>
+      <p style="margin:4px 0 0">„Gegen jeden, der es unternimmt, diese Ordnung zu beseitigen, haben alle Deutschen das Recht zum Widerstand, wenn andere Abhilfe nicht möglich ist.“</p>
+    </div>
+    <div class="heft">
+      <div class="lab">Ins Heft · V3</div>
+      <p><b>Erläutere</b>, warum das Widerstandsrecht (seit 1968 im Grundgesetz) gerade in Deutschland eine besondere Bedeutung hat. Beziehe dich auf die Zeit 1933–1945.</p>
+    </div>
+    <details><summary>Musterlösung</summary><div>Im NS-Staat wurde die Demokratie Schritt für Schritt beseitigt, und wer Widerstand leistete, galt als Verbrecher und wurde verfolgt. Das Grundgesetz stellt seit 1968 ausdrücklich klar: Wer die demokratische Ordnung beseitigen will, handelt unrecht, und wer sich dagegen wehrt, handelt rechtmäßig, wenn es keinen anderen Weg mehr gibt. Vorher sollen aber Gerichte, Wahlen, Presse und Demonstrationen die Demokratie schützen.</div></details>
+    <p class="klein">Ein Vergleich mit heute hat Grenzen: Wer heute widerspricht, riskiert vielleicht Ärger in der Gruppe, aber keine Gestapo und kein KZ.</p>
+    <div class="nav"><button data-go="v2">Zurück</button><button class="voll" data-go="sonder">Zur Sonderausstellung</button></div>
+  </div>
+</section>
+
+<!-- Sonderausstellung -->
+<section class="v" id="v-sonder">
+  <div class="tafel dunkel">
+    <div class="lab">Sonderausstellung · für alle, die noch Zeit haben</div>
+    <h2>Vier Module, frei wählbar</h2>
+    <p>Jedes Modul hat ein eigenes Abzeichen. Die Reihenfolge wählst du selbst.</p>
+    <div class="abz" id="abzeichen"></div>
+  </div>
+  <div class="modul">
+    <button data-go="e1"><b>Ausstellung kuratieren</b>Vitrine mit drei Exponaten zusammenstellen · ca. 10 Min.</button>
+    <button data-go="e2"><b>Georg Elser</b>Lebensweg ordnen und eine Gedenktafel prüfen · ca. 10 Min.</button>
+    <button data-go="e3"><b>Erinnerungen prüfen</b>Wie zuverlässig sind Zeitzeugenberichte? · ca. 8 Min.</button>
+    <button data-go="e4"><b>Aufgabe für die Klasse</b>Selbst Fragen entwerfen · ca. 10 Min. oder länger</button>
+  </div>
+</section>
+
+<section class="v" id="v-e1">
+  <div class="tafel">
+    <div class="lab">Modul 1 · Ausstellung kuratieren</div>
+    <h2>Welche drei Exponate zeigen das Verhalten der Menschen am besten?</h2>
+    <p>Du darfst für eine Vitrine genau <b>drei</b> von sechs Exponaten auswählen. Die Vitrine soll zeigen, dass sich Menschen unterschiedlich verhielten.</p>
+    <div class="exp" id="exponate"></div>
+    <button class="blau" id="vitrineCheck">Vitrine prüfen</button>
+    <div class="rm" id="vitrineRm"></div>
+    <div class="heft">
+      <div class="lab">Ins Heft · Modul 1</div>
+      <p><b>Schreibe</b> zu jedem deiner drei Exponate eine Bildunterschrift (je 1–2 Sätze): Was ist es, und wofür steht es? Gib der Vitrine einen Titel.</p>
+    </div>
+    <div class="nav"><button data-go="sonder">Zur Übersicht</button><button class="voll" data-done="e1" data-go="sonder">Modul abschließen</button></div>
+  </div>
+</section>
+
+<section class="v" id="v-e2">
+  <div class="tafel">
+    <div class="lab">Modul 2 · Georg Elser (1903–1945)</div>
+    <h2>Wie ein Schreiner versuchte, den Krieg zu verhindern</h2>
+    <p>Georg Elser stammte aus Hermaringen in Württemberg und war Schreiner. Er wollte Hitler töten, weil er einen Krieg kommen sah und ihn verhindern wollte. Er plante allein.</p>
+    <p>Bring seinen Weg in die richtige Reihenfolge: Tippe das früheste Ereignis zuerst.</p>
+    <div class="zl" id="elser"></div>
+    <div class="rm" id="elserRm"></div>
+    <h3>Welcher Text passt auf eine Gedenktafel?</h3>
+    <div id="tafelq"></div>
+    <div class="heft">
+      <div class="lab">Ins Heft · Modul 2</div>
+      <p><b>Beurteile</b>: Elsers Bombe tötete acht Menschen, die nicht Hitler waren. Darf man ihn trotzdem als Widerstandskämpfer ehren? Begründe in 4–5 Sätzen.</p>
+    </div>
+    <details><summary>Musterlösung</summary><div>Elser handelte gegen eine verbrecherische Diktatur und wollte einen Krieg verhindern, der dann Millionen Menschen das Leben kostete. Er erkannte früher als die meisten, wohin Hitlers Politik führte, und handelte allein und ohne Auftrag. Dass bei dem Anschlag acht Menschen starben, ist tragisch und gehört zur ehrlichen Erinnerung dazu. Heute wird Elser zu Recht als Widerstandskämpfer geehrt; Gedenkorte erinnern an ihn, ohne die Opfer des Anschlags zu verschweigen.</div></details>
+    <div class="nav"><button data-go="sonder">Zur Übersicht</button><button class="voll" data-done="e2" data-go="sonder">Modul abschließen</button></div>
+  </div>
+</section>
+
+<section class="v" id="v-e3">
+  <div class="tafel">
+    <div class="lab">Modul 3 · Erinnerungen prüfen</div>
+    <h2>Wie zuverlässig ist ein Rückblick auf die eigene Jugend?</h2>
+    <p>M11 im Buch ist ein Rückblick. Entscheide bei jeder Aussage: richtig oder falsch?</p>
+    <div class="chips" id="rf"></div>
+    <div class="heft">
+      <div class="lab">Ins Heft · Modul 3</div>
+      <p><b>Formuliere</b> drei Fragen, die du einem Zeitzeugen stellen würdest, um zu prüfen, wie er damals wirklich dachte.</p>
+    </div>
+    <div class="nav"><button data-go="sonder">Zur Übersicht</button><button class="voll" data-done="e3" data-go="sonder">Modul abschließen</button></div>
+  </div>
+</section>
+
+<section class="v" id="v-e4">
+  <div class="tafel">
+    <div class="lab">Modul 4 · Aufgabe für die Klasse</div>
+    <h2>Entwirf selbst einen Fall</h2>
+    <p>Schreibe ins Heft <b>zwei neue Fallkarten</b> wie in Raum 3 (je 2–3 Sätze, ausgedachte Person, typisch für 1933–1939). Schreibe auf die Rückseite die richtige Stufe und eine Begründung.</p>
+    <p>Danach: <b>Schreibe 3 Quizfragen</b> mit je vier Antworten zur heutigen Stunde. Markiere die richtige Antwort.</p>
+    <details><summary>Darauf achten</summary><div>Der Fall muss eindeutig zu einer Stufe passen. · Keine echten Personen außer bekannten historischen Personen. · Sachlich bleiben: keine Witze über Opfer oder Täter.</div></details>
+    <p class="klein">Diese Aufgabe kann nicht ausgehen: Wer fertig ist, schreibt weitere Fälle oder tauscht mit dem Nachbarn und löst dessen Karten.</p>
+    <div class="nav"><button data-go="sonder">Zur Übersicht</button><button class="voll" data-done="e4" data-go="sonder">Modul abschließen</button></div>
+  </div>
+</section>
+</main>
+
+<div class="dialog" id="dlg"><div>
+  <p><b>Wirklich neu starten?</b></p>
+  <p>Alle Antworten auf diesem iPad werden gelöscht.</p>
+  <div class="nav"><button id="dlgNein">Abbrechen</button><button class="voll" id="dlgJa">Ja, neu starten</button></div>
+</div></div>
+
+<script>
+(function(){
+var KEY='gl10-2026-11-19-verhalten';
+var S={a:{},v:{},done:{},z:{},s:{}};
+try{var raw=localStorage.getItem(KEY);if(raw){S=JSON.parse(raw);['a','v','done','z','s'].forEach(function(k){if(!S[k])S[k]={};});}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function $(id){return document.getElementById(id);}
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+
+var STUFEN=['Zustimmung und Mitmachen','Anpassung','Verweigerung','Widerstand'];
+var KURZ=['Zustimmung','Anpassung','Verweigerung','Widerstand'];
+
+/* --- Bewertete Aufgaben: S.a[id] = {e:etappe, f:erster Versuch richtig?, n:jetzt richtig?} --- */
+var ETAPPEN={r1:'Raum 1 (Ordnungsmodell)',r3:'Raum 3 (Fälle ordnen)',r4:'Raum 4 (Gründe)',r6:'Raum 6 (Abschlusscheck)'};
+var HILFE={r1:'Raum 1 oder Buch S. 288/289',r3:'Raum 3 und Raum 1',r4:'Raum 4 oder Buch S. 288/289, M10/M11',r6:'Raum 1 und Raum 5'};
+var ALLE={};
+function reg(id,e){ALLE[id]=e;}
+function antwort(id,ok){var x=S.a[id];if(!x){x=S.a[id]={e:ALLE[id],f:ok,n:ok};}else{x.n=ok;}save();}
+
+/* Multiple Choice */
+function mc(box,id,e,frage,opts,richtig,rmR,rmF){
+  reg(id,e);
+  var w=el('div');w.appendChild(el('div','frage',frage));
+  var o=el('div','opts');var rm=el('div','rm');
+  opts.forEach(function(t,i){var b=el('button',null,t);b.onclick=function(){
+    [].forEach.call(o.children,function(c){c.classList.remove('r','f');});
+    var ok=i===richtig;b.classList.add(ok?'r':'f');antwort(id,ok);
+    rm.className='rm on '+(ok?'r':'f');rm.innerHTML=(ok?'<b>Richtig.</b> ':'<b>Noch nicht.</b> ')+(ok?rmR:rmF);
+    if(!ok)rm.innerHTML+=' Versuch es noch einmal.';
+    S.s[id]=i;save();};o.appendChild(b);});
+  w.appendChild(o);w.appendChild(rm);box.appendChild(w);
+  if(S.s[id]!=null){var i=S.s[id];var b=o.children[i];var ok=i===richtig;b.classList.add(ok?'r':'f');rm.className='rm on '+(ok?'r':'f');rm.innerHTML=(ok?'<b>Richtig.</b> '+rmR:'<b>Noch nicht.</b> '+rmF+' Versuch es noch einmal.');}
+}
+
+/* --- Plan --- */
+var RAEUME=[['start','Eingang',''],['r0','Einstieg','0'],['r1','Modell','1'],['r2','Plakat','2'],['r3','Fälle','3'],['r4','Gründe','4'],['r5','Urteil','5'],['r6','Check','6'],['ergebnis','Ergebnis','ZP'],['v1','Risiko','V1'],['v2','Jugend','V2'],['v3','Heute','V3'],['sonder','Sonder','S']];
+function plan(akt){
+  var svg=$('plan');var h='';
+  RAEUME.forEach(function(r,i){var row=i<9?0:1;var col=i<9?i:i-9+2;var x=6+col*108,y=row?66:12,w=102;
+    var done=S.done['raum-'+r[0]];
+    h+='<g class="r'+(done?' done':'')+(akt===r[0]?' akt':'')+'" data-go="'+r[0]+'" role="button" tabindex="0" aria-label="'+r[1]+'"><rect x="'+x+'" y="'+y+'" width="'+w+'" height="44"/>'+
+      (r[2]?'<text class="k" x="'+(x+8)+'" y="'+(y+16)+'">'+r[2]+'</text>':'')+'<text x="'+(x+8)+'" y="'+(y+35)+'">'+r[1]+'</text></g>';});
+  h+='<text x="6" y="88" style="font:600 10px Menlo,monospace;fill:#AEB5BF;letter-spacing:.06em">FÜR SCHNELLE</text><text x="6" y="102" style="font:600 10px Menlo,monospace;fill:#AEB5BF;letter-spacing:.06em">↓ WEITER</text>';
+  svg.innerHTML=h;
+}
+
+/* --- Ansichten --- */
+function zeige(v){
+  if(!$('v-'+v))v='start';
+  [].forEach.call(document.querySelectorAll('section.v'),function(s){s.classList.remove('on');});
+  $('v-'+v).classList.add('on');S.done['raum-'+v]=true;save();plan(v);
+  if(v==='ergebnis')ergebnis();
+  if(v==='sonder')abzeichen();
+  if(location.hash!=='#'+v){try{history.replaceState(null,'','#'+v);}catch(e){location.hash=v;}}
+  window.scrollTo(0,0);
+}
+document.addEventListener('click',function(ev){var t=ev.target.closest('[data-go]');if(!t)return;
+  var d=t.getAttribute('data-done');if(d){S.done['mod-'+d]=true;save();}
+  zeige(t.getAttribute('data-go'));});
+document.addEventListener('keydown',function(ev){if((ev.key==='Enter'||ev.key===' ')&&ev.target.matches('g[data-go]')){ev.preventDefault();zeige(ev.target.getAttribute('data-go'));}});
+window.addEventListener('hashchange',function(){var h=location.hash.slice(1);if(h&&$('v-'+h)&&!$('v-'+h).classList.contains('on'))zeige(h);});
+
+/* --- Einstieg Regler --- */
+(function(){var r=$('schaetz');function upd(){$('schaetzBar').style.width=r.value+'%';$('schaetzWert').textContent=r.value+' %';}
+  r.oninput=upd;if(S.z.schaetz!=null){r.value=S.z.schaetz;}upd();
+  function auf(){$('aufgedeckt').style.display='block';var d=Math.abs(r.value-90);
+    $('schaetzRm').innerHTML='Deine Vermutung: <b>'+r.value+' %</b>. '+(d<=5?'Du lagst sehr nah dran.':(r.value<90?'Das tatsächliche Ergebnis lag deutlich höher.':'Das tatsächliche Ergebnis lag etwas niedriger.'));}
+  $('aufdecken').onclick=function(){S.z.schaetz=r.value;save();auf();};
+  if(S.z.schaetz!=null)auf();
+})();
+
+/* --- Raum 1: Treppe --- */
+var STINFO=[
+ '<b>Zustimmung und Mitmachen.</b> Menschen glaubten an Hitler und die Ideen der Nationalsozialisten, jubelten, warben für das Regime oder machten bei der Verfolgung mit, etwa indem sie Nachbarn anzeigten. <br><span class="klein">Risiko: keins. Oft gab es sogar Vorteile.</span>',
+ '<b>Anpassung.</b> Menschen taten, was erwartet wurde, ohne unbedingt überzeugt zu sein: Fahne raushängen, „Hitlergruß“, Eintritt in die Partei oder eine NS-Organisation, Schweigen. Gründe waren Angst, Gruppendruck oder Vorteile im Beruf. <br><span class="klein">Risiko: gering. Die meisten Deutschen verhielten sich so.</span>',
+ '<b>Verweigerung.</b> Menschen entzogen sich im Alltag, ohne das Regime stürzen zu wollen: kein „Hitlergruß“, Fernbleiben von HJ-Treffen, eigene Musik und Kleidung, Kontakt zu Verfolgten halten. <br><span class="klein">Risiko: mittel. Es drohten Anzeige, Verhör, Nachteile in Beruf und Schule.</span>',
+ '<b>Widerstand.</b> Menschen handelten bewusst gegen das Regime und wollten es schwächen oder beseitigen: Flugblätter, geheime Gruppen, Attentate. <br><span class="klein">Risiko: sehr hoch. Es drohten Zuchthaus, KZ und Tod. Das taten nur sehr wenige.</span>'];
+(function(){var svg=$('treppe');var cols=['#C9D3E3','#9FB3D3','#5E80B5','#2B5797'];var h='';
+  for(var i=0;i<4;i++){var x=10+i*185,hh=60+i*45,y=240-hh;
+    h+='<g class="st" data-i="'+i+'" role="button" tabindex="0" aria-label="Stufe '+(i+1)+': '+STUFEN[i]+'"><rect x="'+x+'" y="'+y+'" width="180" height="'+hh+'" fill="'+cols[i]+'"/><text x="'+(x+10)+'" y="'+(y+24)+'" fill="'+(i>1?'#fff':'#1B1E23')+'">'+(i+1)+' '+KURZ[i]+'</text></g>';}
+  h+='<text x="10" y="18" style="font:600 12px Menlo,monospace;fill:#5A616B">WENIGER RISIKO, VIELE MENSCHEN</text><text x="750" y="18" text-anchor="end" style="font:600 12px Menlo,monospace;fill:#5A616B">MEHR RISIKO, WENIGE MENSCHEN →</text>';
+  svg.innerHTML=h;
+  function wahl(i){[].forEach.call(svg.querySelectorAll('.st'),function(g){g.classList.toggle('sel',+g.getAttribute('data-i')===i);});$('stinfo').innerHTML=STINFO[i];}
+  svg.addEventListener('click',function(e){var g=e.target.closest('.st');if(g)wahl(+g.getAttribute('data-i'));});
+  svg.addEventListener('keydown',function(e){var g=e.target.closest('.st');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();wahl(+g.getAttribute('data-i'));}});
+})();
+var c1=$('check1');
+mc(c1,'c1a','r1','Was unterscheidet Verweigerung von Widerstand?',['Verweigerung war erlaubt, Widerstand verboten.','Wer sich verweigerte, entzog sich im Alltag; wer Widerstand leistete, wollte das Regime schwächen oder beseitigen.','Verweigerung gab es nur bei Jugendlichen.','Es gibt keinen Unterschied.'],1,'Der Unterschied liegt im Ziel: sich entziehen oder das Regime bekämpfen.','Lies die Erklärungen zu Stufe 3 und 4 noch einmal.');
+mc(c1,'c1b','r1','Wie verhielt sich die Mehrheit der Deutschen?',['Sie leistete Widerstand.','Sie verweigerte sich.','Sie passte sich an oder stimmte zu.','Sie wanderte aus.'],2,'Die meisten passten sich an, viele stimmten zu.','Schau auf die Beschriftung der Treppe: Wo standen viele Menschen?');
+mc(c1,'c1c','r1','Ein Mann tritt in die Partei ein, damit er befördert wird. Er glaubt aber nicht an die NS-Ideologie. Welche Stufe passt?',['Zustimmung und Mitmachen','Anpassung','Verweigerung','Widerstand'],1,'Er tut, was erwartet wird, um einen Vorteil zu haben.','Er ist nicht überzeugt. Welche Stufe beschreibt Mitmachen ohne Überzeugung?');
+
+/* --- Raum 3: Kartenstapel --- */
+var FAELLE=[
+ ['Ein Kaufmann hängt im Mai 1933 eine Hakenkreuzfahne ins Schaufenster. Die Nachbarn tun es auch, und er will keine Kunden verlieren.',1,'Er macht mit, um keine Nachteile zu haben.'],
+ ['Eine Lehrerin ist von Hitler begeistert. Vor der Volksabstimmung 1934 wirbt sie in ihrer Klasse für ein „Ja“.',0,'Sie ist überzeugt und wirbt aktiv für das Regime.'],
+ ['Eine Frau erzählt der Gestapo, dass der Mann von nebenan Witze über Hitler macht.',0,'Wer Menschen anzeigt (Denunziation), hilft aktiv bei der Verfolgung.'],
+ ['Jugendliche in Hamburg treffen sich Ende der 1930er-Jahre, hören amerikanische Swingmusik und tragen lange Haare statt HJ-Uniform.',2,'Sie entziehen sich im Alltag, wollen das Regime aber nicht stürzen.'],
+ ['Ein Arbeiter verteilt nachts Flugblätter einer verbotenen Partei, die zum Kampf gegen Hitler aufrufen.',3,'Er handelt bewusst gegen das Regime.'],
+ ['Eine Frau grüßt beim Bäcker weiter mit „Guten Tag“ statt mit dem „Hitlergruß“.',2,'Sie verweigert ein Ritual, ohne das Regime aktiv zu bekämpfen.'],
+ ['Ein Beamter tritt 1933 in die NSDAP ein, weil er fürchtet, sonst seine Stelle zu verlieren.',1,'Angst vor Nachteilen, keine Überzeugung: Anpassung.'],
+ ['Georg Elser versteckt 1939 im Münchner Bürgerbräukeller eine Bombe, um Hitler zu töten.',3,'Ein Attentat ist Widerstand: Er wollte Hitler beseitigen.'],
+ ['Eine Familie spendet beim „Eintopfsonntag“, weil der „Blockwart“ (ein Aufpasser der Partei für einige Häuser) an der Tür kontrolliert.',1,'Sie gibt, weil sie kontrolliert wird.'],
+ ['Ein Bauer glaubt der Propaganda und jubelt am Straßenrand, als Hitler durch die Gegend fährt.',0,'Er glaubt der Propaganda und jubelt: Zustimmung.']];
+FAELLE.forEach(function(f,i){reg('f'+i,'r3');});
+function stapelZeigen(){
+  var box=$('stapel');box.innerHTML='';
+  var offen=-1;for(var i=0;i<FAELLE.length;i++){if(!(S.a['f'+i]&&S.a['f'+i].n)){offen=i;break;}}
+  var abl=$('ablage');abl.innerHTML='';
+  KURZ.forEach(function(k,j){var f=el('div','fach','<b>'+(j+1)+' '+k+'</b>');FAELLE.forEach(function(x,i){if(S.a['f'+i]&&S.a['f'+i].n&&x[1]===j)f.appendChild(el('div',null,'Karte '+(i+1)));});abl.appendChild(f);});
+  if(offen<0){box.appendChild(el('div','rm on r','<b>Alle zehn Karten liegen richtig.</b> Schau dir die Fächer unten an: Welche Stufe ist am vollsten? Woran liegt das?'));return;}
+  var k=el('div','karte','<span class="lab nr">Karte '+(offen+1)+' von 10</span><p style="font-size:18px;margin:18px 0 12px">'+FAELLE[offen][0]+'</p>');
+  var z=el('div','ziele');var rm=el('div','rm');
+  KURZ.forEach(function(t,j){var b=el('button',null,(j+1)+' '+t);b.onclick=function(){var ok=j===FAELLE[offen][1];antwort('f'+offen,ok);
+    if(ok){rm.className='rm on r';rm.innerHTML='<b>Richtig.</b> '+FAELLE[offen][2];z.querySelectorAll('button').forEach(function(x){x.disabled=true;});
+      var w=el('button','voll','Nächste Karte');w.style.marginTop='8px';w.onclick=stapelZeigen;rm.appendChild(el('br'));rm.appendChild(w);}
+    else{rm.className='rm on f';rm.innerHTML='<b>Noch nicht.</b> Frag dich: Ist die Person überzeugt? Will sie nur Nachteile vermeiden? Entzieht sie sich? Oder kämpft sie gegen das Regime?';b.disabled=true;}};z.appendChild(b);});
+  k.appendChild(z);k.appendChild(rm);box.appendChild(k);
+}
+stapelZeigen();
+
+/* --- Raum 4: Gründe --- */
+var GR=['Überzeugung und Begeisterung','Vorteil','Angst und Druck'];
+var GRUENDE=[
+ ['Man glaubte der Propaganda, Hitler habe Deutschland „gerettet“.',0],
+ ['Neue Arbeitsplätze durch Aufrüstung und Straßenbau',1],
+ ['Angst vor Gestapo und Konzentrationslager',2],
+ ['Begeisterung für Fahrten, Zeltlager und Gemeinschaft in HJ und BDM',0],
+ ['Beförderung im Beruf nach dem Eintritt in die Partei',1],
+ ['Furcht, von Nachbarn oder Kollegen angezeigt zu werden',2],
+ ['Judenfeindliche Vorurteile, die viele schon vor 1933 hatten',0],
+ ['Billige Übernahme von Geschäften und Wohnungen verfolgter jüdischer Familien',1],
+ ['Druck im Betrieb und in der Schule, bei allem mitzumachen',2]];
+(function(){var box=$('gruende');GRUENDE.forEach(function(g,i){var id='g'+i;reg(id,'r4');
+  var c=el('div','chip','<div>'+g[0]+'</div>');var w=el('div','wahl');var rm=el('div','klein');
+  GR.forEach(function(t,j){var b=el('button',null,t);b.onclick=function(){var ok=j===g[1];antwort(id,ok);S.s[id]=j;save();setz(j);};w.appendChild(b);});
+  function setz(j){var ok=j===g[1];c.classList.remove('r','f');c.classList.add(ok?'r':'f');
+    [].forEach.call(w.children,function(b,k){b.style.fontWeight=k===j?'700':'500';});
+    rm.innerHTML=ok?'Richtig.':'Noch nicht. Überleg: Hatte die Person etwas davon, hatte sie Angst, oder war sie überzeugt?';}
+  c.appendChild(w);c.appendChild(rm);box.appendChild(c);if(S.s[id]!=null)setz(S.s[id]);});
+})();
+
+/* --- Raum 2: Lupe --- */
+(function(){var L=[['1 · Wer ist abgebildet?','Achte auf Personen, ihr Alter, ihre Kleidung und ihre Haltung. Wer steht vorn, wer hinten?'],
+  ['2 · Wohin schauen die Personen?','Blickrichtung und Haltung zeigen, wem die Personen folgen sollen.'],
+  ['3 · Was sagt der Text?','Lies die Schrift auf dem Plakat. Wer ist mit „Dir“ gemeint? Wer ist „wir“?'],
+  ['4 · Was soll der Betrachter tun?','Propaganda will ein Verhalten auslösen. Welches? Zu welcher Stufe aus Raum 1 passt es?'],
+  ['5 · Was fehlt auf dem Bild?','Propaganda zeigt nur das, was ins Bild passen soll. Was zeigt das Plakat nicht? Denk an Zwang, Verfolgung und Menschen, die ausgeschlossen wurden.']];
+  var box=$('lupe');L.forEach(function(l,i){var b=el('button',null,'<b>'+l[0]+'</b>');b.onclick=function(){if(b.classList.contains('sel'))return;b.classList.add('sel');b.innerHTML='<b>'+l[0]+'</b><br><span>'+l[1]+'</span>';S.z['lupe'+i]=1;save();};box.appendChild(b);if(S.z['lupe'+i])b.onclick();});
+})();
+
+/* --- Raum 6 Quiz --- */
+var q=$('quiz');
+mc(q,'q1','r6','Ein Angestellter tritt 1933 in die Deutsche Arbeitsfront ein, weil sein Chef es von allen erwartet. Welche Stufe passt?',['Zustimmung und Mitmachen','Anpassung','Verweigerung','Widerstand'],1,'Er folgt dem Druck, nicht seiner Überzeugung.','Ist er überzeugt oder folgt er einer Erwartung?');
+mc(q,'q2','r6','Bei der Volksabstimmung 1934 gab es rund 90 Prozent Ja-Stimmen. Was folgt daraus?',['Alle Deutschen waren begeistert.','Die Abstimmung war frei und geheim.','Es gab viel Zustimmung, aber die Abstimmung war nicht frei.','Niemand stimmte mit Nein.'],2,'Zustimmung und Druck gab es gleichzeitig.','Denk an Raum 0: Gab es eine echte Wahl?');
+mc(q,'q3','r6','Richtig oder falsch? „Wer sich verweigerte, wollte immer das Regime stürzen.“',['Richtig','Falsch'],1,'Verweigerung heißt: sich im Alltag entziehen. Das Regime zu stürzen ist das Ziel von Widerstand.','Vergleiche Stufe 3 und Stufe 4.');
+mc(q,'q4','r6','Warum war Denunziation für die Gestapo so wichtig?',['Die Gestapo hatte wenig Personal und war auf Anzeigen aus der Bevölkerung angewiesen.','Denunziation war die einzige Strafe im NS-Staat.','Die Gestapo durfte selbst niemanden verhaften.','Denunziation gab es erst nach 1945.'],0,'Ohne Anzeigen aus der Bevölkerung hätte die Gestapo viel weniger erfahren.','Denk an den Fall der Nachbarin in Raum 3.');
+mc(q,'q5','r6','Eine Schülerin bleibt 1938 den BDM-Treffen fern und trifft sich lieber mit Freundinnen, die Swing hören. Welche Stufe passt?',['Zustimmung und Mitmachen','Anpassung','Verweigerung','Widerstand'],2,'Sie entzieht sich, ohne das Regime zu bekämpfen.','Kämpft sie gegen das Regime oder entzieht sie sich?');
+mc(q,'q6','r6','Welche Aussage über die Zeit 1933–1939 ist richtig?',['Man konnte gar nichts tun, jede Abweichung führte ins KZ.','Im Alltag gab es Spielräume; offener Widerstand war aber lebensgefährlich.','Widerstand war ungefährlich, weil es Gerichte gab.','Die meisten Deutschen leisteten Widerstand.'],1,'Genau das zeigen die Fälle aus Raum 3.','Denk an Raum 5 und an die Treppe in Raum 1.');
+
+/* --- Ergebnis --- */
+function stufe(p){return p>=85?['A','Sicher']:p>=65?['B','Gut, kleine Lücken']:p>=40?['C','Teilweise – wiederholen']:['D','Noch unsicher – noch einmal üben'];}
+function ergebnis(){
+  var ids=Object.keys(ALLE);var ges=ids.length,f=0,n=0,per={};
+  ids.forEach(function(id){var e=ALLE[id];per[e]=per[e]||{g:0,f:0};per[e].g++;var x=S.a[id];if(x&&x.f){f++;per[e].f++;}if(x&&x.n)n++;});
+  var p=Math.round(f/ges*100),st=stufe(p);
+  var d=new Date();$('ergZeit').textContent='Stand: '+d.toLocaleDateString('de-DE')+', '+d.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+' Uhr';
+  $('ergKopf').innerHTML='<p style="font-size:20px;margin:6px 0">1. Versuch: <b>'+f+' von '+ges+' Punkten</b> ('+p+' %)</p><div class="stufe s'+st[0]+'" style="border-color:#F2F3F5">'+st[0]+'</div><p style="font-size:20px"><b>Stufe '+st[0]+': '+st[1]+'</b></p>'+(n>f?'<p>Nach Verbesserung: '+n+' von '+ges+' Punkten (die Stufe zählt nach dem 1. Versuch).</p>':'')+(st[0]==='A'?'<p>Stark. Weiter geht es im Vertiefungsraum und in der Sonderausstellung.</p>':'');
+  var t='<tr><th>Etappe</th><th>1. Versuch</th><th>Rückmeldung</th></tr>';
+  Object.keys(ETAPPEN).forEach(function(e){var x=per[e];if(!x)return;var q=x.f/x.g;t+='<tr><td>'+ETAPPEN[e]+'</td><td>'+x.f+' von '+x.g+'</td><td>'+(q>=0.75?'gut gelöst':'wiederhole '+HILFE[e])+'</td></tr>';});
+  $('ergTab').innerHTML=t;
+  var offen=ids.filter(function(id){return !(S.a[id]&&S.a[id].n);});
+  var v=$('ergVerb');v.innerHTML='';
+  if(offen.length){var raeume={};offen.forEach(function(id){raeume[ALLE[id]]=1;});
+    v.appendChild(el('p',null,'<b>Fehler verbessern:</b> '+offen.length+' Antwort(en) sind noch offen oder falsch. Geh in den Raum und antworte neu:'));
+    var w=el('div','nav');Object.keys(raeume).forEach(function(r){var b=el('button','blau',ETAPPEN[r]);b.setAttribute('data-go',r);w.appendChild(b);});v.appendChild(w);}
+  else v.appendChild(el('p',null,'Alle Antworten sind jetzt richtig.'));
+}
+
+/* --- V1 Risiko --- */
+(function(){var R=[['Nicht in die NSDAP eintreten',1,'Für die meisten Menschen ohne Strafe. Wer Beamter oder Lehrer war, musste aber mit Nachteilen bei Beförderungen rechnen.'],
+  ['Den „Hitlergruß“ verweigern',2,'Das konnte zu Anzeigen, Verhören und beruflichen Nachteilen führen.'],
+  ['Einen Witz über Hitler erzählen',3,'Nach dem „Heimtückegesetz“ vom Dezember 1934 drohte Gefängnis, wenn jemand den Witz anzeigte.'],
+  ['Flugblätter einer verbotenen Partei verteilen',4,'Viele wurden wegen „Hochverrats“ zu Zuchthaus verurteilt oder in ein KZ gebracht.'],
+  ['Ein Attentat auf Hitler planen',5,'Georg Elser wurde nach dem Anschlag 1939 über fünf Jahre im KZ gefangen gehalten und im April 1945 ermordet.']];
+  var box=$('risiko');R.forEach(function(r,i){var c=el('div','chip','<b>'+r[0]+'</b>');var inp=el('input','regler');inp.type='range';inp.min=1;inp.max=5;inp.value=S.z['ri'+i]||3;inp.setAttribute('aria-label','Risiko 1 bis 5');
+    var lab=el('div','klein','Deine Schätzung: '+inp.value);inp.oninput=function(){lab.textContent='Deine Schätzung: '+inp.value;};
+    var b=el('button','blau klein','Aufdecken');var rm=el('div','rm');
+    b.onclick=function(){S.z['ri'+i]=inp.value;save();rm.className='rm on '+(Math.abs(inp.value-r[1])<=1?'r':'f');rm.innerHTML='Etwa Stufe <b>'+r[1]+'</b>. '+r[2];};
+    c.appendChild(inp);c.appendChild(lab);c.appendChild(b);c.appendChild(rm);box.appendChild(c);if(S.z['ri'+i])b.onclick();});
+})();
+
+/* --- Reihenfolge-Aufgaben --- */
+function reihe(boxId,rmId,key,items,txtOk){
+  var box=$(boxId),rm=$(rmId);
+  function bau(){box.innerHTML='';var gew=S.z[key]||[];
+    var mische=items.map(function(x,i){return i;});mische.sort(function(a,b){return ((a*7+3)%items.length)-((b*7+3)%items.length);});
+    mische.forEach(function(i){var it=items[i];var pos=gew.indexOf(i);var b=el('button',null,(pos>=0?'<b>'+(pos+1)+'.</b> ':'')+(pos>=0?'<b>'+it[0]+'</b> · ':'')+it[1]);
+      if(pos>=0)b.disabled=true;
+      b.onclick=function(){if(i!==gew.length){rm.className='rm on f';rm.innerHTML='Noch nicht. Dieses Ereignis kommt später. Welches war früher?';return;}
+        gew.push(i);S.z[key]=gew;save();rm.className='rm';bau();};box.appendChild(b);});
+    if(gew.length===items.length){rm.className='rm on r';rm.innerHTML='<b>Richtig geordnet.</b> '+txtOk;var w=el('button','klein','Noch einmal ordnen');w.onclick=function(){S.z[key]=[];save();bau();};box.appendChild(w);}
+  }
+  bau();
+}
+reihe('zeitleiste','zlRm','zl',[['1933','Die meisten anderen Jugendverbände werden verboten oder in die Hitlerjugend eingegliedert.'],['1936','Das „Gesetz über die Hitlerjugend“ macht die HJ zur Staatsjugend.'],['1939','Die „Jugenddienstpflicht“ macht den Dienst in der HJ zur Pflicht.']],'Schritt für Schritt wurde aus einem Angebot eine Pflicht.');
+mc($('v2q'),'v2a','v2','Welche Absicht steckt am ehesten dahinter?',['Die Jugend sollte möglichst früh im Sinne der NS-Ideologie erzogen werden.','Die Jugend sollte mehr Freizeit haben.','Die Eltern sollten mehr Einfluss bekommen.','Die Schulen sollten abgeschafft werden.'],0,'Das Regime wollte die Jugend ganz an sich binden, auch gegen den Einfluss von Eltern und Kirchen.','Wem nützte es, dass Jugendliche ihre Freizeit in der HJ verbrachten?');
+delete ALLE.v2a;
+reihe('elser','elserRm','el',[['4. Jan. 1903','Geburt in Hermaringen (Württemberg); später Ausbildung zum Schreiner'],['Herbst 1938','Entschluss, Hitler zu töten, um einen Krieg zu verhindern'],['Aug.–Nov. 1939','In über 30 Nächten höhlt er im Bürgerbräukeller eine Säule hinter dem Rednerpult aus und baut die Bombe ein.'],['8. Nov. 1939, 20:45 Uhr','Festnahme an der Grenze zur Schweiz bei Konstanz'],['8. Nov. 1939, 21:20 Uhr','Die Bombe explodiert. Hitler hatte den Saal 13 Minuten vorher verlassen. Acht Menschen sterben.'],['9. Apr. 1945','Ermordung im KZ Dachau, wenige Wochen vor Kriegsende']],'Bemerkenswert: Elser wurde schon festgenommen, bevor die Bombe explodierte.');
+mc($('tafelq'),'e2a','e2','Welcher Text passt am besten auf eine Gedenktafel?',['„Georg Elser – ein verrückter Einzelgänger mit einer Bombe.“','„Georg Elser (1903–1945) versuchte am 8. November 1939 hier, Hitler zu töten, um einen Krieg zu verhindern. Bei dem Anschlag starben acht Menschen. Elser wurde 1945 im KZ Dachau ermordet.“','„Georg Elser hätte fast den Zweiten Weltkrieg verhindert – nur 13 Minuten fehlten.“'],1,'Der Text ist sachlich, nennt Ziel, Folgen und Elsers Schicksal und verschweigt die Opfer nicht.','Eine Gedenktafel soll sachlich und vollständig informieren. Prüfe: Beleidigt der Text? Behauptet er etwas, das niemand wissen kann?');
+delete ALLE.e2a;
+
+/* --- GG --- */
+(function(){var RE=['Art. 5 Meinungsfreiheit','Art. 8 Versammlungsfreiheit','Art. 9 Vereinigungsfreiheit'];
+  var F=[['Lena kritisiert in einem Leserbrief den Bürgermeister.',0],['Eltern und Kinder demonstrieren in Bad Salzuflen für einen sicheren Schulweg.',1],['Ein paar Freunde gründen einen Verein für Jugendkultur.',2]];
+  var box=$('gg');F.forEach(function(f,i){var c=el('div','chip','<div>'+f[0]+'</div>');var w=el('div','wahl');var rm=el('div','klein');
+    RE.forEach(function(t,j){var b=el('button',null,t);b.onclick=function(){c.classList.remove('r','f');c.classList.add(j===f[1]?'r':'f');rm.textContent=j===f[1]?'Richtig.':'Noch nicht. Lies die Namen der Grundrechte genau.';};w.appendChild(b);});
+    c.appendChild(w);c.appendChild(rm);box.appendChild(c);});
+})();
+
+/* --- Modul 1 Exponate --- */
+(function(){var X=[['Stimmzettel der Volksabstimmung 1934','Er zeigt die Abstimmung, bei der es keine echte Wahl gab.',0],
+  ['Sammelbüchse für das „Winterhilfswerk“','Spenden wurden an der Haustür eingesammelt, wer nichts gab, fiel auf.',1],
+  ['Schallplatte mit amerikanischer Swingmusik','Diese Musik galt den Nationalsozialisten als „undeutsch“; Jugendliche hörten sie trotzdem.',2],
+  ['Flugblatt einer verbotenen Partei','Es wurde heimlich gedruckt und verteilt; wer erwischt wurde, kam vor Gericht.',3],
+  ['Mitgliedsausweis eines Beamten in der NSDAP, ausgestellt im Frühjahr 1933','Zu dieser Zeit traten sehr viele Menschen in die Partei ein.',1],
+  ['Nachbau von Elsers Zeitzünder','Er erinnert an das Attentat vom 8. November 1939.',3]];
+  var box=$('exponate');var sel=S.z.vit||[];
+  X.forEach(function(x,i){var b=el('button',sel.indexOf(i)>=0?'sel':null,'<b>'+x[0]+'</b><br><span class="klein">'+x[1]+'</span>');b.onclick=function(){var k=sel.indexOf(i);if(k>=0){sel.splice(k,1);b.classList.remove('sel');}else if(sel.length<3){sel.push(i);b.classList.add('sel');}S.z.vit=sel;save();};box.appendChild(b);});
+  $('vitrineCheck').onclick=function(){var rm=$('vitrineRm');if(sel.length!==3){rm.className='rm on f';rm.textContent='Wähle genau drei Exponate aus.';return;}
+    var st={};sel.forEach(function(i){st[X[i][2]]=1;});var n=Object.keys(st).length;
+    rm.className='rm on '+(n>=3?'r':'f');
+    rm.innerHTML=n>=3?'<b>Gute Vitrine.</b> Deine Exponate zeigen drei verschiedene Stufen: '+Object.keys(st).map(function(k){return KURZ[k];}).join(', ')+'.':'Deine Exponate zeigen nur '+n+' Stufe(n): '+Object.keys(st).map(function(k){return KURZ[k];}).join(', ')+'. Tausche ein Exponat, damit die Vitrine die Unterschiede zeigt.';};
+})();
+
+/* --- Modul 3 Richtig/Falsch --- */
+(function(){var A=[['Ein Rückblick, der Jahrzehnte später geschrieben wurde, kann durch späteres Wissen gefärbt sein.',true,'Wer weiß, wie alles endete, erinnert sich oft anders.'],
+  ['Zeitzeugenberichte sind immer genauer als Akten aus der Zeit.',false,'Erinnerungen können täuschen. Man vergleicht sie deshalb mit anderen Quellen.'],
+  ['Manche Menschen stellten ihre Rolle nach 1945 harmloser dar, als sie war.',true,'Das kam häufig vor, zum Beispiel mit dem Satz „Wir konnten nichts machen“.'],
+  ['Ein Rückblick ist wertlos, weil er nicht aus der Zeit selbst stammt.',false,'Er zeigt, wie jemand die Zeit erlebt und später gedeutet hat. Das ist wertvoll, man muss es nur einordnen.'],
+  ['Es hilft zu wissen, wie alt die Person damals war und welche Rolle sie hatte.',true,'Ein 14-jähriges Mädchen im BDM erlebte die Zeit anders als ein Beamter.']];
+  var box=$('rf');A.forEach(function(a,i){var c=el('div','chip','<div>'+a[0]+'</div>');var w=el('div','wahl');var rm=el('div','klein');
+    [['richtig',true],['falsch',false]].forEach(function(o){var b=el('button',null,o[0]);b.onclick=function(){var ok=o[1]===a[1];c.classList.remove('r','f');c.classList.add(ok?'r':'f');rm.textContent=(ok?'Stimmt. ':'Noch nicht. ')+a[2];};w.appendChild(b);});
+    c.appendChild(w);c.appendChild(rm);box.appendChild(c);});
+})();
+
+/* --- Abzeichen --- */
+function abzeichen(){var n={e1:'Kurator',e2:'Elser-Kenner',e3:'Quellenprüfer',e4:'Aufgabenautor'};var b=$('abzeichen');b.innerHTML='';
+  Object.keys(n).forEach(function(k){b.appendChild(el('span',S.done['mod-'+k]?null:'leer',(S.done['mod-'+k]?'✓ ':'')+n[k]));});}
+
+/* --- Vorlesen --- */
+(function(){if(!('speechSynthesis' in window))return;var de=null;
+  function such(){var v=speechSynthesis.getVoices();for(var i=0;i<v.length;i++){if(/^de/i.test(v[i].lang)){de=v[i];break;}}
+    [].forEach.call(document.querySelectorAll('.vorlesen'),function(b){b.classList.toggle('da',!!de);});}
+  such();speechSynthesis.onvoiceschanged=such;
+  document.addEventListener('click',function(e){var b=e.target.closest('.vorlesen');if(!b||!de)return;speechSynthesis.cancel();var u=new SpeechSynthesisUtterance($(b.getAttribute('data-lesen')).innerText);u.voice=de;u.lang=de.lang;u.rate=.95;speechSynthesis.speak(u);});
+})();
+
+/* --- Neu starten --- */
+$('neuBtn').onclick=function(){$('dlg').classList.add('on');};
+$('dlgNein').onclick=function(){$('dlg').classList.remove('on');};
+$('dlgJa').onclick=function(){try{localStorage.removeItem(KEY);}catch(e){}location.hash='start';location.reload();};
+
+zeige(location.hash.slice(1)||'start');
+})();
+</script>
+</body>
+</html>
