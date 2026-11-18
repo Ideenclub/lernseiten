@@ -1,0 +1,20 @@
+{
+ "klasse": "GL10",
+ "datum": "2026-11-19",
+ "commit": "Aktualisierung",
+ "eintraege": [
+  {
+   "datei": "gl10/lessons.json",
+   "eintrag": {
+    "datum": "2026-11-19",
+    "titel": "Wie verhielten sich die Deutschen gegenüber dem NS-Staat?",
+    "typ": "Lernseite mit Quiz",
+    "pfad": "2026-11-19-verhalten.html",
+    "info": "Do, Einzelstunde"
+   }
+  }
+ ],
+ "urls": [
+  "https://ideenclub.github.io/lernseiten/gl10/2026-11-19-verhalten.html"
+ ]
+}
