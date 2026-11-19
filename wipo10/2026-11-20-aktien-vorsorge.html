@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warum eignen sich Aktien und ETFs für die langfristige Vorsorge? · WiPo 10</title>
+<style>
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --primary-soft: #f0fdfa;
+  --slate: #1e293b;
+  --amber: #b45309;
+  --amber-soft: #fffbeb;
+  --danger: #b91c1c;
+  --danger-soft: #fef2f2;
+  --ok: #15803d;
+  --ok-soft: #f0fdf4;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 16px;
+}
+header {
+  background: var(--slate);
+  color: #fff;
+  padding: 1.25rem 1rem 1rem;
+  border-bottom: 4px solid var(--primary);
+}
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.kicker {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  margin-bottom: 0.3rem;
+}
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+.subline {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+nav.top-nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.nav-inner {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding: 0.6rem 1rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.nav-btn {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.progress-bar-wrap {
+  height: 5px;
+  background: #e2e8f0;
+  width: 100%;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--primary);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+main {
+  padding: 1.5rem 1rem 3rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.section-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.35rem;
+  margin-bottom: 1.5rem;
+}
+.section-block h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+  color: var(--slate);
+  border-left: 4px solid var(--primary);
+  padding-left: 0.65rem;
+}
+.fundstelle {
+  font-size: 0.9rem;
+  color: var(--primary-dark);
+  background: var(--primary-soft);
+  border-left: 3px solid var(--primary);
+  padding: 0.45rem 0.75rem;
+  margin: 0.5rem 0 0.9rem;
+}
+.btn {
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--slate);
+  background: var(--slate);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.btn:hover { opacity: 0.92; }
+.btn-primary { background: var(--primary); border-color: var(--primary); }
+.btn-outline { background: #fff; color: var(--slate); border-color: var(--border); }
+.btn-outline.selected { background: var(--primary-soft); border-color: var(--primary); color: var(--primary-dark); }
+.btn-amber { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.slider-box {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.slider-row {
+  margin-bottom: 0.9rem;
+}
+.slider-row label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 0.25rem;
+}
+input[type="range"] {
+  width: 100%;
+  height: 28px;
+  accent-color: var(--primary);
+}
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+.kpi .lbl { font-size: 0.8rem; color: var(--muted); }
+.kpi .val { font-size: 1.25rem; font-weight: 700; color: var(--slate); margin-top: 0.2rem; }
+.kpi.highlight { border-color: var(--primary); background: var(--primary-soft); }
+.kpi.highlight .val { color: var(--primary-dark); }
+.feedback {
+  padding: 0.75rem 0.9rem;
+  border-radius: 4px;
+  margin-top: 0.75rem;
+  font-size: 0.93rem;
+  display: none;
+}
+.feedback.show { display: block; }
+.feedback.ok { background: var(--ok-soft); border-left: 4px solid var(--ok); color: #14532d; }
+.feedback.err { background: var(--danger-soft); border-left: 4px solid var(--danger); color: #7f1d1d; }
+.feedback.info { background: var(--amber-soft); border-left: 4px solid var(--amber); color: #78350f; }
+.zp-box {
+  background: #f1f5f9;
+  border: 2px solid var(--slate);
+  border-radius: 4px;
+  padding: 1.1rem;
+  margin: 1.5rem 0;
+}
+.zp-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+details.tipp {
+  background: var(--amber-soft);
+  border-left: 3px solid var(--amber);
+  padding: 0.6rem 0.85rem;
+  margin-top: 0.75rem;
+  border-radius: 0 4px 4px 0;
+}
+details.tipp summary {
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+.sort-card {
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sort-btns { display: flex; gap: 0.4rem; }
+.quiz-q {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.quiz-opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  min-height: 44px;
+  padding: 0.6rem 0.85rem;
+  margin: 0.4rem 0;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.quiz-opt.correct { background: var(--ok-soft); border-color: var(--ok); font-weight: 600; }
+.quiz-opt.wrong { background: var(--danger-soft); border-color: var(--danger); }
+.result-panel {
+  border: 2px solid var(--primary);
+  background: var(--primary-soft);
+  padding: 1.25rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+.stufe-badge {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid var(--slate);
+  background: #fff;
+  margin: 0.5rem 0;
+}
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.mod-badge {
+  font-size: 0.82rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #fff;
+}
+.mod-badge.done {
+  background: var(--ok-soft);
+  border-color: var(--ok);
+  color: #14532d;
+  font-weight: 600;
+}
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">WiPo 10 · Kap. 6.3 Für die Zukunft selbst vorsorgen · Doppelstunde</div>
+    <h1>Warum eignen sich Aktien und ETFs für die langfristige Vorsorge?</h1>
+    <p class="subline">Finanz-Werkstatt · Bearbeite Teil 1, Teil 2 und das Abschluss-Quiz. Für Schnelle gibt es im Bereich „Vertiefung“ weitere Module.</p>
+  </div>
+</header>
+
+<nav class="top-nav" aria-label="Abschnitte">
+  <div class="nav-inner">
+    <button class="nav-btn active" onclick="showTab('teil1', this)">1. Grundlagen &amp; Simulation</button>
+    <button class="nav-btn" onclick="showTab('teil2', this)">2. Risiko &amp; Praxis</button>
+    <button class="nav-btn" onclick="showTab('quiz', this)">3. Abschluss-Quiz</button>
+    <button class="nav-btn" onclick="showTab('vertiefung', this)">4. Vertiefung (Schnelle)</button>
+  </div>
+  <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progFill"></div></div>
+</nav>
+
+<main>
+
+<!-- ===================== TEIL 1 ===================== -->
+<div id="teil1" class="tab-pane active">
+
+  <!-- ETAPPE 1: ZINSESZINS-SIMULATOR -->
+  <section class="section-block" id="animation">
+    <h2>Etappe 1 · Sparplan-Simulator: Was wird aus 50 € im Monat?</h2>
+    <p>Viele denken, Aktien seien nur etwas für Reiche. Teste hier selbst, was passiert, wenn man schon früh kleine Beträge regelmäßig anlegt (vereinfachte Modellrechnung; Kurse schwanken in der Realität).</p>
+    
+    <div class="slider-box" style="margin-bottom:1rem;">
+      <p style="margin-top:0;"><strong>Vorhersage (vor dem Ausprobieren):</strong> Du legst 40 Jahre lang jeden Monat 50 € an (insgesamt 24.000 € eingezahlt). Wie viel Geld kommt bei einem weltweiten ETF (Ø 6 % Rendite pro Jahr) ungefähr heraus?</p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <button class="btn btn-outline" onclick="checkPred1(this, false)">ca. 30.000 €</button>
+        <button class="btn btn-outline" onclick="checkPred1(this, false)">ca. 55.000 €</button>
+        <button class="btn btn-outline" onclick="checkPred1(this, true)">ca. 99.600 €</button>
+      </div>
+      <div id="pred1Fb" class="feedback"></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="slider-box">
+        <div class="slider-row">
+          <label for="slRate">Monatliche Sparrate: <span id="lblRate">50 €</span></label>
+          <input type="range" id="slRate" min="25" max="300" step="25" value="50" oninput="updateSim1()">
+        </div>
+        <div class="slider-row">
+          <label for="slYears">Laufzeit (Anlagehorizont): <span id="lblYears">40 Jahre</span></label>
+          <input type="range" id="slYears" min="5" max="45" step="5" value="40" oninput="updateSim1()">
+        </div>
+        <div class="slider-row">
+          <label for="slType">Anlageform:</label>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.3rem;">
+            <button class="btn btn-outline" id="btnType1" onclick="setSimType(1)">Sparbuch (1 %)</button>
+            <button class="btn btn-outline" id="btnType4" onclick="setSimType(4)">Misch-Depot (4 %)</button>
+            <button class="btn btn-outline selected" id="btnType6" onclick="setSimType(6)">Welt-ETF (6 %)</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <svg id="sim1Svg" viewBox="0 0 420 210" style="width:100%; height:auto; background:#fff; border:1px solid #cbd5e1; border-radius:4px;" aria-label="Verlaufsgrafik Sparplan"></svg>
+      </div>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="lbl">Selbst eingezahlt</div><div class="val" id="kpiIn">24.000 €</div></div>
+      <div class="kpi highlight"><div class="lbl">Endkapital (nominal)</div><div class="val" id="kpiEnd">99.575 €</div></div>
+      <div class="kpi"><div class="lbl">Davon Zinseszins-Gewinn</div><div class="val" id="kpiGain">75.575 €</div></div>
+      <div class="kpi"><div class="lbl">Kaufkraft heute (bei 2 % Inflation)</div><div class="val" id="kpiReal">45.097 €</div></div>
+    </div>
+
+    <details class="tipp">
+      <summary>Tipp: Warum wächst die Kurve am Ende so steil?</summary>
+      <p>Das ist der <strong>Zinseszins-Effekt</strong>: Gewinne, die im Depot bleiben, erwirtschaften im nächsten Jahr selbst wieder neue Gewinne. Je länger der Anlagehorizont, desto stärker wirkt dieser Schneeballeffekt.</p>
+    </details>
+  </section>
+
+  <!-- ETAPPE 2: ZUORDNUNG AKTIE VS ETF -->
+  <section class="section-block">
+    <h2>Etappe 2 · Einzelaktie oder ETF? (Zuordnen per Tippen)</h2>
+    <div class="fundstelle"><strong>Buch S. 205, M8</strong> (Aktie) und <strong>Buch S. 206, M9</strong> (ETFs) · Nutze bei Unsicherheit das Buch.</div>
+    <p>Ordne jede Aussage per Tippen der passenden Anlageform zu.</p>
+    <div id="sortContainer"></div>
+    <button class="btn btn-primary" onclick="checkSort()">Zuordnung prüfen</button>
+    <div id="sortFb" class="feedback"></div>
+    <details class="tipp">
+      <summary>Tipp: Wortspeicher</summary>
+      <p><strong>Aktie:</strong> Anteil an einem einzelnen Unternehmen (Mitunternehmer). <strong>ETF (Exchange Traded Fund):</strong> Fonds, der das Geld vieler Anleger bündelt und breit über viele Firmen, Branchen und Länder streut (<strong>Diversifikation</strong>).</p>
+    </details>
+  </section>
+
+  <!-- ETAPPE 3: CRASH-SIMULATOR -->
+  <section class="section-block" id="animation-2">
+    <h2>Etappe 3 · Börsen-Crash-Test: 1 Firma vs. Welt-ETF (10 Jahre)</h2>
+    <p>Du investierst 1.000 €. Klicke Jahr für Jahr weiter und beobachte, was im Krisenjahr (Jahr 4) passiert (vereinfachte Darstellung).</p>
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.8rem;">
+      <button class="btn btn-primary" id="btnCrashStep" onclick="stepCrash()">Nächstes Jahr (Jahr 1)</button>
+      <button class="btn btn-outline" onclick="resetCrash()">Neustart</button>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="lbl">Aktuelles Jahr</div><div class="val" id="crYear">Start (Jahr 0)</div></div>
+      <div class="kpi"><div class="lbl">1 Einzelaktie (Tech-Firma)</div><div class="val" id="crSingle">1.000 €</div></div>
+      <div class="kpi highlight"><div class="lbl">Welt-ETF (breit gestreut)</div><div class="val" id="crEtf">1.000 €</div></div>
+    </div>
+    <div id="crNote" class="feedback info show">Beide Depots starten mit 1.000 €. Klicke auf „Nächstes Jahr“.</div>
+  </section>
+
+  <!-- ZEIGEPUNKT 1 -->
+  <div class="zp-box">
+    <h3>ZEIGEPUNKT 1 · Nach Etappe 3 (bzw. Aufgabe 3 auf dem Blatt)</h3>
+    <p><strong>Zeige:</strong> Aufgabe 2 auf dem Arbeitsblatt (deine ausgefüllte Vergleichstabelle).</p>
+    <p>Geh mit dem Blatt zum Zeigeplatz am Lehrerpult. Sind dort schon zwei Personen, bleib sitzen: Leg das Blatt aufgeklappt an den Tischrand und mach in Teil 2 weiter. Die Lehrkraft kommt vorbei. Noch nicht fertig? Zeige trotzdem, wie weit du gekommen bist.</p>
+    <button class="btn btn-primary" onclick="showTab('teil2', document.querySelectorAll('.nav-btn')[1]); window.scrollTo(0,0);">Weiter zu Teil 2</button>
+  </div>
+
+</div>
+
+<!-- ===================== TEIL 2 ===================== -->
+<div id="teil2" class="tab-pane">
+
+  <!-- ETAPPE 4: MAGISCHES DREIECK & PAUL/NIHAN -->
+  <section class="section-block">
+    <h2>Etappe 4 · Das Magische Dreieck und der Fall Paul &amp; Nihan</h2>
+    <div class="fundstelle"><strong>Buch S. 204, M6</strong> (Magisches Dreieck) und <strong>Buch S. 207, F-Aufgabe</strong> (Paul &amp; Nihan)</div>
+    <p>Klicke eine Anlageform an, um zu sehen, welche Ziele des Magischen Dreiecks sie erfüllt:</p>
+    <div style="display:flex; gap:0.45rem; flex-wrap:wrap; margin-bottom:0.8rem;">
+      <button class="btn btn-outline" onclick="showTri('tagesgeld', this)">Tagesgeldkonto</button>
+      <button class="btn btn-outline" onclick="showTri('aktie', this)">Einzelaktie</button>
+      <button class="btn btn-outline" onclick="showTri('etf', this)">Weltweiter ETF</button>
+      <button class="btn btn-outline" onclick="showTri('immo', this)">Immobilie</button>
+    </div>
+    <div id="triOut" class="feedback info show">Wähle oben eine Anlageform aus.</div>
+
+    <hr style="margin:1.2rem 0; border:none; border-top:1px solid var(--border);">
+    <p><strong>Fallanalyse (ins Heft, Aufgabe 3):</strong> Paul und Nihan wollen nächstes Jahr eine Fernreise machen. Nihan schlägt vor, das Geld bis dahin in Aktien anzulegen. Schreibe deine Beurteilung (4–5 Sätze) ins Heft und prüfe danach die Musterlösung.</p>
+    <details class="tipp">
+      <summary>Musterlösung erst nach dem Schreiben im Heft aufklappen</summary>
+      <p>Von Aktien ist abzuraten: Der Anlagehorizont von einem Jahr ist viel zu kurz. Da Aktienkurse kurzfristig stark schwanken, droht beim Verkauf genau vor der Reise ein Verlust. Nach dem Magischen Dreieck zählen hier <strong>Sicherheit</strong> und <strong>Verfügbarkeit</strong> (z. B. Tagesgeldkonto), nicht hohe Rendite.</p>
+    </details>
+  </section>
+
+  <!-- ETAPPE 5: M11 ERFAHRUNGEN -->
+  <section class="section-block">
+    <h2>Etappe 5 · Vier Wege mit Geld (Buch S. 207, M11)</h2>
+    <div class="fundstelle"><strong>Buch S. 207, M11</strong> · Lies die Aussagen von Ingo (24), Zeynep (27), Maya (16) und Julia (19).</div>
+    <p>Welche Strategie passt am besten zu einer langfristigen, planbaren Altersvorsorge? Tippe eine Person an und prüfe deine Einschätzung:</p>
+    <div class="grid-2">
+      <button class="btn btn-outline" onclick="checkM11('julia')">Julia (19): Hält Schwankungen nicht aus, wartet ab</button>
+      <button class="btn btn-outline" onclick="checkM11('zeynep')">Zeynep (27): 50 € monatlich per ETF-Sparplan</button>
+      <button class="btn btn-outline" onclick="checkM11('ingo')">Ingo (24): Mutter hat früh in Aktien &amp; ETFs investiert</button>
+      <button class="btn btn-outline" onclick="checkM11('maya')">Maya (16): ETFs + Einzelaktien als „Spielgeld“</button>
+    </div>
+    <div id="m11Fb" class="feedback"></div>
+  </section>
+
+  <!-- ETAPPE 6: KREATIV-BAUKASTEN -->
+  <section class="section-block">
+    <h2>Etappe 6 · Kreativ-Baukasten: Dein Start mit 18</h2>
+    <div class="fundstelle"><strong>Buch S. 203, M4</strong> (Vier-Töpfe-Prinzip) und <strong>Buch S. 206, M10</strong> (Depot)</div>
+    <p>Stelle hier deinen persönlichen 3-Schritte-Vorsorgeplan für dein erstes eigenes Einkommen zusammen und übertrage ihn als <strong>Aufgabe 5 ins Heft</strong> (oder schreibe Weg B: Ratgeber-Post für Gleichaltrige).</p>
+    <div class="slider-box">
+      <p style="margin-top:0;"><strong>Schritt 1 (Basis):</strong>
+        <select id="plan1" style="min-height:40px; padding:0.3rem; font-size:0.95rem; width:100%; margin-top:0.2rem;">
+          <option value="Fixkosten &amp; wichtige Versicherungen (Haftpflicht) abdecken">Fixkosten &amp; wichtige Versicherungen (Haftpflicht) abdecken</option>
+          <option value="Sofort das ganze Gehalt in eine einzelne Aktie stecken">Sofort das ganze Gehalt in eine einzelne Aktie stecken</option>
+        </select>
+      </p>
+      <p><strong>Schritt 2 (Reserve):</strong>
+        <select id="plan2" style="min-height:40px; padding:0.3rem; font-size:0.95rem; width:100%; margin-top:0.2rem;">
+          <option value="Notgroschen (2–3 Monatsgehälter) auf dem Tagesgeldkonto ansparen">Notgroschen (2–3 Monatsgehälter) auf dem Tagesgeldkonto ansparen</option>
+          <option value="Alles in bar zu Hause lagern">Alles in bar zu Hause lagern</option>
+        </select>
+      </p>
+      <p><strong>Schritt 3 (Langfristige Vorsorge):</strong>
+        <select id="plan3" style="min-height:40px; padding:0.3rem; font-size:0.95rem; width:100%; margin-top:0.2rem;">
+          <option value="Depot eröffnen und monatlich per breit gestreutem ETF-Sparplan vorsorgen">Depot eröffnen und monatlich per breit gestreutem ETF-Sparplan vorsorgen</option>
+          <option value="Auf die gesetzliche Rente allein verlassen und nichts zurücklegen">Auf die gesetzliche Rente allein verlassen und nichts zurücklegen</option>
+        </select>
+      </p>
+      <button class="btn btn-primary" onclick="checkPlan()">Plan prüfen</button>
+      <div id="planFb" class="feedback"></div>
+    </div>
+    <div style="margin-top:1rem;">
+      <button class="btn btn-primary" onclick="showTab('quiz', document.querySelectorAll('.nav-btn')[2]); window.scrollTo(0,0);">Weiter zum Abschluss-Quiz</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===================== QUIZ ===================== -->
+<div id="quiz" class="tab-pane">
+  <section class="section-block">
+    <h2>Abschluss-Quiz · 8 Anwendungsfragen</h2>
+    <p>Beantworte alle 8 Fragen. Deine Punkte aus dem <strong>ersten Versuch</strong> bestimmen deine Stufe (A–D). Danach kannst du Fehler gezielt verbessern.</p>
+    <div id="quizBox"></div>
+    <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:1rem;">
+      <button class="btn btn-primary" id="btnFinishQuiz" onclick="finishQuiz()">Ergebnis auswerten</button>
+      <button class="btn btn-amber" id="btnRetryWrong" style="display:none;" onclick="retryWrong()">Fehler verbessern</button>
+      <button class="btn btn-outline" onclick="askResetQuiz()">Neu starten</button>
+    </div>
+    <div id="resetConfirm" class="feedback info" style="margin-top:0.6rem;">
+      Wirklich alle Antworten löschen?
+      <button class="btn btn-outline" style="margin-left:0.5rem;" onclick="confirmResetQuiz()">Ja, neu starten</button>
+      <button class="btn btn-outline" onclick="document.getElementById('resetConfirm').classList.remove('show')">Abbrechen</button>
+    </div>
+
+    <div id="resultBox" class="result-panel" style="display:none;"></div>
+  </section>
+
+  <div class="zp-box">
+    <h3>ZEIGEPUNKT 2 · Nach Aufgabe 6 &amp; Abschluss-Quiz</h3>
+    <p><strong>Zeige:</strong> Das Arbeitsblatt (Aufgabe 6: Leitfrage-Antwort und „Mein Ergebnis“) und diesen Ergebnisbildschirm auf dem iPad am Zeigeplatz oder am Tischrand.</p>
+    <p>Danach weiter im Bereich <strong>„4. Vertiefung (Schnelle)“</strong> oder bei „Schon fertig?“ auf dem Blatt.</p>
+  </div>
+</div>
+
+<!-- ===================== VERTIEFUNG (R26) ===================== -->
+<div id="vertiefung" class="tab-pane">
+  <section class="section-block">
+    <h2>Vertiefung &amp; Erlebnisbereich · Frei wählbare Module</h2>
+    <p>Schon fertig mit dem Pflichtteil? Wähle ein Modul aus (je ca. 5–10 Min.) und sammle alle drei Abzeichen.</p>
+    <div class="badge-row" id="badgeRow">
+      <span class="mod-badge" id="bdg1">Modul 1: Mythen-Check (offen)</span>
+      <span class="mod-badge" id="bdg2">Modul 2: Inflations-Labor (offen)</span>
+      <span class="mod-badge" id="bdg3">Modul 3: DAX &amp; Dividende (offen)</span>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>Modul 1 · Börsen-Mythen im Faktencheck (ca. 6 Min.)</h2>
+    <p>Stimmt die Aussage oder ist sie ein Mythos?</p>
+    <div id="mythBox"></div>
+    <button class="btn btn-primary" onclick="finishMod(1)">Modul 1 abschließen</button>
+  </section>
+
+  <section class="section-block">
+    <h2>Modul 2 · Inflations-Labor: Was sind 10.000 € in 30 Jahren wert? (ca. 6 Min.)</h2>
+    <p>Stelle die jährliche Inflationsrate ein und beobachte, wie viel Kaufkraft von 10.000 € auf einem unverzinsten Konto nach 30 Jahren übrig bleibt:</p>
+    <div class="slider-box">
+      <label for="slInf">Inflationsrate pro Jahr: <span id="lblInf">2,0 %</span></label>
+      <input type="range" id="slInf" min="1" max="5" step="0.5" value="2" oninput="updateInf()">
+      <p style="font-size:1.1rem; font-weight:700; margin:0.6rem 0 0;">Kaufkraft nach 30 Jahren: <span id="infVal">5.521 €</span></p>
+    </div>
+    <button class="btn btn-primary" style="margin-top:0.75rem;" onclick="finishMod(2)">Modul 2 abschließen</button>
+  </section>
+
+  <section class="section-block">
+    <h2>Modul 3 · DAX, Dow Jones &amp; Dividende (ca. 8 Min.)</h2>
+    <div class="fundstelle"><strong>Buch S. 205, M8</strong> und <strong>Buch S. 208</strong> (Grundwissen Aktien)</div>
+    <p>Beantworte kurz für dich und klappe die Kontrolle auf: Was ist der Unterschied zwischen <strong>Kursgewinn</strong> und <strong>Dividende</strong>? Und warum nennt man den DAX einen „Stimmungsmesser“?</p>
+    <details class="tipp">
+      <summary>Kontrolle aufklappen</summary>
+      <p><strong>Kursgewinn:</strong> Die Aktie steigt im Preis und man verkauft sie teurer als gekauft. <strong>Dividende:</strong> Jährliche Gewinnausschüttung des Unternehmens an seine Aktionäre. Der <strong>DAX</strong> bildet die 40 größten deutschen Aktiengesellschaften ab – steigt er, erwarten Anleger meist gute Geschäfte.</p>
+    </details>
+    <button class="btn btn-primary" style="margin-top:0.75rem;" onclick="finishMod(3)">Modul 3 abschließen</button>
+  </section>
+
+  <section class="section-block">
+    <h2>Offene Expertenaufgabe (ins Heft)</h2>
+    <p>Entwirf <strong>5 eigene Quizfragen</strong> (mit jeweils 3 Antwortmöglichkeiten und markierter Lösung) zum Thema Aktien, ETFs und Altersvorsorge für die nächste Stunde.</p>
+  </section>
+</div>
+
+</main>
+
+<script>
+// Navigation
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (btn) btn.classList.add('active');
+  const map = { teil1: 25, teil2: 55, quiz: 85, vertiefung: 100 };
+  document.getElementById('progFill').style.width = (map[id] || 25) + '%';
+}
+
+// Etappe 1: Vorhersage + Sparplan-Simulator
+let simRatePct = 6;
+function checkPred1(btn, ok) {
+  const fb = document.getElementById('pred1Fb');
+  fb.className = 'feedback show ' + (ok ? 'ok' : 'info');
+  fb.textContent = ok
+    ? 'Genau richtig! Bei 6 % Rendite pro Jahr werden aus 24.000 € Einzahlung rund 99.600 € – über 75.000 € davon sind reiner Zinseszins.'
+    : 'Überraschung: Es sind rund 99.600 €! Probiere es unten mit den Reglern aus und sieh dir an, wie stark der Zinseszins über 40 Jahre wirkt.';
+}
+function setSimType(pct) {
+  simRatePct = pct;
+  [1, 4, 6].forEach(v => document.getElementById('btnType' + v).classList.toggle('selected', v === pct));
+  updateSim1();
+}
+function fmtEur(n) {
+  return Math.round(n).toLocaleString('de-DE') + ' €';
+}
+function updateSim1() {
+  const monthly = Number(document.getElementById('slRate').value);
+  const years = Number(document.getElementById('slYears').value);
+  document.getElementById('lblRate').textContent = monthly + ' €';
+  document.getElementById('lblYears').textContent = years + ' Jahre';
+
+  const r = simRatePct / 100 / 12;
+  const ptsIn = [], ptsVal = [];
+  let maxY = 1000;
+  for (let y = 0; y <= years; y++) {
+    const m = y * 12;
+    const paid = monthly * m;
+    const val = r === 0 ? paid : monthly * ((Math.pow(1 + r, m) - 1) / r);
+    ptsIn.push({ y, v: paid });
+    ptsVal.push({ y, v: val });
+    if (val > maxY) maxY = val;
+  }
+  const endIn = ptsIn[ptsIn.length - 1].v;
+  const endVal = ptsVal[ptsVal.length - 1].v;
+  const realVal = endVal / Math.pow(1.02, years);
+
+  document.getElementById('kpiIn').textContent = fmtEur(endIn);
+  document.getElementById('kpiEnd').textContent = fmtEur(endVal);
+  document.getElementById('kpiGain').textContent = fmtEur(endVal - endIn);
+  document.getElementById('kpiReal').textContent = fmtEur(realVal);
+
+  // SVG zeichnen
+  const svg = document.getElementById('sim1Svg');
+  const W = 420, H = 210, padL = 55, padR = 16, padT = 18, padB = 28;
+  const pw = W - padL - padR, ph = H - padT - padB;
+  const toX = y => padL + (y / years) * pw;
+  const toY = v => padT + ph - (v / maxY) * ph;
+  const pathIn = ptsIn.map((p, i) => (i === 0 ? 'M' : 'L') + toX(p.y).toFixed(1) + ',' + toY(p.v).toFixed(1)).join(' ');
+  const pathVal = ptsVal.map((p, i) => (i === 0 ? 'M' : 'L') + toX(p.y).toFixed(1) + ',' + toY(p.v).toFixed(1)).join(' ');
+
+  svg.innerHTML = `
+    <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="#94a3b8" stroke-width="1"/>
+    <text x="${padL-6}" y="${padT+8}" text-anchor="end" font-size="10" fill="#475569">${Math.round(maxY/1000)}k €</text>
+    <text x="${padL-6}" y="${H-padB}" text-anchor="end" font-size="10" fill="#475569">0 €</text>
+    <text x="${W-padR}" y="${H-8}" text-anchor="end" font-size="10" fill="#475569">${years} Jahre</text>
+    <path d="${pathIn}" fill="none" stroke="#94a3b8" stroke-width="2.2" stroke-dasharray="5,4"/>
+    <path d="${pathVal}" fill="none" stroke="#0f766e" stroke-width="3"/>
+    <text x="${padL+8}" y="${padT+12}" font-size="10.5" font-weight="600" fill="#0f766e">— Endkapital (${simRatePct} % p.a.)</text>
+    <text x="${padL+8}" y="${padT+26}" font-size="10" fill="#64748b">-- Eingezahlt</text>
+  `;
+}
+
+// Etappe 2: Sortieraufgabe
+const sortItems = [
+  { t: "Du kaufst einen Anteil an genau einem Unternehmen.", a: "aktie" },
+  { t: "Dein Geld wird automatisch auf viele Firmen und Länder verteilt (Diversifikation).", a: "etf" },
+  { t: "Geht das eine Unternehmen pleite, ist das gesamte investierte Geld weg.", a: "aktie" },
+  { t: "Wird meist passiv verwaltet und hat deshalb sehr geringe Kosten.", a: "etf" },
+  { t: "Besonders beliebt für die langfristige Altersvorsorge per Sparplan.", a: "etf" },
+  { t: "Sehr hohe Gewinnchance, aber auch sehr hohes Einzelrisiko.", a: "aktie" }
+];
+const sortAns = {};
+function renderSort() {
+  const box = document.getElementById('sortContainer');
+  box.innerHTML = sortItems.map((it, i) => `
+    <div class="sort-card">
+      <span>${i+1}. ${it.t}</span>
+      <div class="sort-btns">
+        <button class="btn btn-outline" id="s_${i}_aktie" onclick="pickSort(${i},'aktie')">Einzelaktie</button>
+        <button class="btn btn-outline" id="s_${i}_etf" onclick="pickSort(${i},'etf')">ETF</button>
+      </div>
+    </div>
+  `).join('');
+}
+function pickSort(i, val) {
+  sortAns[i] = val;
+  document.getElementById(`s_${i}_aktie`).classList.toggle('selected', val === 'aktie');
+  document.getElementById(`s_${i}_etf`).classList.toggle('selected', val === 'etf');
+}
+function checkSort() {
+  let ok = 0;
+  sortItems.forEach((it, i) => { if (sortAns[i] === it.a) ok++; });
+  const fb = document.getElementById('sortFb');
+  fb.className = 'feedback show ' + (ok === sortItems.length ? 'ok' : 'info');
+  fb.textContent = ok === sortItems.length
+    ? 'Alle 6 Aussagen richtig zugeordnet! Übertrage die Kernpunkte jetzt in Aufgabe 2 auf dein Arbeitsblatt.'
+    : `${ok} von ${sortItems.length} richtig. Prüfe die übrigen Aussagen mit Buch S. 205 (M8) und S. 206 (M9).`;
+}
+
+// Etappe 3: Crash-Simulator
+const crashData = [
+  { y: 0, s: 1000, e: 1000, n: "Start: Beide Depots beginnen mit 1.000 €." },
+  { y: 1, s: 1180, e: 1070, n: "Jahr 1: Die Tech-Firma boomt (+18 %), der Welt-ETF wächst ruhig (+7 %)." },
+  { y: 2, s: 1320, e: 1145, n: "Jahr 2: Weiter gute Stimmung an der Börse („Bullish“)." },
+  { y: 3, s: 1250, e: 1210, n: "Jahr 3: Erste Konkurrenz drückt die Tech-Aktie leicht." },
+  { y: 4, s: 490,  e: 895,  n: "Jahr
