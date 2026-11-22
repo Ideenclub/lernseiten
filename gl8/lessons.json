@@ -1,4 +1,6 @@
 [
+  {"datum": "2026-11-23", "titel": "Baustein 6: Wer half den Arbeitern wirklich aus der Not?", "typ": "Lernseite mit Quiz", "pfad": "b06-soziale-frage.html", "info": "ca. 45 Minuten, 5 Etappen + Check + Vertiefung"},
+  {"datum": "2026-11-23", "titel": "Baustein 7: Was änderte Bismarcks Sozialversicherung?", "typ": "Lernseite mit Quiz", "pfad": "b07-sozialversicherung.html", "info": "ca. 45 Minuten, 5 Etappen + Check + Vertiefung"},
   {"datum": "2026-11-16", "titel": "Baustein 4: Kinder in der Fabrikzeit", "typ": "Lernseite mit Quiz", "pfad": "b04-kinderarbeit.html", "info": "ca. 45 Minuten, 6 Etappen + Bonus"},
   {"datum": "2026-11-16", "titel": "Baustein 5: Der Preis für die Natur", "typ": "Lernseite mit Quiz", "pfad": "b05-umwelt.html", "info": "ca. 45 Minuten, 6 Etappen + Bonus"},
   {"datum": "2026-11-12", "titel": "Baustein 3: Wer zahlt den Preis? – Arbeit in der Fabrik", "typ": "Lernseite mit Quiz", "pfad": "b03-fabrikarbeit.html", "info": "ca. 40 Minuten, 7 Etappen + Abschlussquiz"}
